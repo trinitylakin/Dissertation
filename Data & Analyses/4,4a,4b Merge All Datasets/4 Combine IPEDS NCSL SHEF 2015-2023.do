@@ -78,6 +78,8 @@ clonevar c_other = carnegie15
 recode c_other (1 2 . =0)(3=1)
 label variable c_other "Not R1 or R2 University"
 
+recode hbcu (.=0)
+
 drop party_gov size carnegie15
 
 save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\4b Abridged Master Dataset 2015-2023.dta", replace
