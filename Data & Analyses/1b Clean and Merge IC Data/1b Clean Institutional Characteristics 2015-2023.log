@@ -1,0 +1,188 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Fa
+> culty\1b Clean Institutional Characteristics 2015-2023.log
+  log type:  text
+ opened on:  28 Jan 2025, 21:39:46
+
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Cha
+> r\1 IC Merged 2015 through 2023.dta"  
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. ** Fixing carnegie classifications **
+. clonevar carnegie15 =carnegieclassification2015basich
+(49 missing values generated)
+
+. replace carnegie15 = 3 if inrange(carnegie15,1,14)|inrange(carnegie15,17,33)
+(5,539 real changes made)
+
+. recode carnegie15 (-2=.)(15=1)(16=2)
+(1,522 changes made to carnegie15)
+
+. label define c15 1 "R1 University" 2 "R2 University" 3 "All Others"
+
+. label values carnegie15 c15
+
+. 
+. ** HBCU var
+. clonevar hbcu = historicallyblackcollegeoruniver
+(49 missing values generated)
+
+. recode hbcu (2=0)
+(6,804 changes made to hbcu)
+
+. label define yesno 1 "Yes" 0 "No"
+
+. label values hbcu yesno
+
+. 
+. ** Institution size
+. recode institutionsizecategoryhd2015 institutionsizecategoryhd2016 institutionsizecategoryhd
+> 2017 institutionsizecategoryhd2018 institutionsizecategoryhd2019 institutionsizecategoryhd20
+> 20 institutionsizecategoryhd2021 institutionsizecategoryhd2022 institutionsizecategoryhd2023
+>  (-1 -2 . =0)
+(6,417 changes made to institutionsizecategoryhd2015)
+(6,416 changes made to institutionsizecategoryhd2016)
+(6,411 changes made to institutionsizecategoryhd2017)
+(6,410 changes made to institutionsizecategoryhd2018)
+(6,410 changes made to institutionsizecategoryhd2019)
+(6,432 changes made to institutionsizecategoryhd2020)
+(6,432 changes made to institutionsizecategoryhd2021)
+(6,408 changes made to institutionsizecategoryhd2022)
+(6,410 changes made to institutionsizecategoryhd2023)
+
+. 
+. gen size = (institutionsizecategoryhd2015 + institutionsizecategoryhd2016 + institutionsizec
+> ategoryhd2017 + institutionsizecategoryhd2018 + institutionsizecategoryhd2019 + institutions
+> izecategoryhd2020 + institutionsizecategoryhd2021 + institutionsizecategoryhd2022 + institut
+> ionsizecategoryhd2023)
+
+. 
+. recode size (0=.)
+(74 changes made to size)
+
+. 
+. ** State
+. gen state = (stateabbreviationhd2015 + stateabbreviationhd2016 + stateabbreviationhd2017 + s
+> tateabbreviationhd2018 + stateabbreviationhd2019 + stateabbreviationhd2020 + stateabbreviati
+> onhd2021 + stateabbreviationhd2022 + stateabbreviationhd2023)
+(49 missing values generated)
+
+. *
+. replace state = "PA" if unitid==214591 | unitid==214607 | unitid==214625 | unitid==214634 | 
+> unitid==214643 | unitid==214652 | unitid==214670 | unitid==214689 | unitid==214698 | unitid=
+> =214704 | unitid==214713 | unitid==214731 | unitid==214740 | unitid==214759 | unitid==214768
+>  | unitid==214777 | unitid==214786 | unitid==214795 | unitid==214801 | unitid==214810 | unit
+> id==214829 | unitid==479956 | unitid==498562 | unitid==498571
+(36 real changes made)
+
+. replace state = "IN" if unitid==463056 | unitid==488800
+(18 real changes made)
+
+. replace state = "CA" if unitid==489779
+(9 real changes made)
+
+. replace state = "TX" if unitid==490805 
+(9 real changes made)
+
+. replace state = "CT" if unitid==491288
+(9 real changes made)
+
+. replace state = "WI" if unitid==491297 | unitid==492689 
+(11 real changes made)
+
+. *
+. replace state = "Alabama" if state == "AL"
+variable state was str2 now str7
+(126 real changes made)
+
+. replace state = "California" if state == "CA"
+variable state was str7 now str10
+(468 real changes made)
+
+. replace state = "Florida" if state == "FL"
+(369 real changes made)
+
+. replace state = "Georgia" if state == "GA"
+(243 real changes made)
+
+. replace state = "Illinois" if state == "IL"
+(108 real changes made)
+
+. replace state = "Maryland" if state == "MD"
+(126 real changes made)
+
+. replace state = "Massachusetts" if state == "MA"
+variable state was str10 now str13
+(135 real changes made)
+
+. replace state = "Michigan" if state == "MI"
+(189 real changes made)
+
+. replace state = "New York" if state == "NY"
+(405 real changes made)
+
+. replace state = "North Carolina" if state == "NC"
+variable state was str13 now str14
+(153 real changes made)
+
+. replace state = "Ohio" if state == "OH"
+(423 real changes made)
+
+. replace state = "Pennsylvania" if state == "PA"
+(351 real changes made)
+
+. replace state = "Texas" if state == "TX"
+(567 real changes made)
+
+. replace state = "Virginia" if state == "VA"
+(144 real changes made)
+
+. replace state = "D.C." if state == "DC"
+(9 real changes made)
+
+. replace state = "Wisconsin" if state == "WI"
+(153 real changes made)
+
+. 
+. 
+. keep unitid institutionname year state size hbcu carnegie15
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+.                       **** Labeling Variables ****
+. ********************************************************************************
+. ********************************************************************************
+.                                           
+. label variable unitid "Institution ID"
+
+. label variable year "Year"
+
+. label variable state "State"
+
+. label variable size "Institution Size Category"
+
+. label variable carnegie15 "Carnegie Classification 2015"
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Ch
+> ar\1b Clean Institutional Characteristics 2015-2023.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst
+    Char\1b Clean Institutional Characteristics 2015-2023.dta saved
+
+. 
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Fa
+> culty\1b Clean Institutional Characteristics 2015-2023.log
+  log type:  text
+ closed on:  28 Jan 2025, 21:39:47
+----------------------------------------------------------------------------------------------

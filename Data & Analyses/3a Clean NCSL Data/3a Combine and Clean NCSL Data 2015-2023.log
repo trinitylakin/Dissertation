@@ -1,0 +1,344 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\3a Combine and C
+> lean NCSL Data 2015-2023.log
+  log type:  text
+ opened on:   1 Feb 2025, 11:41:50
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+.                 *** Save Yearly NCSL Data Files ***
+. *******************************************************************************
+. *******************************************************************************
+. 
+. ** 2015
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2015.xlsx", sheet("Table 1") firstrow
+(13 vars, 61 obs)
+
+. gen year = 2015
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2015.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2015.dta
+    saved
+
+. clear
+
+. ** 2016
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2016.xlsx", sheet("Table 1") firstrow
+(13 vars, 60 obs)
+
+. gen year = 2016
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2016.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2016.dta
+    saved
+
+. clear
+
+. ** 2017
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2017.xlsx", sheet("Table 1") firstrow
+(13 vars, 61 obs)
+
+. gen year = 2017
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2017.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2017.dta
+    saved
+
+. clear
+
+. ** 2018
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2018.xlsx", sheet("Table 1") firstrow
+(13 vars, 61 obs)
+
+. gen year = 2018
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2018.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2018.dta
+    saved
+
+. clear
+
+. ** 2019
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2019.xlsx", sheet("Table 1") firstrow
+(13 vars, 60 obs)
+
+. gen year = 2019
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2019.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2019.dta
+    saved
+
+. clear
+
+. ** 2020
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2020.xlsx", sheet("Table 1") firstrow
+(13 vars, 60 obs)
+
+. gen year = 2020
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2020.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2020.dta
+    saved
+
+. clear
+
+. ** 2021
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2021.xlsx", sheet("Table 1") firstrow
+(14 vars, 60 obs)
+
+. gen year = 2021
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2021.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2021.dta
+    saved
+
+. clear
+
+. ** 2022
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2022.xlsx", sheet("Table 1") firstrow
+(14 vars, 60 obs)
+
+. gen year = 2022
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2022.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2022.dta
+    saved
+
+. clear
+
+. ** 2023
+. import excel "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\partisan cont
+> rol 2023.xlsx", sheet("Table 1") firstrow
+(14 vars, 60 obs)
+
+. gen year = 2023
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2023.dta
+> ", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2023.dta
+    saved
+
+. clear
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+.                 *** Combine and Clean Yearly NCSL Data ***
+. *******************************************************************************
+. *******************************************************************************
+. 
+. ** 2015 & 2016
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\Yearly files\2015.dta"
+
+. 
+.  merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party com
+> p\Yearly files\2016.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           121
+        from master                        61  
+        from using                         60  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2017
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2017.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           182
+        from master                       121  
+        from using                         61  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2018
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2018.dta", nogenerate
+(variable LegisControl was str5, now str7 to accommodate using data's values)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           243
+        from master                       182  
+        from using                         61  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2019
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2019.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           303
+        from master                       243  
+        from using                         60  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2020
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2020.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           363
+        from master                       303  
+        from using                         60  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2021
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2021.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           423
+        from master                       363  
+        from using                         60  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2022
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2022.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           483
+        from master                       423  
+        from using                         60  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ** & 2023
+. merge m:m STATE year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp
+> \Yearly files\2023.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           543
+        from master                       483  
+        from using                         60  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. ***********
+. 
+. ***Cleaning Dataset ***
+. 
+. drop if TotalSeats==.
+(84 observations deleted)
+
+. rename STATE state
+
+. replace state = "Alaska" if state=="Alaska*"
+(2 real changes made)
+
+. replace state = "New York" if state=="New York*"
+(1 real change made)
+
+. replace state = "Vermont" if state=="Vermont*"
+(2 real changes made)
+
+. replace state = "Washington" if state=="Washington*"
+(1 real change made)
+
+. 
+. gen legislature1 = (LegisControl+LegControl)
+
+. encode legislature1, gen (party_legis)
+
+. recode party_legis (2=1)(5 6 =2)(7=3)
+(292 changes made to party_legis)
+
+. label define legis 1 "Democrat" 2 "Republican" 3 "Split" 4 "N/A"
+
+. label values party_legis legis
+
+. 
+. encode GovParty, gen (party_gov)
+
+. recode party_gov (2=4)(3=2)
+(267 changes made to party_gov)
+
+. recode party_gov (4=3)
+(4 changes made to party_gov)
+
+. label define gov 1 "Democrat" 2 "Republican" 3 "Independent"
+
+. label values party_gov gov
+
+. 
+. gen party_demprop = ((HouseDem+SenateDem)/TotalSeats)
+(18 missing values generated)
+
+. 
+. keep state year party_demprop party_legis party_gov
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+.                       **** Labeling Variables ****
+. ********************************************************************************
+. ********************************************************************************
+. 
+. label variable state "State"
+
+. label variable year "Year"
+
+. label variable party_legis "Partisan Control of State Legislature"
+
+. label variable party_gov "Governor Party Affiliation"
+
+. label variable party_demprop "Democratic Representation in State Legislature"
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+. 
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\3a Clean NCSL Data 20
+> 15-2023", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\3a Clean NCSL Data
+    2015-2023.dta saved
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\NCSL party comp\3a Combine and C
+> lean NCSL Data 2015-2023.log
+  log type:  text
+ closed on:   1 Feb 2025, 11:41:51
+----------------------------------------------------------------------------------------------

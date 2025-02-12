@@ -1,0 +1,205 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 
+> Merge Faculty and IC Data 2015-2023.log
+  log type:  text
+ opened on:   1 Feb 2025, 11:29:32
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Cha
+> r\1b Clean Institutional Characteristics 2015-2023.dta"
+
+. 
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\1a Clean Faculty 2015-2023 Condensed Races.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                           181
+        from master                       181  
+        from using                          0  
+
+    Matched                             7,028  
+    -----------------------------------------
+
+. 
+. replace state = "Alabama" if state == "AL"
+(0 real changes made)
+
+. replace state = "Alaska" if state == "AK"
+(36 real changes made)
+
+. replace state = "Arizona" if state == "AZ"
+(90 real changes made)
+
+. replace state = "Arkansas" if state == "AR"
+(101 real changes made)
+
+. replace state = "California" if state == "CA"
+(0 real changes made)
+
+. replace state = "Colorado" if state == "CO"
+(216 real changes made)
+
+. replace state = "Connecticut" if state == "CT"
+(99 real changes made)
+
+. replace state = "Delaware" if state == "DE"
+(27 real changes made)
+
+. replace state = "Florida" if state == "FL"
+(0 real changes made)
+
+. replace state = "Georgia" if state == "GA"
+(0 real changes made)
+
+. replace state = "Hawaii" if state == "HI"
+(36 real changes made)
+
+. replace state = "Idaho" if state == "ID"
+(45 real changes made)
+
+. replace state = "Illinois" if state == "IL"
+(0 real changes made)
+
+. replace state = "Indiana" if state == "IN"
+(135 real changes made)
+
+. replace state = "Iowa" if state == "IA"
+(27 real changes made)
+
+. replace state = "Kansas" if state == "KS"
+(79 real changes made)
+
+. replace state = "Kentucky" if state == "KY"
+(72 real changes made)
+
+. replace state = "Louisiana" if state == "LA"
+(153 real changes made)
+
+. replace state = "Maine" if state == "ME"
+(63 real changes made)
+
+. replace state = "Maryland" if state == "MD"
+(0 real changes made)
+
+. replace state = "Massachusetts" if state == "MA"
+(0 real changes made)
+
+. replace state = "Michigan" if state == "MI"
+(0 real changes made)
+
+. replace state = "Minnesota" if state == "MN"
+(117 real changes made)
+
+. replace state = "Mississippi" if state == "MS"
+(72 real changes made)
+
+. replace state = "Missouri" if state == "MO"
+(135 real changes made)
+
+. replace state = "Montana" if state == "MT"
+(81 real changes made)
+
+. replace state = "Nebraska" if state == "NE"
+(72 real changes made)
+
+. replace state = "Nevada" if state == "NV"
+(63 real changes made)
+
+. replace state = "New Hampshire" if state == "NH"
+(54 real changes made)
+
+. replace state = "New Jersey" if state == "NJ"
+(117 real changes made)
+
+. replace state = "New Mexico" if state == "NM"
+(81 real changes made)
+
+. replace state = "New York" if state == "NY"
+(0 real changes made)
+
+. replace state = "North Carolina" if state == "NC"
+(0 real changes made)
+
+. replace state = "North Dakota" if state == "ND"
+(81 real changes made)
+
+. replace state = "Ohio" if state == "OH"
+(0 real changes made)
+
+. replace state = "Oklahoma" if state == "OK"
+(153 real changes made)
+
+. replace state = "Oregon" if state == "OR"
+(99 real changes made)
+
+. replace state = "Pennsylvania" if state == "PA"
+(0 real changes made)
+
+. replace state = "Rhode Island" if state == "RI"
+(18 real changes made)
+
+. replace state = "South Carolina" if state == "SC"
+(126 real changes made)
+
+. replace state = "South Dakota" if state == "SD"
+(81 real changes made)
+
+. replace state = "Tennessee" if state == "TN"
+(99 real changes made)
+
+. replace state = "Texas" if state == "TX"
+(0 real changes made)
+
+. replace state = "Utah" if state == "UT"
+(63 real changes made)
+
+. replace state = "Vermont" if state == "VT"
+(36 real changes made)
+
+. replace state = "Virginia" if state == "VA"
+(0 real changes made)
+
+. replace state = "Washington" if state == "WA"
+(351 real changes made)
+
+. replace state = "West Virginia" if state == "WV"
+(117 real changes made)
+
+. replace state = "Wisconsin" if state == "WI"
+(0 real changes made)
+
+. replace state = "Wyoming" if state == "WY"
+(45 real changes made)
+
+. replace state = "D.C." if state == "DC"
+(0 real changes made)
+
+. 
+. drop if state==""
+(0 observations deleted)
+
+. 
+. drop if t_total==.
+(181 observations deleted)
+
+. 
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merge
+> d Faculty and IC Data 2015-2023.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merged
+    Faculty and IC Data 2015-2023.dta saved
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 
+> Merge Faculty and IC Data 2015-2023.log
+  log type:  text
+ closed on:   1 Feb 2025, 11:29:32
+----------------------------------------------------------------------------------------------

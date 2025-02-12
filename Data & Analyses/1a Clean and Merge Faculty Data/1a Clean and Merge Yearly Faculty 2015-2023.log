@@ -1,0 +1,4498 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Fa
+> culty\1a Clean and Merge Yearly Faculty 2015-2023.log
+  log type:  text
+ opened on:   1 Feb 2025, 11:29:10
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+.                       **** Cleaning Yearly Files ****
+. *******************************************************************************
+. *******************************************************************************
+. 
+. * 2015
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2015.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2015_is_rv
+> fulltimeinstr asianwomens2015_is_rvfulltimeins blackorafricanamericanmens2015_i blackorafric
+> anamericanwomens2015 hispanicorlatinomens2015_is_rvfu hispanicorlatinowomens2015_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2015_is_rvfulltimeinstr whitewomens2015_is_rvfullti
+> meins twoormoreracesmens2015_is_rvfull twoormoreraceswomens2015_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2015_is_rvallfulltimein asianwomens2015_is_rvallfulltime v49 v50 hispanicor
+> latinomens2015_is_rval v52 v53 v54 whitemens2015_is_rvallfulltimein whitewomens2015_is_rvall
+> fulltime twoormoreracesmens2015_is_rvallf twoormoreraceswomens2015_is_rval v59 (.=0)
+(100 changes made to americanindianoralaskanativemens)
+(100 changes made to americanindianoralaskanativewome)
+(100 changes made to asianmens2015_is_rvfulltimeinstr)
+(100 changes made to asianwomens2015_is_rvfulltimeins)
+(100 changes made to blackorafricanamericanmens2015_i)
+(100 changes made to blackorafricanamericanwomens2015)
+(100 changes made to hispanicorlatinomens2015_is_rvfu)
+(100 changes made to hispanicorlatinowomens2015_is_rv)
+(100 changes made to nativehawaiianorotherpacificisla)
+(100 changes made to v12)
+(100 changes made to whitemens2015_is_rvfulltimeinstr)
+(100 changes made to whitewomens2015_is_rvfulltimeins)
+(100 changes made to twoormoreracesmens2015_is_rvfull)
+(100 changes made to twoormoreraceswomens2015_is_rvfu)
+(92 changes made to v17)
+(92 changes made to v18)
+(92 changes made to v19)
+(92 changes made to v20)
+(92 changes made to v21)
+(92 changes made to v22)
+(92 changes made to v23)
+(92 changes made to v24)
+(92 changes made to v25)
+(92 changes made to v26)
+(92 changes made to v27)
+(92 changes made to v28)
+(92 changes made to v29)
+(92 changes made to v30)
+(42 changes made to v31)
+(42 changes made to v32)
+(42 changes made to v33)
+(42 changes made to v34)
+(42 changes made to v35)
+(42 changes made to v36)
+(42 changes made to v37)
+(42 changes made to v38)
+(42 changes made to v39)
+(42 changes made to v40)
+(42 changes made to v41)
+(42 changes made to v42)
+(42 changes made to v43)
+(42 changes made to v44)
+(17 changes made to v45)
+(17 changes made to v46)
+(17 changes made to asianmens2015_is_rvallfulltimein)
+(17 changes made to asianwomens2015_is_rvallfulltime)
+(17 changes made to v49)
+(17 changes made to v50)
+(17 changes made to hispanicorlatinomens2015_is_rval)
+(17 changes made to v52)
+(17 changes made to v53)
+(17 changes made to v54)
+(17 changes made to whitemens2015_is_rvallfulltimein)
+(17 changes made to whitewomens2015_is_rvallfulltime)
+(17 changes made to twoormoreracesmens2015_is_rvallf)
+(17 changes made to twoormoreraceswomens2015_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2015_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2015_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2015_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2015_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2015_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2015
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2015_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2015_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2015_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2015_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2015_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2015_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2015_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2015_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2015_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2015_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2015_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  sum(w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  sum(m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(0 observations deleted)
+
+. *
+. *
+. gen t_tenured =  sum(m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t +
+>  m_hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  sum(m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_
+> black_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m
+> _multi_tt + w_multi_tt)
+
+. gen t_notontt =  sum(m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w
+> _black_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white
+> _ntt + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2015.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2015.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2016
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2016.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2016_is_rv
+> fulltimeinstr asianwomens2016_is_rvfulltimeins blackorafricanamericanmens2016_i blackorafric
+> anamericanwomens2016 hispanicorlatinomens2016_is_rvfu hispanicorlatinowomens2016_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2016_is_rvfulltimeinstr whitewomens2016_is_rvfullti
+> meins twoormoreracesmens2016_is_rvfull twoormoreraceswomens2016_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2016_is_rvallfulltimein asianwomens2016_is_rvallfulltime v49 v50 hispanicor
+> latinomens2016_is_rval v52 v53 v54 whitemens2016_is_rvallfulltimein whitewomens2016_is_rvall
+> fulltime twoormoreracesmens2016_is_rvallf twoormoreraceswomens2016_is_rval v59 (.=0)
+(102 changes made to americanindianoralaskanativemens)
+(102 changes made to americanindianoralaskanativewome)
+(102 changes made to asianmens2016_is_rvfulltimeinstr)
+(102 changes made to asianwomens2016_is_rvfulltimeins)
+(102 changes made to blackorafricanamericanmens2016_i)
+(102 changes made to blackorafricanamericanwomens2016)
+(102 changes made to hispanicorlatinomens2016_is_rvfu)
+(102 changes made to hispanicorlatinowomens2016_is_rv)
+(102 changes made to nativehawaiianorotherpacificisla)
+(102 changes made to v12)
+(102 changes made to whitemens2016_is_rvfulltimeinstr)
+(102 changes made to whitewomens2016_is_rvfulltimeins)
+(102 changes made to twoormoreracesmens2016_is_rvfull)
+(102 changes made to twoormoreraceswomens2016_is_rvfu)
+(94 changes made to v17)
+(94 changes made to v18)
+(94 changes made to v19)
+(94 changes made to v20)
+(94 changes made to v21)
+(94 changes made to v22)
+(94 changes made to v23)
+(94 changes made to v24)
+(94 changes made to v25)
+(94 changes made to v26)
+(94 changes made to v27)
+(94 changes made to v28)
+(94 changes made to v29)
+(94 changes made to v30)
+(42 changes made to v31)
+(42 changes made to v32)
+(42 changes made to v33)
+(42 changes made to v34)
+(42 changes made to v35)
+(42 changes made to v36)
+(42 changes made to v37)
+(42 changes made to v38)
+(42 changes made to v39)
+(42 changes made to v40)
+(42 changes made to v41)
+(42 changes made to v42)
+(42 changes made to v43)
+(42 changes made to v44)
+(18 changes made to v45)
+(18 changes made to v46)
+(18 changes made to asianmens2016_is_rvallfulltimein)
+(18 changes made to asianwomens2016_is_rvallfulltime)
+(18 changes made to v49)
+(18 changes made to v50)
+(18 changes made to hispanicorlatinomens2016_is_rval)
+(18 changes made to v52)
+(18 changes made to v53)
+(18 changes made to v54)
+(18 changes made to whitemens2016_is_rvallfulltimein)
+(18 changes made to whitewomens2016_is_rvallfulltime)
+(18 changes made to twoormoreracesmens2016_is_rvallf)
+(18 changes made to twoormoreraceswomens2016_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2016_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2016_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2016_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2016_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2016_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2016
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2016_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2016_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2016_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2016_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2016_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2016_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2016_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2016_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2016_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2016_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2016_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(19 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2016.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2016.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2017
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2017.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2017_is_rv
+> fulltimeinstr asianwomens2017_is_rvfulltimeins blackorafricanamericanmens2017_i blackorafric
+> anamericanwomens2017 hispanicorlatinomens2017_is_rvfu hispanicorlatinowomens2017_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2017_is_rvfulltimeinstr whitewomens2017_is_rvfullti
+> meins twoormoreracesmens2017_is_rvfull twoormoreraceswomens2017_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2017_is_rvallfulltimein asianwomens2017_is_rvallfulltime v49 v50 hispanicor
+> latinomens2017_is_rval v52 v53 v54 whitemens2017_is_rvallfulltimein whitewomens2017_is_rvall
+> fulltime twoormoreracesmens2017_is_rvallf twoormoreraceswomens2017_is_rval v59 (.=0)
+(101 changes made to americanindianoralaskanativemens)
+(101 changes made to americanindianoralaskanativewome)
+(101 changes made to asianmens2017_is_rvfulltimeinstr)
+(101 changes made to asianwomens2017_is_rvfulltimeins)
+(101 changes made to blackorafricanamericanmens2017_i)
+(101 changes made to blackorafricanamericanwomens2017)
+(101 changes made to hispanicorlatinomens2017_is_rvfu)
+(101 changes made to hispanicorlatinowomens2017_is_rv)
+(101 changes made to nativehawaiianorotherpacificisla)
+(101 changes made to v12)
+(101 changes made to whitemens2017_is_rvfulltimeinstr)
+(101 changes made to whitewomens2017_is_rvfulltimeins)
+(101 changes made to twoormoreracesmens2017_is_rvfull)
+(101 changes made to twoormoreraceswomens2017_is_rvfu)
+(89 changes made to v17)
+(89 changes made to v18)
+(89 changes made to v19)
+(89 changes made to v20)
+(89 changes made to v21)
+(89 changes made to v22)
+(89 changes made to v23)
+(89 changes made to v24)
+(89 changes made to v25)
+(89 changes made to v26)
+(89 changes made to v27)
+(89 changes made to v28)
+(89 changes made to v29)
+(89 changes made to v30)
+(46 changes made to v31)
+(46 changes made to v32)
+(46 changes made to v33)
+(46 changes made to v34)
+(46 changes made to v35)
+(46 changes made to v36)
+(46 changes made to v37)
+(46 changes made to v38)
+(46 changes made to v39)
+(46 changes made to v40)
+(46 changes made to v41)
+(46 changes made to v42)
+(46 changes made to v43)
+(46 changes made to v44)
+(17 changes made to v45)
+(17 changes made to v46)
+(17 changes made to asianmens2017_is_rvallfulltimein)
+(17 changes made to asianwomens2017_is_rvallfulltime)
+(17 changes made to v49)
+(17 changes made to v50)
+(17 changes made to hispanicorlatinomens2017_is_rval)
+(17 changes made to v52)
+(17 changes made to v53)
+(17 changes made to v54)
+(17 changes made to whitemens2017_is_rvallfulltimein)
+(17 changes made to whitewomens2017_is_rvallfulltime)
+(17 changes made to twoormoreracesmens2017_is_rvallf)
+(17 changes made to twoormoreraceswomens2017_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2017_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2017_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2017_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2017_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2017_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2017
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2017_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2017_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2017_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2017_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2017_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2017_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2017_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2017_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2017_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2017_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2017_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(17 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2017.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2017.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2018
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2018.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2018_is_rv
+> fulltimeinstr asianwomens2018_is_rvfulltimeins blackorafricanamericanmens2018_i blackorafric
+> anamericanwomens2018 hispanicorlatinomens2018_is_rvfu hispanicorlatinowomens2018_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2018_is_rvfulltimeinstr whitewomens2018_is_rvfullti
+> meins twoormoreracesmens2018_is_rvfull twoormoreraceswomens2018_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2018_is_rvallfulltimein asianwomens2018_is_rvallfulltime v49 v50 hispanicor
+> latinomens2018_is_rval v52 v53 v54 whitemens2018_is_rvallfulltimein whitewomens2018_is_rvall
+> fulltime twoormoreracesmens2018_is_rvallf twoormoreraceswomens2018_is_rval v59 (.=0)
+(102 changes made to americanindianoralaskanativemens)
+(102 changes made to americanindianoralaskanativewome)
+(102 changes made to asianmens2018_is_rvfulltimeinstr)
+(102 changes made to asianwomens2018_is_rvfulltimeins)
+(102 changes made to blackorafricanamericanmens2018_i)
+(102 changes made to blackorafricanamericanwomens2018)
+(102 changes made to hispanicorlatinomens2018_is_rvfu)
+(102 changes made to hispanicorlatinowomens2018_is_rv)
+(102 changes made to nativehawaiianorotherpacificisla)
+(102 changes made to v12)
+(102 changes made to whitemens2018_is_rvfulltimeinstr)
+(102 changes made to whitewomens2018_is_rvfulltimeins)
+(102 changes made to twoormoreracesmens2018_is_rvfull)
+(102 changes made to twoormoreraceswomens2018_is_rvfu)
+(90 changes made to v17)
+(90 changes made to v18)
+(90 changes made to v19)
+(90 changes made to v20)
+(90 changes made to v21)
+(90 changes made to v22)
+(90 changes made to v23)
+(90 changes made to v24)
+(90 changes made to v25)
+(90 changes made to v26)
+(90 changes made to v27)
+(90 changes made to v28)
+(90 changes made to v29)
+(90 changes made to v30)
+(36 changes made to v31)
+(36 changes made to v32)
+(36 changes made to v33)
+(36 changes made to v34)
+(36 changes made to v35)
+(36 changes made to v36)
+(36 changes made to v37)
+(36 changes made to v38)
+(36 changes made to v39)
+(36 changes made to v40)
+(36 changes made to v41)
+(36 changes made to v42)
+(36 changes made to v43)
+(36 changes made to v44)
+(13 changes made to v45)
+(13 changes made to v46)
+(13 changes made to asianmens2018_is_rvallfulltimein)
+(13 changes made to asianwomens2018_is_rvallfulltime)
+(13 changes made to v49)
+(13 changes made to v50)
+(13 changes made to hispanicorlatinomens2018_is_rval)
+(13 changes made to v52)
+(13 changes made to v53)
+(13 changes made to v54)
+(13 changes made to whitemens2018_is_rvallfulltimein)
+(13 changes made to whitewomens2018_is_rvallfulltime)
+(13 changes made to twoormoreracesmens2018_is_rvallf)
+(13 changes made to twoormoreraceswomens2018_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2018_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2018_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2018_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2018_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2018_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2018
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2018_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2018_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2018_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2018_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2018_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2018_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2018_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2018_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2018_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2018_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2018_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(14 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2018.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2018.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2019
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2019.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2019_is_rv
+> fulltimeinstr asianwomens2019_is_rvfulltimeins blackorafricanamericanmens2019_i blackorafric
+> anamericanwomens2019 hispanicorlatinomens2019_is_rvfu hispanicorlatinowomens2019_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2019_is_rvfulltimeinstr whitewomens2019_is_rvfullti
+> meins twoormoreracesmens2019_is_rvfull twoormoreraceswomens2019_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2019_is_rvallfulltimein asianwomens2019_is_rvallfulltime v49 v50 hispanicor
+> latinomens2019_is_rval v52 v53 v54 whitemens2019_is_rvallfulltimein whitewomens2019_is_rvall
+> fulltime twoormoreracesmens2019_is_rvallf twoormoreraceswomens2019_is_rval v59 (.=0)
+(120 changes made to americanindianoralaskanativemens)
+(120 changes made to americanindianoralaskanativewome)
+(120 changes made to asianmens2019_is_rvfulltimeinstr)
+(120 changes made to asianwomens2019_is_rvfulltimeins)
+(120 changes made to blackorafricanamericanmens2019_i)
+(120 changes made to blackorafricanamericanwomens2019)
+(120 changes made to hispanicorlatinomens2019_is_rvfu)
+(120 changes made to hispanicorlatinowomens2019_is_rv)
+(120 changes made to nativehawaiianorotherpacificisla)
+(120 changes made to v12)
+(120 changes made to whitemens2019_is_rvfulltimeinstr)
+(120 changes made to whitewomens2019_is_rvfulltimeins)
+(120 changes made to twoormoreracesmens2019_is_rvfull)
+(120 changes made to twoormoreraceswomens2019_is_rvfu)
+(108 changes made to v17)
+(108 changes made to v18)
+(108 changes made to v19)
+(108 changes made to v20)
+(108 changes made to v21)
+(108 changes made to v22)
+(108 changes made to v23)
+(108 changes made to v24)
+(108 changes made to v25)
+(108 changes made to v26)
+(108 changes made to v27)
+(108 changes made to v28)
+(108 changes made to v29)
+(108 changes made to v30)
+(60 changes made to v31)
+(60 changes made to v32)
+(60 changes made to v33)
+(60 changes made to v34)
+(60 changes made to v35)
+(60 changes made to v36)
+(60 changes made to v37)
+(60 changes made to v38)
+(60 changes made to v39)
+(60 changes made to v40)
+(60 changes made to v41)
+(60 changes made to v42)
+(60 changes made to v43)
+(60 changes made to v44)
+(34 changes made to v45)
+(34 changes made to v46)
+(34 changes made to asianmens2019_is_rvallfulltimein)
+(34 changes made to asianwomens2019_is_rvallfulltime)
+(34 changes made to v49)
+(34 changes made to v50)
+(34 changes made to hispanicorlatinomens2019_is_rval)
+(34 changes made to v52)
+(34 changes made to v53)
+(34 changes made to v54)
+(34 changes made to whitemens2019_is_rvallfulltimein)
+(34 changes made to whitewomens2019_is_rvallfulltime)
+(34 changes made to twoormoreracesmens2019_is_rvallf)
+(34 changes made to twoormoreraceswomens2019_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2019_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2019_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2019_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2019_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2019_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2019
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2019_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2019_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2019_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2019_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2019_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2019_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2019_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2019_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2019_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2019_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2019_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(34 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2019.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2019.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2020
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2020.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2020_is_rv
+> fulltimeinstr asianwomens2020_is_rvfulltimeins blackorafricanamericanmens2020_i blackorafric
+> anamericanwomens2020 hispanicorlatinomens2020_is_rvfu hispanicorlatinowomens2020_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2020_is_rvfulltimeinstr whitewomens2020_is_rvfullti
+> meins twoormoreracesmens2020_is_rvfull twoormoreraceswomens2020_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2020_is_rvallfulltimein asianwomens2020_is_rvallfulltime v49 v50 hispanicor
+> latinomens2020_is_rval v52 v53 v54 whitemens2020_is_rvallfulltimein whitewomens2020_is_rvall
+> fulltime twoormoreracesmens2020_is_rvallf twoormoreraceswomens2020_is_rval v59 (.=0)
+(125 changes made to americanindianoralaskanativemens)
+(125 changes made to americanindianoralaskanativewome)
+(125 changes made to asianmens2020_is_rvfulltimeinstr)
+(125 changes made to asianwomens2020_is_rvfulltimeins)
+(125 changes made to blackorafricanamericanmens2020_i)
+(125 changes made to blackorafricanamericanwomens2020)
+(125 changes made to hispanicorlatinomens2020_is_rvfu)
+(125 changes made to hispanicorlatinowomens2020_is_rv)
+(125 changes made to nativehawaiianorotherpacificisla)
+(125 changes made to v12)
+(125 changes made to whitemens2020_is_rvfulltimeinstr)
+(125 changes made to whitewomens2020_is_rvfulltimeins)
+(125 changes made to twoormoreracesmens2020_is_rvfull)
+(125 changes made to twoormoreraceswomens2020_is_rvfu)
+(110 changes made to v17)
+(110 changes made to v18)
+(110 changes made to v19)
+(110 changes made to v20)
+(110 changes made to v21)
+(110 changes made to v22)
+(110 changes made to v23)
+(110 changes made to v24)
+(110 changes made to v25)
+(110 changes made to v26)
+(110 changes made to v27)
+(110 changes made to v28)
+(110 changes made to v29)
+(110 changes made to v30)
+(61 changes made to v31)
+(61 changes made to v32)
+(61 changes made to v33)
+(61 changes made to v34)
+(61 changes made to v35)
+(61 changes made to v36)
+(61 changes made to v37)
+(61 changes made to v38)
+(61 changes made to v39)
+(61 changes made to v40)
+(61 changes made to v41)
+(61 changes made to v42)
+(61 changes made to v43)
+(61 changes made to v44)
+(35 changes made to v45)
+(35 changes made to v46)
+(35 changes made to asianmens2020_is_rvallfulltimein)
+(35 changes made to asianwomens2020_is_rvallfulltime)
+(35 changes made to v49)
+(35 changes made to v50)
+(35 changes made to hispanicorlatinomens2020_is_rval)
+(35 changes made to v52)
+(35 changes made to v53)
+(35 changes made to v54)
+(35 changes made to whitemens2020_is_rvallfulltimein)
+(35 changes made to whitewomens2020_is_rvallfulltime)
+(35 changes made to twoormoreracesmens2020_is_rvallf)
+(35 changes made to twoormoreraceswomens2020_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2020_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2020_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2020_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2020_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2020_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2020
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2020_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2020_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2020_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2020_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2020_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2020_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2020_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2020_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2020_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2020_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2020_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(35 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2020.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2020.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2021
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2021.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2021_is_rv
+> fulltimeinstr asianwomens2021_is_rvfulltimeins blackorafricanamericanmens2021_i blackorafric
+> anamericanwomens2021 hispanicorlatinomens2021_is_rvfu hispanicorlatinowomens2021_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2021_is_rvfulltimeinstr whitewomens2021_is_rvfullti
+> meins twoormoreracesmens2021_is_rvfull twoormoreraceswomens2021_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2021_is_rvallfulltimein asianwomens2021_is_rvallfulltime v49 v50 hispanicor
+> latinomens2021_is_rval v52 v53 v54 whitemens2021_is_rvallfulltimein whitewomens2021_is_rvall
+> fulltime twoormoreracesmens2021_is_rvallf twoormoreraceswomens2021_is_rval v59 (.=0)
+(122 changes made to americanindianoralaskanativemens)
+(122 changes made to americanindianoralaskanativewome)
+(122 changes made to asianmens2021_is_rvfulltimeinstr)
+(122 changes made to asianwomens2021_is_rvfulltimeins)
+(122 changes made to blackorafricanamericanmens2021_i)
+(122 changes made to blackorafricanamericanwomens2021)
+(122 changes made to hispanicorlatinomens2021_is_rvfu)
+(122 changes made to hispanicorlatinowomens2021_is_rv)
+(122 changes made to nativehawaiianorotherpacificisla)
+(122 changes made to v12)
+(122 changes made to whitemens2021_is_rvfulltimeinstr)
+(122 changes made to whitewomens2021_is_rvfulltimeins)
+(122 changes made to twoormoreracesmens2021_is_rvfull)
+(122 changes made to twoormoreraceswomens2021_is_rvfu)
+(109 changes made to v17)
+(109 changes made to v18)
+(109 changes made to v19)
+(109 changes made to v20)
+(109 changes made to v21)
+(109 changes made to v22)
+(109 changes made to v23)
+(109 changes made to v24)
+(109 changes made to v25)
+(109 changes made to v26)
+(109 changes made to v27)
+(109 changes made to v28)
+(109 changes made to v29)
+(109 changes made to v30)
+(59 changes made to v31)
+(59 changes made to v32)
+(59 changes made to v33)
+(59 changes made to v34)
+(59 changes made to v35)
+(59 changes made to v36)
+(59 changes made to v37)
+(59 changes made to v38)
+(59 changes made to v39)
+(59 changes made to v40)
+(59 changes made to v41)
+(59 changes made to v42)
+(59 changes made to v43)
+(59 changes made to v44)
+(35 changes made to v45)
+(35 changes made to v46)
+(35 changes made to asianmens2021_is_rvallfulltimein)
+(35 changes made to asianwomens2021_is_rvallfulltime)
+(35 changes made to v49)
+(35 changes made to v50)
+(35 changes made to hispanicorlatinomens2021_is_rval)
+(35 changes made to v52)
+(35 changes made to v53)
+(35 changes made to v54)
+(35 changes made to whitemens2021_is_rvallfulltimein)
+(35 changes made to whitewomens2021_is_rvallfulltime)
+(35 changes made to twoormoreracesmens2021_is_rvallf)
+(35 changes made to twoormoreraceswomens2021_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2021_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2021_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2021_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2021_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2021_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2021
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2021_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2021_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2021_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2021_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2021_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2021_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2021_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2021_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2021_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2021_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2021_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(35 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2021.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2021.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2022
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2022.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2022_is_rv
+> fulltimeinstr asianwomens2022_is_rvfulltimeins blackorafricanamericanmens2022_i blackorafric
+> anamericanwomens2022 hispanicorlatinomens2022_is_rvfu hispanicorlatinowomens2022_is_rv nativ
+> ehawaiianorotherpacificisla v12 whitemens2022_is_rvfulltimeinstr whitewomens2022_is_rvfullti
+> meins twoormoreracesmens2022_is_rvfull twoormoreraceswomens2022_is_rvfu v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2022_is_rvallfulltimein asianwomens2022_is_rvallfulltime v49 v50 hispanicor
+> latinomens2022_is_rval v52 v53 v54 whitemens2022_is_rvallfulltimein whitewomens2022_is_rvall
+> fulltime twoormoreracesmens2022_is_rvallf twoormoreraceswomens2022_is_rval v59 (.=0)
+(102 changes made to americanindianoralaskanativemens)
+(102 changes made to americanindianoralaskanativewome)
+(102 changes made to asianmens2022_is_rvfulltimeinstr)
+(102 changes made to asianwomens2022_is_rvfulltimeins)
+(102 changes made to blackorafricanamericanmens2022_i)
+(102 changes made to blackorafricanamericanwomens2022)
+(102 changes made to hispanicorlatinomens2022_is_rvfu)
+(102 changes made to hispanicorlatinowomens2022_is_rv)
+(102 changes made to nativehawaiianorotherpacificisla)
+(102 changes made to v12)
+(102 changes made to whitemens2022_is_rvfulltimeinstr)
+(102 changes made to whitewomens2022_is_rvfulltimeins)
+(102 changes made to twoormoreracesmens2022_is_rvfull)
+(102 changes made to twoormoreraceswomens2022_is_rvfu)
+(87 changes made to v17)
+(87 changes made to v18)
+(87 changes made to v19)
+(87 changes made to v20)
+(87 changes made to v21)
+(87 changes made to v22)
+(87 changes made to v23)
+(87 changes made to v24)
+(87 changes made to v25)
+(87 changes made to v26)
+(87 changes made to v27)
+(87 changes made to v28)
+(87 changes made to v29)
+(87 changes made to v30)
+(34 changes made to v31)
+(34 changes made to v32)
+(34 changes made to v33)
+(34 changes made to v34)
+(34 changes made to v35)
+(34 changes made to v36)
+(34 changes made to v37)
+(34 changes made to v38)
+(34 changes made to v39)
+(34 changes made to v40)
+(34 changes made to v41)
+(34 changes made to v42)
+(34 changes made to v43)
+(34 changes made to v44)
+(12 changes made to v45)
+(12 changes made to v46)
+(12 changes made to asianmens2022_is_rvallfulltimein)
+(12 changes made to asianwomens2022_is_rvallfulltime)
+(12 changes made to v49)
+(12 changes made to v50)
+(12 changes made to hispanicorlatinomens2022_is_rval)
+(12 changes made to v52)
+(12 changes made to v53)
+(12 changes made to v54)
+(12 changes made to whitemens2022_is_rvallfulltimein)
+(12 changes made to whitewomens2022_is_rvallfulltime)
+(12 changes made to twoormoreracesmens2022_is_rvallf)
+(12 changes made to twoormoreraceswomens2022_is_rval)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2022_is_rvfulltimeinstr
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2022_is_rvallfulltimein
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2022_is_rvfulltimeins 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2022_is_rvallfulltime
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2022_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2022
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2022_is_rvfu
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2022_is_rval
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2022_is_rv
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = v52
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2022_is_rvfulltimeinstr
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2022_is_rvallfulltimein
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2022_is_rvfulltimeins
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2022_is_rvallfulltime
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2022_is_rvfull
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2022_is_rvallf
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2022_is_rvfu
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2022_is_rval
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(12 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_tt = ((w_asian_t + m_asian_t)/t_total)
+
+. gen p_asian_ntt = ((w_asian_t + m_asian_t)/t_total)
+
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_tt = ((w_black_t + m_black_t)/t_total)
+
+. gen p_black_ntt = ((w_black_t + m_black_t)/t_total)
+
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_tt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. gen p_hisp_ntt = ((w_hisp_t + m_hisp_t)/t_total)
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_tt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. gen p_pacific_ntt = ((w_pacific_t + m_pacific_t)/t_total)
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_tt = ((w_white_t + m_white_t)/t_total)
+
+. gen p_white_ntt = ((w_white_t + m_white_t)/t_total)
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_tt = ((w_multi_t + m_multi_t)/t_total)
+
+. gen p_multi_ntt = ((w_multi_t + m_multi_t)/t_total)
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2022.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2022.dta saved
+
+. clear
+
+. *******************************************************************************
+. * 2023
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Faculty 2023.dta"
+
+. *
+. recode americanindianoralaskanativemens americanindianoralaskanativewome asianmens2023_isful
+> ltimeinstruct asianwomens2023_isfulltimeinstru blackorafricanamericanmens2023_i blackorafric
+> anamericanwomens2023 hispanicorlatinomens2023_isfullt hispanicorlatinowomens2023_isful nativ
+> ehawaiianorotherpacificisla v12 whitemens2023_isfulltimeinstruct whitewomens2023_isfulltimei
+> nstru twoormoreracesmens2023_isfulltim twoormoreraceswomens2023_isfullt v17 v18 v19 v20 v21 
+> v22 v23 v24 v25 v26 v27 v28 v29 v30 v31 v32 v33 v34 v35 v36 v37 v38 v39 v40 v41 v42 v43 v44 
+> v45 v46 asianmens2023_isallfulltimeinstr asianwomens2023_isallfulltimeins v49 v50 hispanicor
+> latinomens2023_isallfu hispanicorlatinowomens2023_isall v53 v54 whitemens2023_isallfulltimei
+> nstr whitewomens2023_isallfulltimeins twoormoreracesmens2023_isallfull twoormoreraceswomens2
+> 023_isallfu v59 (.=0)
+(107 changes made to americanindianoralaskanativemens)
+(107 changes made to americanindianoralaskanativewome)
+(107 changes made to asianmens2023_isfulltimeinstruct)
+(107 changes made to asianwomens2023_isfulltimeinstru)
+(107 changes made to blackorafricanamericanmens2023_i)
+(107 changes made to blackorafricanamericanwomens2023)
+(107 changes made to hispanicorlatinomens2023_isfullt)
+(107 changes made to hispanicorlatinowomens2023_isful)
+(107 changes made to nativehawaiianorotherpacificisla)
+(107 changes made to v12)
+(107 changes made to whitemens2023_isfulltimeinstruct)
+(107 changes made to whitewomens2023_isfulltimeinstru)
+(107 changes made to twoormoreracesmens2023_isfulltim)
+(107 changes made to twoormoreraceswomens2023_isfullt)
+(88 changes made to v17)
+(88 changes made to v18)
+(88 changes made to v19)
+(88 changes made to v20)
+(88 changes made to v21)
+(88 changes made to v22)
+(88 changes made to v23)
+(88 changes made to v24)
+(88 changes made to v25)
+(88 changes made to v26)
+(88 changes made to v27)
+(88 changes made to v28)
+(88 changes made to v29)
+(88 changes made to v30)
+(38 changes made to v31)
+(38 changes made to v32)
+(38 changes made to v33)
+(38 changes made to v34)
+(38 changes made to v35)
+(38 changes made to v36)
+(38 changes made to v37)
+(38 changes made to v38)
+(38 changes made to v39)
+(38 changes made to v40)
+(38 changes made to v41)
+(38 changes made to v42)
+(38 changes made to v43)
+(38 changes made to v44)
+(15 changes made to v45)
+(15 changes made to v46)
+(15 changes made to asianmens2023_isallfulltimeinstr)
+(15 changes made to asianwomens2023_isallfulltimeins)
+(15 changes made to v49)
+(15 changes made to v50)
+(15 changes made to hispanicorlatinomens2023_isallfu)
+(15 changes made to hispanicorlatinowomens2023_isall)
+(15 changes made to v53)
+(15 changes made to v54)
+(15 changes made to whitemens2023_isallfulltimeinstr)
+(15 changes made to whitewomens2023_isallfulltimeins)
+(15 changes made to twoormoreracesmens2023_isallfull)
+(15 changes made to twoormoreraceswomens2023_isallfu)
+(801 changes made to v59)
+
+. *
+. gen m_natam_t =  v17
+
+. gen m_natam_tt =  americanindianoralaskanativemens
+
+. gen m_natam_ntt =  v31
+
+. gen m_natam =  v45
+
+. gen w_natam_t =  v18
+
+. gen w_natam_tt =  americanindianoralaskanativewome
+
+. gen w_natam_ntt =  v32
+
+. gen w_natam =  v46
+
+. gen t_natam =  (m_natam + w_natam)
+
+. *
+. gen m_asian_t =  v19
+
+. gen m_asian_tt =  asianmens2023_isfulltimeinstruct
+
+. gen m_asian_ntt =  v33
+
+. gen m_asian =  asianmens2023_isallfulltimeinstr
+
+. gen w_asian_t =  v20
+
+. gen w_asian_tt =  asianwomens2023_isfulltimeinstru 
+
+. gen w_asian_ntt =  v34
+
+. gen w_asian = asianwomens2023_isallfulltimeins
+
+. gen t_asian =  (m_asian + w_asian)
+
+. *
+. gen m_black_t = v21
+
+. gen m_black_tt = blackorafricanamericanmens2023_i
+
+. gen m_black_ntt = v35
+
+. gen m_black = v49
+
+. gen w_black_t = v22
+
+. gen w_black_tt = blackorafricanamericanwomens2023
+
+. gen w_black_ntt = v36
+
+. gen w_black = v50
+
+. gen t_black =  (m_black + w_black)
+
+. *
+. gen m_hisp_t = v23
+
+. gen m_hisp_tt = hispanicorlatinomens2023_isfullt
+
+. gen m_hisp_ntt = v37
+
+. gen m_hisp = hispanicorlatinomens2023_isallfu
+
+. gen w_hisp_t = v24
+
+. gen w_hisp_tt = hispanicorlatinowomens2023_isful
+
+. gen w_hisp_ntt = v38
+
+. gen w_hisp = hispanicorlatinowomens2023_isall
+
+. gen t_hisp =  (m_hisp + w_hisp)
+
+. *
+. gen m_pacific_t = v25
+
+. gen m_pacific_tt = nativehawaiianorotherpacificisla
+
+. gen m_pacific_ntt = v39
+
+. gen m_pacific = v53
+
+. gen w_pacific_t = v40
+
+. gen w_pacific_tt = v26
+
+. gen w_pacific_ntt = v12
+
+. gen w_pacific = v54
+
+. gen t_pacific =  (m_pacific + w_pacific)
+
+. *
+. gen m_white_t = v27
+
+. gen m_white_tt = whitemens2023_isfulltimeinstruct
+
+. gen m_white_ntt = v41
+
+. gen m_white = whitemens2023_isallfulltimeinstr
+
+. gen w_white_t = v28
+
+. gen w_white_tt = whitewomens2023_isfulltimeinstru
+
+. gen w_white_ntt = v42
+
+. gen w_white = whitewomens2023_isallfulltimeins
+
+. gen t_white =  (m_white + w_white)
+
+. *
+. gen m_multi_t = v29
+
+. gen m_multi_tt = twoormoreracesmens2023_isfulltim
+
+. gen m_multi_ntt = v43
+
+. gen m_multi = twoormoreracesmens2023_isallfull
+
+. gen w_multi_t = v30
+
+. gen w_multi_tt = twoormoreraceswomens2023_isfullt
+
+. gen w_multi_ntt = v44
+
+. gen w_multi = twoormoreraceswomens2023_isallfu
+
+. gen t_multi =  (m_multi + w_multi)
+
+. *
+. gen t_women =  (w_natam + w_asian + w_black + w_hisp + w_pacific + w_white + w_multi)
+
+. gen t_men =  (m_natam + m_asian + m_black + m_hisp + m_pacific + m_white + m_multi)
+
+. gen t_total =  (t_men + t_women)
+
+. drop if t_total<3
+(15 observations deleted)
+
+. *
+. gen t_tenured =  (m_natam_t + w_natam_t + m_asian_t + w_asian_t + m_black_t + w_black_t + m_
+> hisp_t + w_hisp_t + m_pacific_t + w_pacific_t + m_white_t + w_white_t + m_multi_t)
+
+. gen t_tenuretrack =  (m_natam_tt + w_natam_tt + m_asian_tt + w_asian_tt + m_black_tt + w_bla
+> ck_tt + m_hisp_tt + w_hisp_tt + m_pacific_tt + w_pacific_tt + m_white_tt + w_white_tt + m_mu
+> lti_tt + w_multi_tt)
+
+. gen t_notontt =  (m_natam_ntt + w_natam_ntt + m_asian_ntt + w_asian_ntt + m_black_ntt + w_bl
+> ack_ntt + m_hisp_ntt + w_hisp_ntt + m_pacific_ntt + w_pacific_ntt + m_white_ntt + w_white_nt
+> t + m_multi_ntt + w_multi_ntt)
+
+. *
+. gen p_women =  (t_women/t_total)
+
+. gen p_men =  (t_men/t_total)
+
+. *
+. gen p_tenured =  (t_tenured/t_total)
+
+. gen p_tenuretrack =  (t_tenuretrack/t_total)
+
+. gen p_notontt =  (t_notontt/t_total)
+
+. *
+. gen p_natam =  (t_natam/t_total)
+
+. gen p_natam_w =  (w_natam/t_total)
+
+. gen p_natam_m =  (m_natam/t_total)
+
+. gen p_natam_w_t = (w_natam_t/t_total)
+
+. gen p_natam_w_tt = (w_natam_tt/t_total)
+
+. gen p_natam_w_ntt = (w_natam_ntt/t_total)
+
+. gen p_natam_m_t = (m_natam_t/t_total)
+
+. gen p_natam_m_tt = (m_natam_tt/t_total)
+
+. gen p_natam_m_ntt = (m_natam_ntt/t_total)
+
+. gen p_natam_t = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_tt = ((w_natam_t + m_natam_t)/t_total)
+
+. gen p_natam_ntt = ((w_natam_t + m_natam_t)/t_total)
+
+. *
+. gen p_asian =  (t_asian/t_total)
+
+. gen p_asian_w =  (w_asian/t_total)
+
+. gen p_asian_m =  (m_asian/t_total)
+
+. gen p_asian_w_t = (w_asian_t/t_total)
+
+. gen p_asian_w_tt = (w_asian_tt/t_total)
+
+. gen p_asian_w_ntt = (w_asian_ntt/t_total)
+
+. gen p_asian_m_t = (m_asian_t/t_total)
+
+. gen p_asian_m_tt = (m_asian_tt/t_total)
+
+. gen p_asian_m_ntt = (m_asian_ntt/t_total)
+
+. gen p_asian_t = (w_asian_t + m_asian_t)/t_total
+
+. gen p_asian_tt = (w_asian_tt + m_asian_tt)/t_total
+
+. gen p_asian_ntt = (w_asian_ntt + m_asian_ntt)/t_total
+
+. *
+. *
+. gen p_black =  (t_black/t_total)
+
+. gen p_black_w =  (w_black/t_total)
+
+. gen p_black_m =  (m_black/t_total)
+
+. gen p_black_w_t = (w_black_t/t_total)
+
+. gen p_black_w_tt = (w_black_tt/t_total)
+
+. gen p_black_w_ntt = (w_black_ntt/t_total)
+
+. gen p_black_m_t = (m_black_t/t_total)
+
+. gen p_black_m_tt = (m_black_tt/t_total)
+
+. gen p_black_m_ntt = (m_black_ntt/t_total)
+
+. gen p_black_t = (w_black_t + m_black_t)/t_total
+
+. gen p_black_tt = (w_black_tt + m_black_tt)/t_total
+
+. gen p_black_ntt = (w_black_ntt + m_black_ntt)/t_total
+
+. 
+. *
+. gen p_hisp =  (t_hisp/t_total)
+
+. gen p_hisp_w =  (w_hisp/t_total)
+
+. gen p_hisp_m =  (m_hisp/t_total)
+
+. gen p_hisp_w_t = (w_hisp_t/t_total)
+
+. gen p_hisp_w_tt = (w_hisp_tt/t_total)
+
+. gen p_hisp_w_ntt = (w_hisp_ntt/t_total)
+
+. gen p_hisp_m_t = (m_hisp_t/t_total)
+
+. gen p_hisp_m_tt = (m_hisp_tt/t_total)
+
+. gen p_hisp_m_ntt = (m_hisp_ntt/t_total)
+
+. gen p_hisp_t = (w_hisp_t + m_hisp_t)/t_total
+
+. gen p_hisp_tt = (w_hisp_tt + m_hisp_tt)/t_total
+
+. gen p_hisp_ntt = (w_hisp_ntt + m_hisp_ntt)/t_total
+
+. *
+. gen p_pacific =  (t_pacific/t_total)
+
+. gen p_pacific_w =  (w_pacific/t_total)
+
+. gen p_pacific_m =  (m_pacific/t_total)
+
+. gen p_pacific_w_t = (w_pacific_t/t_total)
+
+. gen p_pacific_w_tt = (w_pacific_tt/t_total)
+
+. gen p_pacific_w_ntt = (w_pacific_ntt/t_total)
+
+. gen p_pacific_m_t = (m_pacific_t/t_total)
+
+. gen p_pacific_m_tt = (m_pacific_tt/t_total)
+
+. gen p_pacific_m_ntt = (m_pacific_ntt/t_total)
+
+. gen p_pacific_t = (w_pacific_t + m_pacific_t)/t_total
+
+. gen p_pacific_tt = (w_pacific_tt + m_pacific_tt)/t_total
+
+. gen p_pacific_ntt = (w_pacific_ntt + m_pacific_ntt)/t_total
+
+. *
+. gen p_white =  (t_white/t_total)
+
+. gen p_white_w =  (w_white/t_total)
+
+. gen p_white_m =  (m_white/t_total)
+
+. gen p_white_w_t = (w_white_t/t_total)
+
+. gen p_white_w_tt = (w_white_tt/t_total)
+
+. gen p_white_w_ntt = (w_white_ntt/t_total)
+
+. gen p_white_m_t = (m_white_t/t_total)
+
+. gen p_white_m_tt = (m_white_tt/t_total)
+
+. gen p_white_m_ntt = (m_white_ntt/t_total)
+
+. gen p_white_t = (w_white_t + m_white_t)/t_total
+
+. gen p_white_tt = (w_white_tt + m_white_tt)/t_total
+
+. gen p_white_ntt = (w_white_ntt + m_white_ntt)/t_total
+
+. *
+. gen p_multi =  (t_multi/t_total)
+
+. gen p_multi_w =  (w_multi/t_total)
+
+. gen p_multi_m =  (m_multi/t_total)
+
+. gen p_multi_w_t = (w_multi_t/t_total)
+
+. gen p_multi_w_tt = (w_multi_tt/t_total)
+
+. gen p_multi_w_ntt = (w_multi_ntt/t_total)
+
+. gen p_multi_m_t = (m_multi_t/t_total)
+
+. gen p_multi_m_tt = (m_multi_tt/t_total)
+
+. gen p_multi_m_ntt = (m_multi_ntt/t_total)
+
+. gen p_multi_t = (w_multi_t + m_multi_t)/t_total
+
+. gen p_multi_tt = (w_multi_tt + m_multi_tt)/t_total
+
+. gen p_multi_ntt = (w_multi_ntt + m_multi_ntt)/t_total
+
+. *
+. keep unitid institutionname year m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_
+> tt w_natam_ntt w_natam t_natam m_asian_t m_asian_tt m_asian_ntt m_asian w_asian_t w_asian_tt
+>  w_asian_ntt w_asian t_asian m_black_t m_black_tt m_black_ntt m_black w_black_t w_black_tt w
+> _black_ntt w_black t_black m_hisp_t m_hisp_tt m_hisp_ntt m_hisp w_hisp_t w_hisp_tt w_hisp_nt
+> t w_hisp t_hisp m_pacific_t m_pacific_tt m_pacific_ntt m_pacific w_pacific_t w_pacific_tt w_
+> pacific_ntt w_pacific t_pacific m_white_t m_white_tt m_white_ntt m_white w_white_t w_white_t
+> t w_white_ntt w_white t_white m_multi_t m_multi_tt m_multi_ntt m_multi w_multi_t w_multi_tt 
+> w_multi_ntt w_multi t_multi t_women t_men t_total t_tenured t_tenuretrack t_notontt p_women 
+> p_men p_tenured p_tenuretrack p_notontt p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt
+>  p_natam_w_ntt p_natam_m_t p_natam_m_tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt p_asi
+> an p_asian_w p_asian_m p_asian_w_t p_asian_w_tt p_asian_w_ntt p_asian_m_t p_asian_m_tt p_asi
+> an_m_ntt p_asian_t p_asian_tt p_asian_ntt p_black p_black_w p_black_m p_black_w_t p_black_w_
+> tt p_black_w_ntt p_black_m_t p_black_m_tt p_black_m_ntt p_black_t p_black_tt p_black_ntt p_h
+> isp p_hisp_w p_hisp_m p_hisp_w_t p_hisp_w_tt p_hisp_w_ntt p_hisp_m_t p_hisp_m_tt p_hisp_m_nt
+> t p_hisp_t p_hisp_tt p_hisp_ntt p_pacific p_pacific_w p_pacific_m p_pacific_w_t p_pacific_w_
+> tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_m_ntt p_pacific_t p_pacific_tt p_p
+> acific_ntt p_white p_white_w p_white_m p_white_w_t p_white_w_tt p_white_w_ntt p_white_m_t p_
+> white_m_tt p_white_m_ntt p_white_t p_white_tt p_white_ntt p_multi p_multi_w p_multi_m p_mult
+> i_w_t p_multi_w_tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt
+>  p_multi_ntt
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2023.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2023.dta saved
+
+. clear
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+.               **** Merging Cleaned Yearly Faculty Data *****
+. *******************************************************************************
+. *******************************************************************************
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Yearly data\Clean Faculty 2015.dta"
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2016.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         1,583
+        from master                       801  
+        from using                        782  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2017.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         2,367
+        from master                     1,583  
+        from using                        784  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2018.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         3,154
+        from master                     2,367  
+        from using                        787  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2019.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         3,921
+        from master                     3,154  
+        from using                        767  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2020.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         4,687
+        from master                     3,921  
+        from using                        766  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2021.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         5,453
+        from master                     4,687  
+        from using                        766  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2022.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         6,242
+        from master                     5,453  
+        from using                        789  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
+> 15 through 2023\Faculty\Yearly data\Clean Faculty 2023.dta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         7,028
+        from master                     6,242  
+        from using                        786  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Yearly data\Clean Faculty 2015-2023 All Races.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Yearly data\Clean Faculty 2015-2023 All Races.dta saved
+
+. *
+. *******************************************************************************
+. *******************************************************************************
+.               **** Cleaning Combined Faculty Data *****
+. *******************************************************************************
+. *******************************************************************************
+. 
+. ** Creating "other" racial category **
+. gen m_other_t = (m_natam_t + m_pacific_t + m_multi_t)
+
+. gen m_other_tt = (m_natam_tt + m_pacific_tt + m_multi_tt)
+
+. gen m_other_ntt = (m_natam_ntt + m_pacific_ntt + m_multi_ntt)
+
+. gen m_other = (m_other_t + m_other_tt + m_other_ntt)
+
+. gen w_other_t = (w_natam_t + w_pacific_t + w_multi_t)
+
+. gen w_other_tt = (w_natam_tt + w_pacific_tt + w_multi_tt)
+
+. gen w_other_ntt = (w_natam_ntt + w_pacific_ntt + w_multi_ntt)
+
+. gen w_other = (w_other_t + w_other_tt + w_other_ntt)
+
+. gen t_other = m_other + w_other
+
+. gen p_other =  (t_other/t_total)
+
+. gen p_other_w =  (w_other/t_total)
+
+. gen p_other_m =  (m_other/t_total)
+
+. gen p_other_w_t = (w_other_t/t_total)
+
+. gen p_other_w_tt = (w_other_tt/t_total)
+
+. gen p_other_w_ntt = (w_other_ntt/t_total)
+
+. gen p_other_m_t = (m_other_t/t_total)
+
+. gen p_other_m_tt = (m_other_tt/t_total)
+
+. gen p_other_m_ntt = (m_other_ntt/t_total)
+
+. gen p_other_t = (w_other_t + m_other_t)/t_total
+
+. gen p_other_tt = (w_other_tt + m_other_tt)/t_total
+
+. gen p_other_ntt = (w_other_ntt + m_other_ntt)/t_total
+
+. *
+. drop m_natam_t m_natam_tt m_natam_ntt m_natam w_natam_t w_natam_tt w_natam_ntt w_natam t_nat
+> am p_natam p_natam_w p_natam_m p_natam_w_t p_natam_w_tt p_natam_w_ntt p_natam_m_t p_natam_m_
+> tt p_natam_m_ntt p_natam_t p_natam_tt p_natam_ntt m_pacific_t m_pacific_tt m_pacific_ntt m_p
+> acific w_pacific_t w_pacific_tt w_pacific_ntt w_pacific t_pacific p_pacific p_pacific_w p_pa
+> cific_m p_pacific_w_t p_pacific_w_tt p_pacific_w_ntt p_pacific_m_t p_pacific_m_tt p_pacific_
+> m_ntt p_pacific_t p_pacific_tt p_pacific_ntt m_multi_t m_multi_tt m_multi_ntt m_multi w_mult
+> i_t w_multi_tt w_multi_ntt w_multi t_multi p_multi p_multi_w p_multi_m p_multi_w_t p_multi_w
+> _tt p_multi_w_ntt p_multi_m_t p_multi_m_tt p_multi_m_ntt p_multi_t p_multi_tt p_multi_ntt
+
+. 
+. gen i_diversity = 1 - (p_asian^2 + p_black^2 + p_hisp^2 + p_white^2 + p_other^2)
+
+. 
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \Clean Faculty 2015-2023 Condensed Races.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\Clean Faculty 2015-2023 Condensed Races.dta saved
+
+. clear
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+.                       **** Labeling Variables ****
+. *******************************************************************************
+. *******************************************************************************
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\
+> Clean Faculty 2015-2023 Condensed Races.dta"
+
+. 
+. label variable year "Year"
+
+. label variable unitid "Institution ID"
+
+. *
+. label variable m_asian_t "Total Tenured Asian Men"
+
+. label variable m_asian_tt "Total Tenture-Track Asian Men"
+
+. label variable m_asian_ntt "Total Non-Tenure-Track Asian Men"
+
+. label variable m_asian "Total Asian Men"
+
+. label variable w_asian_t "Total Tenured Asian Women"
+
+. label variable w_asian_tt "Total Tenured Asian Women"
+
+. label variable w_asian_ntt "Total Tenure-Track Asian Women"
+
+. label variable w_asian "Total Non-Tenure-Track Asian Women"
+
+. label variable t_asian "Total Asian Women"
+
+. *
+. label variable m_black_t "Total Tenured Black Men"
+
+. label variable m_black_tt "Total Tenture-Track Black Men"
+
+. label variable m_black_ntt "Total Non-Tenure-Track Black Men"
+
+. label variable m_black "Total Black Men"
+
+. label variable w_black_t "Total Tenured Black Women"
+
+. label variable w_black_tt "Total Tenured Black Women"
+
+. label variable w_black_ntt "Total Tenure-Track Black Women"
+
+. label variable w_black "Total Non-Tenure-Track Black Women"
+
+. label variable t_black "Total Black Women"
+
+. *
+. label variable m_hisp_t "Total Tenured Hispanic Men"
+
+. label variable m_hisp_tt "Total Tenture-Track Hispanic Men"
+
+. label variable m_hisp_ntt "Total Non-Tenure-Track Hispanic Men"
+
+. label variable m_hisp "Total Hispanic Men"
+
+. label variable w_hisp_t "Total Tenured Hispanic Women"
+
+. label variable w_hisp_tt "Total Tenured Hispanic Women"
+
+. label variable w_hisp_ntt "Total Tenure-Track Hispanic Women"
+
+. label variable w_hisp "Total Non-Tenure-Track Hispanic Women"
+
+. label variable t_hisp "Total Hispanic Women"
+
+. *
+. label variable m_white_t "Total Tenured White Men"
+
+. label variable m_white_tt "Total Tenture-Track White Men"
+
+. label variable m_white_ntt "Total Non-Tenure-Track White Men"
+
+. label variable m_white "Total White Men"
+
+. label variable w_white_t "Total Tenured White Women"
+
+. label variable w_white_tt "Total Tenured White Women"
+
+. label variable w_white_ntt "Total Tenure-Track White Women"
+
+. label variable w_white "Total Non-Tenure-Track White Women"
+
+. label variable t_white "Total White Women"
+
+. *
+. label variable m_other_t "Total Tenured Other Race Men"
+
+. label variable m_other_tt "Total Tenture-Track Other Race Men"
+
+. label variable m_other_ntt "Total Non-Tenure-Track Other Race Men"
+
+. label variable m_other "Total Other Race Men"
+
+. label variable w_other_t "Total Tenured Other Race Women"
+
+. label variable w_other_tt "Total Tenured Other Race Women"
+
+. label variable w_other_ntt "Total Tenure-Track Other Race Women"
+
+. label variable w_other "Total Non-Tenure-Track Other Race Women"
+
+. label variable t_other "Total Other Race Women"
+
+. *
+. label variable t_women "Total Women Faculty"
+
+. label variable t_men "Total Men Faculty"
+
+. label variable t_total "Total Faculty"
+
+. *
+. label variable t_tenured "Total Tenured Faculty"
+
+. label variable t_tenuretrack "Total Tenure-Track Faculty"
+
+. label variable t_notontt "Total Non-Tenure-Track Faculty"
+
+. *
+. label variable p_women "Proportion of Women Faculty Out of All Faculty"
+
+. label variable p_men "Proportion of Men Faculty Out of All Faculty"
+
+. *
+. label variable p_tenured "Proportion of Tenured Faculty Out of All Faculty"
+
+. label variable p_tenuretrack "Proportion of Tenure-Track Faculty Out of All Faculty"
+
+. label variable p_notontt "Proportion of Non-Tenure-Track Faculty Out of All Faculty"
+
+. *
+. label variable p_asian  "Proportion of Asian Faculty Out of All Faculty"
+
+. label variable p_asian_w "Proportion of Asian Women Out of All Faculty"
+
+. label variable p_asian_m "Proportion of Asian Men Out of All Faculty"
+
+. label variable p_asian_w_t "Proportion of Tenured Asian Women Out of All Faculty"
+
+. label variable p_asian_w_tt "Proportion of Tenure-Track Asian Women Out of All Faculty"
+
+. label variable p_asian_w_ntt "Proportion of Non-Tenure-Track Asian Women Out of All Faculty"
+
+. label variable p_asian_m_t "Proportion of Tenured Asian Men Out of All Faculty"
+
+. label variable p_asian_m_tt "Proportion of Tenure-Track Asian Men Out of All Faculty"
+
+. label variable p_asian_m_ntt "Proportion of Non-Tenure-Track Asian Men Out of All Faculty"
+
+. label variable p_asian_t "Proportion of Tenured Asian Faculty Out of All Faculty"
+
+. label variable p_asian_tt "Proportion of Tenure-Track Asian Faculty Out of All Faculty"
+
+. label variable p_asian_ntt "Proportion of Non-Tenure-Track Asian Faculty Out of All Faculty"
+
+. *
+. label variable p_black  "Proportion of Black Faculty Out of All Faculty"
+
+. label variable p_black_w "Proportion of Black Women Out of All Faculty"
+
+. label variable p_black_m "Proportion of Black Men Out of All Faculty"
+
+. label variable p_black_w_t "Proportion of Tenured Black Women Out of All Faculty"
+
+. label variable p_black_w_tt "Proportion of Tenure-Track Black Women Out of All Faculty"
+
+. label variable p_black_w_ntt "Proportion of Non-Tenure-Track Black Women Out of All Faculty"
+
+. label variable p_black_m_t "Proportion of Tenured Black Men Out of All Faculty"
+
+. label variable p_black_m_tt "Proportion of Tenure-Track Black Men Out of All Faculty"
+
+. label variable p_black_m_ntt "Proportion of Non-Tenure-Track Black Men Out of All Faculty"
+
+. label variable p_black_t "Proportion of Tenured Black Faculty Out of All Faculty"
+
+. label variable p_black_tt "Proportion of Tenure-Track Black Faculty Out of All Faculty"
+
+. label variable p_black_ntt "Proportion of Non-Tenure-Track Black Faculty Out of All Faculty"
+
+. *
+. label variable p_hisp  "Proportion of Hispanic Faculty Out of All Faculty"
+
+. label variable p_hisp_w "Proportion of Hispanic Women Out of All Faculty"
+
+. label variable p_hisp_m "Proportion of Hispanic Men Out of All Faculty"
+
+. label variable p_hisp_w_t "Proportion of Tenured Hispanic Women Out of All Faculty"
+
+. label variable p_hisp_w_tt "Proportion of Tenure-Track Hispanic Women Out of All Faculty"
+
+. label variable p_hisp_w_ntt "Proportion of Non-Tenure-Track Hispanic Women Out of All Facult
+> y"
+
+. label variable p_hisp_m_t "Proportion of Tenured Hispanic Men Out of All Faculty"
+
+. label variable p_hisp_m_tt "Proportion of Tenure-Track Hispanic Men Out of All Faculty"
+
+. label variable p_hisp_m_ntt "Proportion of Non-Tenure-Track Hispanic Men Out of All Faculty"
+
+. label variable p_hisp_t "Proportion of Tenured Hispanic Faculty Out of All Faculty"
+
+. label variable p_hisp_tt "Proportion of Tenure-Track Hispanic Faculty Out of All Faculty"
+
+. label variable p_hisp_ntt "Proportion of Non-Tenure-Track Hispanic Faculty Out of All Facult
+> y"
+
+. *
+. label variable p_white  "Proportion of White Faculty Out of All Faculty"
+
+. label variable p_white_w "Proportion of White Women Out of All Faculty"
+
+. label variable p_white_m "Proportion of White Men Out of All Faculty"
+
+. label variable p_white_w_t "Proportion of Tenured White Women Out of All Faculty"
+
+. label variable p_white_w_tt "Proportion of Tenure-Track White Women Out of All Faculty"
+
+. label variable p_white_w_ntt "Proportion of Non-Tenure-Track White Women Out of All Faculty"
+
+. label variable p_white_m_t "Proportion of Tenured White Men Out of All Faculty"
+
+. label variable p_white_m_tt "Proportion of Tenure-Track White Men Out of All Faculty"
+
+. label variable p_white_m_ntt "Proportion of Non-Tenure-Track White Men Out of All Faculty"
+
+. label variable p_white_t "Proportion of Tenured White Faculty Out of All Faculty"
+
+. label variable p_white_tt "Proportion of Tenure-Track White Faculty Out of All Faculty"
+
+. label variable p_white_ntt "Proportion of Non-Tenure-Track White Faculty Out of All Faculty"
+
+. *
+. label variable p_other  "Proportion of Other Race Faculty Out of All Faculty"
+
+. label variable p_other_w "Proportion of Other Race Women Out of All Faculty"
+
+. label variable p_other_m "Proportion of Other Race Men Out of All Faculty"
+
+. label variable p_other_w_t "Proportion of Tenured Other Race Women Out of All Faculty"
+
+. label variable p_other_w_tt "Proportion of Tenure-Track Other Race Women Out of All Faculty"
+
+. label variable p_other_w_ntt "Proportion of Non-Tenure-Track Other Race Women Out of All Fac
+> ulty"
+
+. label variable p_other_m_t "Proportion of Tenured Other Race Men Out of All Faculty"
+
+. label variable p_other_m_tt "Proportion of Tenure-Track Other Race Men Out of All Faculty"
+
+. label variable p_other_m_ntt "Proportion of Non-Tenure-Track Other Race Men Out of All Facul
+> ty"
+
+. label variable p_other_t "Proportion of Tenured Other Race Faculty Out of All Faculty"
+
+. label variable p_other_tt "Proportion of Tenure-Track Other Race Faculty Out of All Faculty"
+
+. label variable p_other_ntt "Proportion of Non-Tenure-Track Other Race Faculty Out of All Fac
+> ulty"
+
+. *
+. label variable i_diversity "Diversity Index"
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty
+> \1a Clean Faculty 2015-2023 Condensed Races.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through
+    2023\Faculty\1a Clean Faculty 2015-2023 Condensed Races.dta saved
+
+. clear
+
+. ********************************************************************************
+. ********************************************************************************
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Fa
+> culty\1a Clean and Merge Yearly Faculty 2015-2023.log
+  log type:  text
+ closed on:   1 Feb 2025, 11:29:12
+----------------------------------------------------------------------------------------------

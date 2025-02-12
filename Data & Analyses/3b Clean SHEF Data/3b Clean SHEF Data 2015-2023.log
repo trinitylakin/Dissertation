@@ -1,0 +1,70 @@
+----------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\State Funding\3b Clean SHEF Data
+>  2015-2023.log
+  log type:  text
+ opened on:   1 Feb 2025, 12:06:24
+
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\State Funding\SHEForiginal.dta"
+
+. 
+. *******************************************************************************
+. *******************************************************************************
+. 
+. drop if FY <= 2014
+(1,789 observations deleted)
+
+. rename FY year
+
+. *
+. rename State state
+
+. drop if state=="U.S."
+(9 observations deleted)
+
+. *
+. rename EducationAppropriationsExcludi educapp
+
+. gen educappFTE = (educapp/NetFTEEnrollment)
+(2 missing values generated)
+
+. 
+. keep state year educappFTE 
+
+. 
+. drop if year==.
+(2 observations deleted)
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+.                       **** Labeling Variables ****
+. ********************************************************************************
+. ********************************************************************************
+. 
+. label variable year "Year"
+
+. label variable educappFTE "State/Local Appropriations to Higher Education per FTE Enrollment
+> "
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\State Funding\3b Clean SHEF Data 2015
+> -2023.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\State Funding\3b Clean SHEF Data
+    2015-2023.dta saved
+
+. 
+. ********************************************************************************
+. ********************************************************************************
+. 
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\State Funding\3b Clean SHEF Data
+>  2015-2023.log
+  log type:  text
+ closed on:   1 Feb 2025, 12:06:24
+----------------------------------------------------------------------------------------------

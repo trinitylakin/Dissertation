@@ -1,0 +1,476 @@
+-----------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPE
+> DS\IPEDS 2015 through 2023\1 Save and Merge Faculty and IC Year
+> ly Files.log
+  log type:  text
+ opened on:  28 Jan 2025, 15:15:05
+
+. 
+. ***************************************************************
+> ************
+. *** Saving and Merging Faculty Data ***
+. 
+. *** Creating dta faculty data ***
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 015.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2015
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2015.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2015.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 016.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2016
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2016.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2016.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 017.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2017
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2017.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2017.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 018.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2018
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2018.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2018.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 019.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2019
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2019.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2019.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 020.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2020
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2020.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2020.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 021.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2021
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2021.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2021.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 022.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2022
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2022.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2022.dta
+    saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Faculty\Yearly data\Faculty 2
+> 023.csv"
+(encoding automatically selected: ISO-8859-1)
+(59 vars, 801 obs)
+
+. gen year = 2023
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Faculty\Yearly data\Faculty 2023.dta", re
+> place
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Faculty\Yearly data\Faculty 2023.dta
+    saved
+
+. clear
+
+. 
+. ***************************************************************
+> ****************************
+. 
+. *** Saving and Merging Institutional Characteristics Data ***
+. 
+. *** Creating dta files ***
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2015.csv"
+(encoding automatically selected: ISO-8859-2)
+(8 vars, 801 obs)
+
+. gen year = 2015
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2015.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2015.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2016.csv"
+(encoding automatically selected: ISO-8859-2)
+(8 vars, 801 obs)
+
+. gen year = 2016
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2016.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2016.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2017.csv"
+(encoding automatically selected: ISO-8859-2)
+(8 vars, 801 obs)
+
+. gen year = 2017
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2017.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2017.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2018.csv"
+(encoding automatically selected: ISO-8859-2)
+(9 vars, 801 obs)
+
+. gen year = 2018
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2018.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2018.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2019.csv"
+(encoding automatically selected: ISO-8859-2)
+(9 vars, 801 obs)
+
+. gen year = 2019
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2019.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2019.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2020.csv"
+(encoding automatically selected: ISO-8859-2)
+(9 vars, 801 obs)
+
+. gen year = 2020
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2020.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2020.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2021.csv"
+(encoding automatically selected: ISO-8859-2)
+(10 vars, 801 obs)
+
+. gen year = 2021
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2021.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2021.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2022.csv"
+(encoding automatically selected: ISO-8859-2)
+(10 vars, 801 obs)
+
+. gen year = 2022
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2022.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2022.dta saved
+
+. clear
+
+. *
+. import delimited "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\d
+> iss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2023.csv"
+(encoding automatically selected: ISO-8859-2)
+(10 vars, 801 obs)
+
+. gen year = 2023
+
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\IC2023.dta", replace
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\IC2023.dta saved
+
+. clear
+
+. ******
+. 
+. *** Merge Inst Char Data ***
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPE
+> DS 2015 through 2023\Inst Char\IC2015.dta"
+
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2016.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         1,602
+        from master                       801  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2017.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         2,403
+        from master                     1,602  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2018.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         3,204
+        from master                     2,403  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2019.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         4,005
+        from master                     3,204  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2020.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         4,806
+        from master                     4,005  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2021.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         5,607
+        from master                     4,806  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2022.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         6,408
+        from master                     5,607  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\
+> Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\IC2023.d
+> ta", nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                         7,209
+        from master                     6,408  
+        from using                        801  
+
+    Matched                                 0  
+    -----------------------------------------
+
+. *
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IP
+> EDS 2015 through 2023\Inst Char\1 IC Merged 2015 through 2023.d
+> ta", replace
+(file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\1 IC Merged 2015 through
+    2023.dta not found)
+file
+    \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPED
+    > S 2015 through 2023\Inst Char\1 IC Merged 2015 through
+    2023.dta saved
+
+. 
+. ***************************************************************
+> ****************************
+. 
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPE
+> DS\IPEDS 2015 through 2023\1 Save and Merge Faculty and IC Year
+> ly Files.log
+  log type:  text
+ closed on:  28 Jan 2025, 15:15:08
+-----------------------------------------------------------------
