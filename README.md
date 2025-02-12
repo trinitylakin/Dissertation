@@ -13,6 +13,7 @@ This dissertation uses two Critical Race Theory (CRT) tenets - interest converge
 <strong> Data Sources: </strong>
 <ul>
   <li> Integrated Postsecondary Education Data System (IPEDS) </li>
+    <li> State appropriations data from the State Higher Education Funding (SHEF) Report </li>
   <li> State partisan control data from National Conference of State Legislatures (NCSL)</li>
 </ul>
 
