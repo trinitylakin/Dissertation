@@ -1,14 +1,15 @@
 # Dissertation Repository
 This repository holds relevant files for my doctoral dissertation, including:
 <ul>
-    <li> Chapter drafts and final versions</li>
+    <li> Final manuscript document</li>
+    <li> Defense presentation</li>
     <li> Data files, do files, and log files</li>
-    <li> Data visualizations, tables, and appendices</li>
+    <li> Data visualizations and Tableau workbooks</li>
 </ul>
 
 <strong> Project Information: </strong>
 
-This dissertation uses two Critical Race Theory (CRT) tenets - interest convergence and intersectionality - to inform an evaluation of the impact of the COVID-19 pandemic and state partisan control on the racial and gender diversity of post-secondary faculty in the United States between 2015 and 2023.
+This dissertation uses two Critical Race Theory (CRT) tenets - interest convergence and intersectionality - to inform an evaluation of the impact of state partisan control and higher education appropriations on the racial and gender diversity of post-secondary faculty in the United States between 2015 and 2023.
 
 <strong> Data Sources: </strong>
 <ul>
