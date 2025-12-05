@@ -1,28 +1,25 @@
-----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 
-> Merge Faculty and IC Data 2015-2023.log
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merge Faculty and IC Data 2015-2023.log
   log type:  text
- opened on:   1 Feb 2025, 11:29:32
+ opened on:   4 Dec 2025, 18:54:20
 
 . 
 . *******************************************************************************
 . *******************************************************************************
 . 
-. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Cha
-> r\1b Clean Institutional Characteristics 2015-2023.dta"
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Inst Char\1b Clean Institutional Characteristics 2015-2023.dta"
 
 . 
-. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 20
-> 15 through 2023\Faculty\1a Clean Faculty 2015-2023 Condensed Races.dta", nogenerate
+. merge m:m unitid year using "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\Faculty\1a Clean Faculty 2015-2023 Condensed Races.dta", nogenerate
 
     Result                      Number of obs
     -----------------------------------------
-    Not matched                           181
-        from master                       181  
+    Not matched                           126
+        from master                       126  
         from using                          0  
 
-    Matched                             7,028  
+    Matched                             7,083  
     -----------------------------------------
 
 . 
@@ -185,21 +182,18 @@
 
 . 
 . drop if t_total==.
-(181 observations deleted)
+(202 observations deleted)
 
 . 
-. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merge
-> d Faculty and IC Data 2015-2023.dta", replace
-file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merged
-    Faculty and IC Data 2015-2023.dta saved
+. save "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merged Faculty and IC Data 2015-2023.dta", replace
+file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merged Faculty and IC Data 2015-2023.dta saved
 
 . 
 . *******************************************************************************
 . *******************************************************************************
 . log close
       name:  <unnamed>
-       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 
-> Merge Faculty and IC Data 2015-2023.log
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\IPEDS\IPEDS 2015 through 2023\2 Merge Faculty and IC Data 2015-2023.log
   log type:  text
- closed on:   1 Feb 2025, 11:29:32
-----------------------------------------------------------------------------------------------
+ closed on:   4 Dec 2025, 18:54:20
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

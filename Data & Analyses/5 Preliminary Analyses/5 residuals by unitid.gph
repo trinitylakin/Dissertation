@@ -1,0 +1,964 @@
+StataFileTM:00001:01000:LiveGPH:                       :
+00008:00008:
+*! classname: boxgraph_g
+*! family: bar
+*! command: box resids, over(unitid)
+*! command_date:  4 Dec 2025
+*! command_time: 18:15:23
+*! datafile: \smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\4b Abridged Master Dataset 2015-2023.dta
+*! datafile_date: 23 Aug 2025 13:02
+*! scheme: stcolor
+*! naturallywhite: 1
+*! xsize: 7.5
+*! ysize: 4.5
+*! end
+<BeginItem> serset K7ec54c68 
+<BeginSerset>
+<BeginSeries>
+.name = `"_values"'
+.label = `"Residuals"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  -.2156199812889099
+.max =  .1824981868267059
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories =  4190
+<EndSeries>
+<BeginSeries>
+.name = `"_variables"'
+.label = `""'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  1
+.max =  1
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories =  1
+.lab_offset = (.)
+.vlabs.Declare __D_1 = `"Residuals"'
+<EndSeries>
+<BeginSeries>
+.name = `"unitid"'
+.label = `"group(unitid)"'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  1
+.max =  787
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories =  787
+.lab_offset = (.)
+.vlabs.Declare __D_1 = `"100654"'
+.vlabs.Declare __D_2 = `"100663"'
+.vlabs.Declare __D_3 = `"100706"'
+.vlabs.Declare __D_4 = `"100724"'
+.vlabs.Declare __D_5 = `"100751"'
+.vlabs.Declare __D_6 = `"100812"'
+.vlabs.Declare __D_7 = `"100830"'
+.vlabs.Declare __D_8 = `"100858"'
+.vlabs.Declare __D_9 = `"101480"'
+.vlabs.Declare __D_10 = `"101587"'
+.vlabs.Declare __D_11 = `"101709"'
+.vlabs.Declare __D_12 = `"101879"'
+.vlabs.Declare __D_13 = `"102094"'
+.vlabs.Declare __D_14 = `"102368"'
+.vlabs.Declare __D_15 = `"102553"'
+.vlabs.Declare __D_16 = `"102614"'
+.vlabs.Declare __D_17 = `"102632"'
+.vlabs.Declare __D_18 = `"104151"'
+.vlabs.Declare __D_19 = `"104179"'
+.vlabs.Declare __D_20 = `"104708"'
+.vlabs.Declare __D_21 = `"105145"'
+.vlabs.Declare __D_22 = `"105297"'
+.vlabs.Declare __D_23 = `"105330"'
+.vlabs.Declare __D_24 = `"105668"'
+.vlabs.Declare __D_25 = `"106148"'
+.vlabs.Declare __D_26 = `"106245"'
+.vlabs.Declare __D_27 = `"106263"'
+.vlabs.Declare __D_28 = `"106397"'
+.vlabs.Declare __D_29 = `"106412"'
+.vlabs.Declare __D_30 = `"106458"'
+.vlabs.Declare __D_31 = `"106467"'
+.vlabs.Declare __D_32 = `"106485"'
+.vlabs.Declare __D_33 = `"106704"'
+.vlabs.Declare __D_34 = `"107071"'
+.vlabs.Declare __D_35 = `"107983"'
+.vlabs.Declare __D_36 = `"108092"'
+.vlabs.Declare __D_37 = `"109350"'
+.vlabs.Declare __D_38 = `"109819"'
+.vlabs.Declare __D_39 = `"110398"'
+.vlabs.Declare __D_40 = `"110422"'
+.vlabs.Declare __D_41 = `"110486"'
+.vlabs.Declare __D_42 = `"110495"'
+.vlabs.Declare __D_43 = `"110510"'
+.vlabs.Declare __D_44 = `"110529"'
+.vlabs.Declare __D_45 = `"110538"'
+.vlabs.Declare __D_46 = `"110547"'
+.vlabs.Declare __D_47 = `"110556"'
+.vlabs.Declare __D_48 = `"110565"'
+.vlabs.Declare __D_49 = `"110574"'
+.vlabs.Declare __D_50 = `"110583"'
+.vlabs.Declare __D_51 = `"110592"'
+.vlabs.Declare __D_52 = `"110608"'
+.vlabs.Declare __D_53 = `"110617"'
+.vlabs.Declare __D_54 = `"110635"'
+.vlabs.Declare __D_55 = `"110644"'
+.vlabs.Declare __D_56 = `"110653"'
+.vlabs.Declare __D_57 = `"110662"'
+.vlabs.Declare __D_58 = `"110671"'
+.vlabs.Declare __D_59 = `"110680"'
+.vlabs.Declare __D_60 = `"110699"'
+.vlabs.Declare __D_61 = `"110705"'
+.vlabs.Declare __D_62 = `"110714"'
+.vlabs.Declare __D_63 = `"111188"'
+.vlabs.Declare __D_64 = `"113236"'
+.vlabs.Declare __D_65 = `"114433"'
+.vlabs.Declare __D_66 = `"114716"'
+.vlabs.Declare __D_67 = `"115755"'
+.vlabs.Declare __D_68 = `"118912"'
+.vlabs.Declare __D_69 = `"118976"'
+.vlabs.Declare __D_70 = `"119678"'
+.vlabs.Declare __D_71 = `"121619"'
+.vlabs.Declare __D_72 = `"121886"'
+.vlabs.Declare __D_73 = `"122375"'
+.vlabs.Declare __D_74 = `"122409"'
+.vlabs.Declare __D_75 = `"122597"'
+.vlabs.Declare __D_76 = `"122755"'
+.vlabs.Declare __D_77 = `"122977"'
+.vlabs.Declare __D_78 = `"123299"'
+.vlabs.Declare __D_79 = `"123509"'
+.vlabs.Declare __D_80 = `"123563"'
+.vlabs.Declare __D_81 = `"123572"'
+.vlabs.Declare __D_82 = `"125471"'
+.vlabs.Declare __D_83 = `"126182"'
+.vlabs.Declare __D_84 = `"126207"'
+.vlabs.Declare __D_85 = `"126289"'
+.vlabs.Declare __D_86 = `"126562"'
+.vlabs.Declare __D_87 = `"126580"'
+.vlabs.Declare __D_88 = `"126614"'
+.vlabs.Declare __D_89 = `"126711"'
+.vlabs.Declare __D_90 = `"126775"'
+.vlabs.Declare __D_91 = `"126818"'
+.vlabs.Declare __D_92 = `"126942"'
+.vlabs.Declare __D_93 = `"127185"'
+.vlabs.Declare __D_94 = `"127200"'
+.vlabs.Declare __D_95 = `"127556"'
+.vlabs.Declare __D_96 = `"127565"'
+.vlabs.Declare __D_97 = `"127617"'
+.vlabs.Declare __D_98 = `"127741"'
+.vlabs.Declare __D_99 = `"127820"'
+.vlabs.Declare __D_100 = `"127884"'
+.vlabs.Declare __D_101 = `"127909"'
+.vlabs.Declare __D_102 = `"128106"'
+.vlabs.Declare __D_103 = `"128258"'
+.vlabs.Declare __D_104 = `"128328"'
+.vlabs.Declare __D_105 = `"128391"'
+.vlabs.Declare __D_106 = `"128771"'
+.vlabs.Declare __D_107 = `"129020"'
+.vlabs.Declare __D_108 = `"129215"'
+.vlabs.Declare __D_109 = `"130493"'
+.vlabs.Declare __D_110 = `"130624"'
+.vlabs.Declare __D_111 = `"130776"'
+.vlabs.Declare __D_112 = `"130907"'
+.vlabs.Declare __D_113 = `"130934"'
+.vlabs.Declare __D_114 = `"130943"'
+.vlabs.Declare __D_115 = `"131399"'
+.vlabs.Declare __D_116 = `"132693"'
+.vlabs.Declare __D_117 = `"132709"'
+.vlabs.Declare __D_118 = `"132851"'
+.vlabs.Declare __D_119 = `"132903"'
+.vlabs.Declare __D_120 = `"133021"'
+.vlabs.Declare __D_121 = `"133386"'
+.vlabs.Declare __D_122 = `"133508"'
+.vlabs.Declare __D_123 = `"133650"'
+.vlabs.Declare __D_124 = `"133669"'
+.vlabs.Declare __D_125 = `"133702"'
+.vlabs.Declare __D_126 = `"133951"'
+.vlabs.Declare __D_127 = `"133960"'
+.vlabs.Declare __D_128 = `"134097"'
+.vlabs.Declare __D_129 = `"134130"'
+.vlabs.Declare __D_130 = `"134343"'
+.vlabs.Declare __D_131 = `"134495"'
+.vlabs.Declare __D_132 = `"134608"'
+.vlabs.Declare __D_133 = `"135160"'
+.vlabs.Declare __D_134 = `"135188"'
+.vlabs.Declare __D_135 = `"135391"'
+.vlabs.Declare __D_136 = `"135717"'
+.vlabs.Declare __D_137 = `"136145"'
+.vlabs.Declare __D_138 = `"136172"'
+.vlabs.Declare __D_139 = `"136233"'
+.vlabs.Declare __D_140 = `"136358"'
+.vlabs.Declare __D_141 = `"136400"'
+.vlabs.Declare __D_142 = `"136473"'
+.vlabs.Declare __D_143 = `"136516"'
+.vlabs.Declare __D_144 = `"137078"'
+.vlabs.Declare __D_145 = `"137096"'
+.vlabs.Declare __D_146 = `"137209"'
+.vlabs.Declare __D_147 = `"137281"'
+.vlabs.Declare __D_148 = `"137315"'
+.vlabs.Declare __D_149 = `"137351"'
+.vlabs.Declare __D_150 = `"137759"'
+.vlabs.Declare __D_151 = `"138187"'
+.vlabs.Declare __D_152 = `"138354"'
+.vlabs.Declare __D_153 = `"138558"'
+.vlabs.Declare __D_154 = `"138716"'
+.vlabs.Declare __D_155 = `"138901"'
+.vlabs.Declare __D_156 = `"139250"'
+.vlabs.Declare __D_157 = `"139311"'
+.vlabs.Declare __D_158 = `"139366"'
+.vlabs.Declare __D_159 = `"139463"'
+.vlabs.Declare __D_160 = `"139621"'
+.vlabs.Declare __D_161 = `"139700"'
+.vlabs.Declare __D_162 = `"139719"'
+.vlabs.Declare __D_163 = `"139755"'
+.vlabs.Declare __D_164 = `"139764"'
+.vlabs.Declare __D_165 = `"139861"'
+.vlabs.Declare __D_166 = `"139931"'
+.vlabs.Declare __D_167 = `"139940"'
+.vlabs.Declare __D_168 = `"139959"'
+.vlabs.Declare __D_169 = `"139968"'
+.vlabs.Declare __D_170 = `"140960"'
+.vlabs.Declare __D_171 = `"141264"'
+.vlabs.Declare __D_172 = `"141334"'
+.vlabs.Declare __D_173 = `"141565"'
+.vlabs.Declare __D_174 = `"141574"'
+.vlabs.Declare __D_175 = `"141839"'
+.vlabs.Declare __D_176 = `"141981"'
+.vlabs.Declare __D_177 = `"142115"'
+.vlabs.Declare __D_178 = `"142276"'
+.vlabs.Declare __D_179 = `"142285"'
+.vlabs.Declare __D_180 = `"142328"'
+.vlabs.Declare __D_181 = `"142559"'
+.vlabs.Declare __D_182 = `"144005"'
+.vlabs.Declare __D_183 = `"144892"'
+.vlabs.Declare __D_184 = `"145336"'
+.vlabs.Declare __D_185 = `"145600"'
+.vlabs.Declare __D_186 = `"145637"'
+.vlabs.Declare __D_187 = `"145813"'
+.vlabs.Declare __D_188 = `"147703"'
+.vlabs.Declare __D_189 = `"147776"'
+.vlabs.Declare __D_190 = `"148654"'
+.vlabs.Declare __D_191 = `"149222"'
+.vlabs.Declare __D_192 = `"149231"'
+.vlabs.Declare __D_193 = `"149772"'
+.vlabs.Declare __D_194 = `"150136"'
+.vlabs.Declare __D_195 = `"151102"'
+.vlabs.Declare __D_196 = `"151111"'
+.vlabs.Declare __D_197 = `"151306"'
+.vlabs.Declare __D_198 = `"151324"'
+.vlabs.Declare __D_199 = `"151333"'
+.vlabs.Declare __D_200 = `"151342"'
+.vlabs.Declare __D_201 = `"151351"'
+.vlabs.Declare __D_202 = `"151360"'
+.vlabs.Declare __D_203 = `"151379"'
+.vlabs.Declare __D_204 = `"151388"'
+.vlabs.Declare __D_205 = `"152637"'
+.vlabs.Declare __D_206 = `"153603"'
+.vlabs.Declare __D_207 = `"153658"'
+.vlabs.Declare __D_208 = `"154095"'
+.vlabs.Declare __D_209 = `"155025"'
+.vlabs.Declare __D_210 = `"155061"'
+.vlabs.Declare __D_211 = `"155140"'
+.vlabs.Declare __D_212 = `"155317"'
+.vlabs.Declare __D_213 = `"155399"'
+.vlabs.Declare __D_214 = `"155681"'
+.vlabs.Declare __D_215 = `"156082"'
+.vlabs.Declare __D_216 = `"156125"'
+.vlabs.Declare __D_217 = `"156620"'
+.vlabs.Declare __D_218 = `"157058"'
+.vlabs.Declare __D_219 = `"157085"'
+.vlabs.Declare __D_220 = `"157289"'
+.vlabs.Declare __D_221 = `"157386"'
+.vlabs.Declare __D_222 = `"157401"'
+.vlabs.Declare __D_223 = `"157447"'
+.vlabs.Declare __D_224 = `"157951"'
+.vlabs.Declare __D_225 = `"159009"'
+.vlabs.Declare __D_226 = `"159373"'
+.vlabs.Declare __D_227 = `"159382"'
+.vlabs.Declare __D_228 = `"159391"'
+.vlabs.Declare __D_229 = `"159416"'
+.vlabs.Declare __D_230 = `"159647"'
+.vlabs.Declare __D_231 = `"159717"'
+.vlabs.Declare __D_232 = `"159939"'
+.vlabs.Declare __D_233 = `"159966"'
+.vlabs.Declare __D_234 = `"159993"'
+.vlabs.Declare __D_235 = `"160038"'
+.vlabs.Declare __D_236 = `"160612"'
+.vlabs.Declare __D_237 = `"160621"'
+.vlabs.Declare __D_238 = `"160630"'
+.vlabs.Declare __D_239 = `"160658"'
+.vlabs.Declare __D_240 = `"161217"'
+.vlabs.Declare __D_241 = `"161226"'
+.vlabs.Declare __D_242 = `"161235"'
+.vlabs.Declare __D_243 = `"161253"'
+.vlabs.Declare __D_244 = `"161299"'
+.vlabs.Declare __D_245 = `"161341"'
+.vlabs.Declare __D_246 = `"161554"'
+.vlabs.Declare __D_247 = `"161873"'
+.vlabs.Declare __D_248 = `"162007"'
+.vlabs.Declare __D_249 = `"162283"'
+.vlabs.Declare __D_250 = `"162584"'
+.vlabs.Declare __D_251 = `"163204"'
+.vlabs.Declare __D_252 = `"163259"'
+.vlabs.Declare __D_253 = `"163268"'
+.vlabs.Declare __D_254 = `"163286"'
+.vlabs.Declare __D_255 = `"163338"'
+.vlabs.Declare __D_256 = `"163453"'
+.vlabs.Declare __D_257 = `"163851"'
+.vlabs.Declare __D_258 = `"163912"'
+.vlabs.Declare __D_259 = `"164076"'
+.vlabs.Declare __D_260 = `"164155"'
+.vlabs.Declare __D_261 = `"165024"'
+.vlabs.Declare __D_262 = `"165820"'
+.vlabs.Declare __D_263 = `"165866"'
+.vlabs.Declare __D_264 = `"166513"'
+.vlabs.Declare __D_265 = `"166629"'
+.vlabs.Declare __D_266 = `"166638"'
+.vlabs.Declare __D_267 = `"166674"'
+.vlabs.Declare __D_268 = `"166692"'
+.vlabs.Declare __D_269 = `"166708"'
+.vlabs.Declare __D_270 = `"167288"'
+.vlabs.Declare __D_271 = `"167525"'
+.vlabs.Declare __D_272 = `"167729"'
+.vlabs.Declare __D_273 = `"167987"'
+.vlabs.Declare __D_274 = `"168263"'
+.vlabs.Declare __D_275 = `"168430"'
+.vlabs.Declare __D_276 = `"168607"'
+.vlabs.Declare __D_277 = `"169248"'
+.vlabs.Declare __D_278 = `"169798"'
+.vlabs.Declare __D_279 = `"169910"'
+.vlabs.Declare __D_280 = `"170082"'
+.vlabs.Declare __D_281 = `"170240"'
+.vlabs.Declare __D_282 = `"170444"'
+.vlabs.Declare __D_283 = `"170639"'
+.vlabs.Declare __D_284 = `"170976"'
+.vlabs.Declare __D_285 = `"171100"'
+.vlabs.Declare __D_286 = `"171128"'
+.vlabs.Declare __D_287 = `"171137"'
+.vlabs.Declare __D_288 = `"171146"'
+.vlabs.Declare __D_289 = `"171456"'
+.vlabs.Declare __D_290 = `"171483"'
+.vlabs.Declare __D_291 = `"171571"'
+.vlabs.Declare __D_292 = `"172051"'
+.vlabs.Declare __D_293 = `"172200"'
+.vlabs.Declare __D_294 = `"172644"'
+.vlabs.Declare __D_295 = `"172699"'
+.vlabs.Declare __D_296 = `"173124"'
+.vlabs.Declare __D_297 = `"173920"'
+.vlabs.Declare __D_298 = `"174020"'
+.vlabs.Declare __D_299 = `"174066"'
+.vlabs.Declare __D_300 = `"174075"'
+.vlabs.Declare __D_301 = `"174233"'
+.vlabs.Declare __D_302 = `"174251"'
+.vlabs.Declare __D_303 = `"174358"'
+.vlabs.Declare __D_304 = `"174783"'
+.vlabs.Declare __D_305 = `"175078"'
+.vlabs.Declare __D_306 = `"175272"'
+.vlabs.Declare __D_307 = `"175342"'
+.vlabs.Declare __D_308 = `"175616"'
+.vlabs.Declare __D_309 = `"175856"'
+.vlabs.Declare __D_310 = `"176017"'
+.vlabs.Declare __D_311 = `"176035"'
+.vlabs.Declare __D_312 = `"176044"'
+.vlabs.Declare __D_313 = `"176080"'
+.vlabs.Declare __D_314 = `"176372"'
+.vlabs.Declare __D_315 = `"176965"'
+.vlabs.Declare __D_316 = `"177472"'
+.vlabs.Declare __D_317 = `"177551"'
+.vlabs.Declare __D_318 = `"177940"'
+.vlabs.Declare __D_319 = `"178341"'
+.vlabs.Declare __D_320 = `"178387"'
+.vlabs.Declare __D_321 = `"178396"'
+.vlabs.Declare __D_322 = `"178402"'
+.vlabs.Declare __D_323 = `"178411"'
+.vlabs.Declare __D_324 = `"178420"'
+.vlabs.Declare __D_325 = `"178615"'
+.vlabs.Declare __D_326 = `"178624"'
+.vlabs.Declare __D_327 = `"179308"'
+.vlabs.Declare __D_328 = `"179557"'
+.vlabs.Declare __D_329 = `"179566"'
+.vlabs.Declare __D_330 = `"180179"'
+.vlabs.Declare __D_331 = `"180203"'
+.vlabs.Declare __D_332 = `"180416"'
+.vlabs.Declare __D_333 = `"180461"'
+.vlabs.Declare __D_334 = `"180489"'
+.vlabs.Declare __D_335 = `"180522"'
+.vlabs.Declare __D_336 = `"180647"'
+.vlabs.Declare __D_337 = `"180692"'
+.vlabs.Declare __D_338 = `"180948"'
+.vlabs.Declare __D_339 = `"181215"'
+.vlabs.Declare __D_340 = `"181394"'
+.vlabs.Declare __D_341 = `"181419"'
+.vlabs.Declare __D_342 = `"181428"'
+.vlabs.Declare __D_343 = `"181464"'
+.vlabs.Declare __D_344 = `"181534"'
+.vlabs.Declare __D_345 = `"181783"'
+.vlabs.Declare __D_346 = `"182005"'
+.vlabs.Declare __D_347 = `"182281"'
+.vlabs.Declare __D_348 = `"182290"'
+.vlabs.Declare __D_349 = `"182306"'
+.vlabs.Declare __D_350 = `"182500"'
+.vlabs.Declare __D_351 = `"182564"'
+.vlabs.Declare __D_352 = `"182829"'
+.vlabs.Declare __D_353 = `"183044"'
+.vlabs.Declare __D_354 = `"183062"'
+.vlabs.Declare __D_355 = `"183071"'
+.vlabs.Declare __D_356 = `"183080"'
+.vlabs.Declare __D_357 = `"183257"'
+.vlabs.Declare __D_358 = `"184782"'
+.vlabs.Declare __D_359 = `"185129"'
+.vlabs.Declare __D_360 = `"185262"'
+.vlabs.Declare __D_361 = `"185590"'
+.vlabs.Declare __D_362 = `"185828"'
+.vlabs.Declare __D_363 = `"186201"'
+.vlabs.Declare __D_364 = `"186371"'
+.vlabs.Declare __D_365 = `"186380"'
+.vlabs.Declare __D_366 = `"186399"'
+.vlabs.Declare __D_367 = `"186876"'
+.vlabs.Declare __D_368 = `"187134"'
+.vlabs.Declare __D_369 = `"187444"'
+.vlabs.Declare __D_370 = `"187596"'
+.vlabs.Declare __D_371 = `"187648"'
+.vlabs.Declare __D_372 = `"187745"'
+.vlabs.Declare __D_373 = `"187897"'
+.vlabs.Declare __D_374 = `"187967"'
+.vlabs.Declare __D_375 = `"187985"'
+.vlabs.Declare __D_376 = `"188030"'
+.vlabs.Declare __D_377 = `"188058"'
+.vlabs.Declare __D_378 = `"188304"'
+.vlabs.Declare __D_379 = `"190512"'
+.vlabs.Declare __D_380 = `"190549"'
+.vlabs.Declare __D_381 = `"190558"'
+.vlabs.Declare __D_382 = `"190567"'
+.vlabs.Declare __D_383 = `"190576"'
+.vlabs.Declare __D_384 = `"190594"'
+.vlabs.Declare __D_385 = `"190600"'
+.vlabs.Declare __D_386 = `"190637"'
+.vlabs.Declare __D_387 = `"190646"'
+.vlabs.Declare __D_388 = `"190655"'
+.vlabs.Declare __D_389 = `"190664"'
+.vlabs.Declare __D_390 = `"190682"'
+.vlabs.Declare __D_391 = `"190691"'
+.vlabs.Declare __D_392 = `"191126"'
+.vlabs.Declare __D_393 = `"196006"'
+.vlabs.Declare __D_394 = `"196015"'
+.vlabs.Declare __D_395 = `"196024"'
+.vlabs.Declare __D_396 = `"196033"'
+.vlabs.Declare __D_397 = `"196042"'
+.vlabs.Declare __D_398 = `"196051"'
+.vlabs.Declare __D_399 = `"196060"'
+.vlabs.Declare __D_400 = `"196079"'
+.vlabs.Declare __D_401 = `"196088"'
+.vlabs.Declare __D_402 = `"196097"'
+.vlabs.Declare __D_403 = `"196103"'
+.vlabs.Declare __D_404 = `"196112"'
+.vlabs.Declare __D_405 = `"196121"'
+.vlabs.Declare __D_406 = `"196130"'
+.vlabs.Declare __D_407 = `"196149"'
+.vlabs.Declare __D_408 = `"196158"'
+.vlabs.Declare __D_409 = `"196167"'
+.vlabs.Declare __D_410 = `"196176"'
+.vlabs.Declare __D_411 = `"196185"'
+.vlabs.Declare __D_412 = `"196194"'
+.vlabs.Declare __D_413 = `"196200"'
+.vlabs.Declare __D_414 = `"196219"'
+.vlabs.Declare __D_415 = `"196228"'
+.vlabs.Declare __D_416 = `"196237"'
+.vlabs.Declare __D_417 = `"196246"'
+.vlabs.Declare __D_418 = `"196255"'
+.vlabs.Declare __D_419 = `"196264"'
+.vlabs.Declare __D_420 = `"196291"'
+.vlabs.Declare __D_421 = `"196307"'
+.vlabs.Declare __D_422 = `"197027"'
+.vlabs.Declare __D_423 = `"197036"'
+.vlabs.Declare __D_424 = `"197869"'
+.vlabs.Declare __D_425 = `"198464"'
+.vlabs.Declare __D_426 = `"198507"'
+.vlabs.Declare __D_427 = `"198543"'
+.vlabs.Declare __D_428 = `"199102"'
+.vlabs.Declare __D_429 = `"199111"'
+.vlabs.Declare __D_430 = `"199120"'
+.vlabs.Declare __D_431 = `"199139"'
+.vlabs.Declare __D_432 = `"199148"'
+.vlabs.Declare __D_433 = `"199157"'
+.vlabs.Declare __D_434 = `"199184"'
+.vlabs.Declare __D_435 = `"199193"'
+.vlabs.Declare __D_436 = `"199218"'
+.vlabs.Declare __D_437 = `"199281"'
+.vlabs.Declare __D_438 = `"199999"'
+.vlabs.Declare __D_439 = `"200004"'
+.vlabs.Declare __D_440 = `"200022"'
+.vlabs.Declare __D_441 = `"200059"'
+.vlabs.Declare __D_442 = `"200086"'
+.vlabs.Declare __D_443 = `"200226"'
+.vlabs.Declare __D_444 = `"200253"'
+.vlabs.Declare __D_445 = `"200280"'
+.vlabs.Declare __D_446 = `"200332"'
+.vlabs.Declare __D_447 = `"200466"'
+.vlabs.Declare __D_448 = `"200572"'
+.vlabs.Declare __D_449 = `"200800"'
+.vlabs.Declare __D_450 = `"201432"'
+.vlabs.Declare __D_451 = `"201441"'
+.vlabs.Declare __D_452 = `"201672"'
+.vlabs.Declare __D_453 = `"201690"'
+.vlabs.Declare __D_454 = `"201885"'
+.vlabs.Declare __D_455 = `"201928"'
+.vlabs.Declare __D_456 = `"201946"'
+.vlabs.Declare __D_457 = `"201955"'
+.vlabs.Declare __D_458 = `"201973"'
+.vlabs.Declare __D_459 = `"202134"'
+.vlabs.Declare __D_460 = `"203447"'
+.vlabs.Declare __D_461 = `"203456"'
+.vlabs.Declare __D_462 = `"203465"'
+.vlabs.Declare __D_463 = `"203474"'
+.vlabs.Declare __D_464 = `"203483"'
+.vlabs.Declare __D_465 = `"203492"'
+.vlabs.Declare __D_466 = `"203517"'
+.vlabs.Declare __D_467 = `"203526"'
+.vlabs.Declare __D_468 = `"203678"'
+.vlabs.Declare __D_469 = `"203748"'
+.vlabs.Declare __D_470 = `"203881"'
+.vlabs.Declare __D_471 = `"204006"'
+.vlabs.Declare __D_472 = `"204015"'
+.vlabs.Declare __D_473 = `"204024"'
+.vlabs.Declare __D_474 = `"204255"'
+.vlabs.Declare __D_475 = `"204422"'
+.vlabs.Declare __D_476 = `"204477"'
+.vlabs.Declare __D_477 = `"204671"'
+.vlabs.Declare __D_478 = `"204680"'
+.vlabs.Declare __D_479 = `"204699"'
+.vlabs.Declare __D_480 = `"204705"'
+.vlabs.Declare __D_481 = `"204796"'
+.vlabs.Declare __D_482 = `"204802"'
+.vlabs.Declare __D_483 = `"204820"'
+.vlabs.Declare __D_484 = `"204839"'
+.vlabs.Declare __D_485 = `"204848"'
+.vlabs.Declare __D_486 = `"204857"'
+.vlabs.Declare __D_487 = `"204866"'
+.vlabs.Declare __D_488 = `"205443"'
+.vlabs.Declare __D_489 = `"205470"'
+.vlabs.Declare __D_490 = `"206084"'
+.vlabs.Declare __D_491 = `"206446"'
+.vlabs.Declare __D_492 = `"206604"'
+.vlabs.Declare __D_493 = `"206695"'
+.vlabs.Declare __D_494 = `"206914"'
+.vlabs.Declare __D_495 = `"206941"'
+.vlabs.Declare __D_496 = `"207041"'
+.vlabs.Declare __D_497 = `"207209"'
+.vlabs.Declare __D_498 = `"207263"'
+.vlabs.Declare __D_499 = `"207306"'
+.vlabs.Declare __D_500 = `"207315"'
+.vlabs.Declare __D_501 = `"207342"'
+.vlabs.Declare __D_502 = `"207351"'
+.vlabs.Declare __D_503 = `"207388"'
+.vlabs.Declare __D_504 = `"207397"'
+.vlabs.Declare __D_505 = `"207500"'
+.vlabs.Declare __D_506 = `"207564"'
+.vlabs.Declare __D_507 = `"207661"'
+.vlabs.Declare __D_508 = `"207722"'
+.vlabs.Declare __D_509 = `"207847"'
+.vlabs.Declare __D_510 = `"207865"'
+.vlabs.Declare __D_511 = `"208390"'
+.vlabs.Declare __D_512 = `"208646"'
+.vlabs.Declare __D_513 = `"209250"'
+.vlabs.Declare __D_514 = `"209490"'
+.vlabs.Declare __D_515 = `"209506"'
+.vlabs.Declare __D_516 = `"209542"'
+.vlabs.Declare __D_517 = `"209551"'
+.vlabs.Declare __D_518 = `"209807"'
+.vlabs.Declare __D_519 = `"210146"'
+.vlabs.Declare __D_520 = `"210429"'
+.vlabs.Declare __D_521 = `"211608"'
+.vlabs.Declare __D_522 = `"212115"'
+.vlabs.Declare __D_523 = `"213020"'
+.vlabs.Declare __D_524 = `"213349"'
+.vlabs.Declare __D_525 = `"213598"'
+.vlabs.Declare __D_526 = `"214041"'
+.vlabs.Declare __D_527 = `"214591"'
+.vlabs.Declare __D_528 = `"214607"'
+.vlabs.Declare __D_529 = `"214625"'
+.vlabs.Declare __D_530 = `"214634"'
+.vlabs.Declare __D_531 = `"214643"'
+.vlabs.Declare __D_532 = `"214652"'
+.vlabs.Declare __D_533 = `"214670"'
+.vlabs.Declare __D_534 = `"214689"'
+.vlabs.Declare __D_535 = `"214698"'
+.vlabs.Declare __D_536 = `"214704"'
+.vlabs.Declare __D_537 = `"214713"'
+.vlabs.Declare __D_538 = `"214731"'
+.vlabs.Declare __D_539 = `"214740"'
+.vlabs.Declare __D_540 = `"214759"'
+.vlabs.Declare __D_541 = `"214768"'
+.vlabs.Declare __D_542 = `"214777"'
+.vlabs.Declare __D_543 = `"214786"'
+.vlabs.Declare __D_544 = `"214795"'
+.vlabs.Declare __D_545 = `"214801"'
+.vlabs.Declare __D_546 = `"214810"'
+.vlabs.Declare __D_547 = `"214829"'
+.vlabs.Declare __D_548 = `"215266"'
+.vlabs.Declare __D_549 = `"215275"'
+.vlabs.Declare __D_550 = `"215284"'
+.vlabs.Declare __D_551 = `"215293"'
+.vlabs.Declare __D_552 = `"216010"'
+.vlabs.Declare __D_553 = `"216038"'
+.vlabs.Declare __D_554 = `"216339"'
+.vlabs.Declare __D_555 = `"216764"'
+.vlabs.Declare __D_556 = `"217420"'
+.vlabs.Declare __D_557 = `"217484"'
+.vlabs.Declare __D_558 = `"217819"'
+.vlabs.Declare __D_559 = `"217864"'
+.vlabs.Declare __D_560 = `"217882"'
+.vlabs.Declare __D_561 = `"218061"'
+.vlabs.Declare __D_562 = `"218113"'
+.vlabs.Declare __D_563 = `"218229"'
+.vlabs.Declare __D_564 = `"218335"'
+.vlabs.Declare __D_565 = `"218645"'
+.vlabs.Declare __D_566 = `"218654"'
+.vlabs.Declare __D_567 = `"218663"'
+.vlabs.Declare __D_568 = `"218724"'
+.vlabs.Declare __D_569 = `"218733"'
+.vlabs.Declare __D_570 = `"218742"'
+.vlabs.Declare __D_571 = `"218964"'
+.vlabs.Declare __D_572 = `"219046"'
+.vlabs.Declare __D_573 = `"219082"'
+.vlabs.Declare __D_574 = `"219259"'
+.vlabs.Declare __D_575 = `"219277"'
+.vlabs.Declare __D_576 = `"219347"'
+.vlabs.Declare __D_577 = `"219356"'
+.vlabs.Declare __D_578 = `"219374"'
+.vlabs.Declare __D_579 = `"219408"'
+.vlabs.Declare __D_580 = `"219471"'
+.vlabs.Declare __D_581 = `"219602"'
+.vlabs.Declare __D_582 = `"220075"'
+.vlabs.Declare __D_583 = `"220701"'
+.vlabs.Declare __D_584 = `"220862"'
+.vlabs.Declare __D_585 = `"220978"'
+.vlabs.Declare __D_586 = `"221740"'
+.vlabs.Declare __D_587 = `"221759"'
+.vlabs.Declare __D_588 = `"221768"'
+.vlabs.Declare __D_589 = `"221838"'
+.vlabs.Declare __D_590 = `"221847"'
+.vlabs.Declare __D_591 = `"222831"'
+.vlabs.Declare __D_592 = `"222992"'
+.vlabs.Declare __D_593 = `"223506"'
+.vlabs.Declare __D_594 = `"224147"'
+.vlabs.Declare __D_595 = `"224350"'
+.vlabs.Declare __D_596 = `"224545"'
+.vlabs.Declare __D_597 = `"224554"'
+.vlabs.Declare __D_598 = `"224615"'
+.vlabs.Declare __D_599 = `"224961"'
+.vlabs.Declare __D_600 = `"225070"'
+.vlabs.Declare __D_601 = `"225308"'
+.vlabs.Declare __D_602 = `"225414"'
+.vlabs.Declare __D_603 = `"225423"'
+.vlabs.Declare __D_604 = `"225432"'
+.vlabs.Declare __D_605 = `"225502"'
+.vlabs.Declare __D_606 = `"225511"'
+.vlabs.Declare __D_607 = `"226091"'
+.vlabs.Declare __D_608 = `"226134"'
+.vlabs.Declare __D_609 = `"226152"'
+.vlabs.Declare __D_610 = `"226408"'
+.vlabs.Declare __D_611 = `"226806"'
+.vlabs.Declare __D_612 = `"226833"'
+.vlabs.Declare __D_613 = `"227146"'
+.vlabs.Declare __D_614 = `"227182"'
+.vlabs.Declare __D_615 = `"227216"'
+.vlabs.Declare __D_616 = `"227304"'
+.vlabs.Declare __D_617 = `"227368"'
+.vlabs.Declare __D_618 = `"227526"'
+.vlabs.Declare __D_619 = `"227881"'
+.vlabs.Declare __D_620 = `"227924"'
+.vlabs.Declare __D_621 = `"227979"'
+.vlabs.Declare __D_622 = `"228431"'
+.vlabs.Declare __D_623 = `"228459"'
+.vlabs.Declare __D_624 = `"228501"'
+.vlabs.Declare __D_625 = `"228529"'
+.vlabs.Declare __D_626 = `"228635"'
+.vlabs.Declare __D_627 = `"228644"'
+.vlabs.Declare __D_628 = `"228653"'
+.vlabs.Declare __D_629 = `"228705"'
+.vlabs.Declare __D_630 = `"228723"'
+.vlabs.Declare __D_631 = `"228769"'
+.vlabs.Declare __D_632 = `"228778"'
+.vlabs.Declare __D_633 = `"228787"'
+.vlabs.Declare __D_634 = `"228796"'
+.vlabs.Declare __D_635 = `"228802"'
+.vlabs.Declare __D_636 = `"228909"'
+.vlabs.Declare __D_637 = `"229018"'
+.vlabs.Declare __D_638 = `"229027"'
+.vlabs.Declare __D_639 = `"229063"'
+.vlabs.Declare __D_640 = `"229115"'
+.vlabs.Declare __D_641 = `"229179"'
+.vlabs.Declare __D_642 = `"229300"'
+.vlabs.Declare __D_643 = `"229337"'
+.vlabs.Declare __D_644 = `"229355"'
+.vlabs.Declare __D_645 = `"229799"'
+.vlabs.Declare __D_646 = `"229814"'
+.vlabs.Declare __D_647 = `"230171"'
+.vlabs.Declare __D_648 = `"230597"'
+.vlabs.Declare __D_649 = `"230603"'
+.vlabs.Declare __D_650 = `"230728"'
+.vlabs.Declare __D_651 = `"230737"'
+.vlabs.Declare __D_652 = `"230764"'
+.vlabs.Declare __D_653 = `"230782"'
+.vlabs.Declare __D_654 = `"230834"'
+.vlabs.Declare __D_655 = `"230913"'
+.vlabs.Declare __D_656 = `"231165"'
+.vlabs.Declare __D_657 = `"231174"'
+.vlabs.Declare __D_658 = `"231624"'
+.vlabs.Declare __D_659 = `"231712"'
+.vlabs.Declare __D_660 = `"231970"'
+.vlabs.Declare __D_661 = `"232186"'
+.vlabs.Declare __D_662 = `"232423"'
+.vlabs.Declare __D_663 = `"232566"'
+.vlabs.Declare __D_664 = `"232681"'
+.vlabs.Declare __D_665 = `"232937"'
+.vlabs.Declare __D_666 = `"232982"'
+.vlabs.Declare __D_667 = `"233277"'
+.vlabs.Declare __D_668 = `"233897"'
+.vlabs.Declare __D_669 = `"233921"'
+.vlabs.Declare __D_670 = `"234030"'
+.vlabs.Declare __D_671 = `"234076"'
+.vlabs.Declare __D_672 = `"234085"'
+.vlabs.Declare __D_673 = `"234155"'
+.vlabs.Declare __D_674 = `"234669"'
+.vlabs.Declare __D_675 = `"234696"'
+.vlabs.Declare __D_676 = `"234711"'
+.vlabs.Declare __D_677 = `"234827"'
+.vlabs.Declare __D_678 = `"234845"'
+.vlabs.Declare __D_679 = `"234933"'
+.vlabs.Declare __D_680 = `"234951"'
+.vlabs.Declare __D_681 = `"234979"'
+.vlabs.Declare __D_682 = `"235097"'
+.vlabs.Declare __D_683 = `"235103"'
+.vlabs.Declare __D_684 = `"235149"'
+.vlabs.Declare __D_685 = `"235167"'
+.vlabs.Declare __D_686 = `"235237"'
+.vlabs.Declare __D_687 = `"235334"'
+.vlabs.Declare __D_688 = `"235343"'
+.vlabs.Declare __D_689 = `"235431"'
+.vlabs.Declare __D_690 = `"235699"'
+.vlabs.Declare __D_691 = `"235750"'
+.vlabs.Declare __D_692 = `"236072"'
+.vlabs.Declare __D_693 = `"236188"'
+.vlabs.Declare __D_694 = `"236258"'
+.vlabs.Declare __D_695 = `"236382"'
+.vlabs.Declare __D_696 = `"236504"'
+.vlabs.Declare __D_697 = `"236513"'
+.vlabs.Declare __D_698 = `"236638"'
+.vlabs.Declare __D_699 = `"236692"'
+.vlabs.Declare __D_700 = `"236708"'
+.vlabs.Declare __D_701 = `"236753"'
+.vlabs.Declare __D_702 = `"236887"'
+.vlabs.Declare __D_703 = `"236939"'
+.vlabs.Declare __D_704 = `"236948"'
+.vlabs.Declare __D_705 = `"236975"'
+.vlabs.Declare __D_706 = `"237011"'
+.vlabs.Declare __D_707 = `"237039"'
+.vlabs.Declare __D_708 = `"237109"'
+.vlabs.Declare __D_709 = `"237215"'
+.vlabs.Declare __D_710 = `"237330"'
+.vlabs.Declare __D_711 = `"237367"'
+.vlabs.Declare __D_712 = `"237385"'
+.vlabs.Declare __D_713 = `"237525"'
+.vlabs.Declare __D_714 = `"237686"'
+.vlabs.Declare __D_715 = `"237701"'
+.vlabs.Declare __D_716 = `"237792"'
+.vlabs.Declare __D_717 = `"237880"'
+.vlabs.Declare __D_718 = `"237899"'
+.vlabs.Declare __D_719 = `"237932"'
+.vlabs.Declare __D_720 = `"237950"'
+.vlabs.Declare __D_721 = `"238032"'
+.vlabs.Declare __D_722 = `"238263"'
+.vlabs.Declare __D_723 = `"240189"'
+.vlabs.Declare __D_724 = `"240268"'
+.vlabs.Declare __D_725 = `"240277"'
+.vlabs.Declare __D_726 = `"240329"'
+.vlabs.Declare __D_727 = `"240365"'
+.vlabs.Declare __D_728 = `"240374"'
+.vlabs.Declare __D_729 = `"240417"'
+.vlabs.Declare __D_730 = `"240426"'
+.vlabs.Declare __D_731 = `"240444"'
+.vlabs.Declare __D_732 = `"240453"'
+.vlabs.Declare __D_733 = `"240462"'
+.vlabs.Declare __D_734 = `"240471"'
+.vlabs.Declare __D_735 = `"240480"'
+.vlabs.Declare __D_736 = `"240514"'
+.vlabs.Declare __D_737 = `"240620"'
+.vlabs.Declare __D_738 = `"240657"'
+.vlabs.Declare __D_739 = `"240693"'
+.vlabs.Declare __D_740 = `"240727"'
+.vlabs.Declare __D_741 = `"243780"'
+.vlabs.Declare __D_742 = `"247834"'
+.vlabs.Declare __D_743 = `"260372"'
+.vlabs.Declare __D_744 = `"262086"'
+.vlabs.Declare __D_745 = `"262129"'
+.vlabs.Declare __D_746 = `"364016"'
+.vlabs.Declare __D_747 = `"366252"'
+.vlabs.Declare __D_748 = `"366340"'
+.vlabs.Declare __D_749 = `"366711"'
+.vlabs.Declare __D_750 = `"377555"'
+.vlabs.Declare __D_751 = `"377564"'
+.vlabs.Declare __D_752 = `"380359"'
+.vlabs.Declare __D_753 = `"380368"'
+.vlabs.Declare __D_754 = `"380377"'
+.vlabs.Declare __D_755 = `"409315"'
+.vlabs.Declare __D_756 = `"409698"'
+.vlabs.Declare __D_757 = `"416801"'
+.vlabs.Declare __D_758 = `"433174"'
+.vlabs.Declare __D_759 = `"433660"'
+.vlabs.Declare __D_760 = `"434584"'
+.vlabs.Declare __D_761 = `"435000"'
+.vlabs.Declare __D_762 = `"439190"'
+.vlabs.Declare __D_763 = `"440916"'
+.vlabs.Declare __D_764 = `"441900"'
+.vlabs.Declare __D_765 = `"441937"'
+.vlabs.Declare __D_766 = `"442569"'
+.vlabs.Declare __D_767 = `"445188"'
+.vlabs.Declare __D_768 = `"447689"'
+.vlabs.Declare __D_769 = `"456959"'
+.vlabs.Declare __D_770 = `"459949"'
+.vlabs.Declare __D_771 = `"476975"'
+.vlabs.Declare __D_772 = `"482149"'
+.vlabs.Declare __D_773 = `"482158"'
+.vlabs.Declare __D_774 = `"482680"'
+.vlabs.Declare __D_775 = `"482699"'
+.vlabs.Declare __D_776 = `"482936"'
+.vlabs.Declare __D_777 = `"483036"'
+.vlabs.Declare __D_778 = `"483124"'
+.vlabs.Declare __D_779 = `"484473"'
+.vlabs.Declare __D_780 = `"484905"'
+.vlabs.Declare __D_781 = `"485111"'
+.vlabs.Declare __D_782 = `"486840"'
+.vlabs.Declare __D_783 = `"487010"'
+.vlabs.Declare __D_784 = `"488800"'
+.vlabs.Declare __D_785 = `"489779"'
+.vlabs.Declare __D_786 = `"490805"'
+.vlabs.Declare __D_787 = `"492689"'
+<EndSeries>
+<BeginSeries>
+.name = `"_box_sort"'
+.label = `""'
+.format = `"%9.0g"'
+.type.set numeric
+.min =  1
+.max =  9999
+.median = (.)
+.pct25 = (.)
+.pct75 = (.)
+.categories =  6
+<EndSeries>
+.weight_id = (.)
+.miss_opts = "omitallmiss"
+<BeginSersetData>
+sersetreadwrite    –  ˛˛˛˛_values                                                                                                                                               _variables                                                                                                                                            unitid 7                                                                                                                                              _box_sort                                                                                                                                             %9.0g                                                    %9.0g                                                    %9.0g                                                    %9.0g                                                       ÄoôÀø      ?      ?      ?   ¿\«?      ?     òà@    Äá√@ñøÚ;  Ä?  Ä?  Ä?Ö€º  Ä?  Ä?   @êü<  Ä?  Ä?  @@l;øº  Ä?  Ä?  Ä@˚ç=  Ä?  Ä?  †@ÁOΩ  Ä?  Ä? <FfXë:  Ä?   @  Ä?¨ª  Ä?   @   @Ïg;  Ä?   @  @@Dπª  Ä?   @  Ä@Ç˛◊;  Ä?   @  †@     Ä?   @ <FX¿;  Ä?  @@  Ä?bàõª  Ä?  @@   @ç
+ƒ;  Ä?  @@  @@\±º  Ä?  @@  Ä@Yº<  Ä?  @@  †@     Ä?  @@ <F’Ä<  Ä?  Ä@  Ä?à¡:  Ä?  Ä@   @PŒ	<  Ä?  Ä@  @@     Ä?  Ä@  Ä@@Çô<  Ä?  Ä@  †@2„WΩ  Ä?  Ä@ <FËØº  Ä?  Ä@ <FΩ=  Ä?  Ä@ <FF ª  Ä?  †@  Ä?ù/øª  Ä?  †@   @I
+
+<  Ä?  †@  @@n⁄[º  Ä?  †@  Ä@ºÎ5<  Ä?  †@  †@     Ä?  †@ <FcE≤ª  Ä?  ¿@  Ä?‚ıº  Ä?  ¿@   @G?·;  Ä?  ¿@  @@îÜ˙º  Ä?  ¿@  Ä@—/„<  Ä?  ¿@  †@ƒá-=  Ä?  ¿@ <F¨–ª  Ä?  ‡@  Ä?'º  Ä?  ‡@   @hß<  Ä?  ‡@  @@ßZÜº  Ä?  ‡@  Ä@Ω n<  Ä?  ‡@  †@¢]=  Ä?  ‡@ <F‡T.∫  Ä?   A  Ä?Èπcº  Ä?   A   @Ç;<  Ä?   A  @@*RÀº  Ä?   A  Ä@;Ï§<  Ä?   A  †@     Ä?   A <F›˝;  Ä?  A  Ä?Ø»º  Ä?  A   @J◊Y<  Ä?  A  @@Ûã
+Ω  Ä?  A  Ä@¡b~<  Ä?  A  †@     Ä?  A <FF˘<  Ä?   A  Ä?∆a™ª  Ä?   A   @EN4<  Ä?   A  @@£˙©º  Ä?   A  Ä@°-º<  Ä?   A  †@SΩ  Ä?   A <F'ñJ∫  Ä?  0A  Ä?$‹ª  Ä?  0A   @W[¯;  Ä?  0A  @@ÂÆÇº  Ä?  0A  Ä@`ñÄ<  Ä?  0A  †@     Ä?  0A <F;œôª  Ä?  @A  Ä?cNº  Ä?  @A   @ZJ;  Ä?  @A  @@•Zº  Ä?  @A  Ä@K!ì<  Ä?  @A  †@…ÿ<  Ä?  @A <FïyD;  Ä?  PA  Ä?~7–ª  Ä?  PA   @ì»ü;  Ä?  PA  @@Ëeº  Ä?  PA  Ä@°˚7<  Ä?  PA  †@     Ä?  PA <FG=º  Ä?  `A  Ä?l\èº  Ä?  `A   @«º  Ä?  `A  @@ﬁ]”º  Ä?  `A  Ä@     Ä?  `A  †@◊[Ω  Ä?  `A <F8°â=  Ä?  `A <F¶ùç=  Ä?  `A <F›WÔπ  Ä?  pA  Ä?‹öèº  Ä?  pA   @D a<  Ä?  pA  @@o∆º  Ä?  pA  Ä@MS‰<  Ä?  pA  †@     Ä?  pA <F7ø;:  Ä?  ÄA  Ä?õyûª  Ä?  ÄA   @”go;  Ä?  ÄA  @@çK≠ª  Ä?  ÄA  Ä@Y(<  Ä?  ÄA  †@Ï†¿º  Ä?  ÄA <Fqx™<  Ä?  ÄA <Ffö;  Ä?  àA  Ä?2ª  Ä?  àA   @s+Õ;  Ä?  àA  @@     Ä?  àA  Ä@<  Ä?  àA  †@SB!Ω  Ä?  àA <FúIÙº  Ä?  àA <F3ó =  Ä?  àA <F‰¥∫  Ä?  êA  Ä?æ¯ı∫  Ä?  êA   @—⁄:  Ä?  êA  @@∫q†ª  Ä?  êA  Ä@b'U;  Ä?  êA  †@Tâ<<  Ä?  êA <F√‹ﬁ:  Ä?  òA  Ä?€ô…ª  Ä?  òA   @ﬂ:;  Ä?  òA  @@ù¯ª  Ä?  òA  Ä@J◊b<  Ä?  òA  †@‰_Èº  Ä?  òA <FÌû¬<  Ä?  òA <F¶C"<  Ä?  †A  Ä?îÎUº  Ä?  †A   @ÚËJ<  Ä?  †A  @@ ö£º  Ä?  †A  Ä@r<  Ä?  †A  †@     Ä?  †A <FfÙº  Ä?  ®A  Ä?VTùº  Ä?  ®A   @
+ n<  Ä?  ®A  @@˘‰¥º  Ä?  ®A  Ä@”≠¯<  Ä?  ®A  †@     Ä?  ®A <FŸÀ¡ª  Ä?  ∞A  Ä?«„êº  Ä?  ∞A   @Vô£<  Ä?  ∞A  @@≤ñΩ  Ä?  ∞A  Ä@∫µ~=  Ä?  ∞A  †@     Ä?  ∞A <F.Ãπ  Ä?  ∏A  Ä?U˝ï∫  Ä?  ∏A   @ÖwK;  Ä?  ∏A  @@Ö{ñ∫  Ä?  ∏A  Ä@—j<  Ä?  ∏A  †@khÉº  Ä?  ∏A <FY≤¬∫  Ä?  ¿A  Ä?IGˇº  Ä?  ¿A   @aŒ-=  Ä?  ¿A  @@± ÖΩ  Ä?  ¿A  Ä@V™{=  Ä?  ¿A  †@     Ä?  ¿A <F¯I≤ª  Ä?  »A  Ä?q!ûº  Ä?  »A   @ŒYÆ:  Ä?  »A  @@ç≈º  Ä?  »A  Ä@     Ä?  »A  †@9”=  Ä?  »A <Feï6=  Ä?  »A <F7§9º  Ä?  –A  Ä?ˇTãº  Ä?  –A   @QÙ;  Ä?  –A  @@¯∫º  Ä?  –A  Ä@âH∆<  Ä?  –A  †@Œ.i=  Ä?  –A <F«Lõª  Ä?  ÿA  Ä?g]wº  Ä?  ÿA   @L<  Ä?  ÿA  @@ÜÇÛº  Ä?  ÿA  Ä@	¿=  Ä?  ÿA  †@     Ä?  ÿA <F&—E;  Ä?  ‡A  Ä?Ωœª  Ä?  ‡A   @2<  Ä?  ‡A  @@ùËº  Ä?  ‡A  Ä@R€e<  Ä?  ‡A  †@     Ä?  ‡A <F-Oã;  Ä?  ËA  Ä?‚ÆÁª  Ä?  ËA   @/S<<  Ä?  ËA  @@ıì‘º  Ä?  ËA  Ä@òl=  Ä?  ËA  †@fîΩ  Ä?  ËA <F.m7ª  Ä?  A  Ä?Ì-º  Ä?  A   @$a5<  Ä?  A  @@!åΩ  Ä?  A  Ä@V:›<  Ä?  A  †@     Ä?  A <F‘°;  Ä?  ¯A  Ä?øÀK9  Ä?  ¯A   @›g¸;  Ä?  ¯A  @@     Ä?  ¯A  Ä@Íôí<  Ä?  ¯A  †@~!„º  Ä?  ¯A <FïÖﬂº  Ä?  ¯A <F/∫  Ä?   B  Ä?ó◊º  Ä?   B   @Qÿg<  Ä?   B  @@ÖΩ  Ä?   B  Ä@Õ&ô<  Ä?   B  †@     Ä?   B <FDàï:  Ä?  B  Ä?Q º  Ä?  B   @T
+<  Ä?  B  @@¿Ÿbº  Ä?  B  Ä@ò6<  Ä?  B  †@     Ä?  B <Føcº  Ä?  B  Ä?/óPº  Ä?  B   @›à0<  Ä?  B  @@î°≈º  Ä?  B  Ä@∆È=  Ä?  B  †@     Ä?  B <FÇ©ª  Ä?  B  Ä?àº  Ä?  B   @Q9<  Ä?  B  @@ä„Aº  Ä?  B  Ä@˝c=  Ä?  B  †@º# Ω  Ä?  B <FX1Gº  Ä?  B  Ä?Ë¸äº  Ä?  B   @ÔÔ<  Ä?  B  @@P⁄º  Ä?  B  Ä@ÿ =  Ä?  B  †@eI=  Ä?  B <F“ºª  Ä?  B  Ä?±·Xº  Ä?  B   @ØÄ<  Ä?  B  @@ØÁΩ  Ä?  B  Ä@îW(=  Ä?  B  †@     Ä?  B <F‚¯ò∫  Ä?  B  Ä?òÂcº  Ä?  B   @·‡ë<  Ä?  B  @@xúıº  Ä?  B  Ä@O•‹<  Ä?  B  †@     Ä?  B <F04rº  Ä?  B  Ä?√ﬁûº  Ä?  B   @ˇ·Â<  Ä?  B  @@úÜeΩ  Ä?  B  Ä@ï^å=  Ä?  B  †@     Ä?  B <Fãóª  Ä?   B  Ä?Và}ª  Ä?   B   @íQØ:  Ä?   B  @@´˝'º  Ä?   B  Ä@eñ;  Ä?   B  †@üÂXº  Ä?   B <F∏e<  Ä?   B <F·ºπ;  Ä?  $B  Ä?º  Ä?  $B   @ÎV<  Ä?  $B  @@f¥Ëº  Ä?  $B  Ä@ì´Õ<  Ä?  $B  †@     Ä?  $B <F)AΩª  Ä?  (B  Ä?ŒYÓª  Ä?  (B   @¶`<  Ä?  (B  @@»9–º  Ä?  (B  Ä@pnô<  Ä?  (B  †@     Ä?  (B <F˜7Ûπ  Ä?  ,B  Ä?z3îº  Ä?  ,B   @l’ó<  Ä?  ,B  @@•˝ﬁº  Ä?  ,B  Ä@Ø9Ï<  Ä?  ,B  †@     Ä?  ,B <F©Ÿ	;  Ä?  0B  Ä?Z–àª  Ä?  0B   @sèÜ;  Ä?  0B  @@Érº  Ä?  0B  Ä@x
+Y<  Ä?  0B  †@     Ä?  0B <F;ÔŒ:  Ä?  4B  Ä?M–ßª  Ä?  4B   @QÄ;  Ä?  4B  @@ßîº  Ä?  4B  Ä@ä9‘;  Ä?  4B  †@˝Áö<  Ä?  4B <F,ºœ;  Ä?  8B  Ä?°{ª  Ä?  8B   @¸Ú<  Ä?  8B  @@m.´º  Ä?  8B  Ä@xÖ_<  Ä?  8B  †@     Ä?  8B <F¸:  Ä?  <B  Ä?ºˇ∫  Ä?  <B   @z≥;  Ä?  <B  @@ˆﬁQª  Ä?  <B  Ä@Ã"<  Ä?  <B  †@Kpgº  Ä?  <B <FQâÜ;  Ä?  @B  Ä?NUBª  Ä?  @B   @›<  Ä?  @B  @@çóº  Ä?  @B  Ä@£“a<  Ä?  @B  †@     Ä?  @B <Få
+ª  Ä?  DB  Ä?F´	º  Ä?  DB   @Jl<  Ä?  DB  @@W¨—º  Ä?  DB  Ä@0÷µ<  Ä?  DB  †@     Ä?  DB <Fk]‘:  Ä?  HB  Ä?[ﬂAª  Ä?  HB   @X[é;  Ä?  HB  @@”Eª  Ä?  HB  Ä@BFÚ;  Ä?  HB  †@     Ä?  HB <FÏŒ[;  Ä?  LB  Ä?)ue∫  Ä?  LB   @‡ù;  Ä?  LB  @@ñ‰¢∫  Ä?  LB  Ä@¶<  Ä?  LB  †@U[º  Ä?  LB <F¢¡/ª  Ä?  PB  Ä?”¢Cª  Ä?  PB   @,‡ú;  Ä?  PB  @@Ôò…ª  Ä?  PB  Ä@qÏN<  Ä?  PB  †@     Ä?  PB <F¬íß∫  Ä?  TB  Ä?º!gª  Ä?  TB   @ôÏ:;  Ä?  TB  @@œΩÙª  Ä?  TB  Ä@Û#<  Ä?  TB  †@     Ä?  TB <F‹—ﬂª  Ä?  XB  Ä?É<#º  Ä?  XB   @œqC<  Ä?  XB  @@,•öº  Ä?  XB  Ä@ÍP◊<  Ä?  XB  †@     Ä?  XB <F±Ìûª  Ä?  \B  Ä?°`º  Ä?  \B   @N•å<  Ä?  \B  @@÷\≤º  Ä?  \B  Ä@1Í≈<  Ä?  \B  †@     Ä?  \B <Fëäª  Ä?  `B  Ä?6º  Ä?  `B   @˛J›;  Ä?  `B  @@≤gLº  Ä?  `B  Ä@ íÑ<  Ä?  `B  †@     Ä?  `B <Fƒ∏‘π  Ä?  dB  Ä?B)Rº  Ä?  dB   @Ôlk<  Ä?  dB  @@åg”º  Ä?  dB  Ä@öÕ•<  Ä?  dB  †@     Ä?  dB <FÇlª  Ä?  hB  Ä?s~wº  Ä?  hB   @“¨<  Ä?  hB  @@ä¥	Ω  Ä?  hB  Ä@
+HË<  Ä?  hB  †@     Ä?  hB <F?Ñè∫  Ä?  lB  Ä?Dº  Ä?  lB   @-Í-<  Ä?  lB  @@/&Ω  Ä?  lB  Ä@ô·¡<  Ä?  lB  †@     Ä?  lB <F+ë	;  Ä?  pB  Ä?H±«∫  Ä?  pB   @∆‚;  Ä?  pB  @@’ò—ª  Ä?  pB  Ä@H<  Ä?  pB  †@`„îº  Ä?  pB <FE º  Ä?  tB  Ä?ˇH$º  Ä?  tB   @d¸ı;  Ä?  tB  @@Äeñº  Ä?  tB  Ä@|Œœ<  Ä?  tB  †@     Ä?  tB <F∏∑ı∫  Ä?  xB  Ä?Ï˚º  Ä?  xB   @∆Z@<  Ä?  xB  @@C¿º  Ä?  xB  Ä@#‚Æ<  Ä?  xB  †@     Ä?  xB <F·LU<  Ä?  |B  Ä?Í¬bº  Ä?  |B   @◊ìá<  Ä?  |B  @@…ßiΩ  Ä?  |B  Ä@—/?=  Ä?  |B  †@Ö˙ùΩ  Ä?  |B <F˚Tú;  Ä?  ÄB  Ä?ﬂHhª  Ä?  ÄB   @K Ã;  Ä?  ÄB  @@¥Ç$º  Ä?  ÄB  Ä@ÄJû<  Ä?  ÄB  †@eñº  Ä?  ÄB <F7Ë˛ª  Ä?  ÇB  Ä?X⁄º  Ä?  ÇB   @Çﬂ\<  Ä?  ÇB  @@<FêΩ  Ä?  ÇB  Ä@Ñí<  Ä?  ÇB  †@¯ï·=  Ä?  ÇB <F{P;  Ä?  ÑB  Ä?Ω+√ª  Ä?  ÑB   @Œ2Î;  Ä?  ÑB  @@vπº  Ä?  ÑB  Ä@Æ⁄ß<  Ä?  ÑB  †@     Ä?  ÑB <Fv‚C;  Ä?  ÜB  Ä?PPÖª  Ä?  ÜB   @ÏÜ;  Ä?  ÜB  @@∞œ-º  Ä?  ÜB  Ä@c`<  Ä?  ÜB  †@∑Ÿº  Ä?  ÜB <FbÚ‡ª  Ä?  àB  Ä?ô0 Ω  Ä?  àB   @r©=  Ä?  àB  @@"Ö%Ω  Ä?  àB  Ä@5=  Ä?  àB  †@     Ä?  àB <F´˛Ü:  Ä?  äB  Ä?v&Öª  Ä?  äB   @Ï∞;  Ä?  äB  @@ìt3º  Ä?  äB  Ä@zﬂ <  Ä?  äB  †@É/Ω  Ä?  äB <Fº⁄=  Ä?  äB <FŸSÿ:  Ä?  åB  Ä?gØ·º  Ä?  åB   @Lî<  Ä?  åB  @@	ÿΩ  Ä?  åB  Ä@ö9·<  Ä?  åB  †@     Ä?  åB <Fr;;  Ä?  éB  Ä?§ìó∫  Ä?  éB   @ü´∂;  Ä?  éB  @@ø“º  Ä?  éB  Ä@N¬s<  Ä?  éB  †@}ƒº  Ä?  éB <F\ıç;  Ä?  êB  Ä?ŒOäº  Ä?  êB   @ôYÑ<  Ä?  êB  @@ÃÀ´º  Ä?  êB  Ä@âÁ<  Ä?  êB  †@     Ä?  êB <F4‚ä;  Ä?  íB  Ä?|äº  Ä?  íB   @≥B6<  Ä?  íB  @@+\Ω  Ä?  íB  Ä@À =  Ä?  íB  †@     Ä?  íB <FÙEAª  Ä?  îB  Ä?qıWº  Ä?  îB   @@√D<  Ä?  îB  @@Ñ%Ãº  Ä?  îB  Ä@£Õﬁ<  Ä?  îB  †@     Ä?  îB <Fcgß;  Ä?  ñB  Ä?ç≠ª  Ä?  ñB   @»`<  Ä?  ñB  @@ÅŒcº  Ä?  ñB  Ä@|–5<  Ä?  ñB  †@     Ä?  ñB <Fß1b;  Ä?  òB  Ä?“_«ª  Ä?  òB   @C'–;  Ä?  òB  @@‘„dº  Ä?  òB  Ä@_7N<  Ä?  òB  †@     Ä?  òB <Fh„T6  Ä?  öB  Ä?äV ª  Ä?  öB   @Úπ;  Ä?  öB  @@HŸøª  Ä?  öB  Ä@˜z<  Ä?  öB  †@     Ä?  öB <Fµª  Ä?  úB  Ä?7Í º  Ä?  úB   @ ±8<  Ä?  úB  @@ƒgΩ  Ä?  úB  Ä@Nñ¡<  Ä?  úB  †@     Ä?  úB <F]r†:  Ä?  ûB  Ä?Ïº  Ä?  ûB   @–p<  Ä?  ûB  @@TèÊº  Ä?  ûB  Ä@+/”<  Ä?  ûB  †@     Ä?  ûB <FÃ‚œ∫  Ä?  †B  Ä?_ˆº  Ä?  †B   @«Ñ;  Ä?  †B  @@—≠lº  Ä?  †B  Ä@0£;  Ä?  †B  †@1∆ø<  Ä?  †B <Fƒ‘.º  Ä?  ¢B  Ä?s`º  Ä?  ¢B   @€{°<  Ä?  ¢B  @@>µΩ  Ä?  ¢B  Ä@¯ü∆<  Ä?  ¢B  †@     Ä?  ¢B <FÑ©vª  Ä?  §B  Ä?¶pº  Ä?  §B   @4˚ê<  Ä?  §B  @@ŒjÀº  Ä?  §B  Ä@§#
+=  Ä?  §B  †@     Ä?  §B <Føg;  Ä?  ¶B  Ä?">:  Ä?  ¶B   @¬Q9<  Ä?  ¶B  @@Bøò∫  Ä?  ¶B  Ä@N∆<  Ä?  ¶B  †@Ø≠Ω  Ä?  ¶B <FXˇ'=  Ä?  ¶B <FF‘Zπ  Ä?  ®B  Ä?ª˛º  Ä?  ®B   @≥Î;  Ä?  ®B  @@ºYmº  Ä?  ®B  Ä@‰ép<  Ä?  ®B  †@     Ä?  ®B <FÀrª  Ä?  ™B  Ä?ÈOÆº  Ä?  ™B   @V‹ø<  Ä?  ™B  @@Œm.Ω  Ä?  ™B  Ä@Û(=  Ä?  ™B  †@     Ä?  ™B <F%Ë5ª  Ä?  ¨B  Ä? ØMº  Ä?  ¨B   @"ƒ+<  Ä?  ¨B  @@„jº  Ä?  ¨B  Ä@ ∫ë<  Ä?  ¨B  †@     Ä?  ¨B <F!%Ê;  Ä?  ÆB  Ä?:¯ª  Ä?  ÆB   @v»0<  Ä?  ÆB  @@buõº  Ä?  ÆB  Ä@>d°<  Ä?  ÆB  †@¡»Ω  Ä?  ÆB <F›,ª  Ä?  ∞B  Ä?@Yº  Ä?  ∞B   @äÛ<  Ä?  ∞B  @@˚¯0º  Ä?  ∞B  Ä@ô=Ö<  Ä?  ∞B  †@     Ä?  ∞B <FÑ≠gª  Ä?  ≤B  Ä?¸œª  Ä?  ≤B   @À«>;  Ä?  ≤B  @@G
+Åº  Ä?  ≤B  Ä@›˛,<  Ä?  ≤B  †@˛˜…<  Ä?  ≤B <F~w;  Ä?  ¥B  Ä?…âDª  Ä?  ¥B   @…≠’;  Ä?  ¥B  @@1&º  Ä?  ¥B  Ä@ÔL/<  Ä?  ¥B  †@ı˙⁄º  Ä?  ¥B <F:`å;  Ä?  ∂B  Ä?)ù-;  Ä?  ∂B   @†<  Ä?  ∂B  @@     Ä?  ∂B  Ä@÷K<  Ä?  ∂B  †@¡µ Ω  Ä?  ∂B <Fü—∞º  Ä?  ∂B <Fîª˘∫  Ä?  ∏B  Ä?§h±ª  Ä?  ∏B   @◊ıë<  Ä?  ∏B  @@áﬁº  Ä?  ∏B  Ä@\kﬁ<  Ä?  ∏B  †@     Ä?  ∏B <F¬im;  Ä?  ∫B  Ä?Â—Fº  Ä?  ∫B   @—‚ <  Ä?  ∫B  @@ßö„º  Ä?  ∫B  Ä@aU=  Ä?  ∫B  †@     Ä?  ∫B <F`Aä;  Ä?  ºB  Ä?± º  Ä?  ºB   @π‹Â;  Ä?  ºB  @@‹◊¨º  Ä?  ºB  Ä@UË[<  Ä?  ºB  †@     Ä?  ºB <FXm∫  Ä?  æB  Ä?g›òª  Ä?  æB   @ DI;  Ä?  æB  @@¿.
+º  Ä?  æB  Ä@ÂÖ<  Ä?  æB  †@     Ä?  æB <FqWı9  Ä?  ¿B  Ä?v˝°ª  Ä?  ¿B   @”—;  Ä?  ¿B  @@
+º  Ä?  ¿B  Ä@¡â)<  Ä?  ¿B  †@     Ä?  ¿B <Fêe7<  Ä?  ¬B  Ä?
+ñ0Ω  Ä?  ¬B   @ÑEK=  Ä?  ¬B  @@ˇè¡Ω  Ä?  ¬B  Ä@Ùè=  Ä?  ¬B  †@     Ä?  ¬B <F’õN:  Ä?  ƒB  Ä?CTº  Ä?  ƒB   @hè*<  Ä?  ƒB  @@n|º  Ä?  ƒB  Ä@Nh<  Ä?  ƒB  †@     Ä?  ƒB <F#(:  Ä?  ∆B  Ä?
+±º  Ä?  ∆B   @ˆé<  Ä?  ∆B  @@¸n º  Ä?  ∆B  Ä@%ÿ<  Ä?  ∆B  †@     Ä?  ∆B <Fﬁuí;  Ä?  »B  Ä?6
+oº  Ä?  »B   @VP<  Ä?  »B  @@ﬁ…Ω  Ä?  »B  Ä@ä6¯<  Ä?  »B  †@     Ä?  »B <Fì⁄;  Ä?   B  Ä?¢≤Øº  Ä?   B   @{–ã<  Ä?   B  @@_ı˝º  Ä?   B  Ä@RÁ¡<  Ä?   B  †@     Ä?   B <FU∑.ª  Ä?  ÃB  Ä?€‘çº  Ä?  ÃB   @Z®<  Ä?  ÃB  @@[N·º  Ä?  ÃB  Ä@ÂØ=  Ä?  ÃB  †@     Ä?  ÃB <F• Y:  Ä?  ŒB  Ä?¸º  Ä?  ŒB   @À¶<  Ä?  ŒB  @@˝‘Óº  Ä?  ŒB  Ä@tö#=  Ä?  ŒB  †@∑``Ω  Ä?  ŒB <F€†à;  Ä?  –B  Ä?¢átº  Ä?  –B   @≈(˚;  Ä?  –B  @@œiΩ  Ä?  –B  Ä@¿˜<  Ä?  –B  †@     Ä?  –B <Fá.ª  Ä?  “B  Ä?ZiTº  Ä?  “B   @Ù`<  Ä?  “B  @@·?Ω  Ä?  “B  Ä@•v"=  Ä?  “B  †@     Ä?  “B <F*°:  Ä?  ‘B  Ä?ûD?ª  Ä?  ‘B   @°Y/;  Ä?  ‘B  @@7+º  Ä?  ‘B  Ä@Ëé£;  Ä?  ‘B  †@®;<  Ä?  ‘B <Fªæ;  Ä?  ÷B  Ä?ﬂÍº  Ä?  ÷B   @,[-<  Ä?  ÷B  @@nu¨º  Ä?  ÷B  Ä@eEá<  Ä?  ÷B  †@     Ä?  ÷B <FE›;  Ä?  ÿB  Ä?√,$º  Ä?  ÿB   @çım<  Ä?  ÿB  @@´ZÁº  Ä?  ÿB  Ä@Ö&í<  Ä?  ÿB  †@     Ä?  ÿB <F∑zô;  Ä?  ⁄B  Ä??Ä\º  Ä?  ⁄B   @Eœ><  Ä?  ⁄B  @@ª˛Òº  Ä?  ⁄B  Ä@-PÂ<  Ä?  ⁄B  †@     Ä?  ⁄B <FhÉ<  Ä?  ‹B  Ä?ˇÇ˙ª  Ä?  ‹B   @EZh<  Ä?  ‹B  @@•®º  Ä?  ‹B  Ä@‰˝<  Ä?  ‹B  †@e<ÇΩ  Ä?  ‹B <Fz;∑  Ä?  ﬁB  Ä?≈˜ª  Ä?  ﬁB   @b⁄î;  Ä?  ﬁB  @@¥CAº  Ä?  ﬁB  Ä@/÷$<  Ä?  ﬁB  †@     Ä?  ﬁB <F¥@4ª  Ä?  ‡B  Ä?Û‰üª  Ä?  ‡B   @$*ç;  Ä?  ‡B  @@°ò*º  Ä?  ‡B  Ä@AÅˇ;  Ä?  ‡B  †@     Ä?  ‡B <F#≈;  Ä?  ‚B  Ä?ä‡8º  Ä?  ‚B   @ƒc\<  Ä?  ‚B  @@πD∂º  Ä?  ‚B  Ä@¨ÿ©<  Ä?  ‚B  †@     Ä?  ‚B <F–qB;  Ä?  ‰B  Ä?±ú’ª  Ä?  ‰B   @√∑;  Ä?  ‰B  @@«–Øº  Ä?  ‰B  Ä@Áá<  Ä?  ‰B  †@     Ä?  ‰B <Fªf<  Ä?  ÊB  Ä?(ò¶:  Ä?  ÊB   @ù<  Ä?  ÊB  @@ºUÖ∫  Ä?  ÊB  Ä@Œ.=  Ä?  ÊB  †@û-¸Ω  Ä?  ÊB <FP∏√:  Ä?  ËB  Ä?˙H)º  Ä?  ËB   @†r<  Ä?  ËB  @@†!†º  Ä?  ËB  Ä@k≤Ö<  Ä?  ËB  †@     Ä?  ËB <Fv≤_:  Ä?  ÍB  Ä?ù©ª  Ä?  ÍB   @X‡ã;  Ä?  ÍB  @@ƒä¸ª  Ä?  ÍB  Ä@QÅí<  Ä?  ÍB  †@     Ä?  ÍB <Fá%;  Ä?  ÏB  Ä?ÀÎ=ª  Ä?  ÏB   @H<  Ä?  ÏB  @@È|=º  Ä?  ÏB  Ä@¡Æ5<  Ä?  ÏB  †@Rîˇº  Ä?  ÏB <F∆ËM:  Ä?  ÓB  Ä?lÏª  Ä?  ÓB   @?§¢;  Ä?  ÓB  @@zº  Ä?  ÓB  Ä@Zy<  Ä?  ÓB  †@oAbº  Ä?  ÓB <FÀ:U<  Ä?  B  Ä?,l«º  Ä?  B   @eã<  Ä?  B  @@
+C˜º  Ä?  B  Ä@KÍ´<  Ä?  B  †@     Ä?  B <Fñî"ª  Ä?  ÚB  Ä?∂°Çª  Ä?  ÚB   @!Ù:  Ä?  ÚB  @@‡õ#º  Ä?  ÚB  Ä@ñÄ<  Ä?  ÚB  †@+QM<  Ä?  ÚB <F∑ı‚:  Ä?  ÙB  Ä?·d∂ª  Ä?  ÙB   @	À´;  Ä?  ÙB  @@¸°Eº  Ä?  ÙB  Ä@æÿÖ<  Ä?  ÙB  †@ùÆ∫º  Ä?  ÙB <FWñª  Ä?  ˆB  Ä?õº  Ä?  ˆB   @◊‚ú∫  Ä?  ˆB  @@0H<º  Ä?  ˆB  Ä@     Ä?  ˆB  †@;®º  Ä?  ˆB <FÙw∏<  Ä?  ˆB <F–—∆<  Ä?  ˆB <F£\6;  Ä?  ¯B  Ä?©ª  Ä?  ¯B   @À†;  Ä?  ¯B  @@d1Cº  Ä?  ¯B  Ä@ÍJ<  Ä?  ¯B  †@     Ä?  ¯B <FæÒ¨ª  Ä?  ˙B  Ä?⁄Qáº  Ä?  ˙B   @„_¢<  Ä?  ˙B  @@‡Àº  Ä?  ˙B  Ä@H)Ÿ<  Ä?  ˙B  †@     Ä?  ˙B <F§î˛:  Ä?  ¸B  Ä? ¯™∫  Ä?  ¸B   @™/W;  Ä?  ¸B  @@ﬁuRª  Ä?  ¸B  Ä@ì•Á;  Ä?  ¸B  †@     Ä?  ¸B <F
+∫E∫  Ä?  ˛B  Ä?íÛÂº  Ä?  ˛B   @7<ı<  Ä?  ˛B  @@Áœ™Ω  Ä?  ˛B  Ä@ˆò=  Ä?  ˛B  †@     Ä?  ˛B <F¿+…:  Ä?   C  Ä?om[º  Ä?   C   @V“;  Ä?   C  @@Óµôº  Ä?   C  Ä@s≥√<  Ä?   C  †@     Ä?   C <F¬ª  Ä?  C  Ä?õ«Fº  Ä?  C   @î
+<  Ä?  C  @@ìwkº  Ä?  C  Ä@ß¢<  Ä?  C  †@     Ä?  C <Fq∏ª  Ä?  C  Ä?bÙYº  Ä?  C   @Ç≠π  Ä?  C  @@Hƒˆº  Ä?  C  Ä@∏˜;  Ä?  C  †@ãvâ=  Ä?  C <F9o5∏  Ä?  C  Ä?Ù≈/ª  Ä?  C   @#j¡;  Ä?  C  @@∏Äxº  Ä?  C  Ä@<cg<  Ä?  C  †@     Ä?  C <FŒ:π  Ä?  C  Ä?çì∫  Ä?  C   @Pö<  Ä?  C  @@Là∫ª  Ä?  C  Ä@∆¿D<  Ä?  C  †@òDùº  Ä?  C <F]ÎRª  Ä?  C  Ä?¢,÷º  Ä?  C   @Ï&‚<  Ä?  C  @@˝»ìΩ  Ä?  C  Ä@%Ä=  Ä?  C  †@     Ä?  C <FÛƒgº  Ä?  C  Ä?¨}£º  Ä?  C   @Î§<  Ä?  C  @@˜xŸº  Ä?  C  Ä@c¶A=  Ä?  C  †@     Ä?  C <F
+˝*<  Ä?  C  Ä?q¯ùº  Ä?  C   @˜Ö<  Ä?  C  @@ªsΩ  Ä?  C  Ä@±“<  Ä?  C  †@     Ä?  C <Fj/µ∫  Ä?  C  Ä?Z
+º  Ä?  C   @Îœ|<  Ä?  C  @@ài Ω  Ä?  C  Ä@Ê˛=  Ä?  C  †@     Ä?  C <FÊPGº  Ä?  	C  Ä?5Éº  Ä?  	C   @∫:´<  Ä?  	C  @@˝®xΩ  Ä?  	C  Ä@5,W=  Ä?  	C  †@     Ä?  	C <FÁõ∞∫  Ä?  
+C  Ä?4≠-ª  Ä?  
+C   @yó§;  Ä?  
+C  @@—⁄º  Ä?  
+C  Ä@Ò;  Ä?  
+C  †@     Ä?  
+C <Fe¥ò<  Ä?  C  Ä?Ä‹Ω  Ä?  C   @G˛¶<  Ä?  C  @@õ	KΩ  Ä?  C  Ä@`„Ñ=  Ä?  C  †@     Ä?  C <FºÉÖ;  Ä?  C  Ä?´-º  Ä?  C   @´Ñ
+<  Ä?  C  @@ ˆ>º  Ä?  C  Ä@8b<  Ä?  C  †@     Ä?  C <Fªdª  Ä?  C  Ä?ŸÚíº  Ä?  C   @ˇå”;  Ä?  C  @@ûº  Ä?  C  Ä@Iv<  Ä?  C  †@…uB=  Ä?  C <FÊÁ°ª  Ä?  C  Ä?3À˚º  Ä?  C   @”X‹<  Ä?  C  @@»v/Ω  Ä?  C  Ä@‹/d=  Ä?  C  †@     Ä?  C <F~Ebª  Ä?  C  Ä?úÙ£º  Ä?  C   @xE<  Ä?  C  @@*}∏º  Ä?  C  Ä@Ú=  Ä?  C  †@     Ä?  C <Fÿª  Ä?  C  Ä?F·Iª  Ä?  C   @˛ã7;  Ä?  C  @@lØº  Ä?  C  Ä@≈@<  Ä?  C  †@…^<  Ä?  C <FyYìª  Ä?  C  Ä?k–(º  Ä?  C   @#[H<  Ä?  C  @@˘hüº  Ä?  C  Ä@∏ı<  Ä?  C  †@     Ä?  C <FMIâ∫  Ä?  C  Ä?¸ËΩª  Ä?  C   @±8*;  Ä?  C  @@Ê-º  Ä?  C  Ä@Àew<  Ä?  C  †@     Ä?  C <Fèª  Ä?  C  Ä?=p6º  Ä?  C   @ÌD<  Ä?  C  @@…Ω  Ä?  C  Ä@*0·<  Ä?  C  †@     Ä?  C <F=¯⁄:  Ä?  C  Ä?ïUçº  Ä?  C   @ñs—;  Ä?  C  @@T‚º  Ä?  C  Ä@fWŸ;  Ä?  C  †@∆HÄ=  Ä?  C <FÕ≠:  Ä?  C  Ä?Pµª  Ä?  C   @Bæº;  Ä?  C  @@ 7º  Ä?  C  Ä@ÇLo<  Ä?  C  †@     Ä?  C <F2Õ÷;  Ä?  C  Ä?hd;  Ä?  C   @ªå<  Ä?  C  @@     Ä?  C  Ä@å-<  Ä?  C  †@À¡Ω  Ä?  C <FaEº  Ä?  C <F≈Ù®:  Ä?  C  Ä?äº  Ä?  C   @◊¬;  Ä?  C  @@√“Uº  Ä?  C  Ä@÷†»<  Ä?  C  †@     Ä?  C <Fi[:  Ä?  C  Ä?ñãóº  Ä?  C   @;∫Y<  Ä?  C  @@ªîËº  Ä?  C  Ä@∏÷<  Ä?  C  †@     Ä?  C <F†;;  Ä?  C  Ä?µTÉª  Ä?  C   @£`?<  Ä?  C  @@ßÊWº  Ä?  C  Ä@æM<  Ä?  C  †@n Ω  Ä?  C <F	ê:  Ä?  C  Ä?ÏUº  Ä?  C   @jE<  Ä?  C  @@*sËº  Ä?  C  Ä@ã‚£<  Ä?  C  †@     Ä?  C <FÏBπª  Ä?  C  Ä?,‚]º  Ä?  C   @pQ‡<  Ä?  C  @@à«HΩ  Ä?  C  Ä@W,E=  Ä?  C  †@     Ä?  C <F√ˆ™;  Ä?  C  Ä?
+µ™º  Ä?  C   @ıq∫<  Ä?  C  @@Z{+Ω  Ä?  C  Ä@7äÌ<  Ä?  C  †@     Ä?  C <Fá
+⁄;  Ä?  C  Ä?"Yº  Ä?  C   @F,<  Ä?  C  @@ÉÒÂº  Ä?  C  Ä@·≈<  Ä?  C  †@     Ä?  C <F˛ò;  Ä?  C  Ä?ƒ—‰ª  Ä?  C   @·;  Ä?  C  @@òËΩº  Ä?  C  Ä@é≤≤<  Ä?  C  †@     Ä?  C <FEÂÑ:  Ä?  C  Ä?wüMº  Ä?  C   @!ΩI<  Ä?  C  @@qëŸº  Ä?  C  Ä@ê†<  Ä?  C  †@     Ä?  C <Ff¿.ª  Ä?   C  Ä?Ù1›ª  Ä?   C   @»–ı;  Ä?   C  @@∑µüº  Ä?   C  Ä@$‰<  Ä?   C  †@     Ä?   C <FÃ k;  Ä?  !C  Ä?¥º  Ä?  !C   @æ#<  Ä?  !C  @@¿z(º  Ä?  !C  Ä@[|“<  Ä?  !C  †@µ∑;Ω  Ä?  !C <F?0˜;  Ä?  "C  Ä?)|\ª  Ä?  "C   @äa <  Ä?  "C  @@x4Ω  Ä?  "C  Ä@â%=  Ä?  "C  †@<áΩ  Ä?  "C <F¢êZ<  Ä?  #C  Ä?ÙàΩ  Ä?  #C   @À:=  Ä?  #C  @@üoΩ  Ä?  #C  Ä@‘K=  Ä?  #C  †@     Ä?  #C <FòÊ;  Ä?  $C  Ä?Õxßº  Ä?  $C   @»éÀ<  Ä?  $C  @@$ÌZΩ  Ä?  $C  Ä@Åπ;=  Ä?  $C  †@     Ä?  $C <F/¶≈;  Ä?  %C  Ä?π/qª  Ä?  %C   @•L<  Ä?  %C  @@√êº  Ä?  %C  Ä@Fùl<  Ä?  %C  †@±Ÿº  Ä?  %C <Fx◊°∫  Ä?  &C  Ä?ÂBéª  Ä?  &C   @îb";  Ä?  &C  @@_#Ωª  Ä?  &C  Ä@¸/<  Ä?  &C  †@∆€Çº  Ä?  &C <FS∏Ö<  Ä?  &C <Fß4‹9  Ä?  'C  Ä?q^º  Ä?  'C   @¸<  Ä?  'C  @@ÛYªº  Ä?  'C  Ä@4Û¿<  Ä?  'C  †@     Ä?  'C <Fÿª0;  Ä?  (C  Ä?Î*àª  Ä?  (C   @Ëﬁ∆;  Ä?  (C  @@pcº  Ä?  (C  Ä@hì<  Ä?  (C  †@·]∞º  Ä?  (C <Fß|[<  Ä?  )C  Ä?úá¥º  Ä?  )C   @òÆ∆<  Ä?  )C  @@î’qΩ  Ä?  )C  Ä@=  Ä?  )C  †@     Ä?  )C <FètÖ9  Ä?  *C  Ä?‰∫ª  Ä?  *C   @U˛î;  Ä?  *C  @@hÉº  Ä?  *C  Ä@˝M<  Ä?  *C  †@¡÷Œ<  Ä?  *C <F∑âÅ;  Ä?  +C  Ä?6–ª  Ä?  +C   @{}È;  Ä?  +C  @@7„îº  Ä?  +C  Ä@Yøá<  Ä?  +C  †@|KΩ  Ä?  +C <F}‡Ï<  Ä?  +C <F j¥9  Ä?  ,C  Ä?…+Lª  Ä?  ,C   @‰‹:  Ä?  ,C  @@Y¶ª  Ä?  ,C  Ä@„∂Û;  Ä?  ,C  †@     Ä?  ,C <F…§:  Ä?  -C  Ä?v=Œ∫  Ä?  -C   @ëä;  Ä?  -C  @@Ê$ª  Ä?  -C  Ä@—ù´;  Ä?  -C  †@     Ä?  -C <FM·≤∫  Ä?  .C  Ä?Xïª  Ä?  .C   @á5é;  Ä?  .C  @@ıËº  Ä?  .C  Ä@Oa2<  Ä?  .C  †@     Ä?  .C <FÎıº  Ä?  /C  Ä?ü=&º  Ä?  /C   @iÓ°<  Ä?  /C  @@∞cΩ  Ä?  /C  Ä@˜¥b=  Ä?  /C  †@     Ä?  /C <FåDv:  Ä?  0C  Ä?c´ª  Ä?  0C   @På<<  Ä?  0C  @@…Q≤º  Ä?  0C  Ä@ô∑ç<  Ä?  0C  †@     Ä?  0C <Fç:  Ä?  1C  Ä?ƒ/ñª  Ä?  1C   @+„v;  Ä?  1C  @@O2gº  Ä?  1C  Ä@ƒÇ:<  Ä?  1C  †@     Ä?  1C <F,≈∫∫  Ä?  2C  Ä?y·Åª  Ä?  2C   @® ˆ;  Ä?  2C  @@›&ìº  Ä?  2C  Ä@?[8<  Ä?  2C  †@     Ä?  2C <F™ägª  Ä?  3C  Ä?äº  Ä?  3C   @lÙ<  Ä?  3C  @@Üº  Ä?  3C  Ä@njã<  Ä?  3C  †@     Ä?  3C <FÇû∫  Ä?  4C  Ä?É:º  Ä?  4C   @C+<  Ä?  4C  @@ü=”º  Ä?  4C  Ä@ò1â<  Ä?  4C  †@     Ä?  4C <F"_±9  Ä?  5C  Ä?m Åª  Ä?  5C   @≥;  Ä?  5C  @@Ö∫Æª  Ä?  5C  Ä@TíÏ;  Ä?  5C  †@˛⁄Ôº  Ä?  5C <F(ö†<  Ä?  5C <FÄNÊπ  Ä?  6C  Ä?Óºàº  Ä?  6C   @.{a<  Ä?  6C  @@`1Ω  Ä?  6C  Ä@0JÉ<  Ä?  6C  †@ÉN°=  Ä?  6C <F®é;  Ä?  7C  Ä?ÙØmº  Ä?  7C   @VîZ<  Ä?  7C  @@n)Ω  Ä?  7C  Ä@Œ√®<  Ä?  7C  †@     Ä?  7C <Ffiˇ:  Ä?  8C  Ä?ógº  Ä?  8C   @È.Ò;  Ä?  8C  @@Gw(º  Ä?  8C  Ä@X‘±<  Ä?  8C  †@     Ä?  8C <F{ G∑  Ä?  9C  Ä?åhIª  Ä?  9C   @Æ;  Ä?  9C  @@	`√ª  Ä?  9C  Ä@~/à;  Ä?  9C  †@¶+F<  Ä?  9C <FkS;  Ä?  :C  Ä?8 ‹ª  Ä?  :C   @_i›;  Ä?  :C  @@";±º  Ä?  :C  Ä@êå$<  Ä?  :C  †@     Ä?  :C <FŸ¨z:  Ä?  ;C  Ä?q%Éº  Ä?  ;C   @®a<  Ä?  ;C  @@ØxÀº  Ä?  ;C  Ä@∑Œ<  Ä?  ;C  †@     Ä?  ;C <Fã–îª  Ä?  <C  Ä?≥n>º  Ä?  <C   @æ_M<  Ä?  <C  @@>?óº  Ä?  <C  Ä@ã‘®<  Ä?  <C  †@     Ä?  <C <F©ª  Ä?  =C  Ä?ÙΩÌª  Ä?  =C   @Ω<  Ä?  =C  @@&zÆº  Ä?  =C  Ä@‹„<  Ä?  =C  †@     Ä?  =C <F¶é◊ª  Ä?  >C  Ä?Y}!º  Ä?  >C   @ùA<  Ä?  >C  @@Àƒ=º  Ä?  >C  Ä@?!µ<  Ä?  >C  †@     Ä?  >C <FÀá<  Ä?  ?C  Ä?—Äêº  Ä?  ?C   @»ó4<  Ä?  ?C  @@Ô1íº  Ä?  ?C  Ä@2às<  Ä?  ?C  †@     Ä?  ?C <FZ\‚;  Ä?  @C  Ä?ö:,º  Ä?  @C   @∂Ê<  Ä?  @C  @@±Jßº  Ä?  @C  Ä@O\L<  Ä?  @C  †@     Ä?  @C <FÜ:  Ä?  AC  Ä?,ûVº  Ä?  AC   @Ñ±F<  Ä?  AC  @@TMóº  Ä?  AC  Ä@D´î<  Ä?  AC  †@     Ä?  AC <F• k<  Ä?  BC  Ä?∫œÎº  Ä?  BC   @î’ø<  Ä?  BC  @@ô£#Ω  Ä?  BC  Ä@7=  Ä?  BC  †@     Ä?  BC <FHÃ;  Ä?  CC  Ä?N§Çº  Ä?  CC   @È{V<  Ä?  CC  @@€Ω  Ä?  CC  Ä@+4ı<  Ä?  CC  †@     Ä?  CC <F"øè:  Ä?  DC  Ä?bòô∫  Ä?  DC   @á1;  Ä?  DC  @@ü‚%ª  Ä?  DC  Ä@®Cä;  Ä?  DC  †@∫=º  Ä?  DC <F–†<  Ä?  DC <FÒè;  Ä?  EC  Ä?(Dº  Ä?  EC   @4Ìˇ;  Ä?  EC  @@Nêº  Ä?  EC  Ä@hMj<  Ä?  EC  †@     Ä?  EC <Fëoï:  Ä?  FC  Ä?@¬˚ª  Ä?  FC   @∏X‘;  Ä?  FC  @@Fsäº  Ä?  FC  Ä@∑jà<  Ä?  FC  †@     Ä?  FC <F<~8  Ä?  GC  Ä?¡‘†º  Ä?  GC   @†ƒ<  Ä?  GC  @@ÆΩ  Ä?  GC  Ä@Fˆ¸<  Ä?  GC  †@     Ä?  GC <F£ŒÚ;  Ä?  HC  Ä?∑Lª  Ä?  HC   @&?G<  Ä?  HC  @@N—º  Ä?  HC  Ä@'t<  Ä?  HC  †@     Ä?  HC <FhÍá∫  Ä?  IC  Ä?uã§ª  Ä?  IC   @^9µ;  Ä?  IC  @@Õôº  Ä?  IC  Ä@ù¶<  Ä?  IC  †@     Ä?  IC <F–C–∫  Ä?  JC  Ä?Eâ!º  Ä?  JC   @êÍ;  Ä?  JC  @@=q2º  Ä?  JC  Ä@·À¶<  Ä?  JC  †@     Ä?  JC <FÏ€k8  Ä?  KC  Ä?íò º  Ä?  KC   @∏+<  Ä?  KC  @@s·—º  Ä?  KC  Ä@zß<  Ä?  KC  †@     Ä?  KC <Fñyº:  Ä?  LC  Ä?m—º  Ä?  LC   @Éß?<  Ä?  LC  @@nº±º  Ä?  LC  Ä@Ï∏=  Ä?  LC  †@Ñ#Ω  Ä?  LC <FB˚;  Ä?  MC  Ä?¢lèº  Ä?  MC   @Á <  Ä?  MC  @@mQ Ω  Ä?  MC  Ä@Iê<  Ä?  MC  †@     Ä?  MC <FÛƒ :  Ä?  NC  Ä?z-ª  Ä?  NC   @¿Æ+;  Ä?  NC  @@øù(º  Ä?  NC  Ä@∫'{;  Ä?  NC  †@°ÎV<  Ä?  NC <F∆;  Ä?  OC  Ä?ﬂTÿª  Ä?  OC   @5.÷;  Ä?  OC  @@eAûº  Ä?  OC  Ä@ce<  Ä?  OC  †@     Ä?  OC <F%2:  Ä?  PC  Ä?"√·ª  Ä?  PC   @˘ˆ£;  Ä?  PC  @@®•Xº  Ä?  PC  Ä@ãîk<  Ä?  PC  †@     Ä?  PC <F}"ª  Ä?  QC  Ä?\÷∞ª  Ä?  QC   @˛1Í;  Ä?  QC  @@€+Rº  Ä?  QC  Ä@4*»<  Ä?  QC  †@     Ä?  QC <Fÿzî:  Ä?  RC  Ä?w è∫  Ä?  RC   @&d};  Ä?  RC  @@‚}(ª  Ä?  RC  Ä@a∂Ÿ;  Ä?  RC  †@£‹πº  Ä?  RC <F®q|<  Ä?  RC <FS=i=  Ä?  SC  Ä?≠∑˝Ω  Ä?  SC   @·4≈=  Ä?  SC  @@êæ  Ä?  SC  Ä@˙~>  Ä?  SC  †@     Ä?  SC <F∫  Ä?  TC  Ä?òS+ª  Ä?  TC   @∫ã&;  Ä?  TC  @@õI—ª  Ä?  TC  Ä@ñô<  Ä?  TC  †@     Ä?  TC <F~»Îπ  Ä?  UC  Ä?£øª  Ä?  UC   @&õ*;  Ä?  UC  @@åŸº  Ä?  UC  Ä@è<  Ä?  UC  †@     Ä?  UC <F"ÀGª  Ä?  VC  Ä??,&º  Ä?  VC   @Jé”;  Ä?  VC  @@Î>¶º  Ä?  VC  Ä@∂øæ<  Ä?  VC  †@     Ä?  VC <F√Só9  Ä?  WC  Ä?˚Lº  Ä?  WC   @8öD<  Ä?  WC  @@tˆº  Ä?  WC  Ä@ò$=  Ä?  WC  †@     Ä?  WC <FL9  Ä?  XC  Ä?B¸Øª  Ä?  XC   @õÌ9;  Ä?  XC  @@ë1º  Ä?  XC  Ä@√Ú?<  Ä?  XC  †@     Ä?  XC <F¸+;  Ä?  YC  Ä?E	=º  Ä?  YC   @˘&<  Ä?  YC  @@B5Xº  Ä?  YC  Ä@R_9<  Ä?  YC  †@     Ä?  YC <Fø∂˝:  Ä?  ZC  Ä?„≤j9  Ä?  ZC   @Gç;  Ä?  ZC  @@     Ä?  ZC  Ä@     Ä?  ZC  †@4œûº  Ä?  ZC <F¨*º  Ä?  ZC <FÒF6<  Ä?  ZC <F>3°<  Ä?  ZC <FÄuí;  Ä?  [C  Ä?>6ﬂ∫  Ä?  [C   @ˆº<  Ä?  [C  @@     Ä?  [C  Ä@ä=  Ä?  [C  †@2xΩ  Ä?  [C <F5êSΩ  Ä?  [C <Föu;  Ä?  \C  Ä?s7™ª  Ä?  \C   @6<  Ä?  \C  @@óeº  Ä?  \C  Ä@õÔ<  Ä?  \C  †@     Ä?  \C <F—*3;  Ä?  ]C  Ä?K¶ˆª  Ä?  ]C   @?œæ;  Ä?  ]C  @@Injº  Ä?  ]C  Ä@és<  Ä?  ]C  †@     Ä?  ]C <F¡∫  Ä?  ^C  Ä?vﬁÜª  Ä?  ^C   @t<  Ä?  ^C  @@©≥…ª  Ä?  ^C  Ä@o<  Ä?  ^C  †@üÚº  Ä?  ^C <FëÅ≤:  Ä?  _C  Ä?ÛS„ª  Ä?  _C   @X{÷;  Ä?  _C  @@ÕSº  Ä?  _C  Ä@rÛ5<  Ä?  _C  †@     Ä?  _C <Fuª  Ä?  `C  Ä?DŸÔª  Ä?  `C   @∞yª;  Ä?  `C  @@NΩ º  Ä?  `C  Ä@§∞z<  Ä?  `C  †@     Ä?  `C <Fü«;  Ä?  aC  Ä?	ÛAª  Ä?  aC   @òF‰;  Ä?  aC  @@     Ä?  aC  Ä@òñx<  Ä?  aC  †@p&Ω  Ä?  aC <F)ΩÁº  Ä?  aC <FZß-=  Ä?  aC <FÙ5Í:  Ä?  bC  Ä?¯ä9  Ä?  bC   @<⁄©;  Ä?  bC  @@ê∞Áª  Ä?  bC  Ä@»¸*<  Ä?  bC  †@ç$Zº  Ä?  bC <F@_≠9  Ä?  cC  Ä?¨™Wº  Ä?  cC   @†ﬂô<  Ä?  cC  @@€RΩ  Ä?  cC  Ä@«9ÿ<  Ä?  cC  †@     Ä?  cC <F0…∂ª  Ä?  dC  Ä?“ÄCº  Ä?  dC   @Ï›™<  Ä?  dC  @@&•Èº  Ä?  dC  Ä@πÊª<  Ä?  dC  †@     Ä?  dC <FkÎ[;  Ä?  eC  Ä?µR'º  Ä?  eC   @Å&W<  Ä?  eC  @@€ˇº  Ä?  eC  Ä@tb=  Ä?  eC  †@     Ä?  eC <F,c^ª  Ä?  fC  Ä?˜g©ª  Ä?  fC   @ß◊V;  Ä?  fC  @@jŸ
+º  Ä?  fC  Ä@/œ<  Ä?  fC  †@     Ä?  fC <F;`Tª  Ä?  gC  Ä?|	Íª  Ä?  gC   @Ì∏;  Ä?  gC  @@/·Äº  Ä?  gC  Ä@|<  Ä?  gC  †@¯≥¸º  Ä?  gC <F[Î!=  Ä?  gC <Få:  Ä?  hC  Ä?ï`ˇª  Ä?  hC   @ÑXﬁ;  Ä?  hC  @@zl–º  Ä?  hC  Ä@~Wö<  Ä?  hC  †@     Ä?  hC <F¸k∫  Ä?  iC  Ä?‘ùº  Ä?  iC   @Ï√ô;  Ä?  iC  @@≠FÄº  Ä?  iC  Ä@é•<  Ä?  iC  †@     Ä?  iC <F$Øª  Ä?  jC  Ä?ÌçSº  Ä?  jC   @mπå<  Ä?  jC  @@Ÿ±º  Ä?  jC  Ä@ÊΩ÷<  Ä?  jC  †@     Ä?  jC <Fd£ª  Ä?  kC  Ä?a'º  Ä?  kC   @JOÉ;  Ä?  kC  @@∑˝∑º  Ä?  kC  Ä@πØ <  Ä?  kC  †@û∑=  Ä?  kC <FÚ+#ª  Ä?  lC  Ä?€®<ª  Ä?  lC   @ªj;  Ä?  lC  @@Æœª  Ä?  lC  Ä@üŒ–;  Ä?  lC  †@     Ä?  lC <FÕ}ª  Ä?  mC  Ä?ŒÏøª  Ä?  mC   @˝Hè;  Ä?  mC  @@-]9º  Ä?  mC  Ä@IæC<  Ä?  mC  †@     Ä?  mC <FÜW<  Ä?  nC  Ä?Æ§†º  Ä?  nC   @Î5<  Ä?  nC  @@$¡Ω  Ä?  nC  Ä@@¯’<  Ä?  nC  †@     Ä?  nC <Fà%ª  Ä?  oC  Ä?¬ÿÁª  Ä?  oC   @â˛Å;  Ä?  oC  @@ﬂıª  Ä?  oC  Ä@mÈô<  Ä?  oC  †@     Ä?  oC <Fòd◊;  Ä?  pC  Ä?`€Nº  Ä?  pC   @†ƒ<  Ä?  pC  @@ã˝º  Ä?  pC  Ä@Aëª<  Ä?  pC  †@     Ä?  pC <Fqª  Ä?  qC  Ä?œ‚˚ª  Ä?  qC   @2Çz;  Ä?  qC  @@-º  Ä?  qC  Ä@Œ&s<  Ä?  qC  †@pˆOΩ  Ä?  qC <Fßr\=  Ä?  qC <F´’°º  Ä?  rC  Ä?¶OsΩ  Ä?  rC   @ôg=  Ä?  rC  @@ëΩ  Ä?  rC  Ä@ë∑=  Ä?  rC  †@     Ä?  rC <F*ÂFª  Ä?  sC  Ä?™¢Âª  Ä?  sC   @ã<  Ä?  sC  @@Ûjäº  Ä?  sC  Ä@ä_B<  Ä?  sC  †@     Ä?  sC <FCKª  Ä?  tC  Ä?øâXº  Ä?  tC   @^›;  Ä?  tC  @@T5∫º  Ä?  tC  Ä@9ÖÃ<  Ä?  tC  †@     Ä?  tC <FD´;  Ä?  uC  Ä?ö≠á:  Ä?  uC   @àõﬁ;  Ä?  uC  @@     Ä?  uC  Ä@<4'<  Ä?  uC  †@Ë+Ω  Ä?  uC <F86º  Ä?  uC <Fo$©<  Ä?  uC <Fæ5§∫  Ä?  vC  Ä?sÃ ª  Ä?  vC   @Gä≥;  Ä?  vC  @@úS#º  Ä?  vC  Ä@úœÅ<  Ä?  vC  †@     Ä?  vC <F)A™<  Ä?  wC  Ä?V±¡º  Ä?  wC   @’PÙ<  Ä?  wC  @@<wJΩ  Ä?  wC  Ä@·4 =  Ä?  wC  †@     Ä?  wC <Fqç:  Ä?  xC  Ä?˘Xñº  Ä?  xC   @˛µ<  Ä?  xC  @@-+Áº  Ä?  xC  Ä@yÚÈ<  Ä?  xC  †@     Ä?  xC <FKòª  Ä?  yC  Ä?&°âº  Ä?  yC   @|π$=  Ä?  yC  @@∑MÑΩ  Ä?  yC  Ä@xÔ=  Ä?  yC  †@     Ä?  yC <FhË∫  Ä?  zC  Ä?Bº  Ä?  zC   @¿a…;  Ä?  zC  @@≈£ëº  Ä?  zC  Ä@‰0ó<  Ä?  zC  †@     Ä?  zC <Fø!È8  Ä?  {C  Ä?∏Nº  Ä?  {C   @ôUJ<  Ä?  {C  @@"|…º  Ä?  {C  Ä@Q=∞<  Ä?  {C  †@     Ä?  {C <FH‰ç:  Ä?  |C  Ä?w∑C9  Ä?  |C   @”>;  Ä?  |C  @@ôåAª  Ä?  |C  Ä@     Ä?  |C  †@«ˆíª  Ä?  |C <FäT«;  Ä?  |C <F»±À;  Ä?  |C <FóÿZ;  Ä?  }C  Ä?…∆˙ª  Ä?  }C   @üI<  Ä?  }C  @@˚uõº  Ä?  }C  Ä@√∞è<  Ä?  }C  †@     Ä?  }C <Fí+ı8  Ä?  ~C  Ä?È‡º  Ä?  ~C   @0Œ…;  Ä?  ~C  @@∂≥º  Ä?  ~C  Ä@ ··<  Ä?  ~C  †@     Ä?  ~C <F:Ø¢;  Ä?  C  Ä?>ªª  Ä?  C   @»Æa<  Ä?  C  @@˘™º  Ä?  C  Ä@Õ^á<  Ä?  C  †@     Ä?  C <F›á›∫  Ä?  ÄC  Ä?ûÀïº  Ä?  ÄC   @ÇÆã<  Ä?  ÄC  @@2Ú¿º  Ä?  ÄC  Ä@XyÊ<  Ä?  ÄC  †@     Ä?  ÄC <F√ßKª  Ä? ÄÄC  Ä?x∞Éª  Ä? ÄÄC   @0∞>;  Ä? ÄÄC  @@YXº  Ä? ÄÄC  Ä@¶Pü;  Ä? ÄÄC  †@Ny<  Ä? ÄÄC <F+Mdº  Ä?  ÅC  Ä?„Rîº  Ä?  ÅC   @p4h<  Ä?  ÅC  @@≤™Àº  Ä?  ÅC  Ä@œH=  Ä?  ÅC  †@     Ä?  ÅC <FI$ã;  Ä? ÄÅC  Ä?>«˚ª  Ä? ÄÅC   @a¯<  Ä? ÄÅC  @@)ÈÆº  Ä? ÄÅC  Ä@oä<  Ä? ÄÅC  †@     Ä? ÄÅC <F˚Ã:  Ä?  ÇC  Ä?«Ç8º  Ä?  ÇC   @¡˝;  Ä?  ÇC  @@ƒ’º  Ä?  ÇC  Ä@›e<  Ä?  ÇC  †@     Ä?  ÇC <F8'ª  Ä? ÄÇC  Ä?V¨ª  Ä? ÄÇC   @a:Å;  Ä? ÄÇC  @@‚‡uº  Ä? ÄÇC  Ä@©ëâ<  Ä? ÄÇC  †@     Ä? ÄÇC <F;  Ä?  ÉC  Ä?œRº  Ä?  ÉC   @__
+<  Ä?  ÉC  @@ârõº  Ä?  ÉC  Ä@‘ Ö<  Ä?  ÉC  †@     Ä?  ÉC <Fcª  Ä? ÄÉC  Ä?•%aº  Ä? ÄÉC   @˜¶K<  Ä? ÄÉC  @@ìƒïº  Ä? ÄÉC  Ä@^Éñ<  Ä? ÄÉC  †@     Ä? ÄÉC <FÈp;  Ä?  ÑC  Ä?∞5“ª  Ä?  ÑC   @`Z <  Ä?  ÑC  @@§ùFº  Ä?  ÑC  Ä@:ñ<  Ä?  ÑC  †@     Ä?  ÑC <FO)∫  Ä? ÄÑC  Ä?ˆî<ª  Ä? ÄÑC   @ä•y;  Ä? ÄÑC  @@åÉ‡ª  Ä? ÄÑC  Ä@∂3⁄;  Ä? ÄÑC  †@     Ä? ÄÑC <FoÔ∫  Ä?  ÖC  Ä?∆êQª  Ä?  ÖC   @=ë;  Ä?  ÖC  @@*¥?º  Ä?  ÖC  Ä@q<  Ä?  ÖC  †@ªÎÜ<  Ä?  ÖC <Fºo=<  Ä? ÄÖC  Ä?2"‚º  Ä? ÄÖC   @ºº’<  Ä? ÄÖC  @@p^§Ω  Ä? ÄÖC  Ä@AYT=  Ä? ÄÖC  †@     Ä? ÄÖC <FÄáÀ:  Ä?  ÜC  Ä?$ë"º  Ä?  ÜC   @zå;  Ä?  ÜC  @@V|Nº  Ä?  ÜC  Ä@ì‘C<  Ä?  ÜC  †@[ñ.Ω  Ä?  ÜC <FdE=  Ä?  ÜC <Fxî»:  Ä? ÄÜC  Ä?‘ªÿª  Ä? ÄÜC   @Ò¡<  Ä? ÄÜC  @@çrwº  Ä? ÄÜC  Ä@ﬂ}<  Ä? ÄÜC  †@     Ä? ÄÜC <FNﬁ"º  Ä?  áC  Ä?çÙ&º  Ä?  áC   @õmÜ<  Ä?  áC  @@QΩ  Ä?  áC  Ä@$‡=  Ä?  áC  †@     Ä?  áC <F/g[º  Ä? ÄáC  Ä?Ö%¢º  Ä? ÄáC   @âM£<  Ä? ÄáC  @@
+¥Ω  Ä? ÄáC  Ä@ÑqS=  Ä? ÄáC  †@     Ä? ÄáC <Fƒ†ﬁ∫  Ä?  àC  Ä?0ƒ)º  Ä?  àC   @Uó<  Ä?  àC  @@>‘º  Ä?  àC  Ä@Üâ∆<  Ä?  àC  †@     Ä?  àC <Fëü%;  Ä? ÄàC  Ä?lµª  Ä? ÄàC   @Ç∆Ç;  Ä? ÄàC  @@≥7'º  Ä? ÄàC  Ä@U±;  Ä? ÄàC  †@     Ä? ÄàC <F∂Üπ  Ä?  âC  Ä?¿-Eª  Ä?  âC   @g…õ;  Ä?  âC  @@¨pº  Ä?  âC  Ä@y><  Ä?  âC  †@     Ä?  âC <F¥≤;  Ä? ÄâC  Ä?±Ãíπ  Ä? ÄâC   @Ê¨´<  Ä? ÄâC  @@¨ü∫º  Ä? ÄâC  Ä@í·Ó<  Ä? ÄâC  †@AÑΩ  Ä? ÄâC <Fñ∫  Ä?  äC  Ä?⁄§º  Ä?  äC   @af˚;  Ä?  äC  @@«…º  Ä?  äC  Ä@É!Ω<  Ä?  äC  †@     Ä?  äC <F˝F‚π  Ä? ÄäC  Ä?|ª  Ä? ÄäC   @;;  Ä? ÄäC  @@k ±ª  Ä? ÄäC  Ä@ï¯ù;  Ä? ÄäC  †@(Òáº  Ä? ÄäC <FyP´<  Ä? ÄäC <Fkº  Ä?  ãC  Ä?¬6Bº  Ä?  ãC   @DPº  Ä?  ãC  @@™Áqº  Ä?  ãC  Ä@ıåµª  Ä?  ãC  †@˘Ã∂=  Ä?  ãC <F5€b:  Ä? ÄãC  Ä?s∑Oº  Ä? ÄãC   @.P!<  Ä? ÄãC  @@Ó<™º  Ä? ÄãC  Ä@»O<  Ä? ÄãC  †@     Ä? ÄãC <FZ5;  Ä?  åC  Ä?Õ27º  Ä?  åC   @˜Ø;  Ä?  åC  @@3]cº  Ä?  åC  Ä@\<  Ä?  åC  †@     Ä?  åC <Fèô∫  Ä? ÄåC  Ä?ù`cª  Ä? ÄåC   @÷ı.;  Ä? ÄåC  @@`j»ª  Ä? ÄåC  Ä@vß<  Ä? ÄåC  †@     Ä? ÄåC <FÎˇ <  Ä?  çC  Ä?§trº  Ä?  çC   @ÿh¶<  Ä?  çC  @@˝TΩ  Ä?  çC  Ä@BÛ<  Ä?  çC  †@     Ä?  çC <F›F <  Ä? ÄçC  Ä?V¶º  Ä? ÄçC   @Úπs<  Ä? ÄçC  @@≤ÑsΩ  Ä? ÄçC  Ä@1  =  Ä? ÄçC  †@     Ä? ÄçC <F∫„:  Ä?  éC  Ä?PfÀπ  Ä?  éC   @PB;  Ä?  éC  @@iØcª  Ä?  éC  Ä@Í<Ä;  Ä?  éC  †@     Ä?  éC <FÓ`Á:  Ä? ÄéC  Ä?oèÅª  Ä? ÄéC   @ﬂC;  Ä? ÄéC  @@ûÙ ª  Ä? ÄéC  Ä@Â•<  Ä? ÄéC  †@     Ä? ÄéC <FÁùEª  Ä?  èC  Ä?aëƒª  Ä?  èC   @(è˘9  Ä?  èC  @@kï¯ª  Ä?  èC  Ä@     Ä?  èC  †@(—N<  Ä?  èC <Ff)Ä<  Ä?  èC <F§ä;  Ä? ÄèC  Ä?ïÖª  Ä? ÄèC   @˚z˝;  Ä? ÄèC  @@‘Zzº  Ä? ÄèC  Ä@ÍøZ<  Ä? ÄèC  †@     Ä? ÄèC <Fò€`;  Ä?  êC  Ä?ÑÇeº  Ä?  êC   @_ﬂò<  Ä?  êC  @@&)¯º  Ä?  êC  Ä@7Ó<  Ä?  êC  †@     Ä?  êC <Fm•⁄ª  Ä? ÄêC  Ä?=¨2º  Ä? ÄêC   @bπx;  Ä? ÄêC  @@oÅº  Ä? ÄêC  Ä@›⁄<  Ä? ÄêC  †@"ç=  Ä? ÄêC <FH∆:  Ä?  ëC  Ä?v…íª  Ä?  ëC   @_√;  Ä?  ëC  @@bè/º  Ä?  ëC  Ä@—¡P;  Ä?  ëC  †@     Ä?  ëC <F4{b;  Ä? ÄëC  Ä?≠Í¥ª  Ä? ÄëC   @vî<  Ä? ÄëC  @@¯Yº  Ä? ÄëC  Ä@ö°ç<  Ä? ÄëC  †@     Ä? ÄëC <Fj∑Q:  Ä?  íC  Ä?fÑÄª  Ä?  íC   @”ï<  Ä?  íC  @@ÀÉâº  Ä?  íC  Ä@h›W<  Ä?  íC  †@     Ä?  íC <FÇ<  Ä? ÄíC  Ä?ä©º  Ä? ÄíC   @™Á$<  Ä? ÄíC  @@ÜÔΩ  Ä? ÄíC  Ä@≈=  Ä? ÄíC  †@     Ä? ÄíC <F~5;  Ä?  ìC  Ä?Lu›∫  Ä?  ìC   @ãq};  Ä?  ìC  @@éÇÂª  Ä?  ìC  Ä@h,¡;  Ä?  ìC  †@     Ä?  ìC <F‡ª  Ä? ÄìC  Ä?< º  Ä? ÄìC   @9h4<  Ä? ÄìC  @@∏)º  Ä? ÄìC  Ä@–,Ñ<  Ä? ÄìC  †@     Ä? ÄìC <F*Uù∫  Ä?  îC  Ä?>]Õª  Ä?  îC   @∂iÿ;  Ä?  îC  @@≤¶Lº  Ä?  îC  Ä@R–O<  Ä?  îC  †@     Ä?  îC <Fe†ç∫  Ä? ÄîC  Ä?£∞Éª  Ä? ÄîC   @Iﬁ;  Ä? ÄîC  @@?ÿ“ª  Ä? ÄîC  Ä@ú†'<  Ä? ÄîC  †@     Ä? ÄîC <F!JÜ<  Ä?  ïC  Ä?kÎ®º  Ä?  ïC   @À@™<  Ä?  ïC  @@F¡Ω  Ä?  ïC  Ä@2Ó‰<  Ä?  ïC  †@     Ä?  ïC <FtQAª  Ä? ÄïC  Ä?ûìª  Ä? ÄïC   @zfÑπ  Ä? ÄïC  @@«‰„ª  Ä? ÄïC  Ä@     Ä? ÄïC  †@	 <  Ä? ÄïC <FÔ‹ç<  Ä? ÄïC <Ft;ƒ∫  Ä?  ñC  Ä?ÁQº  Ä?  ñC   @m◊ì:  Ä?  ñC  @@L;äº  Ä?  ñC  Ä@¶}m<  Ä?  ñC  †@Îé =  Ä?  ñC <FÜÍâ:  Ä? ÄñC  Ä?Uù°ª  Ä? ÄñC   @—ê;  Ä? ÄñC  @@9ÇÈª  Ä? ÄñC  Ä@~Ó;  Ä? ÄñC  †@     Ä? ÄñC <F±¿ª  Ä?  óC  Ä?⁄Æ'º  Ä?  óC   @K<  Ä?  óC  @@ò∞Ÿº  Ä?  óC  Ä@bå¿<  Ä?  óC  †@     Ä?  óC <FPpÅª  Ä? ÄóC  Ä?XàŒª  Ä? ÄóC   @ﬂtö;  Ä? ÄóC  @@Rãº  Ä? ÄóC  Ä@:4ß<  Ä? ÄóC  †@     Ä? ÄóC <F¨Ö¥:  Ä?  òC  Ä?⁄ßﬁª  Ä?  òC   @†„<  Ä?  òC  @@$µº  Ä?  òC  Ä@Ò∞†<  Ä?  òC  †@     Ä?  òC <F»¡Ê;  Ä? ÄòC  Ä?Äµ+º  Ä? ÄòC   @IÂ,<  Ä? ÄòC  @@BΩ  Ä? ÄòC  Ä@›Ãì<  Ä? ÄòC  †@     Ä? ÄòC <F˝'ª  Ä?  ôC  Ä?oHº  Ä?  ôC   @96U<  Ä?  ôC  @@VÌ«º  Ä?  ôC  Ä@>“ï<  Ä?  ôC  †@     Ä?  ôC <F!¥Õ:  Ä? ÄôC  Ä?N,\ª  Ä? ÄôC   @Çw"<  Ä? ÄôC  @@ˆí˝ª  Ä? ÄôC  Ä@%‘ú<  Ä? ÄôC  †@¡7kΩ  Ä? ÄôC <FEØ=  Ä? ÄôC <F∏ª  Ä?  öC  Ä? `Zº  Ä?  öC   @äÜ<  Ä?  öC  @@ô6Ω  Ä?  öC  Ä@äo#=  Ä?  öC  †@     Ä?  öC <Fp‘≥;  Ä? ÄöC  Ä?s?Äº  Ä? ÄöC   @Ù&J<  Ä? ÄöC  @@BV¬º  Ä? ÄöC  Ä@¯÷Ÿ<  Ä? ÄöC  †@     Ä? ÄöC <F»ê∏  Ä?  õC  Ä?πÂ·ª  Ä?  õC   @]çç:  Ä?  õC  @@ö¨Nº  Ä?  õC  Ä@•÷;  Ä?  õC  †@y <  Ä?  õC <FÀ|˘;  Ä? ÄõC  Ä?tÊ8º  Ä? ÄõC   @T}W<  Ä? ÄõC  @@âúΩ  Ä? ÄõC  Ä@≤èÉ<  Ä? ÄõC  †@     Ä? ÄõC <F¥º  Ä?  úC  Ä?†æPº  Ä?  úC   @±”<  Ä?  úC  @@;Å¸º  Ä?  úC  Ä@si˛<  Ä?  úC  †@     Ä?  úC <F5{;  Ä? ÄúC  Ä?ÎF ª  Ä? ÄúC   @¢â¯;  Ä? ÄúC  @@Ö∂Åº  Ä? ÄúC  Ä@‰D<  Ä? ÄúC  †@ºÖ∏º  Ä? ÄúC <FÌk÷;  Ä?  ùC  Ä?¬˚º  Ä?  ùC   @√f<  Ä?  ùC  @@¬∂Öº  Ä?  ùC  Ä@˘“"<  Ä?  ùC  †@     Ä?  ùC <Fæ\<  Ä? ÄùC  Ä?H•πº  Ä? ÄùC   @T∑ë<  Ä? ÄùC  @@ö˝JΩ  Ä? ÄùC  Ä@É"ˆ<  Ä? ÄùC  †@     Ä? ÄùC <F©˘∏∫  Ä?  ûC  Ä?Òòº  Ä?  ûC   @Ñ§;  Ä?  ûC  @@èN
+Ω  Ä?  ûC  Ä@}„=  Ä?  ûC  †@     Ä?  ûC <F¯H,<  Ä? ÄûC  Ä?æƒº  Ä? ÄûC   @äz<  Ä? ÄûC  @@#Ω  Ä? ÄûC  Ä@q=  Ä? ÄûC  †@     Ä? ÄûC <F§ª  Ä?  üC  Ä?Y¸º  Ä?  üC   @Ç¶f<  Ä?  üC  @@.u±º  Ä?  üC  Ä@8±«<  Ä?  üC  †@     Ä?  üC <Fì{2<  Ä? ÄüC  Ä?w.æº  Ä? ÄüC   @ìÕ<  Ä? ÄüC  @@ßÁbΩ  Ä? ÄüC  Ä@v=  Ä? ÄüC  †@     Ä? ÄüC <F˜Üº  Ä?  †C  Ä?Üˇº  Ä?  †C   @•=  Ä?  †C  @@ÛΩ  Ä?  †C  Ä@ñ⁄4=  Ä?  †C  †@     Ä?  †C <F hª  Ä? Ä†C  Ä?»∏æª  Ä? Ä†C   @éå<  Ä? Ä†C  @@Òpº  Ä? Ä†C  Ä@#¨R<  Ä? Ä†C  †@     Ä? Ä†C <FXÄJ:  Ä?  °C  Ä?¥.`ª  Ä?  °C   @X7£;  Ä?  °C  @@ó&4º  Ä?  °C  Ä@¸<  Ä?  °C  †@     Ä?  °C <F\{É;  Ä? Ä°C  Ä?Ñ{uº  Ä? Ä°C   @9∂,<  Ä? Ä°C  @@†Äº  Ä? Ä°C  Ä@˚=  Ä? Ä°C  †@     Ä? Ä°C <Ftes:  Ä?  ¢C  Ä?;ˇöª  Ä?  ¢C   @" ;  Ä?  ¢C  @@Ïªº  Ä?  ¢C  Ä@jk<  Ä?  ¢C  †@     Ä?  ¢C <FieÜª  Ä? Ä¢C  Ä?™º  Ä? Ä¢C   @⁄‹Ö;  Ä? Ä¢C  @@∏ˇƒº  Ä? Ä¢C  Ä@?Ûz<  Ä? Ä¢C  †@ü‹BΩ  Ä? Ä¢C <Fö—ç=  Ä? Ä¢C <F§Qx∫  Ä?  £C  Ä?Ùséª  Ä?  £C   @ÊÓ–;  Ä?  £C  @@rˇçº  Ä?  £C  Ä@≠3H<  Ä?  £C  †@     Ä?  £C <FstÎ:  Ä? Ä£C  Ä?™πBº  Ä? Ä£C   @ ö><  Ä? Ä£C  @@Íº  Ä? Ä£C  Ä@ŸÀ<  Ä? Ä£C  †@     Ä? Ä£C <F=_	;  Ä?  §C  Ä?û≠º  Ä?  §C   @J≥«;  Ä?  §C  @@”}Cº  Ä?  §C  Ä@§ÁÜ<  Ä?  §C  †@     Ä?  §C <FÈc&;  Ä? Ä§C  Ä?äq=ª  Ä? Ä§C   @Å<ƒ;  Ä? Ä§C  @@ÿ!º  Ä? Ä§C  Ä@Ö£<  Ä? Ä§C  †@´pëº  Ä? Ä§C <F^&ª  Ä?  •C  Ä?‚%º  Ä?  •C   @’á<  Ä?  •C  @@p¢”º  Ä?  •C  Ä@~√<  Ä?  •C  †@     Ä?  •C <FN†=  Ä? Ä•C  Ä?&-zº  Ä? Ä•C   @°é!=  Ä? Ä•C  @@Eá‡º  Ä? Ä•C  Ä@√ñí=  Ä? Ä•C  †@|À\æ  Ä? Ä•C <F˜’M;  Ä?  ¶C  Ä?ö+º  Ä?  ¶C   @B<  Ä?  ¶C  @@Õ"úº  Ä?  ¶C  Ä@1Åm<  Ä?  ¶C  †@     Ä?  ¶C <FjL º  Ä? Ä¶C  Ä?"4yº  Ä? Ä¶C   @>≤Á:  Ä? Ä¶C  @@åçº  Ä? Ä¶C  Ä@ÙÅö;  Ä? Ä¶C  †@Pa=  Ä? Ä¶C <Fvâ∑:  Ä?  ßC  Ä?êlª  Ä?  ßC   @Êr‘;  Ä?  ßC  @@∏ñº  Ä?  ßC  Ä@ Ù^<  Ä?  ßC  †@     Ä?  ßC <FJ∏¢º  Ä? ÄßC  Ä? ∏º  Ä? ÄßC   @µlZ<  Ä? ÄßC  @@◊”YΩ  Ä? ÄßC  Ä@V_=  Ä? ÄßC  †@     Ä? ÄßC <Fåö˘ª  Ä?  ®C  Ä?©Ò0º  Ä?  ®C   @b2Ñ<  Ä?  ®C  @@∆Sêº  Ä?  ®C  Ä@Ò¨=  Ä?  ®C  †@     Ä?  ®C <F…,∏ª  Ä? Ä®C  Ä?4≈Åº  Ä? Ä®C   @â$;  Ä? Ä®C  @@Ö+Ω  Ä? Ä®C  Ä@:ã,<  Ä? Ä®C  †@ÃæLΩ  Ä? Ä®C <FYﬁÃ=  Ä? Ä®C <FÎ3√ª  Ä?  ©C  Ä?§Èáº  Ä?  ©C   @ÿàÜ<  Ä?  ©C  @@XLΩ  Ä?  ©C  Ä@h§&=  Ä?  ©C  †@     Ä?  ©C <F†Ä¡9  Ä? Ä©C  Ä?@–Nª  Ä? Ä©C   @Yµ\;  Ä? Ä©C  @@Ó"Ùª  Ä? Ä©C  Ä@¬rı;  Ä? Ä©C  †@     Ä? Ä©C <F€˘H;  Ä?  ™C  Ä?"TÖª  Ä?  ™C   @’œu;  Ä?  ™C  @@†1%º  Ä?  ™C  Ä@óÙ*<  Ä?  ™C  †@     Ä?  ™C <FÄU3<  Ä? Ä™C  Ä?§Ûº  Ä? Ä™C   @i:=  Ä? Ä™C  @@º‡Ω  Ä? Ä™C  Ä@ y=  Ä? Ä™C  †@     Ä? Ä™C <F¥÷â∫  Ä?  ´C  Ä?•ESº  Ä?  ´C   @Ó÷∂<  Ä?  ´C  @@~—Ω  Ä?  ´C  Ä@N‡È<  Ä?  ´C  †@     Ä?  ´C <FÏÉíª  Ä? Ä´C  Ä?Îªº  Ä? Ä´C   @õ@b<  Ä? Ä´C  @@2)´º  Ä? Ä´C  Ä@w£§<  Ä? Ä´C  †@     Ä? Ä´C <FáΩ⁄:  Ä?  ¨C  Ä?<0Wº  Ä?  ¨C   @s<  Ä?  ¨C  @@¿Ω  Ä?  ¨C  Ä@9*–<  Ä?  ¨C  †@     Ä?  ¨C <F∫‰9  Ä? Ä¨C  Ä?]&©º  Ä? Ä¨C   @]<  Ä? Ä¨C  @@Â’º  Ä? Ä¨C  Ä@a; =  Ä? Ä¨C  †@     Ä? Ä¨C <F∂e∫  Ä?  ≠C  Ä?›Ä<º  Ä?  ≠C   @‡OA<  Ä?  ≠C  @@>¨fº  Ä?  ≠C  Ä@s¨£<  Ä?  ≠C  †@     Ä?  ≠C <Fb–◊;  Ä? Ä≠C  Ä?%–Tº  Ä? Ä≠C   @ñzm<  Ä? Ä≠C  @@Gr˛º  Ä? Ä≠C  Ä@Íl∏<  Ä? Ä≠C  †@     Ä? Ä≠C <F˚ä_∫  Ä?  ÆC  Ä?bº  Ä?  ÆC   @T«h:  Ä?  ÆC  @@FÈYº  Ä?  ÆC  Ä@(kv<  Ä?  ÆC  †@◊ë<  Ä?  ÆC <FEÁ&<  Ä? ÄÆC  Ä?UÌ]Ω  Ä? ÄÆC   @mı'=  Ä? ÄÆC  @@â†≥Ω  Ä? ÄÆC  Ä@‚ö=  Ä? ÄÆC  †@     Ä? ÄÆC <Fônà;  Ä?  ØC  Ä?VK+º  Ä?  ØC   @ná<  Ä?  ØC  @@ˇî”º  Ä?  ØC  Ä@	çà<  Ä?  ØC  †@     Ä?  ØC <F≤„Í;  Ä? ÄØC  Ä?
+πª  Ä? ÄØC   @‡?{<  Ä? ÄØC  @@     Ä? ÄØC  Ä@ZÜ™<  Ä? ÄØC  †@R&Ω  Ä? ÄØC <Fı¸Ω  Ä? ÄØC <Fô	<  Ä?  ∞C  Ä?¿ÌÀº  Ä?  ∞C   @7C9<  Ä?  ∞C  @@w¶CΩ  Ä?  ∞C  Ä@ºño=  Ä?  ∞C  †@     Ä?  ∞C <FÕ†:  Ä? Ä∞C  Ä?$Üøª  Ä? Ä∞C   @ÊF!<  Ä? Ä∞C  @@àº  Ä? Ä∞C  Ä@ÌÏJ<  Ä? Ä∞C  †@     Ä? Ä∞C <FÍâö;  Ä?  ±C  Ä?KE‹ª  Ä?  ±C   @»I<  Ä?  ±C  @@∞Ñ=º  Ä?  ±C  Ä@µùΩ<  Ä?  ±C  †@◊jΩ  Ä?  ±C <FÄi9<  Ä? Ä±C  Ä?).ôª  Ä? Ä±C   @ÿ¯î<  Ä? Ä±C  @@ÁîÎª  Ä? Ä±C  Ä@N•ï<  Ä? Ä±C  †@céΩ  Ä? Ä±C <F¿(∫  Ä?  ≤C  Ä?ìπª  Ä?  ≤C   @vR<  Ä?  ≤C  @@˚0gº  Ä?  ≤C  Ä@ﬂÎG<  Ä?  ≤C  †@     Ä?  ≤C <F¸Yb;  Ä? Ä≤C  Ä?üòΩ  Ä? Ä≤C   @5ı@=  Ä? Ä≤C  @@†ö†Ω  Ä? Ä≤C  Ä@·±=  Ä? Ä≤C  †@     Ä? Ä≤C <F™k<  Ä?  ≥C  Ä?çgïº  Ä?  ≥C   @ìV8<  Ä?  ≥C  @@~Ñºº  Ä?  ≥C  Ä@
+éÑ<  Ä?  ≥C  †@     Ä?  ≥C <Fg~ºª  Ä? Ä≥C  Ä?-Wœª  Ä? Ä≥C   @0 #<  Ä? Ä≥C  @@Ü≥Jº  Ä? Ä≥C  Ä@‰Rï<  Ä? Ä≥C  †@     Ä? Ä≥C <F”Ã‡ª  Ä?  ¥C  Ä?yZº  Ä?  ¥C   @m≈<  Ä?  ¥C  @@k…Ω  Ä?  ¥C  Ä@·=  Ä?  ¥C  †@     Ä?  ¥C <FÅ⁄C:  Ä? Ä¥C  Ä?û5º  Ä? Ä¥C   @¡L_<  Ä? Ä¥C  @@>Jeº  Ä? Ä¥C  Ä@Ñç<  Ä? Ä¥C  †@     Ä? Ä¥C <F¿ú<  Ä?  µC  Ä?Éïº  Ä?  µC   @)yS<  Ä?  µC  @@ëΩ  Ä?  µC  Ä@˘©Œ<  Ä?  µC  †@     Ä?  µC <FíÒΩ:  Ä? ÄµC  Ä?˘⁄¢ª  Ä? ÄµC   @R<  Ä? ÄµC  @@•º  Ä? ÄµC  Ä@¬ÌX<  Ä? ÄµC  †@     Ä? ÄµC <F—@ﬂ∫  Ä?  ∂C  Ä?|ríª  Ä?  ∂C   @“™ïπ  Ä?  ∂C  @@˘ã˜ª  Ä?  ∂C  Ä@|√6π  Ä?  ∂C  †@%ø<  Ä?  ∂C <FöB˙;  Ä? Ä∂C  Ä?l•7º  Ä? Ä∂C   @≠4<  Ä? Ä∂C  @@ˆŒˇº  Ä? Ä∂C  Ä@sßa<  Ä? Ä∂C  †@     Ä? Ä∂C <Fœöı;  Ä?  ∑C  Ä?)¶›º  Ä?  ∑C   @NØz<  Ä?  ∑C  @@8w,Ω  Ä?  ∑C  Ä@eÇ#=  Ä?  ∑C  †@     Ä?  ∑C <FÍXv9  Ä? Ä∑C  Ä?◊1ª  Ä? Ä∑C   @π’ê;  Ä? Ä∑C  @@ç˘º  Ä? Ä∑C  Ä@™1<  Ä? Ä∑C  †@[aπº  Ä? Ä∑C <FcCâ<  Ä? Ä∑C <FÏÏ≈:  Ä?  ∏C  Ä?≈?cº  Ä?  ∏C   @Z±#<  Ä?  ∏C  @@‚∂’º  Ä?  ∏C  Ä@Â‘Û<  Ä?  ∏C  †@     Ä?  ∏C <Fñ<  Ä? Ä∏C  Ä?≥∫  Ä? Ä∏C   @∂J<  Ä? Ä∏C  @@     Ä? Ä∏C  Ä@õKï<  Ä? Ä∏C  †@AÎ	Ω  Ä? Ä∏C <FŒ√º  Ä? Ä∏C <Fa`Nª  Ä?  πC  Ä?˙å˚ª  Ä?  πC   @µ¡4;  Ä?  πC  @@˚-èº  Ä?  πC  Ä@     Ä?  πC  †@°˜8Ω  Ä?  πC <Fø=  Ä?  πC <F[∏D=  Ä?  πC <F3Œ∫  Ä? ÄπC  Ä?9F™ª  Ä? ÄπC   @&ûé;  Ä? ÄπC  @@˜Rûº  Ä? ÄπC  Ä@#ŸC<  Ä? ÄπC  †@     Ä? ÄπC <FŒ<5<  Ä?  ∫C  Ä?PO⁄º  Ä?  ∫C   @ˆ<  Ä?  ∫C  @@∞âΩ  Ä?  ∫C  Ä@Y+u=  Ä?  ∫C  †@     Ä?  ∫C <Fs©…:  Ä? Ä∫C  Ä?FœÌ∫  Ä? Ä∫C   @Ÿ©Ù;  Ä? Ä∫C  @@˙iª  Ä? Ä∫C  Ä@ù<  Ä? Ä∫C  †@Òé
+Ω  Ä? Ä∫C <F zÍ<  Ä? Ä∫C <F“`›ª  Ä?  ªC  Ä?È'º  Ä?  ªC   @JΩk<  Ä?  ªC  @@(≤º  Ä?  ªC  Ä@¬‹<  Ä?  ªC  †@     Ä?  ªC <FOMà∫  Ä? ÄªC  Ä?‘Ê„∫  Ä? ÄªC   @Ï! ;  Ä? ÄªC  @@V, ª  Ä? ÄªC  Ä@0p¢;  Ä? ÄªC  †@     Ä? ÄªC <F√∂¡∏  Ä?  ºC  Ä?Æœäª  Ä?  ºC   @¯ßo;  Ä?  ºC  @@≠|/º  Ä?  ºC  Ä@Är<  Ä?  ºC  †@     Ä?  ºC <Fqeπ  Ä? ÄºC  Ä?L˚Ω  Ä? ÄºC   @Wx=  Ä? ÄºC  @@EM¿Ω  Ä? ÄºC  Ä@›¢=  Ä? ÄºC  †@     Ä? ÄºC <F3£êª  Ä?  ΩC  Ä?8
+µº  Ä?  ΩC   @∂‘â<  Ä?  ΩC  @@<VÅΩ  Ä?  ΩC  Ä@/fg=  Ä?  ΩC  †@     Ä?  ΩC <FQª  Ä? ÄΩC  Ä?ØKKº  Ä? ÄΩC   @6¶<  Ä? ÄΩC  @@úüíº  Ä? ÄΩC  Ä@=  Ä? ÄΩC  †@     Ä? ÄΩC <F%«p9  Ä?  æC  Ä?iÕª  Ä?  æC   @ﬁ-`;  Ä?  æC  @@ìk*º  Ä?  æC  Ä@Ñâä;  Ä?  æC  †@‘b<  Ä?  æC <FEˇ9  Ä? ÄæC  Ä?‘F¯ª  Ä? ÄæC   @	∏»;  Ä? ÄæC  @@eaIº  Ä? ÄæC  Ä@µt<  Ä? ÄæC  †@     Ä? ÄæC <F˝[:  Ä?  øC  Ä?Ì ∫  Ä?  øC   @Å¸:  Ä?  øC  @@œúûª  Ä?  øC  Ä@ÿ<;  Ä?  øC  †@AJ<  Ä?  øC <F¬âè;  Ä? ÄøC  Ä?¥›
+º  Ä? ÄøC   @tå<  Ä? ÄøC  @@QÒCº  Ä? ÄøC  Ä@¶<  Ä? ÄøC  †@.2`Ω  Ä? ÄøC <Fÿóﬁ:  Ä?  ¿C  Ä?ı·7ª  Ä?  ¿C   @2•y;  Ä?  ¿C  @@NO«ª  Ä?  ¿C  Ä@óÄ<  Ä?  ¿C  †@G¢óº  Ä?  ¿C <F6¢<  Ä?  ¿C <FTó*;  Ä? Ä¿C  Ä?)(º  Ä? Ä¿C   @ÀÚ<  Ä? Ä¿C  @@`Õëº  Ä? Ä¿C  Ä@ı<‹<  Ä? Ä¿C  †@     Ä? Ä¿C <F4∏ë:  Ä?  ¡C  Ä?ØüBº  Ä?  ¡C   @f<  Ä?  ¡C  @@zº  Ä?  ¡C  Ä@…b =  Ä?  ¡C  †@     Ä?  ¡C <F¢â—∫  Ä? Ä¡C  Ä?•pvª  Ä? Ä¡C   @∞Ò—;  Ä? Ä¡C  @@·[º  Ä? Ä¡C  Ä@uÄ;  Ä? Ä¡C  †@˘7Î<  Ä? Ä¡C <F£∞Â:  Ä?  ¬C  Ä?ê=oπ  Ä?  ¬C   @WË,;  Ä?  ¬C  @@Eﬁcª  Ä?  ¬C  Ä@     Ä?  ¬C  †@“HÒ;  Ä?  ¬C <F”‚Ú;  Ä?  ¬C <Fÿ§∞;  Ä? Ä¬C  Ä?)›`º  Ä? Ä¬C   @!´<<  Ä? Ä¬C  @@ùë¬º  Ä? Ä¬C  Ä@ ∆<  Ä? Ä¬C  †@     Ä? Ä¬C <F∫…ª  Ä?  √C  Ä?£âº  Ä?  √C   @i®Ä<  Ä?  √C  @@\ÕÕº  Ä?  √C  Ä@Y´¸<  Ä?  √C  †@     Ä?  √C <F$2;  Ä? Ä√C  Ä?öÄª  Ä? Ä√C   @∏;  Ä? Ä√C  @@Á”º  Ä? Ä√C  Ä@ﬁ%d<  Ä? Ä√C  †@     Ä? Ä√C <Fà‹®∫  Ä?  ƒC  Ä?ƒæ}ª  Ä?  ƒC   @∂¬ﬂ;  Ä?  ƒC  @@Œúñº  Ä?  ƒC  Ä@GCå<  Ä?  ƒC  †@     Ä?  ƒC <FRèº  Ä? ÄƒC  Ä?]B;º  Ä? ÄƒC   @£&.<  Ä? ÄƒC  @@ôúº  Ä? ÄƒC  Ä@ÌG™<  Ä? ÄƒC  †@     Ä? ÄƒC <Fã∆ˇª  Ä?  ≈C  Ä?Áº  Ä?  ≈C   @Ô<<  Ä?  ≈C  @@R ßº  Ä?  ≈C  Ä@gö<  Ä?  ≈C  †@     Ä?  ≈C <F≠P€∫  Ä? Ä≈C  Ä?†Ññº  Ä? Ä≈C   @¨˛`<  Ä? Ä≈C  @@p≈Îº  Ä? Ä≈C  Ä@1ˆ5=  Ä? Ä≈C  †@     Ä? Ä≈C <Fœª  Ä?  ∆C  Ä?ÛîFº  Ä?  ∆C   @˜˝…;  Ä?  ∆C  @@Ñèº  Ä?  ∆C  Ä@yn√<  Ä?  ∆C  †@     Ä?  ∆C <F)R1:  Ä? Ä∆C  Ä?éóª  Ä? Ä∆C   @rJ;  Ä? Ä∆C  @@	T˘ª  Ä? Ä∆C  Ä@lˆì;  Ä? Ä∆C  †@e°~<  Ä? Ä∆C <Fá ∫  Ä?  «C  Ä?ª°dº  Ä?  «C   @à/ë<  Ä?  «C  @@ˇ
+hΩ  Ä?  «C  Ä@í_K=  Ä?  «C  †@     Ä?  «C <F?c∆:  Ä? Ä«C  Ä?®ª  Ä? Ä«C   @J∆;  Ä? Ä«C  @@E—ª  Ä? Ä«C  Ä@êgË;  Ä? Ä«C  †@     Ä? Ä«C <F…ñ—ª  Ä?  »C  Ä?û∏˛ª  Ä?  »C   @∂=><  Ä?  »C  @@ë8º  Ä?  »C  Ä@/lÉ<  Ä?  »C  †@     Ä?  »C <Fﬂº™∫  Ä? Ä»C  Ä?Ó›º  Ä? Ä»C   @dw<  Ä? Ä»C  @@Òá{º  Ä? Ä»C  Ä@Èº<  Ä? Ä»C  †@     Ä? Ä»C <FYÑ ;  Ä?  …C  Ä?>ÈWº  Ä?  …C   @L´q<  Ä?  …C  @@ào˙º  Ä?  …C  Ä@U(…<  Ä?  …C  †@     Ä?  …C <F˜£©:  Ä? Ä…C  Ä?Ì÷™º  Ä? Ä…C   @˚ÀL<  Ä? Ä…C  @@)uΩ  Ä? Ä…C  Ä@lö=  Ä? Ä…C  †@     Ä? Ä…C <FÄV;  Ä?   C  Ä?˙5bº  Ä?   C   @O√<  Ä?   C  @@j’º  Ä?   C  Ä@Hú=  Ä?   C  †@     Ä?   C <Fü|π  Ä? Ä C  Ä?ø[º  Ä? Ä C   @($Ö<  Ä? Ä C  @@ÛTÛº  Ä? Ä C  Ä@_[¨<  Ä? Ä C  †@     Ä? Ä C <Fì’çª  Ä?  ÀC  Ä?‚/º  Ä?  ÀC   @Ë¨K<  Ä?  ÀC  @@Ã√Üº  Ä?  ÀC  Ä@dÄ´<  Ä?  ÀC  †@     Ä?  ÀC <FŒUÍª  Ä? ÄÀC  Ä?üé1º  Ä? ÄÀC   @‡˝;  Ä? ÄÀC  @@…π>º  Ä? ÄÀC  Ä@U:ù<  Ä? ÄÀC  †@     Ä? ÄÀC <F^≥D;  Ä?  ÃC  Ä?”àxº  Ä?  ÃC   @õfR<  Ä?  ÃC  @@Ω#
+Ω  Ä?  ÃC  Ä@<2ê<  Ä?  ÃC  †@     Ä?  ÃC <Fı”*º  Ä? ÄÃC  Ä?%Ôâº  Ä? ÄÃC   @Kï<  Ä? ÄÃC  @@]¿‘º  Ä? ÄÃC  Ä@{0Ê<  Ä? ÄÃC  †@     Ä? ÄÃC <F` Â:  Ä?  ÕC  Ä?∑⁄Çª  Ä?  ÕC   @ÑŸ‡;  Ä?  ÕC  @@’ßàº  Ä?  ÕC  Ä@[[¨<  Ä?  ÕC  †@0ÿº  Ä?  ÕC <F‘µ9  Ä? ÄÕC  Ä? Ô2º  Ä? ÄÕC   @ç	N<  Ä? ÄÕC  @@∞˘ºº  Ä? ÄÕC  Ä@Á‰™<  Ä? ÄÕC  †@     Ä? ÄÕC <FµÿË9  Ä?  ŒC  Ä?ãyŒª  Ä?  ŒC   @ìÃÚ;  Ä?  ŒC  @@„√º  Ä?  ŒC  Ä@dØŒ<  Ä?  ŒC  †@     Ä?  ŒC <F6o+ª  Ä? ÄŒC  Ä?s$Œª  Ä? ÄŒC   @F><  Ä? ÄŒC  @@≠yìº  Ä? ÄŒC  Ä@y9ã<  Ä? ÄŒC  †@     Ä? ÄŒC <F∞•^ª  Ä?  œC  Ä?ƒÍª  Ä?  œC   @H:<  Ä?  œC  @@
+úFº  Ä?  œC  Ä@GZV<  Ä?  œC  †@     Ä?  œC <Fi◊&<  Ä? ÄœC  Ä?z…∫  Ä? ÄœC   @sêK<  Ä? ÄœC  @@‡√ãº  Ä? ÄœC  Ä@j∏<  Ä? ÄœC  †@RR=Ω  Ä? ÄœC <FRL„ª  Ä?  –C  Ä?˜]º  Ä?  –C   @>Àµ<  Ä?  –C  @@%:‰º  Ä?  –C  Ä@É-=  Ä?  –C  †@     Ä?  –C <F‚?Êª  Ä? Ä–C  Ä?ˆ*ª  Ä? Ä–C   @xj“:  Ä? Ä–C  @@9&&º  Ä? Ä–C  Ä@     Ä? Ä–C  †@l´é<  Ä? Ä–C <F''°<  Ä? Ä–C <FÅ«Ö;  Ä?  —C  Ä?g÷ó:  Ä?  —C   @ﬁ(®;  Ä?  —C  @@     Ä?  —C  Ä@_<  Ä?  —C  †@«Éº  Ä?  —C <F)™ª  Ä?  —C <FrD	ª  Ä? Ä—C  Ä?éßº  Ä? Ä—C   @9πú<  Ä? Ä—C  @@cΩ  Ä? Ä—C  Ä@à¬˛<  Ä? Ä—C  †@     Ä? Ä—C <F&#Ω  Ä?  “C  Ä?Ω  Ä?  “C   @>Ì<  Ä?  “C  @@ßO*Ω  Ä?  “C  Ä@Áµ∞=  Ä?  “C  †@     Ä?  “C <Fâ6:  Ä? Ä“C  Ä?-"ª  Ä? Ä“C   @°$&;  Ä? Ä“C  @@%¯‡ª  Ä? Ä“C  Ä@Ó—£;  Ä? Ä“C  †@     Ä? Ä“C <F9/Øª  Ä?  ”C  Ä?E€®º  Ä?  ”C   @¡\<  Ä?  ”C  @@;Òº  Ä?  ”C  Ä@ÇÉˆ<  Ä?  ”C  †@     Ä?  ”C <FÚinª  Ä? Ä”C  Ä?w
+9º  Ä? Ä”C   @Ÿ#&<  Ä? Ä”C  @@ï
+Ω  Ä? Ä”C  Ä@	•’<  Ä? Ä”C  †@     Ä? Ä”C <Fpˇaπ  Ä?  ‘C  Ä?˙ÌDª  Ä?  ‘C   @∞uˆ:  Ä?  ‘C  @@$Ì
+º  Ä?  ‘C  Ä@øòÕ;  Ä?  ‘C  †@     Ä?  ‘C <F…o9  Ä? Ä‘C  Ä?∆Z'º  Ä? Ä‘C   @e'<  Ä? Ä‘C  @@	¡àº  Ä? Ä‘C  Ä@i‹≠<  Ä? Ä‘C  †@     Ä? Ä‘C <FIÄ;  Ä?  ’C  Ä?ìdúª  Ä?  ’C   @Í(<  Ä?  ’C  @@+–Cº  Ä?  ’C  Ä@ˇ%'<  Ä?  ’C  †@XöΩ  Ä?  ’C <F¯=  Ä?  ’C <FËeÒ∫  Ä? Ä’C  Ä?éÊ€ª  Ä? Ä’C   @/,Ë;  Ä? Ä’C  @@ô0º  Ä? Ä’C  Ä@¯ô<  Ä? Ä’C  †@     Ä? Ä’C <Fé5:  Ä?  ÷C  Ä?&˛^ª  Ä?  ÷C   @Z¸™;  Ä?  ÷C  @@Ω–º  Ä?  ÷C  Ä@Ì»<  Ä?  ÷C  †@     Ä?  ÷C <F◊>;ª  Ä? Ä÷C  Ä?ˇÔ–ª  Ä? Ä÷C   @µW,<  Ä? Ä÷C  @@27º  Ä? Ä÷C  Ä@≈ƒ=  Ä? Ä÷C  †@Z÷Ω  Ä? Ä÷C <F·Í(∫  Ä?  ◊C  Ä?=$ãª  Ä?  ◊C   @‡	;  Ä?  ◊C  @@}’1º  Ä?  ◊C  Ä@p";  Ä?  ◊C  †@Ç&ô<  Ä?  ◊C <F“e¥;  Ä? Ä◊C  Ä?Ìª  Ä? Ä◊C   @µ‹<  Ä? Ä◊C  @@˜≤™º  Ä? Ä◊C  Ä@#˝o<  Ä? Ä◊C  †@     Ä? Ä◊C <F4ú¿:  Ä?  ÿC  Ä?>±ª  Ä?  ÿC   @,yÏ;  Ä?  ÿC  @@¬ñ¡º  Ä?  ÿC  Ä@πõ<  Ä?  ÿC  †@     Ä?  ÿC <FŒΩH;  Ä? ÄÿC  Ä?g6º  Ä? ÄÿC   @îH·;  Ä? ÄÿC  @@’T4º  Ä? ÄÿC  Ä@ñD;<  Ä? ÄÿC  †@     Ä? ÄÿC <F¬∑ë∫  Ä?  ŸC  Ä?2Ï„ª  Ä?  ŸC   @”»;  Ä?  ŸC  @@ƒ5vº  Ä?  ŸC  Ä@bÊù;  Ä?  ŸC  †@O*ó<  Ä?  ŸC <F~ê¸;  Ä? ÄŸC  Ä?√3vº  Ä? ÄŸC   @"ÅT<  Ä? ÄŸC  @@Õ
+Ω  Ä? ÄŸC  Ä@ä=Ù<  Ä? ÄŸC  †@     Ä? ÄŸC <F¡ﬂçª  Ä?  ⁄C  Ä?˙ù)º  Ä?  ⁄C   @⁄´x<  Ä?  ⁄C  @@Gìº  Ä?  ⁄C  Ä@GÃ¶<  Ä?  ⁄C  †@     Ä?  ⁄C <Fı∂’;  Ä? Ä⁄C  Ä?∞¶∂ª  Ä? Ä⁄C   @•F<  Ä? Ä⁄C  @@gNbº  Ä? Ä⁄C  Ä@Sá±<  Ä? Ä⁄C  †@‰b„º  Ä? Ä⁄C <F‹I9  Ä?  €C  Ä?u√‰ª  Ä?  €C   @+‹<  Ä?  €C  @@f_mº  Ä?  €C  Ä@z©í<  Ä?  €C  †@     Ä?  €C <F ìÔ9  Ä? Ä€C  Ä?¢+zª  Ä? Ä€C   @´Ω;  Ä? Ä€C  @@ qº  Ä? Ä€C  Ä@Ë<  Ä? Ä€C  †@r©Æº  Ä? Ä€C <F¨Dzª  Ä?  ‹C  Ä?
+2º  Ä?  ‹C   @æb∏;  Ä?  ‹C  @@(ãöº  Ä?  ‹C  Ä@o9¥<  Ä?  ‹C  †@     Ä?  ‹C <Få©?;  Ä? Ä‹C  Ä?døº  Ä? Ä‹C   @òû‚;  Ä? Ä‹C  @@pÅÎº  Ä? Ä‹C  Ä@ ˝˘<  Ä? Ä‹C  †@     Ä? Ä‹C <Foœ<  Ä?  ›C  Ä?Ï¨fΩ  Ä?  ›C   @˘$Ç=  Ä?  ›C  @@»P¶Ω  Ä?  ›C  Ä@®x®=  Ä?  ›C  †@     Ä?  ›C <FµÌ@ª  Ä? Ä›C  Ä?≠êdº  Ä? Ä›C   @Ø;  Ä? Ä›C  @@Ê…º  Ä? Ä›C  Ä@≤£¨<  Ä? Ä›C  †@ ∞=  Ä? Ä›C <F‘ró;  Ä?  ﬁC  Ä?Øhaº  Ä?  ﬁC   @VF<  Ä?  ﬁC  @@¯\Ω  Ä?  ﬁC  Ä@¥ä€<  Ä?  ﬁC  †@     Ä?  ﬁC <F{œÃπ  Ä? ÄﬁC  Ä?©∏ ª  Ä? ÄﬁC   @È;  Ä? ÄﬁC  @@G#Çª  Ä? ÄﬁC  Ä@lf;  Ä? ÄﬁC  †@”ƒDº  Ä? ÄﬁC <F:é<  Ä? ÄﬁC <FwÅ∫  Ä?  ﬂC  Ä?ƒªrª  Ä?  ﬂC   @Õ˜”;  Ä?  ﬂC  @@≥'º  Ä?  ﬂC  Ä@ƒı/<  Ä?  ﬂC  †@     Ä?  ﬂC <FLi;  Ä? ÄﬂC  Ä?u«º  Ä? ÄﬂC   @≤Ò@<  Ä? ÄﬂC  @@ÿTFº  Ä? ÄﬂC  Ä@å$=  Ä? ÄﬂC  †@LÚ#Ω  Ä? ÄﬂC <F≈ ;  Ä?  ‡C  Ä?9©áª  Ä?  ‡C   @÷"¢;  Ä?  ‡C  @@     Ä?  ‡C  Ä@"‘f<  Ä?  ‡C  †@ÙÏº  Ä?  ‡C <F?˝®º  Ä?  ‡C <FLàÿ<  Ä?  ‡C <F¶≥…;  Ä? Ä‡C  Ä?¡eˇª  Ä? Ä‡C   @Î5¸;  Ä? Ä‡C  @@·˝eº  Ä? Ä‡C  Ä@îóK<  Ä? Ä‡C  †@     Ä? Ä‡C <F	ª  Ä?  ·C  Ä?0‚º  Ä?  ·C   @wK∑<  Ä?  ·C  @@Ÿ–Ω  Ä?  ·C  Ä@c+=  Ä?  ·C  †@     Ä?  ·C <FL˝8  Ä? Ä·C  Ä?˛‡Mª  Ä? Ä·C   @Ul;  Ä? Ä·C  @@Ù‡Ìª  Ä? Ä·C  Ä@Ã*<  Ä? Ä·C  †@     Ä? Ä·C <F>¡Ö;  Ä?  ‚C  Ä?‡ç™º  Ä?  ‚C   @Èr<  Ä?  ‚C  @@Ó=Ω  Ä?  ‚C  Ä@|8–<  Ä?  ‚C  †@     Ä?  ‚C <FÆAf;  Ä? Ä‚C  Ä?%Ußª  Ä? Ä‚C   @«¥F<  Ä? Ä‚C  @@±jºº  Ä? Ä‚C  Ä@kÅ<  Ä? Ä‚C  †@     Ä? Ä‚C <F*êJ∫  Ä?  „C  Ä?∆%Yª  Ä?  „C   @å—∑;  Ä?  „C  @@3‘#º  Ä?  „C  Ä@ÉrÄ<  Ä?  „C  †@     Ä?  „C <F>í:  Ä? Ä„C  Ä?‚TÂº  Ä? Ä„C   @A‚{<  Ä? Ä„C  @@dúΩ  Ä? Ä„C  Ä@∫Ì-=  Ä? Ä„C  †@     Ä? Ä„C <Fôß∆;  Ä?  ‰C  Ä?’:°º  Ä?  ‰C   @‹_<  Ä?  ‰C  @@ Ω  Ä?  ‰C  Ä@*ŒË<  Ä?  ‰C  †@     Ä?  ‰C <F≠tø∫  Ä? Ä‰C  Ä?	íª  Ä? Ä‰C   @∫‚†;  Ä? Ä‰C  @@,Atº  Ä? Ä‰C  Ä@Ë°;  Ä? Ä‰C  †@>fÃ<  Ä? Ä‰C <F4-≤;  Ä?  ÂC  Ä?~[îº  Ä?  ÂC   @j¸ï<  Ä?  ÂC  @@rÓ4Ω  Ä?  ÂC  Ä@£¬=  Ä?  ÂC  †@     Ä?  ÂC <FæLæπ  Ä? ÄÂC  Ä?‹,º  Ä? ÄÂC   @J"N<  Ä? ÄÂC  @@Î√º  Ä? ÄÂC  Ä@ö\∞<  Ä? ÄÂC  †@     Ä? ÄÂC <FÇ	ª  Ä?  ÊC  Ä?ÿ˚mº  Ä?  ÊC   @>hm<  Ä?  ÊC  @@ó[?Ω  Ä?  ÊC  Ä@§k6=  Ä?  ÊC  †@     Ä?  ÊC <Fæ*<  Ä? ÄÊC  Ä?„äËª  Ä? ÄÊC   @zÂ≈<  Ä? ÄÊC  @@/∂	Ω  Ä? ÄÊC  Ä@˝ $=  Ä? ÄÊC  †@<$ùΩ  Ä? ÄÊC <F÷˛A∫  Ä?  ÁC  Ä?Ø3º  Ä?  ÁC   @¬á<  Ä?  ÁC  @@≤w‰º  Ä?  ÁC  Ä@ÈÀ<  Ä?  ÁC  †@     Ä?  ÁC <Fö ª  Ä? ÄÁC  Ä?•ˇ(º  Ä? ÄÁC   @õÎd<  Ä? ÄÁC  @@˘∑º  Ä? ÄÁC  Ä@9¨<  Ä? ÄÁC  †@     Ä? ÄÁC <F>!ö:  Ä?  ËC  Ä?¯}.º  Ä?  ËC   @}D‡;  Ä?  ËC  @@QŒ•º  Ä?  ËC  Ä@wÛ‘<  Ä?  ËC  †@     Ä?  ËC <F´Xç:  Ä? ÄËC  Ä?ëíº  Ä? ÄËC   @Yÿ=  Ä? ÄËC  @@´Äƒº  Ä? ÄËC  Ä@Ö‡G=  Ä? ÄËC  †@Pg€Ω  Ä? ÄËC <FNN;  Ä?  ÈC  Ä?o[ª  Ä?  ÈC   @Oî;  Ä?  ÈC  @@D≠Eº  Ä?  ÈC  Ä@Á[·;  Ä?  ÈC  †@     Ä?  ÈC <F~ÁÂ;  Ä? ÄÈC  Ä?Y•Ãº  Ä? ÄÈC   @1©<  Ä? ÄÈC  @@k Ω  Ä? ÄÈC  Ä@Ó]	=  Ä? ÄÈC  †@     Ä? ÄÈC <F\<  Ä?  ÍC  Ä? ß∂º  Ä?  ÍC   @vÁå<  Ä?  ÍC  @@R4/Ω  Ä?  ÍC  Ä@ëﬂ	=  Ä?  ÍC  †@     Ä?  ÍC <Fõª  Ä? ÄÍC  Ä?ﬁw+º  Ä? ÄÍC   @9˜a<  Ä? ÄÍC  @@ü±åº  Ä? ÄÍC  Ä@ï¢™<  Ä? ÄÍC  †@     Ä? ÄÍC <FŸ´wª  Ä?  ÎC  Ä?√Kæº  Ä?  ÎC   @àá“<  Ä?  ÎC  @@èh*Ω  Ä?  ÎC  Ä@Û0=  Ä?  ÎC  †@     Ä?  ÎC <FÅ		<  Ä? ÄÎC  Ä?ï`º  Ä? ÄÎC   @≥µ<  Ä? ÄÎC  @@"nΩ  Ä? ÄÎC  Ä@b/=  Ä? ÄÎC  †@     Ä? ÄÎC <F5W∆;  Ä?  ÏC  Ä?öãº  Ä?  ÏC   @i6È<  Ä?  ÏC  @@ñ;õΩ  Ä?  ÏC  Ä@ +=  Ä?  ÏC  †@     Ä?  ÏC <F≥lb9  Ä? ÄÏC  Ä?agº  Ä? ÄÏC   @Jr<  Ä? ÄÏC  @@¡êäº  Ä? ÄÏC  Ä@WOë<  Ä? ÄÏC  †@     Ä? ÄÏC <Fﬂ≥aª  Ä?  ÌC  Ä?Äoèº  Ä?  ÌC   @˜¶9<  Ä?  ÌC  @@¬Ω  Ä?  ÌC  Ä@n’<=  Ä?  ÌC  †@     Ä?  ÌC <F1√	Ω  Ä? ÄÌC  Ä?·ªkΩ  Ä? ÄÌC   @ õ§=  Ä? ÄÌC  @@c]èΩ  Ä? ÄÌC  Ä@_Ÿ¸=  Ä? ÄÌC  †@     Ä? ÄÌC <F5´ö;  Ä?  ÓC  Ä?çµº  Ä?  ÓC   @ù0ã<  Ä?  ÓC  @@<âΩ  Ä?  ÓC  Ä@z·<  Ä?  ÓC  †@     Ä?  ÓC <FÉÄÚª  Ä? ÄÓC  Ä?q*|º  Ä? ÄÓC   @wìô<  Ä? ÄÓC  @@FZΩ  Ä? ÄÓC  Ä@”=  Ä? ÄÓC  †@     Ä? ÄÓC <Fi‘t;  Ä?  ÔC  Ä?sîª  Ä?  ÔC   @ÃØ<  Ä?  ÔC  @@     Ä?  ÔC  Ä@tâ-<  Ä?  ÔC  †@¸GΩ  Ä?  ÔC <F˘º  Ä?  ÔC <F+…=  Ä?  ÔC <Fõ©ã∫  Ä? ÄÔC  Ä?„˘7Ω  Ä? ÄÔC   @ã8=  Ä? ÄÔC  @@ﬁáΩ  Ä? ÄÔC  Ä@y~y=  Ä? ÄÔC  †@     Ä? ÄÔC <F∆4à<  Ä?  C  Ä?R€Ìº  Ä?  C   @˚W§<  Ä?  C  @@‡*Ω  Ä?  C  Ä@av<  Ä?  C  †@     Ä?  C <F~§;  Ä? ÄC  Ä?µ’ª  Ä? ÄC   @.ÌR<  Ä? ÄC  @@e›º  Ä? ÄC  Ä@á»∏<  Ä? ÄC  †@     Ä? ÄC <F≥w=<  Ä?  ÒC  Ä?ÚÿΩ  Ä?  ÒC   @≠ú<  Ä?  ÒC  @@Ô›<Ω  Ä?  ÒC  Ä@Ω'a=  Ä?  ÒC  †@     Ä?  ÒC <FËõÿª  Ä? ÄÒC  Ä?=ßº  Ä? ÄÒC   @lë<  Ä? ÄÒC  @@ÉFº  Ä? ÄÒC  Ä@ì√i<  Ä? ÄÒC  †@     Ä? ÄÒC <F∂∂€º  Ä?  ÚC  Ä??ù}Ω  Ä?  ÚC   @ÈQ=  Ä?  ÚC  @@™ªΩ  Ä?  ÚC  Ä@JﬂÎ=  Ä?  ÚC  †@     Ä?  ÚC <F›t©<  Ä? ÄÚC  Ä?.BÜΩ  Ä? ÄÚC   @”§O=  Ä? ÄÚC  @@¯WöΩ  Ä? ÄÚC  Ä@À"l=  Ä? ÄÚC  †@     Ä? ÄÚC <F˘è˛:  Ä?  ÛC  Ä?i/ª  Ä?  ÛC   @~Ö;  Ä?  ÛC  @@I]º  Ä?  ÛC  Ä@3Íı;  Ä?  ÛC  †@     Ä?  ÛC <Få·S<  Ä? ÄÛC  Ä?üp,Ω  Ä? ÄÛC   @Â=  Ä? ÄÛC  @@;ÉΩ  Ä? ÄÛC  Ä@Ô°v=  Ä? ÄÛC  †@     Ä? ÄÛC <F0jpº  Ä?  ÙC  Ä?∏ëº  Ä?  ÙC   @ÿT≥<  Ä?  ÙC  @@$ä˜º  Ä?  ÙC  Ä@ê¬B=  Ä?  ÙC  †@     Ä?  ÙC <Fóc-ª  Ä? ÄÙC  Ä?∆»lº  Ä? ÄÙC   @ÅX<  Ä? ÄÙC  @@m2Éº  Ä? ÄÙC  Ä@—F∆<  Ä? ÄÙC  †@     Ä? ÄÙC <Fì$†ª  Ä?  ıC  Ä?¥–ª  Ä?  ıC   @√´<  Ä?  ıC  @@˘Ç"º  Ä?  ıC  Ä@ÒÁ¨<  Ä?  ıC  †@     Ä?  ıC <Fg8ª  Ä? ÄıC  Ä?úÆª  Ä? ÄıC   @d§Ë;  Ä? ÄıC  @@ûº  Ä? ÄıC  Ä@vYè<  Ä? ÄıC  †@‚˜º  Ä? ÄıC <F<!:  Ä?  ˆC  Ä?—d±ª  Ä?  ˆC   @˝›&<  Ä?  ˆC  @@V™∫º  Ä?  ˆC  Ä@"WŸ<  Ä?  ˆC  †@€Ω  Ä?  ˆC <F)Ë∆;  Ä? ÄˆC  Ä?qRª  Ä? ÄˆC   @+“<  Ä? ÄˆC  @@Ò·?º  Ä? ÄˆC  Ä@€l7<  Ä? ÄˆC  †@^oÃº  Ä? ÄˆC <FL‚ß;  Ä?  ˜C  Ä?E|º  Ä?  ˜C   @&‰<  Ä?  ˜C  @@æ\ º  Ä?  ˜C  Ä@W€£<  Ä?  ˜C  †@     Ä?  ˜C <Fm¨Éª  Ä? Ä˜C  Ä?»:aº  Ä? Ä˜C   @{By<  Ä? Ä˜C  @@C-˛º  Ä? Ä˜C  Ä@Œ¸Ï<  Ä? Ä˜C  †@     Ä? Ä˜C <Fò ùº  Ä?  ¯C  Ä?÷á‡º  Ä?  ¯C   @'Ì=  Ä?  ¯C  @@)≥&Ω  Ä?  ¯C  Ä@Lõ§=  Ä?  ¯C  †@     Ä?  ¯C <FMO?ª  Ä? Ä¯C  Ä?]Ê
+º  Ä? Ä¯C   @§œ;  Ä? Ä¯C  @@Áq∏º  Ä? Ä¯C  Ä@PAs<  Ä? Ä¯C  †@∞ß=  Ä? Ä¯C <Fdˇ∫  Ä?  ˘C  Ä?°8ﬁª  Ä?  ˘C   @#C<  Ä?  ˘C  @@!—üº  Ä?  ˘C  Ä@OÜ©<  Ä?  ˘C  †@     Ä?  ˘C <FÿNº∫  Ä? Ä˘C  Ä?&Ê$º  Ä? Ä˘C   @˜P_<  Ä? Ä˘C  @@Ñµ Ω  Ä? Ä˘C  Ä@íD¥<  Ä? Ä˘C  †@     Ä? Ä˘C <F~ÈB=  Ä?  ˙C  Ä?ß±Ω  Ä?  ˙C   @,„†=  Ä?  ˙C  @@7[◊Ω  Ä?  ˙C  Ä@EËΩ=  Ä?  ˙C  †@     Ä?  ˙C <Fn,F;  Ä? Ä˙C  Ä?ÈGç9  Ä? Ä˙C   @Q√¢;  Ä? Ä˙C  @@     Ä? Ä˙C  Ä@ ã'<  Ä? Ä˙C  †@á∫º  Ä? Ä˙C <F8º  Ä? Ä˙C <FbFñ<  Ä?  ˚C  Ä?|‚HΩ  Ä?  ˚C   @…=  Ä?  ˚C  @@FËêΩ  Ä?  ˚C  Ä@$<=  Ä?  ˚C  †@     Ä?  ˚C <FÎcÄ∫  Ä? Ä˚C  Ä?Öjº  Ä? Ä˚C   @§ó<  Ä? Ä˚C  @@EÙ»º  Ä? Ä˚C  Ä@˚h∏<  Ä? Ä˚C  †@     Ä? Ä˚C <FœVf<  Ä?  ¸C  Ä?´w#Ω  Ä?  ¸C   @wñ<  Ä?  ¸C  @@*ÊcΩ  Ä?  ¸C  Ä@^e©=  Ä?  ¸C  †@     Ä?  ¸C <F≥ó°ª  Ä? Ä¸C  Ä?÷æóº  Ä? Ä¸C   @∂=∑<  Ä? Ä¸C  @@CÜÀº  Ä? Ä¸C  Ä@˛ =  Ä? Ä¸C  †@     Ä? Ä¸C <FÅLƒ∫  Ä?  ˝C  Ä?g‘Ãº  Ä?  ˝C   @±§X<  Ä?  ˝C  @@§	Ω  Ä?  ˝C  Ä@,P=  Ä?  ˝C  †@     Ä?  ˝C <F˘œ9<  Ä? Ä˝C  Ä?©ª  Ä? Ä˝C   @≠êÖ<  Ä? Ä˝C  @@     Ä? Ä˝C  Ä@[„<  Ä? Ä˝C  †@¬FFΩ  Ä? Ä˝C <F$’Ω  Ä? Ä˝C <FŒ?h;  Ä?  ˛C  Ä?RÜº  Ä?  ˛C   @@˛Ÿ;  Ä?  ˛C  @@ﬂ‡πº  Ä?  ˛C  Ä@!FÉ<  Ä?  ˛C  †@ü^Ω  Ä?  ˛C <Fxƒb=  Ä?  ˛C <Fƒ!∫  Ä? Ä˛C  Ä?oPº  Ä? Ä˛C   @˘U<  Ä? Ä˛C  @@Ì™íº  Ä? Ä˛C  Ä@ÆÌù<  Ä? Ä˛C  †@     Ä? Ä˛C <FHráπ  Ä?  ˇC  Ä?RïÑº  Ä?  ˇC   @âKh<  Ä?  ˇC  @@≤ºº  Ä?  ˇC  Ä@˝\¥<  Ä?  ˇC  †@     Ä?  ˇC <Fﬂ!ª  Ä? ÄˇC  Ä?˘9Fª  Ä? ÄˇC   @"æ<  Ä? ÄˇC  @@SIóº  Ä? ÄˇC  Ä@-ˆà<  Ä? ÄˇC  †@     Ä? ÄˇC <FÔ©°ª  Ä?   D  Ä?ÛÜ¸ª  Ä?   D   @§®;  Ä?   D  @@t¡ìº  Ä?   D  Ä@     Ä?   D  †@˛Xü<  Ä?   D <F˚}≠<  Ä?   D <FVßª  Ä? @ D  Ä?ß=Êª  Ä? @ D   @e<  Ä? @ D  @@∫Îßº  Ä? @ D  Ä@¿ê∫<  Ä? @ D  †@     Ä? @ D <Fœ√9  Ä? Ä D  Ä?œÿ≠ª  Ä? Ä D   @° §;  Ä? Ä D  @@1º  Ä? Ä D  Ä@Y=<  Ä? Ä D  †@     Ä? Ä D <F<  Ä? ¿ D  Ä?Ç3\º  Ä? ¿ D   @ïaF<  Ä? ¿ D  @@˜º  Ä? ¿ D  Ä@>.™<  Ä? ¿ D  †@     Ä? ¿ D <F\8X∫  Ä?  D  Ä?ÿh∫  Ä?  D   @glq;  Ä?  D  @@“Ùª  Ä?  D  Ä@XÙ≤;  Ä?  D  †@ à2º  Ä?  D <F˛¯Îπ  Ä? @D  Ä?–í∑ª  Ä? @D   @!]ò;  Ä? @D  @@·Î>º  Ä? @D  Ä@^àa<  Ä? @D  †@     Ä? @D <F¬&<  Ä? ÄD  Ä?Föº  Ä? ÄD   @)¡ã<  Ä? ÄD  @@ëçΩ  Ä? ÄD  Ä@»‰E=  Ä? ÄD  †@     Ä? ÄD <FpéÍπ  Ä? ¿D  Ä?åj"ª  Ä? ¿D   @ŸH;  Ä? ¿D  @@‚Àÿª  Ä? ¿D  Ä@Cb§;  Ä? ¿D  †@y Ω  Ä? ¿D <F·˘<  Ä? ¿D <F3/∫  Ä?  D  Ä?jÑª  Ä?  D   @_ÿ:  Ä?  D  @@b7Ùª  Ä?  D  Ä@ŸôÛ;  Ä?  D  †@›G<  Ä?  D <Fß£æ<  Ä? @D  Ä?]7Ω  Ä? @D   @1.;=  Ä? @D  @@Õ¬Ω  Ä? @D  Ä@ $C=  Ä? @D  †@     Ä? @D <FL¡ª  Ä? ÄD  Ä?Y0º  Ä? ÄD   @0`E<  Ä? ÄD  @@+$6º  Ä? ÄD  Ä@hCø<  Ä? ÄD  †@     Ä? ÄD <FNﬂ<  Ä? ¿D  Ä?P»†º  Ä? ¿D   @ëE<  Ä? ¿D  @@Åöÿº  Ä? ¿D  Ä@{uá<  Ä? ¿D  †@     Ä? ¿D <FÏûD;  Ä?  D  Ä?:â•º  Ä?  D   @ßÖ<  Ä?  D  @@¢¿ıº  Ä?  D  Ä@[3¸<  Ä?  D  †@     Ä?  D <Fï_2:  Ä? @D  Ä?¨8°º  Ä? @D   @SLy<  Ä? @D  @@Ïg≈º  Ä? @D  Ä@¥_+=  Ä? @D  †@     Ä? @D <F±%Ü;  Ä? ÄD  Ä?©≥ıª  Ä? ÄD   @s:<  Ä? ÄD  @@Á•º  Ä? ÄD  Ä@¢~<  Ä? ÄD  †@     Ä? ÄD <Fgª  Ä? ¿D  Ä?Ω´Œª  Ä? ¿D   @)VO;  Ä? ¿D  @@'Æ"º  Ä? ¿D  Ä@     Ä? ¿D  †@˙≤ë<  Ä? ¿D <FÙp(º  Ä?  D  Ä?›-Ωº  Ä?  D   @+∫<  Ä?  D  @@q§√º  Ä?  D  Ä@ïH]=  Ä?  D  †@     Ä?  D <FCfº  Ä? @D  Ä?ßóZΩ  Ä? @D   @Ôos=  Ä? @D  @@#µbΩ  Ä? @D  Ä@+ú=  Ä? @D  †@     Ä? @D <FÃú$ª  Ä? ÄD  Ä?™PΩ  Ä? ÄD   @£*=  Ä? ÄD  @@˜îBΩ  Ä? ÄD  Ä@‹ƒ)=  Ä? ÄD  †@     Ä? ÄD <Fnùå∫  Ä? ¿D  Ä?FèNº  Ä? ¿D   @èt±<  Ä? ¿D  @@n\Ω  Ä? ¿D  Ä@)m=  Ä? ¿D  †@     Ä? ¿D <FÓfg∫  Ä?  D  Ä?æJ’ª  Ä?  D   @Ø <  Ä?  D  @@	∫<º  Ä?  D  Ä@Qì<  Ä?  D  †@     Ä?  D <F&O⁄:  Ä? @D  Ä?œéº  Ä? @D   @ÏÕ°;  Ä? @D  @@êº  Ä? @D  Ä@,=<  Ä? @D  †@     Ä? @D <FÃö:  Ä? ÄD  Ä?Î&º  Ä? ÄD   @Ìl<  Ä? ÄD  @@ºîjº  Ä? ÄD  Ä@z<<  Ä? ÄD  †@     Ä? ÄD <F∑úª  Ä? ¿D  Ä?.Aº  Ä? ¿D   @›◊‹<  Ä? ¿D  @@+ßΩ  Ä? ¿D  Ä@±∏=  Ä? ¿D  †@     Ä? ¿D <FP(!∫  Ä?  D  Ä?Ë*º  Ä?  D   @]'P<  Ä?  D  @@ä¬º  Ä?  D  Ä@Í˛”<  Ä?  D  †@     Ä?  D <F3∫8  Ä? @D  Ä?9ú[ª  Ä? @D   @⁄	O;  Ä? @D  @@H¨∂ª  Ä? @D  Ä@C”K<  Ä? @D  †@     Ä? @D <FtU˚;  Ä? ÄD  Ä?o‘¡º  Ä? ÄD   @6ÆŸ<  Ä? ÄD  @@ƒL8Ω  Ä? ÄD  Ä@„_ﬂ<  Ä? ÄD  †@     Ä? ÄD <F_wX<  Ä? ¿D  Ä?p˙Ω  Ä? ¿D   @Sﬁÿ<  Ä? ¿D  @@8Ω  Ä? ¿D  Ä@ùŒ˛<  Ä? ¿D  †@     Ä? ¿D <Fsa±∫  Ä?  D  Ä?≥A'º  Ä?  D   @u€?;  Ä?  D  @@     Ä?  D  Ä@     Ä?  D  †@ˇ	˝º  Ä?  D <F:,Ó<  Ä?  D <FWb<  Ä? @D  Ä?T`^Ω  Ä? @D   @…÷<  Ä? @D  @@gaΩ  Ä? @D  Ä@¡Q=  Ä? @D  †@     Ä? @D <FÄBª  Ä? ÄD  Ä?S'º  Ä? ÄD   @¬NY<  Ä? ÄD  @@_1º  Ä? ÄD  Ä@≥Ne<  Ä? ÄD  †@     Ä? ÄD <Fév˝ª  Ä? ¿D  Ä?Ô…‹º  Ä? ¿D   @Èa=  Ä? ¿D  @@ÒÅΩ  Ä? ¿D  Ä@√z=  Ä? ¿D  †@     Ä? ¿D <F„ˇ;  Ä?  D  Ä?»º˜º  Ä?  D   @EÑó<  Ä?  D  @@†FΩ  Ä?  D  Ä@Àg‚<  Ä?  D  †@     Ä?  D <FJ∆ º  Ä? @D  Ä?l≥Íº  Ä? @D   @$1=  Ä? @D  @@ç∫Ûº  Ä? @D  Ä@è)G=  Ä? @D  †@     Ä? @D <F#nŒ;  Ä? ÄD  Ä?ãÛº  Ä? ÄD   @•»<  Ä? ÄD  @@ErAΩ  Ä? ÄD  Ä@ÉV‚<  Ä? ÄD  †@     Ä? ÄD <F≤Í“;  Ä? ¿D  Ä?¯
+¸º  Ä? ¿D   @˝Ωπ<  Ä? ¿D  @@`ÓΩ  Ä? ¿D  Ä@Æ´<  Ä? ¿D  †@     Ä? ¿D <F)!ò:  Ä?  	D  Ä?íéãº  Ä?  	D   @.ál<  Ä?  	D  @@3ZVΩ  Ä?  	D  Ä@ú'=  Ä?  	D  †@     Ä?  	D <F€◊s;  Ä? @	D  Ä?*eº  Ä? @	D   @üÇ˝;  Ä? @	D  @@mû™º  Ä? @	D  Ä@OC<  Ä? @	D  †@     Ä? @	D <F\µ§ª  Ä? Ä	D  Ä?˝}Oº  Ä? Ä	D   @Úî2;  Ä? Ä	D  @@Ciº  Ä? Ä	D  Ä@6o±<  Ä? Ä	D  †@M{˛<  Ä? Ä	D <F∫ïã:  Ä? ¿	D  Ä?Õ∂ª  Ä? ¿	D   @6=;  Ä? ¿	D  @@bΩ«ª  Ä? ¿	D  Ä@´ˆæ;  Ä? ¿	D  †@     Ä? ¿	D <Fx:ïª  Ä?  
+D  Ä?BÒ∫ª  Ä?  
+D   @‹F:<  Ä?  
+D  @@Gïàº  Ä?  
+D  Ä@•πº<  Ä?  
+D  †@     Ä?  
+D <Fo†^∫  Ä? @
+D  Ä?œä%ª  Ä? @
+D   @è m;  Ä? @
+D  @@’*º  Ä? @
+D  Ä@
+‰<  Ä? @
+D  †@     Ä? @
+D <F6q≈:  Ä? Ä
+D  Ä?i<Üª  Ä? Ä
+D   @	Œ;  Ä? Ä
+D  @@jıFº  Ä? Ä
+D  Ä@]È<  Ä? Ä
+D  †@     Ä? Ä
+D <F0èø∫  Ä? ¿
+D  Ä?ÚEª  Ä? ¿
+D   @b¥ã;  Ä? ¿
+D  @@/≈Ωª  Ä? ¿
+D  Ä@Ω0©;  Ä? ¿
+D  †@     Ä? ¿
+D <F›Ö:  Ä?  D  Ä?—¨pª  Ä?  D   @Õ∑é;  Ä?  D  @@É†Sº  Ä?  D  Ä@1p(<  Ä?  D  †@     Ä?  D <FôÃ•:  Ä? @D  Ä?ohüª  Ä? @D   @x∆;  Ä? @D  @@<pº  Ä? @D  Ä@ø9<  Ä? @D  †@Ábó<  Ä? @D <F"Ñ⁄8  Ä? ÄD  Ä?†∆oª  Ä? ÄD   @[Ú°;  Ä? ÄD  @@¡¿>º  Ä? ÄD  Ä@⁄©c<  Ä? ÄD  †@     Ä? ÄD <Fo∏}º  Ä? ¿D  Ä? G≠º  Ä? ¿D   @Å´=  Ä? ¿D  @@=òCΩ  Ä? ¿D  Ä@ÄI@=  Ä? ¿D  †@     Ä? ¿D <Fe;  Ä?  D  Ä?UZ≠ª  Ä?  D   @aΩÆ;  Ä?  D  @@9«ùº  Ä?  D  Ä@€0<  Ä?  D  †@     Ä?  D <F
+1;  Ä? @D  Ä?πÉª  Ä? @D   @0›j;  Ä? @D  @@¬≠"º  Ä? @D  Ä@H@Ù;  Ä? @D  †@$?Øº  Ä? @D <FúZé<  Ä? @D <F;Cª  Ä? ÄD  Ä?·4…ª  Ä? ÄD   @ïü;  Ä? ÄD  @@…˘„ª  Ä? ÄD  Ä@Å[(<  Ä? ÄD  †@     Ä? ÄD <FSù(π  Ä? ¿D  Ä?zófº  Ä? ¿D   @Ø¶π;  Ä? ¿D  @@ïêº  Ä? ¿D  Ä@Ñ*œ<  Ä? ¿D  †@     Ä? ¿D <Fn¢-;  Ä?  D  Ä?å oª  Ä?  D   @é <  Ä?  D  @@ﬁ™¡ª  Ä?  D  Ä@IÑ<  Ä?  D  †@1é±º  Ä?  D <Fkæº  Ä? @D  Ä?<õ}º  Ä? @D   @úoÅ<  Ä? @D  @@ˇåàº  Ä? @D  Ä@$`!=  Ä? @D  †@     Ä? @D <FØ√ì;  Ä? ÄD  Ä?;»√º  Ä? ÄD   @¥wO<  Ä? ÄD  @@"Îº  Ä? ÄD  Ä@ëd	=  Ä? ÄD  †@     Ä? ÄD <FÙE:  Ä? ¿D  Ä?4Uª  Ä? ¿D   @WmÖ;  Ä? ¿D  @@–[º  Ä? ¿D  Ä@éEB<  Ä? ¿D  †@     Ä? ¿D <FuØ·∫  Ä?  D  Ä?$Nª  Ä?  D   @è€˛9  Ä?  D  @@©ˇîª  Ä?  D  Ä@Yrå;  Ä?  D  †@t÷?º  Ä?  D <FÌ è<  Ä?  D <FLpê∫  Ä? @D  Ä?ÏÅÄº  Ä? @D   @∫ŸÑ<  Ä? @D  @@w„º  Ä? @D  Ä@Çqÿ<  Ä? @D  †@     Ä? @D <F_‘ô;  Ä? ÄD  Ä?)M)º  Ä? ÄD   @˙ü⁄;  Ä? ÄD  @@G$¿º  Ä? ÄD  Ä@cÏ⁄<  Ä? ÄD  †@     Ä? ÄD <F¶Kˆ∫  Ä? ¿D  Ä?€?˘ª  Ä? ¿D   @M…Ö;  Ä? ¿D  @@Yôqº  Ä? ¿D  Ä@∑ã<  Ä? ¿D  †@Frµ<  Ä? ¿D <FX‡Aª  Ä?  D  Ä?Ù∏º  Ä?  D   @9cW<  Ä?  D  @@ˇ€º  Ä?  D  Ä@§∞<  Ä?  D  †@     Ä?  D <F7±&∫  Ä? @D  Ä?t>lº  Ä? @D   @n¿é<  Ä? @D  @@|∆mΩ  Ä? @D  Ä@<c%=  Ä? @D  †@     Ä? @D <F£ï:  Ä? ÄD  Ä?éîXº  Ä? ÄD   @#1@<  Ä? ÄD  @@în¡º  Ä? ÄD  Ä@ÈeÉ<  Ä? ÄD  †@     Ä? ÄD <FFﬂï<  Ä? ¿D  Ä?Q+yº  Ä? ¿D   @öÃ€<  Ä? ¿D  @@)6}Ω  Ä? ¿D  Ä@® =  Ä? ¿D  †@     Ä? ¿D <Ft≤´∫  Ä?  D  Ä?[cº  Ä?  D   @ËVn<  Ä?  D  @@Ø§ÿº  Ä?  D  Ä@Q‚ù<  Ä?  D  †@     Ä?  D <FhÁ–9  Ä? @D  Ä?Î‰{ª  Ä? @D   @≠æ•;  Ä? @D  @@÷·dº  Ä? @D  Ä@lê<  Ä? @D  †@Ã¡íº  Ä? @D <F=¡_º  Ä? ÄD  Ä?7ü6Ω  Ä? ÄD   @=  Ä? ÄD  @@ˆı§Ω  Ä? ÄD  Ä@ïÌ=  Ä? ÄD  †@     Ä? ÄD <FÕK<  Ä? ¿D  Ä?P÷õº  Ä? ¿D   @≠Õ˚<  Ä? ¿D  @@ı˚´º  Ä? ¿D  Ä@!æ=  Ä? ¿D  †@Ã∆æ  Ä? ¿D <Fãº  Ä?  D  Ä?£º  Ä?  D   @oÊÖ<  Ä?  D  @@π÷√º  Ä?  D  Ä@JÅı<  Ä?  D  †@     Ä?  D <FTK∫  Ä? @D  Ä?áÆ”ª  Ä? @D   @˚¯ı;  Ä? @D  @@‰ªTº  Ä? @D  Ä@ôM4<  Ä? @D  †@     Ä? @D <Fø˝:  Ä? ÄD  Ä?^: º  Ä? ÄD   @«AŸ;  Ä? ÄD  @@∏vÏº  Ä? ÄD  Ä@Á¢<  Ä? ÄD  †@     Ä? ÄD <F»∏†∫  Ä? ¿D  Ä?yJ‹ª  Ä? ¿D   @Â{Ü<  Ä? ¿D  @@fÑº  Ä? ¿D  Ä@X7=  Ä? ¿D  †@Ê≠pΩ  Ä? ¿D <FèY;  Ä?  D  Ä?.Í§ª  Ä?  D   @§kÙ;  Ä?  D  @@L-gº  Ä?  D  Ä@Œ6?<  Ä?  D  †@     Ä?  D <F”üØ∫  Ä? @D  Ä?Û¬˝ª  Ä? @D   @˙«;  Ä? @D  @@[ß7º  Ä? @D  Ä@íŒÇ<  Ä? @D  †@     Ä? @D <FôF:  Ä? ÄD  Ä?gÈuª  Ä? ÄD   @’o‰;  Ä? ÄD  @@ÄÊª  Ä? ÄD  Ä@‚T~<  Ä? ÄD  †@[ÿº  Ä? ÄD <Fr…}∑  Ä? ¿D  Ä?·Û≠∫  Ä? ¿D   @˙Z;  Ä? ¿D  @@gh»ª  Ä? ¿D  Ä@'ö;  Ä? ¿D  †@     Ä? ¿D <FÔBüª  Ä?  D  Ä?ä¡=º  Ä?  D   @åN'<  Ä?  D  @@ßRº  Ä?  D  Ä@⁄Åó<  Ä?  D  †@     Ä?  D <FŸBxπ  Ä? @D  Ä?°·™ª  Ä? @D   @+4;  Ä? @D  @@ÕZº  Ä? @D  Ä@     Ä? @D  †@)ÙÑ<  Ä? @D <F;ãê<  Ä? @D <F4™E;  Ä? ÄD  Ä?∑¢/º  Ä? ÄD   @x:<  Ä? ÄD  @@öÍƒº  Ä? ÄD  Ä@¯v¶<  Ä? ÄD  †@     Ä? ÄD <Fh§…ª  Ä? ¿D  Ä?h√0º  Ä? ¿D   @}`	<  Ä? ¿D  @@¸I<º  Ä? ¿D  Ä@?¿á<  Ä? ¿D  †@     Ä? ¿D <Ft…ª  Ä?  D  Ä?"üº  Ä?  D   @âof<  Ä?  D  @@óÿÖº  Ä?  D  Ä@À¯ì<  Ä?  D  †@     Ä?  D <F¬⁄À;  Ä? @D  Ä?Ná›º  Ä? @D   @zÈú<  Ä? @D  @@Q*Ω  Ä? @D  Ä@*=  Ä? @D  †@     Ä? @D <F›;  Ä? ÄD  Ä?≈_’∫  Ä? ÄD   @9J;  Ä? ÄD  @@|\Mª  Ä? ÄD  Ä@D:ﬁ;  Ä? ÄD  †@Á º  Ä? ÄD <FˇÂAª  Ä? ¿D  Ä?Ó…fº  Ä? ¿D   @zw|:  Ä? ¿D  @@zv≤º  Ä? ¿D  Ä@YÖ;  Ä? ¿D  †@Yeé=  Ä? ¿D <Fÿi<  Ä?  D  Ä?˚Éçº  Ä?  D   @Vkè<  Ä?  D  @@bNxΩ  Ä?  D  Ä@'ö@=  Ä?  D  †@     Ä?  D <FLFˆ:  Ä? @D  Ä?ŸÈ}º  Ä? @D   @ô%<  Ä? @D  @@@bßº  Ä? @D  Ä@÷ô<  Ä? @D  †@     Ä? @D <F·è≈;  Ä? ÄD  Ä?°$º  Ä? ÄD   @¸‡><  Ä? ÄD  @@vËµº  Ä? ÄD  Ä@	à\<  Ä? ÄD  †@     Ä? ÄD <F`ñ–:  Ä? ¿D  Ä?ÛØ
+º  Ä? ¿D   @){Y;  Ä? ¿D  @@ï0Üº  Ä? ¿D  Ä@Õ3◊;  Ä? ¿D  †@Ò$◊<  Ä? ¿D <FPºŒ:  Ä?  D  Ä?Ò¸§º  Ä?  D   @ ‰-=  Ä?  D  @@ã#°Ω  Ä?  D  Ä@4g=  Ä?  D  †@     Ä?  D <F#ó`ª  Ä? @D  Ä?«2‚ª  Ä? @D   @è⁄;  Ä? @D  @@2ƒº  Ä? @D  Ä@)˛ß<  Ä? @D  †@     Ä? @D <F5º  Ä? ÄD  Ä?1‹7º  Ä? ÄD   @Ü≤<  Ä? ÄD  @@[Ævº  Ä? ÄD  Ä@h4Õ<  Ä? ÄD  †@     Ä? ÄD <Fu©;  Ä? ¿D  Ä?ÑÚÉ∫  Ä? ¿D   @Sh];  Ä? ¿D  @@,∆èª  Ä? ¿D  Ä@í^<  Ä? ¿D  †@     Ä? ¿D <Fó∞ø;  Ä?  D  Ä?=Èåª  Ä?  D   @'3<  Ä?  D  @@6◊1º  Ä?  D  Ä@fæ™<  Ä?  D  †@k5Ω  Ä?  D <F	%<  Ä? @D  Ä?;<Lº  Ä? @D   @£Ïö<  Ä? @D  @@/
+Ω  Ä? @D  Ä@ÈÕˇ<  Ä? @D  †@     Ä? @D <F8◊€;  Ä? ÄD  Ä?hÜTº  Ä? ÄD   @^E<  Ä? ÄD  @@öV˙º  Ä? ÄD  Ä@»¿´<  Ä? ÄD  †@     Ä? ÄD <FÑêÚ<  Ä? ¿D  Ä?éΩ  Ä? ¿D   @;≥=  Ä? ¿D  @@2∞ßΩ  Ä? ¿D  Ä@!–K=  Ä? ¿D  †@     Ä? ¿D <F4 "ª  Ä?  D  Ä?ßΩ  Ä?  D   @ÎSﬂ<  Ä?  D  @@ÜÍ@Ω  Ä?  D  Ä@ o=  Ä?  D  †@     Ä?  D <FªHª  Ä? @D  Ä?çøñª  Ä? @D   @<P†;  Ä? @D  @@-uº  Ä? @D  Ä@ÆiÖ<  Ä? @D  †@îΩÔ<  Ä? @D <F`ö.;  Ä? ÄD  Ä?™™"º  Ä? ÄD   @ô Å<  Ä? ÄD  @@haΩ  Ä? ÄD  Ä@ö@˙<  Ä? ÄD  †@     Ä? ÄD <F|MØª  Ä? ¿D  Ä? 'Ω  Ä? ¿D   @Ó®=  Ä? ¿D  @@0⁄êΩ  Ä? ¿D  Ä@Ÿ]I=  Ä? ¿D  †@     Ä? ¿D <F‡‰ª  Ä?  D  Ä?.tBº  Ä?  D   @’Á;<  Ä?  D  @@ÿ&’º  Ä?  D  Ä@Çtﬂ<  Ä?  D  †@     Ä?  D <Fã™ª  Ä? @D  Ä?ßg¨º  Ä? @D   @^í<  Ä? @D  @@]gDΩ  Ä? @D  Ä@=^3=  Ä? @D  †@     Ä? @D <Fhª  Ä? ÄD  Ä?á‚º  Ä? ÄD   @ò§<  Ä? ÄD  @@äüçº  Ä? ÄD  Ä@X∆<  Ä? ÄD  †@     Ä? ÄD <FÕUí;  Ä? ¿D  Ä?ﬁcº  Ä? ¿D   @ÕÔ<  Ä? ¿D  @@ı„Ãº  Ä? ¿D  Ä@m#à<  Ä? ¿D  †@     Ä? ¿D <F…n=  Ä?  D  Ä?qrΩ  Ä?  D   @R[,=  Ä?  D  @@µ∂¥Ω  Ä?  D  Ä@lVV=  Ä?  D  †@     Ä?  D <FÇWD9  Ä? @D  Ä?Ïº  Ä? @D   @ŸâJ<  Ä? @D  @@∑ æº  Ä? @D  Ä@ft€<  Ä? @D  †@     Ä? @D <F•ñ)ª  Ä? ÄD  Ä?ü‰ª  Ä? ÄD   @^<  Ä? ÄD  @@îWDº  Ä? ÄD  Ä@ô≈á<  Ä? ÄD  †@     Ä? ÄD <FàÉË;  Ä? ¿D  Ä?õ∫∫  Ä? ¿D   @Ï[?<  Ä? ¿D  @@¥R#º  Ä? ¿D  Ä@{Á≤<  Ä? ¿D  †@∞√nΩ  Ä? ¿D <Fq.Pº  Ä?  D  Ä?÷Dtº  Ä?  D   @Æo∫  Ä?  D  @@     Ä?  D  Ä@     Ä?  D  †@øL2Ω  Ä?  D <FwΩ  Ä?  D <Fªì=  Ä?  D <FÓ˚õ=  Ä?  D <FBV∫  Ä? @D  Ä?}Eº  Ä? @D   @zΩI<  Ä? @D  @@äºº  Ä? @D  Ä@)Œ∑<  Ä? @D  †@     Ä? @D <Fg„fª  Ä? ÄD  Ä?~ñª  Ä? ÄD   @æL;  Ä? ÄD  @@2J…ª  Ä? ÄD  Ä@	/œ;  Ä? ÄD  †@     Ä? ÄD <F=N ∫  Ä? ¿D  Ä?öúÄª  Ä? ¿D   @Ø†∂:  Ä? ¿D  @@Çº  Ä? ¿D  Ä@Ç œ;  Ä? ¿D  †@$ríº  Ä? ¿D <F„ï∞<  Ä? ¿D <FyI:  Ä?  D  Ä?ö†ªª  Ä?  D   @ÒîÅ;  Ä?  D  @@     Ä?  D  Ä@     Ä?  D  †@∂ìΩ  Ä?  D <F“k¨º  Ä?  D <F’Ì°<  Ä?  D <F5}'=  Ä?  D <FÕmÈ7  Ä? @D  Ä?í,}ª  Ä? @D   @.≠;  Ä? @D  @@‡\âº  Ä? @D  Ä@w<  Ä? @D  †@€••º  Ä? @D <Fﬂ˝:  Ä? ÄD  Ä?tÓ”ª  Ä? ÄD   @{¿¡;  Ä? ÄD  @@"æº  Ä? ÄD  Ä@VàP<  Ä? ÄD  †@     Ä? ÄD <FµMÙ:  Ä? ¿D  Ä?œáª  Ä? ¿D   @7‡#<  Ä? ¿D  @@ã“
+º  Ä? ¿D  Ä@Byô<  Ä? ¿D  †@@¶Úº  Ä? ¿D <F9[j<  Ä?  D  Ä?∆"üº  Ä?  D   @˝Aí<  Ä?  D  @@	†Ω  Ä?  D  Ä@j¡”<  Ä?  D  †@     Ä?  D <F"z"<  Ä? @D  Ä?˘ı7º  Ä? @D   @îAz<  Ä? @D  @@x·º  Ä? @D  Ä@—#û<  Ä? @D  †@     Ä? @D <Fîçsª  Ä? ÄD  Ä?/Çº  Ä? ÄD   @<  Ä? ÄD  @@>√º  Ä? ÄD  Ä@Ù¶§<  Ä? ÄD  †@     Ä? ÄD <Fô0ë;  Ä? ¿D  Ä?>Àª  Ä? ¿D   @pè <  Ä? ¿D  @@¯Œº  Ä? ¿D  Ä@Ÿ$£<  Ä? ¿D  †@Q∫Ω  Ä? ¿D <F2Èr∫  Ä?  D  Ä?ºÆ®º  Ä?  D   @ÙVå<  Ä?  D  @@»7˙º  Ä?  D  Ä@özÚ<  Ä?  D  †@     Ä?  D <Fá:@;  Ä? @D  Ä?˝íåº  Ä? @D   @æCõ<  Ä? @D  @@¯t˜º  Ä? @D  Ä@ƒ7≥<  Ä? @D  †@     Ä? @D <Fë;  Ä? ÄD  Ä?®]ﬂ7  Ä? ÄD   @Z—ı;  Ä? ÄD  @@–⁄º  Ä? ÄD  Ä@¯ô<  Ä? ÄD  †@ÑVº  Ä? ÄD <F5∞kº  Ä? ¿D  Ä?Ò”º  Ä? ¿D   @#˜º<  Ä? ¿D  @@[ıº  Ä? ¿D  Ä@lÕÄ=  Ä? ¿D  †@     Ä? ¿D <FK›åª  Ä?  D  Ä?˘¿Ñº  Ä?  D   @E˘´<  Ä?  D  @@o¬º  Ä?  D  Ä@sƒ<  Ä?  D  †@     Ä?  D <FCáª  Ä? @D  Ä?´±∞º  Ä? @D   @ “<  Ä? @D  @@C‚jΩ  Ä? @D  Ä@ïfw=  Ä? @D  †@     Ä? @D <Fä˛:  Ä? ÄD  Ä?sÄ∫  Ä? ÄD   @-ö8;  Ä? ÄD  @@     Ä? ÄD  Ä@ﬁ¸p;  Ä? ÄD  †@43äº  Ä? ÄD <F¸CÈª  Ä? ÄD <F`Lõ<  Ä? ÄD <FˇEª  Ä? ¿D  Ä?∫g!º  Ä? ¿D   @kik<  Ä? ¿D  @@‰ìŒº  Ä? ¿D  Ä@zP¢<  Ä? ¿D  †@     Ä? ¿D <F"Â;  Ä?   D  Ä?Yåù;  Ä?   D   @Ã¯Q<  Ä?   D  @@     Ä?   D  Ä@R∂»<  Ä?   D  †@P˙FΩ  Ä?   D <F⁄Ω  Ä?   D <F"∑ª;  Ä? @ D  Ä? „≥º  Ä? @ D   @U√<  Ä? @ D  @@ÑÛüΩ  Ä? @ D  Ä@â¿z=  Ä? @ D  †@     Ä? @ D <F>†ã;  Ä? Ä D  Ä?ëÇ«:  Ä? Ä D   @W˜ß;  Ä? Ä D  @@6nõ:  Ä? Ä D  Ä@Qƒ#<  Ä? Ä D  †@Ï‘Ëº  Ä? Ä D <F–∂=<  Ä? Ä D <F£´©º  Ä? ¿ D  Ä?ëT‹º  Ä? ¿ D   @Õ¡,=  Ä? ¿ D  @@0ˆº  Ä? ¿ D  Ä@®=y=  Ä? ¿ D  †@     Ä? ¿ D <FUÕª  Ä?  !D  Ä?[%…º  Ä?  !D   @«ï<  Ä?  !D  @@E–º  Ä?  !D  Ä@c¬<  Ä?  !D  †@     Ä?  !D <FRÇò;  Ä? @!D  Ä?“3-º  Ä? @!D   @Ï7<  Ä? @!D  @@ÇÇ⁄º  Ä? @!D  Ä@Wßr<  Ä? @!D  †@     Ä? @!D <F÷,8∫  Ä? Ä!D  Ä?¨¯éª  Ä? Ä!D   @?P·9  Ä? Ä!D  @@,t	º  Ä? Ä!D  Ä@Ì“ñ:  Ä? Ä!D  †@—éQº  Ä? Ä!D <F™io<  Ä? Ä!D <F‡œñª  Ä? ¿!D  Ä?Ì®º  Ä? ¿!D   @˜h<  Ä? ¿!D  @@Û6Zº  Ä? ¿!D  Ä@£¡<  Ä? ¿!D  †@     Ä? ¿!D <Fsû˘8  Ä?  "D  Ä?∂Cº  Ä?  "D   @ØÄº;  Ä?  "D  @@P∂äº  Ä?  "D  Ä@t$`<  Ä?  "D  †@     Ä?  "D <F?W∫  Ä? @"D  Ä?WÔùª  Ä? @"D   @#∂ñ;  Ä? @"D  @@,Nñº  Ä? @"D  Ä@å-<  Ä? @"D  †@     Ä? @"D <F≤Uª  Ä? Ä"D  Ä?©ä)º  Ä? Ä"D   @*Hà;  Ä? Ä"D  @@Î·¥º  Ä? Ä"D  Ä@wˇ«<  Ä? Ä"D  †@     Ä? Ä"D <F«¥5ª  Ä? ¿"D  Ä?r;º  Ä? ¿"D   @U ;  Ä? ¿"D  @@ ,Fº  Ä? ¿"D  Ä@D5a<  Ä? ¿"D  †@     Ä? ¿"D <F˜!H:  Ä?  #D  Ä?&Ê˝ª  Ä?  #D   @<.;  Ä?  #D  @@Oﬂ"º  Ä?  #D  Ä@Õî<  Ä?  #D  †@     Ä?  #D <Fs(Îª  Ä? @#D  Ä?QÁº  Ä? @#D   @ñw<  Ä? @#D  @@%öº  Ä? @#D  Ä@5π<  Ä? @#D  †@     Ä? @#D <F¿(Àº  Ä? Ä#D  Ä?uÀ9Ω  Ä? Ä#D   @@vô<  Ä? Ä#D  @@ø∫ÅΩ  Ä? Ä#D  Ä@Û"µ<  Ä? Ä#D  †@ )>  Ä? Ä#D <FÄÎ¶8  Ä? ¿#D  Ä?ÔH¡º  Ä? ¿#D   @à?º<  Ä? ¿#D  @@òΩ  Ä? ¿#D  Ä@m7È<  Ä? ¿#D  †@     Ä? ¿#D <Fµcü;  Ä?  $D  Ä?ü¶/º  Ä?  $D   @© <  Ä?  $D  @@"ˆº  Ä?  $D  Ä@≈€‹<  Ä?  $D  †@Èœ%Ω  Ä?  $D <F˛∫=  Ä?  $D <F4óπ  Ä? @$D  Ä??€ñª  Ä? @$D   @ó”;  Ä? @$D  @@\1¨ª  Ä? @$D  Ä@w˛8<  Ä? @$D  †@     Ä? @$D <F®&ª  Ä? Ä$D  Ä?·jº  Ä? Ä$D   @0Ç<  Ä? Ä$D  @@Ø˚Áº  Ä? Ä$D  Ä@’F=  Ä? Ä$D  †@     Ä? Ä$D <F‡∂≠ª  Ä? ¿$D  Ä?WúHº  Ä? ¿$D   @¡y»;  Ä? ¿$D  @@Hä
+Ω  Ä? ¿$D  Ä@ª©”<  Ä? ¿$D  †@ÙÅ'=  Ä? ¿$D <Fæ“⁄:  Ä?  %D  Ä?™lÛª  Ä?  %D   @ñ^;  Ä?  %D  @@`m+º  Ä?  %D  Ä@>R#<  Ä?  %D  †@ÿ©<  Ä?  %D <F_Z‘∫  Ä? @%D  Ä?”aª  Ä? @%D   @Æª<  Ä? @%D  @@Õ√ª  Ä? @%D  Ä@ÇUº<  Ä? @%D  †@@\Ω  Ä? @%D <FxWm∫  Ä? Ä%D  Ä?Hª  Ä? Ä%D   @«^k:  Ä? Ä%D  @@5’Œª  Ä? Ä%D  Ä@Eï;  Ä? Ä%D  †@¨Y<  Ä? Ä%D <F¨3á;  Ä? ¿%D  Ä?Û‡º  Ä? ¿%D   @Â;  Ä? ¿%D  @@	dº  Ä? ¿%D  Ä@©íƒ<  Ä? ¿%D  †@qOΩ  Ä? ¿%D <Fè:<  Ä?  &D  Ä?±´Wº  Ä?  &D   @,˜à<  Ä?  &D  @@	Ω  Ä?  &D  Ä@‚Ñø<  Ä?  &D  †@     Ä?  &D <F©ç„:  Ä? @&D  Ä?˘€ª  Ä? @&D   @Ωáv;  Ä? @&D  @@n[ º  Ä? @&D  Ä@Y:<  Ä? @&D  †@     Ä? @&D <Fà‚g:  Ä? Ä&D  Ä?Üm¶ª  Ä? Ä&D   @ˆ_Á;  Ä? Ä&D  @@ÆÉ;º  Ä? Ä&D  Ä@„˝X<  Ä? Ä&D  †@     Ä? Ä&D <F≤}°ª  Ä? ¿&D  Ä?”ö&º  Ä? ¿&D   @uè<  Ä? ¿&D  @@Ç1‹º  Ä? ¿&D  Ä@|„∫<  Ä? ¿&D  †@     Ä? ¿&D <F#~Ïª  Ä?  'D  Ä?òπVº  Ä?  'D   @£˛π  Ä?  'D  @@Cò˜º  Ä?  'D  Ä@ﬁÆ<  Ä?  'D  †@%\ë=  Ä?  'D <F˙ˇ:  Ä? @'D  Ä?\]‚ª  Ä? @'D   @•£π;  Ä? @'D  @@,TÜº  Ä? @'D  Ä@b¬m<  Ä? @'D  †@     Ä? @'D <Fÿ`;∫  Ä? Ä'D  Ä?ñÇsª  Ä? Ä'D   @iºÅ;  Ä? Ä'D  @@t$Âª  Ä? Ä'D  Ä@ F<  Ä? Ä'D  †@     Ä? Ä'D <FÙ–˚:  Ä? ¿'D  Ä?f$Œª  Ä? ¿'D   @1.›;  Ä? ¿'D  @@K ≠º  Ä? ¿'D  Ä@Oªæ<  Ä? ¿'D  †@     Ä? ¿'D <Fmnpª  Ä?  (D  Ä?†}’ª  Ä?  (D   @›∫;  Ä?  (D  @@óìº  Ä?  (D  Ä@M¥π<  Ä?  (D  †@     Ä?  (D <Ft'<  Ä? @(D  Ä?tº  Ä? @(D   @À#}<  Ä? @(D  @@Ø°%Ω  Ä? @(D  Ä@ës˜<  Ä? @(D  †@     Ä? @(D <F¨û;  Ä? Ä(D  Ä?2mº  Ä? Ä(D   @πÖ˘;  Ä? Ä(D  @@æ!òº  Ä? Ä(D  Ä@P9À<  Ä? Ä(D  †@     Ä? Ä(D <FŒhº  Ä? ¿(D  Ä?S–oº  Ä? ¿(D   @9h<  Ä? ¿(D  @@Ä.ñº  Ä? ¿(D  Ä@ø‘”<  Ä? ¿(D  †@     Ä? ¿(D <FùVÑª  Ä?  )D  Ä?ÎwÎº  Ä?  )D   @?"«<  Ä?  )D  @@‡∂VΩ  Ä?  )D  Ä@“∆L=  Ä?  )D  †@     Ä?  )D <F ºÄ∫  Ä? @)D  Ä?öa‹ª  Ä? @)D   @n˜ë;  Ä? @)D  @@»9º  Ä? @)D  Ä@"38<  Ä? @)D  †@     Ä? @)D <F±¥Ñª  Ä? Ä)D  Ä?Üyº  Ä? Ä)D   @ƒ3f;  Ä? Ä)D  @@'l2º  Ä? Ä)D  Ä@óµ;  Ä? Ä)D  †@πrÛº  Ä? Ä)D <FŸ1=  Ä? Ä)D <FâB]∫  Ä? ¿)D  Ä?5ïª  Ä? ¿)D   @,®;  Ä? ¿)D  @@ﬂxº  Ä? ¿)D  Ä@”|;  Ä? ¿)D  †@$,Å<  Ä? ¿)D <F @º  Ä?  *D  Ä?_Úº  Ä?  *D   @ıøº  Ä?  *D  @@•˛4Ω  Ä?  *D  Ä@     Ä?  *D  †@{•û=  Ä?  *D <FœÆ†=  Ä?  *D <Fùïµ∫  Ä? @*D  Ä?π∞Zº  Ä? @*D   @quÊ;  Ä? @*D  @@‰»uº  Ä? @*D  Ä@mû=  Ä? @*D  †@     Ä? @*D <FBâ´ª  Ä? Ä*D  Ä?íçº  Ä? Ä*D   @ßΩ¥<  Ä? Ä*D  @@ˇøΩ  Ä? Ä*D  Ä@x…Î<  Ä? Ä*D  †@     Ä? Ä*D <F©˚†ª  Ä? ¿*D  Ä?26óº  Ä? ¿*D   @6€ß<  Ä? ¿*D  @@ê◊+Ω  Ä? ¿*D  Ä@ÒÒ=  Ä? ¿*D  †@     Ä? ¿*D <FcΩª  Ä?  +D  Ä?88ùº  Ä?  +D   @§≤<  Ä?  +D  @@Ω}Îº  Ä?  +D  Ä@¯.=  Ä?  +D  †@     Ä?  +D <FÇ´5;  Ä? @+D  Ä?∑ãáº  Ä? @+D   @„Ó.<  Ä? @+D  @@Mí√º  Ä? @+D  Ä@u‚E=  Ä? @+D  †@     Ä? @+D <F	ó“ª  Ä? Ä+D  Ä?»5óº  Ä? Ä+D   @∆º)=  Ä? Ä+D  @@Wñ¡Ω  Ä? Ä+D  Ä@H˜M=  Ä? Ä+D  †@     Ä? Ä+D <Fõí|;  Ä? ¿+D  Ä?ôYàº  Ä? ¿+D   @yql<  Ä? ¿+D  @@#lÊº  Ä? ¿+D  Ä@¢÷œ<  Ä? ¿+D  †@     Ä? ¿+D <F«ÇÃª  Ä?  ,D  Ä?A¢º  Ä?  ,D   @«É=  Ä?  ,D  @@∑bΩ  Ä?  ,D  Ä@, /=  Ä?  ,D  †@     Ä?  ,D <F£ŸÜ;  Ä? @,D  Ä?ÁLxº  Ä? @,D   @DXÛ<  Ä? @,D  @@ÌÃaΩ  Ä? @,D  Ä@√f5=  Ä? @,D  †@     Ä? @,D <F"äª  Ä? Ä,D  Ä?Ûå£º  Ä? Ä,D   @—H#<  Ä? Ä,D  @@H®@Ω  Ä? Ä,D  Ä@Àá_=  Ä? Ä,D  †@<’†Ω  Ä? Ä,D <F˘ =  Ä? Ä,D <F»Í„∏  Ä? ¿,D  Ä?îèº  Ä? ¿,D   @∏i"<  Ä? ¿,D  @@µNÏº  Ä? ¿,D  Ä@0n$=  Ä? ¿,D  †@     Ä? ¿,D <FÅûo;  Ä?  -D  Ä?mâGº  Ä?  -D   @Œ?•<  Ä?  -D  @@\Ω  Ä?  -D  Ä@,≠Ë<  Ä?  -D  †@     Ä?  -D <Fzº;  Ä? @-D  Ä?§~fº  Ä? @-D   @À9<  Ä? @-D  @@ªº  Ä? @-D  Ä@ú∏<  Ä? @-D  †@     Ä? @-D <F,tèª  Ä? Ä-D  Ä?#>º  Ä? Ä-D   @¥ª<  Ä? Ä-D  @@2£Ω  Ä? Ä-D  Ä@`˛<  Ä? Ä-D  †@     Ä? Ä-D <F«˛˝<  Ä? ¿-D  Ä?ú‹1Ω  Ä? ¿-D   @Ït=  Ä? ¿-D  @@ö¥ æ  Ä? ¿-D  Ä@c¯∞=  Ä? ¿-D  †@     Ä? ¿-D <F˙≥Pº  Ä?  .D  Ä?˛ßº  Ä?  .D   @!=  Ä?  .D  @@ûíÜΩ  Ä?  .D  Ä@˜öt=  Ä?  .D  †@     Ä?  .D <FzÍ£ª  Ä? @.D  Ä?ì}–ª  Ä? @.D   @ˇ7<  Ä? @.D  @@Üàº  Ä? @.D  Ä@†∆º<  Ä? @.D  †@     Ä? @.D <F1∆s;  Ä? Ä.D  Ä?çßº  Ä? Ä.D   @ˇÛã<  Ä? Ä.D  @@ˇy(Ω  Ä? Ä.D  Ä@sP=  Ä? Ä.D  †@     Ä? Ä.D <F?qª  Ä? ¿.D  Ä?µ¬º  Ä? ¿.D   @Ÿèºπ  Ä? ¿.D  @@0¢#º  Ä? ¿.D  Ä@œ^<  Ä? ¿.D  †@kLí<  Ä? ¿.D <F]àœª  Ä?  /D  Ä?ô:%º  Ä?  /D   @È#<  Ä?  /D  @@¨ÃÍº  Ä?  /D  Ä@P¸<  Ä?  /D  †@     Ä?  /D <F Ÿ:  Ä? @/D  Ä?<5≤º  Ä? @/D   @œtó<  Ä? @/D  @@∫Õº  Ä? @/D  Ä@&‹<  Ä? @/D  †@     Ä? @/D <F%ú;  Ä? Ä/D  Ä?Òö3º  Ä? Ä/D   @∂±;  Ä? Ä/D  @@è–Àº  Ä? Ä/D  Ä@‹∂ë<  Ä? Ä/D  †@     Ä? Ä/D <F9í¬∫  Ä? ¿/D  Ä?J˙ìª  Ä? ¿/D   @NÊÄ;  Ä? ¿/D  @@,j√ª  Ä? ¿/D  Ä@vT2<  Ä? ¿/D  †@     Ä? ¿/D <FNzÃ;  Ä?  0D  Ä?B8⁄:  Ä?  0D   @˚ÃG<  Ä?  0D  @@     Ä?  0D  Ä@§…<  Ä?  0D  †@Q‡#Ω  Ä?  0D <F˜©
+Ω  Ä?  0D <FÑÒY;  Ä? @0D  Ä?v>Cº  Ä? @0D   @K˙<  Ä? @0D  @@HΩ  Ä? @0D  Ä@å5”<  Ä? @0D  †@     Ä? @0D <FiΩ¢:  Ä? Ä0D  Ä?Æ∂º  Ä? Ä0D   @lˇÁ;  Ä? Ä0D  @@á!Nº  Ä? Ä0D  Ä@Aüz<  Ä? Ä0D  †@     Ä? Ä0D <Fc¸;º  Ä? ¿0D  Ä?`Ü|º  Ä? ¿0D   @1©	<  Ä? ¿0D  @@ﬁÏ‹º  Ä? ¿0D  Ä@‡	=  Ä? ¿0D  †@ÙL=  Ä? ¿0D <FâPMª  Ä?  1D  Ä?Äo¨º  Ä?  1D   @=î˜<  Ä?  1D  @@ˇ¯Ω  Ä?  1D  Ä@= (=  Ä?  1D  †@     Ä?  1D <F÷«üª  Ä? @1D  Ä?VC›º  Ä? @1D   @Tf<  Ä? @1D  @@"ØΩ  Ä? @1D  Ä@Å=  Ä? @1D  †@     Ä? @1D <Fyº  Ä? Ä1D  Ä?Ím(Ω  Ä? Ä1D   @(n’<  Ä? Ä1D  @@ú’ZΩ  Ä? Ä1D  Ä@‘†=  Ä? Ä1D  †@     Ä? Ä1D <FºÅª  Ä? ¿1D  Ä?ﬁº  Ä? ¿1D   @E4æ;  Ä? ¿1D  @@A=º  Ä? ¿1D  Ä@rd$<  Ä? ¿1D  †@     Ä? ¿1D <FÊj%<  Ä?  2D  Ä?£†úº  Ä?  2D   @Œ1ø<  Ä?  2D  @@˜¸ZΩ  Ä?  2D  Ä@:7ı<  Ä?  2D  †@     Ä?  2D <F˚I˛:  Ä? @2D  Ä?Ù>óª  Ä? @2D   @U+ø;  Ä? @2D  @@äZº  Ä? @2D  Ä@ÈT_<  Ä? @2D  †@     Ä? @2D <F5§Åº  Ä? Ä2D  Ä?”ö£º  Ä? Ä2D   @bõíª  Ä? Ä2D  @@≥™ﬁº  Ä? Ä2D  Ä@≈èû∫  Ä? Ä2D  †@v_Ω  Ä? Ä2D <FŒQ>  Ä? Ä2D <FÁ…|º  Ä? ¿2D  Ä?…3Îº  Ä? ¿2D   @∆â=  Ä? ¿2D  @@Ωæ7Ω  Ä? ¿2D  Ä@>áQ=  Ä? ¿2D  †@     Ä? ¿2D <F£˝;  Ä?  3D  Ä?˝ﬁ{º  Ä?  3D   @z6N<  Ä?  3D  @@À∂º  Ä?  3D  Ä@2iƒ<  Ä?  3D  †@     Ä?  3D <F,âª  Ä? @3D  Ä?Øπº  Ä? @3D   @‚<  Ä? @3D  @@Ùö€º  Ä? @3D  Ä@“Ê”<  Ä? @3D  †@     Ä? @3D <FÏN)º  Ä? Ä3D  Ä?◊:ôº  Ä? Ä3D   @v<  Ä? Ä3D  @@ÕÑΩ  Ä? Ä3D  Ä@1Ìø<  Ä? Ä3D  †@∂ƒ∞=  Ä? Ä3D <Fâ5º  Ä? ¿3D  Ä?˝øº  Ä? ¿3D   @CPrπ  Ä? ¿3D  @@Ω  Ä? ¿3D  Ä@Êhœ<  Ä? ¿3D  †@≤›ª=  Ä? ¿3D <F^øÜ;  Ä?  4D  Ä?P§(º  Ä?  4D   @]R<  Ä?  4D  @@ZgÏº  Ä?  4D  Ä@°ﬂ=  Ä?  4D  †@     Ä?  4D <FÌõ&ª  Ä? @4D  Ä?“Ñóª  Ä? @4D   @I·Ä;  Ä? @4D  @@ã`˘ª  Ä? @4D  Ä@}G<  Ä? @4D  †@     Ä? @4D <FÌŒmª  Ä? Ä4D  Ä?LJº  Ä? Ä4D   @/Ay:  Ä? Ä4D  @@ıPïº  Ä? Ä4D  Ä@«B$<  Ä? Ä4D  †@€Ù=  Ä? Ä4D <F}»n;  Ä? ¿4D  Ä?—›íº  Ä? ¿4D   @M	l<  Ä? ¿4D  @@à¿ßº  Ä? ¿4D  Ä@Éõ<  Ä? ¿4D  †@     Ä? ¿4D <F&Ñ:  Ä?  5D  Ä?ö·¡ª  Ä?  5D   @ÜÓ;  Ä?  5D  @@wkº  Ä?  5D  Ä@6‚f<  Ä?  5D  †@     Ä?  5D <F^MÄ;  Ä? @5D  Ä?ﬂº  Ä? @5D   @ˇ¶ó;  Ä? @5D  @@Œéº  Ä? @5D  Ä@óê¨;  Ä? @5D  †@ÚÒ<  Ä? @5D <Fñ‡"ª  Ä? Ä5D  Ä?)˚€ª  Ä? Ä5D   @–ıÂ;  Ä? Ä5D  @@∑-º  Ä? Ä5D  Ä@·ïW<  Ä? Ä5D  †@     Ä? Ä5D <F¬ãª  Ä? ¿5D  Ä?ƒaóª  Ä? ¿5D   @ß”Ñπ  Ä? ¿5D  @@Ñÿª  Ä? ¿5D  Ä@@ﬂ∆;  Ä? ¿5D  †@6R-<  Ä? ¿5D <F=D∫  Ä?  6D  Ä?ì}Dª  Ä?  6D   @u¨ö:  Ä?  6D  @@óÁjª  Ä?  6D  Ä@     Ä?  6D  †@sÃFº  Ä?  6D <F`°F<  Ä?  6D <Fﬁ!z<  Ä?  6D <Fﬁ˜^:  Ä? @6D  Ä?GËª  Ä? @6D   @ÏA•;  Ä? @6D  @@Oíqº  Ä? @6D  Ä@€Ñ<  Ä? @6D  †@     Ä? @6D <F≠Ó⁄9  Ä? Ä6D  Ä?(÷3º  Ä? Ä6D   @.m9<  Ä? Ä6D  @@ﬁ6¶º  Ä? Ä6D  Ä@ìóç<  Ä? Ä6D  †@     Ä? Ä6D <F≤˛N;  Ä? ¿6D  Ä?ª]º  Ä? ¿6D   @áï)<  Ä? ¿6D  @@†|⁄º  Ä? ¿6D  Ä@•,ƒ<  Ä? ¿6D  †@     Ä? ¿6D <F(¡Äª  Ä?  7D  Ä?àÙª  Ä?  7D   @tzÓ;  Ä?  7D  @@(3º  Ä?  7D  Ä@Øµç<  Ä?  7D  †@     Ä?  7D <Fq”xπ  Ä? @7D  Ä?Èª  Ä? @7D   @¸pù;  Ä? @7D  @@üIEº  Ä? @7D  Ä@m@s<  Ä? @7D  †@     Ä? @7D <F<	:  Ä? Ä7D  Ä?ógª  Ä? Ä7D   @9ﬂ:  Ä? Ä7D  @@ï÷Ôª  Ä? Ä7D  Ä@B∏∂;  Ä? Ä7D  †@ÆÑº  Ä? Ä7D <Fdøg<  Ä? Ä7D <F¢6!ª  Ä? ¿7D  Ä?bµ∆ª  Ä? ¿7D   @É÷◊:  Ä? ¿7D  @@°‰4º  Ä? ¿7D  Ä@E3);  Ä? ¿7D  †@söº  Ä? ¿7D <F@ë=  Ä? ¿7D <FÍ•Ãª  Ä?  8D  Ä?/zº  Ä?  8D   @ã<  Ä?  8D  @@m(Ωº  Ä?  8D  Ä@)·<  Ä?  8D  †@     Ä?  8D <F∞«Æ∫  Ä? @8D  Ä?gM4º  Ä? @8D   @í€c<  Ä? @8D  @@á≤êº  Ä? @8D  Ä@Lß<  Ä? @8D  †@     Ä? @8D <FN*›ª  Ä? Ä8D  Ä?áP8º  Ä? Ä8D   @Ñ o<  Ä? Ä8D  @@hy∆º  Ä? Ä8D  Ä@µ	¿<  Ä? Ä8D  †@     Ä? Ä8D <FT·x∫  Ä? ¿8D  Ä?DÿÒª  Ä? ¿8D   @i˝;  Ä? ¿8D  @@C!õº  Ä? ¿8D  Ä@0A¢<  Ä? ¿8D  †@     Ä? ¿8D <F3»Oπ  Ä?  9D  Ä?Tæøª  Ä?  9D   @âßˆ;  Ä?  9D  @@pÙáº  Ä?  9D  Ä@°ß(<  Ä?  9D  †@     Ä?  9D <FtD◊ª  Ä? @9D  Ä?¬+º  Ä? @9D   @·_ó<  Ä? @9D  @@øªº  Ä? @9D  Ä@∏åÏ<  Ä? @9D  †@     Ä? @9D <F·\:  Ä? Ä9D  Ä?kLÂª  Ä? Ä9D   @0,E<  Ä? Ä9D  @@’ √º  Ä? Ä9D  Ä@ZÄ<  Ä? Ä9D  †@     Ä? Ä9D <FL}J;  Ä? ¿9D  Ä?˛Æº  Ä? ¿9D   @çÒ<  Ä? ¿9D  @@‡S•Ω  Ä? ¿9D  Ä@≤±=  Ä? ¿9D  †@     Ä? ¿9D <FZTª  Ä?  :D  Ä?£Úº  Ä?  :D   @ùTÜ<  Ä?  :D  @@ßä+Ω  Ä?  :D  Ä@`û«<  Ä?  :D  †@     Ä?  :D <F-&Ü<  Ä? @:D  Ä?ÌOÒº  Ä? @:D   @°	¬<  Ä? @:D  @@ºÖqΩ  Ä? @:D  Ä@hnF=  Ä? @:D  †@     Ä? @:D <F¡±íª  Ä? Ä:D  Ä?0åëº  Ä? Ä:D   @RÑ<  Ä? Ä:D  @@ê°Ω  Ä? Ä:D  Ä@ºÓ˝<  Ä? Ä:D  †@     Ä? Ä:D <F·°∫  Ä? ¿:D  Ä?í€ª  Ä? ¿:D   @ãaÈ;  Ä? ¿:D  @@9œº  Ä? ¿:D  Ä@4ùç<  Ä? ¿:D  †@     Ä? ¿:D <F£Îp;  Ä?  ;D  Ä?cûª  Ä?  ;D   @a=  Ä?  ;D  @@     Ä?  ;D  Ä@‡HK=  Ä?  ;D  †@ôΩ  Ä?  ;D <F¶zêΩ  Ä?  ;D <F‡1\;  Ä? @;D  Ä?ıÕª  Ä? @;D   @ÖØ;  Ä? @;D  @@πº  Ä? @;D  Ä@¯¯Q<  Ä? @;D  †@     Ä? @;D <Fı˛∏<  Ä? Ä;D  Ä?3Pª∫  Ä? Ä;D   @`’<  Ä? Ä;D  @@     Ä? Ä;D  Ä@œ‚=  Ä? Ä;D  †@ˆÅΩ  Ä? Ä;D <FæÕjΩ  Ä? Ä;D <F\†!<  Ä? ¿;D  Ä?!Cº  Ä? ¿;D   @OÕ<  Ä? ¿;D  @@åπlΩ  Ä? ¿;D  Ä@π=  Ä? ¿;D  †@     Ä? ¿;D <FAw∫  Ä?  <D  Ä?≠÷‰º  Ä?  <D   @∫Æ<  Ä?  <D  @@ü˛∆Ω  Ä?  <D  Ä@‹3#=  Ä?  <D  †@Æ=  Ä?  <D <F´ΩOº  Ä? @<D  Ä?Ω  Ä? @<D   @‡≈ˇª  Ä? @<D  @@ 0Ω  Ä? @<D  Ä@     Ä? @<D  †@~§=  Ä? @<D <Fæ[Ã=  Ä? @<D <F˛kùª  Ä? Ä<D  Ä?AAº  Ä? Ä<D   @˙X<  Ä? Ä<D  @@°Çíº  Ä? Ä<D  Ä@3ïÚ<  Ä? Ä<D  †@     Ä? Ä<D <F	≥<  Ä? ¿<D  Ä?ÔJÿº  Ä? ¿<D   @!áß<  Ä? ¿<D  @@1gpΩ  Ä? ¿<D  Ä@>=  Ä? ¿<D  †@     Ä? ¿<D <Fˇ∑#;  Ä?  =D  Ä?óu;  Ä?  =D   @ï¨ª;  Ä?  =D  @@     Ä?  =D  Ä@È;  Ä?  =D  †@nÉº  Ä?  =D <F√¢Oº  Ä?  =D <Fà[N<  Ä?  =D <F¯Rõº  Ä? @=D  Ä?”j7Ω  Ä? @=D   @k‡∞=  Ä? @=D  @@êæ  Ä? @=D  Ä@Õ˜=  Ä? @=D  †@     Ä? @=D <F4µ¥;  Ä? Ä=D  Ä?¶?ª  Ä? Ä=D   @\£∫<  Ä? Ä=D  @@     Ä? Ä=D  Ä@uIB=  Ä? Ä=D  †@è¥µΩ  Ä? Ä=D <F´YWΩ  Ä? Ä=D <F.®â∏  Ä? ¿=D  Ä?qo5ª  Ä? ¿=D   @⁄¯“:  Ä? ¿=D  @@…º  Ä? ¿=D  Ä@>Å;  Ä? ¿=D  †@J<  Ä? ¿=D <FJº  Ä?  >D  Ä?¢–ëΩ  Ä?  >D   @`Ä=  Ä?  >D  @@‹û‘Ω  Ä?  >D  Ä@≈K˛=  Ä?  >D  †@     Ä?  >D <F7⁄-ª  Ä? @>D  Ä?∫˝uª  Ä? @>D   @MÈ·;  Ä? @>D  @@Zº  Ä? @>D  Ä@ ÜE<  Ä? @>D  †@vHΩ<  Ä? @>D <Fã;  Ä? Ä>D  Ä?öE	º  Ä? Ä>D   @v#´;  Ä? Ä>D  @@á[Õº  Ä? Ä>D  Ä@º‹w<  Ä? Ä>D  †@     Ä? Ä>D <F@†º  Ä? ¿>D  Ä?ñΩ  Ä? ¿>D   @"9=  Ä? ¿>D  @@Â∏NΩ  Ä? ¿>D  Ä@Êík=  Ä? ¿>D  †@     Ä? ¿>D <F/0S;  Ä?  ?D  Ä?Áàº  Ä?  ?D   @æ;  Ä?  ?D  @@zåΩ  Ä?  ?D  Ä@‘ =  Ä?  ?D  †@ïï#=  Ä?  ?D <F"Ω;  Ä? @?D  Ä?ip:º  Ä? @?D   @-∫à<  Ä? @?D  @@A.Ω  Ä? @?D  Ä@ä∑Ó<  Ä? @?D  †@     Ä? @?D <FÓ·<  Ä? Ä?D  Ä?!d Ω  Ä? Ä?D   @övˇ<  Ä? Ä?D  @@≠MñΩ  Ä? Ä?D  Ä@ˇ=  Ä? Ä?D  †@     Ä? Ä?D <FÈÓ;  Ä? ¿?D  Ä?«'Üª  Ä? ¿?D   @#Ÿ…;  Ä? ¿?D  @@¨ sº  Ä? ¿?D  Ä@} <  Ä? ¿?D  †@     Ä? ¿?D <F‹T≠∫  Ä?  @D  Ä? ;âª  Ä?  @D   @5<  Ä?  @D  @@—–ª  Ä?  @D  Ä@çÂA<  Ä?  @D  †@     Ä?  @D <F·êíª  Ä? @@D  Ä?GäΩ  Ä? @@D   @ˇF=  Ä? @@D  @@“åΩ  Ä? @@D  Ä@E†^=  Ä? @@D  †@     Ä? @@D <F=C€;  Ä? Ä@D  Ä?2W}ª  Ä? Ä@D   @ÎÂ(<  Ä? Ä@D  @@‰—æº  Ä? Ä@D  Ä@Ø—<  Ä? Ä@D  †@9π(Ω  Ä? Ä@D <F,ùv<  Ä? ¿@D  Ä?p¸º  Ä? ¿@D   @a3?=  Ä? ¿@D  @@C}πΩ  Ä? ¿@D  Ä@∂áé=  Ä? ¿@D  †@     Ä? ¿@D <F¸Áçª  Ä?  AD  Ä?ó'º  Ä?  AD   @ä>;  Ä?  AD  @@Í ñº  Ä?  AD  Ä@›ñ;  Ä?  AD  †@‡@=  Ä?  AD <F39  Ä? @AD  Ä?n)}ª  Ä? @AD   @U˚;  Ä? @AD  @@O¬{º  Ä? @AD  Ä@zK<  Ä? @AD  †@     Ä? @AD <F)&:  Ä? ÄAD  Ä?å∂Ÿª  Ä? ÄAD   @&Q;  Ä? ÄAD  @@2ä0º  Ä? ÄAD  Ä@∫j<  Ä? ÄAD  †@     Ä? ÄAD <F|-ä;  Ä? ¿AD  Ä?D¯9º  Ä? ¿AD   @«<  Ä? ¿AD  @@àmzº  Ä? ¿AD  Ä@Ÿà<  Ä? ¿AD  †@     Ä? ¿AD <F‡ÍÅ9  Ä?  BD  Ä?Ûˆ¶º  Ä?  BD   @n∞<  Ä?  BD  @@W}Âº  Ä?  BD  Ä@ìú=  Ä?  BD  †@     Ä?  BD <F#”K;  Ä? @BD  Ä?‰:;º  Ä? @BD   @ï1<  Ä? @BD  @@¯ô¿º  Ä? @BD  Ä@ŒÌê<  Ä? @BD  †@     Ä? @BD <F Jd∏  Ä? ÄBD  Ä?-¢6ª  Ä? ÄBD   @ûÅ¬;  Ä? ÄBD  @@îÄπª  Ä? ÄBD  Ä@\\<  Ä? ÄBD  †@·•º  Ä? ÄBD <Fj˜ZΩ  Ä? ¿BD  Ä?àzΩ  Ä? ¿BD   @ÛŸ´=  Ä? ¿BD  @@uLZæ  Ä? ¿BD  Ä@Œ‡:>  Ä? ¿BD  †@     Ä? ¿BD <FÒñíª  Ä?  CD  Ä?û?bº  Ä?  CD   @é†;  Ä?  CD  @@/Œ¨º  Ä?  CD  Ä@á<  Ä?  CD  †@:åâ=  Ä?  CD <Fd]p<  Ä? @CD  Ä?OÃΩ  Ä? @CD   @+#Ÿ<  Ä? @CD  @@<àaΩ  Ä? @CD  Ä@Ó©'=  Ä? @CD  †@     Ä? @CD <FWç7ª  Ä? ÄCD  Ä?Vô˛ª  Ä? ÄCD   @A∂<  Ä? ÄCD  @@—$àº  Ä? ÄCD  Ä@65«<  Ä? ÄCD  †@     Ä? ÄCD <F¶n};  Ä? ¿CD  Ä?(äª  Ä? ¿CD   @Ïø;  Ä? ¿CD  @@ãlº  Ä? ¿CD  Ä@≤)<  Ä? ¿CD  †@     Ä? ¿CD <Fn'Ω  Ä?  DD  Ä?º@PΩ  Ä?  DD   @ü±=  Ä?  DD  @@öÚÒΩ  Ä?  DD  Ä@É>  Ä?  DD  †@     Ä?  DD <Flœùª  Ä? @DD  Ä?á
+Øº  Ä? @DD   @>Ÿπ  Ä? @DD  @@≈zæº  Ä? @DD  Ä@     Ä? @DD  †@Ä=  Ä? @DD <Fïéx9  Ä? ÄDD  Ä?ırÆª  Ä? ÄDD   @ É%<  Ä? ÄDD  @@˜´Ñº  Ä? ÄDD  Ä@#Ç<  Ä? ÄDD  †@     Ä? ÄDD <FÒ.;  Ä? ¿DD  Ä?èFª  Ä? ¿DD   @X4<  Ä? ¿DD  @@C{Øª  Ä? ¿DD  Ä@—ûÇ<  Ä? ¿DD  †@     Ä? ¿DD <F
+<EndSersetData>
+<EndSerset>
+<EndItem>
+<BeginItem> scheme K7b6f0868 
+.setscheme , scheme(stcolor) naturallywhite(1)
+<EndItem>
+<BeginItem> boxgraph_g K7ec55ac8 <UseScheme> K7b6f0868
+._ngrps = 2
+._nsorts = 0 + 1
+.boxsrt = 1 + 2 + 1
+.vargroup = 2
+.group = 3
+<BeginCmd>
+._map_sersets K7ec54c68
+local fullopts  bndoptions(`"(, )"')
+<EndCmd>
+.command = `"box resids, over(unitid)"'
+.date = " 4 Dec 2025"
+.time = "18:15:23"
+.dta_file = "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\4b Abridged Master Dataset 2015-2023.dta"
+.dta_date = "23 Aug 2025 13:02"
+.drawgraph , nomaybedraw
+._remake_lbls = 1
+._repos_only = 1
+<EndItem>

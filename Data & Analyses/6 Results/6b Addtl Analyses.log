@@ -1,0 +1,536 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Results\6b Addtl Analyses.log
+  log type:  text
+ opened on:   4 Dec 2025, 18:18:20
+
+. 
+. *************************************************
+. *************************************************
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Prelim Findings\5 Preliminary Findings Final.dta"
+
+. 
+. *************************************************
+. *** setting time variable
+. *************************************************
+. xtset unitid year
+
+Panel variable: unitid (unbalanced)
+ Time variable: year, 2015 to 2023, but with gaps
+         Delta: 1 unit
+
+. xtdescribe
+
+  unitid:  100654, 100663, ..., 492689                       n =        784
+    year:  2015, 2016, ..., 2023                             T =          9
+           Delta(year) = 1 unit
+           Span(year)  = 9 periods
+           (unitid*year uniquely identifies each observation)
+
+Distribution of T_i:   min      5%     25%       50%       75%     95%     max
+                         6       9       9         9         9       9       9
+
+     Freq.  Percent    Cum. |  Pattern
+ ---------------------------+-----------
+      757     96.56   96.56 |  111111111
+       20      2.55   99.11 |  1111...11
+        3      0.38   99.49 |  ...111111
+        2      0.26   99.74 |  11111111.
+        1      0.13   99.87 |  ..1111111
+        1      0.13  100.00 |  11111..11
+ ---------------------------+-----------
+      784    100.00         |  XXXXXXXXX
+
+. 
+. *************************************************
+. *************************************************
+. 
+. ** Contextualizing changes in diversity index value
+. ** what does a change in DI mean for the actual composition of the faculty?
+. 
+. bysort unitid (year): gen DI_2015 = i_diversity if year == 2015
+(6,201 missing values generated)
+
+. bysort unitid (year): gen DI_2023 = i_diversity if year == 2023
+(6,199 missing values generated)
+
+. bysort unitid: egen DI_2015_val = max(DI_2015)
+(25 missing values generated)
+
+. bysort unitid: egen DI_2023_val = max(DI_2023)
+(16 missing values generated)
+
+. drop DI_2015
+
+. drop DI_2023
+
+. bysort unitid: gen DI_diff = DI_2023_val - DI_2015_val
+(41 missing values generated)
+
+. 
+. *********
+. sum DI_diff
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     DI_diff |      6,940     .032491    .0411011  -.1519331   .4027778
+
+. sort DI_diff
+
+. list DI_diff unitid instname if DI_diff >=.030 & DI_diff <=.035 & year==2023
+
+      +----------------------------------------------------------------------------------+
+      |  DI_diff   unitid                                                       instname |
+      |----------------------------------------------------------------------------------|
+3267. | .0300132   201441                     Bowling Green State University-Main Campus |
+3276. | .0301077   163851                                           Salisbury University |
+3286. | .0301462   447689                                       Georgia Gwinnett College |
+3296. | .0301561   433660                                  Florida Gulf Coast University |
+3306. | .0301853   133669                                    Florida Atlantic University |
+      |----------------------------------------------------------------------------------|
+3314. | .0302925   137096                                               Santa Fe College |
+3318. | .0304016   174251                                 University of Minnesota-Morris |
+3327. | .0307761   174233                                 University of Minnesota-Duluth |
+3334. | .0308236   133951                               Florida International University |
+3345. | .0308621   197869                                   Appalachian State University |
+      |----------------------------------------------------------------------------------|
+3352. | .0308779   155399                                        Kansas State University |
+3363. | .0309596   216038                       Slippery Rock University of Pennsylvania |
+3370. | .0310094   218663                          University of South Carolina-Columbia |
+3386. | .0310969   228431                              Stephen F Austin State University |
+3393. | .0311044   171483                                  Northwestern Michigan College |
+      |----------------------------------------------------------------------------------|
+3397. | .0312572   161554                                   University of Southern Maine |
+3410. | .0313281   141334                                     University of West Georgia |
+3415. | .0313551   175616                                         Delta State University |
+3430. | .0313756   200332                      North Dakota State University-Main Campus |
+3437. | .0313878   209490                             Oregon Health & Science University |
+      |----------------------------------------------------------------------------------|
+3445. | .0315877   204857                                    Ohio University-Main Campus |
+3457. | .0317088   196060                                           University at Albany |
+3466. | .0318316   139959                                          University of Georgia |
+3471. | .0318962   214713            Pennsylvania State University-Penn State Harrisburg |
+3483. | .0321112   163204                           University of Maryland Global Campus |
+      |----------------------------------------------------------------------------------|
+3487. | .0321574   240374                               University of Wisconsin-Parkside |
+3501. | .0321633   435000   Louisiana State University Health Sciences Center-Shreveport |
+3506. | .0322403   210429                                      Western Oregon University |
+3511. | .0324515   130907                     Delaware Technical Community College-Terry |
+3524. | .0325535   151111                                Indiana University-Indianapolis |
+      |----------------------------------------------------------------------------------|
+3532. | .0325552   145600                                 University of Illinois Chicago |
+3541. | .0325809   237525                                            Marshall University |
+3554. | .0326997   154095                                    University of Northern Iowa |
+3561. | .0329522   196264                                        Empire State University |
+3565. | .0330569   123299                                                 Shasta College |
+      |----------------------------------------------------------------------------------|
+3577. | .0330832   238032                                       West Virginia University |
+3591. | .0332047   207847                         Southeastern Oklahoma State University |
+3600. | .0332891   230603                                       Southern Utah University |
+3608. | .0334332   229814                                    West Texas A & M University |
+3612. | .0337467   181215                              University of Nebraska at Kearney |
+      |----------------------------------------------------------------------------------|
+3624. | .0339712   188304                                  Western New Mexico University |
+3631. | .0339844   127200                                  Front Range Community College |
+3639. |  .034124   104151                      Arizona State University Campus Immersion |
+3651. | .0342211   224554                                Texas A & M University-Commerce |
+3657. | .0344545   190682                                             CUNY School of Law |
+      |----------------------------------------------------------------------------------|
+3666. | .0345018   236072                                          North Seattle College |
+3674. |  .034542   163259                              University of Maryland  Baltimore |
+3683. |  .034563   209551                                           University of Oregon |
+3695. | .0345986   160621                          Southern University and A & M College |
+3702. | .0348759   133386                                          Daytona State College |
+      +----------------------------------------------------------------------------------+
+
+. 
+. ** list of insts with average DI change
+. ** Western Oregon University .322 -- 210429 
+. ** Univ of Wisconsin - Parkside .322 -- 240374
+. ** Indiana University - Indianapolis .326 -- 151111
+. ** Univ of Illinois - Chicago .326 -- 145600 
+. ** Marshall University .326 -- 237525 
+. 
+. **************** .322 change
+. ** Western Oregon University ***** OVERALL DECREASE - 50pp
+.  list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==210429 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3507. |       3         7         2         2        5        9       115       112         1         2       258 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==210429 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3506. |       3         8         2         1        5       13        77        90         0         1       200 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  
+.  ** Univesity of Wisconic - Parkside ***** OVERALL DECREASE - 10pp
+.   list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==240374 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3491. |      11         9         6         1        4        7        57        59         1         0       155 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==240374 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3487. |      15        11         5         6        2        3        53        45         1         1       142 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  
+.  ***************** .326 change
+.  ** Indiana University - Indianapolis ****** OVERALL INCREASE - 700pp
+.    list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==151111 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3522. |     226       102        43        56       48       24       967       726        10         8      2210 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==151111 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3524. |     303       225        66        80       66       41      1161       998        17        28      2985 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  
+.  ** University of Illinois - Chicago ****** OVERALL INCREASE - 400pp
+.     list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==145600 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3536. |     197       164        48        60       58       67       646       576         5        15      1836 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==145600 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3532. |     261       230        72        89       86      111       678       683        18        23      2251 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  
+.  ** Marshall University ****** OVERALL INCREASE SLIGHTLY - 30pp
+.      list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==237525 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3546. |      51        28        15         6        5        7       366       274         0         2       754 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==237525 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+3541. |      70        30        17        11        8        8       344       293         1         3       785 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+.  
+. ************************************
+. ** insts with greatest gains
+. list unitid instname DI_diff if DI_diff >=.35 & year==2023
+
+      +----------------------------------------------------------------------------------------+
+      | unitid                                                             instname    DI_diff |
+      |----------------------------------------------------------------------------------------|
+6934. | 183257   University of New Hampshire College of Professional Studies Online   .4027778 |
+6952. | 488800                                      Teachers College of San Joaquin          . |
+6966. | 492689                 Texas Tech University Health Sciences Center-El Paso          . |
+6967. | 490805                                          Purdue University Northwest          . |
+6980. | 489779                                             Purdue University Global          . |
+      +----------------------------------------------------------------------------------------+
+
+. ** only one inst increased greater than .35
+. ** University of New Hampshire College of Professional Studies Online
+. ** .403 increase
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==183257 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+6940. |       0         0         0         0        0        0         0         3         0         0         3 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==183257 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+6934. |       1         0         0         0        0        0         2         9         0         0        12 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. ** started with only 3 WW, added 1 AM, 2 WM, and 6 WW
+. 
+. ************************************
+. ** insts with greatest losses
+. list unitid instname DI_diff if DI_diff <=0 & year==2023
+
+      +---------------------------------------------------------------------------------+
+      | unitid                                                     instname     DI_diff |
+      |---------------------------------------------------------------------------------|
+   5. | 237686                      West Virginia University at Parkersburg   -.1519331 |
+  15. | 380359                                  Bay Mills Community College    -.124584 |
+  22. | 204839                              Ohio University-Southern Campus   -.1177225 |
+  29. | 203492                               Kent State University at Salem   -.1135116 |
+  38. | 161235                             University of Maine at Fort Kent   -.1028526 |
+      |---------------------------------------------------------------------------------|
+  52. | 204848                             Ohio University-Lancaster Campus   -.0760999 |
+  57. | 380368                     Fond du Lac Tribal and Community College    -.072742 |
+  66. | 214625      Pennsylvania State University-Penn State New Kensington   -.0702066 |
+  78. | 211608                           Cheyney University of Pennsylvania   -.0658897 |
+  84. | 456959                            University of Minnesota-Rochester   -.0648373 |
+      |---------------------------------------------------------------------------------|
+  95. | 161226                            University of Maine at Farmington   -.0620779 |
+ 102. | 188058                                  Northern New Mexico College   -.0595875 |
+ 107. | 126182                                       Adams State University   -.0580124 |
+ 116. | 102368                                              Troy University   -.0559199 |
+ 129. | 196051                                             SUNY Morrisville    -.051414 |
+      |---------------------------------------------------------------------------------|
+ 135. | 226134                                               Laredo College    -.051381 |
+ 146. | 227924                                          San Antonio College   -.0500299 |
+ 159. | 134343                                     Gulf Coast State College   -.0499116 |
+ 160. | 236504                                        South Seattle College   -.0488126 |
+ 174. | 162283                                      Coppin State University   -.0482376 |
+      |---------------------------------------------------------------------------------|
+ 180. | 235699                      Lake Washington Institute of Technology   -.0480305 |
+ 190. | 170639                               Lake Superior State University   -.0451995 |
+ 198. | 226091                                             Lamar University   -.0446573 |
+ 209. | 237701            Potomac State College of West Virginia University   -.0443813 |
+ 220. | 180522                            Montana State University-Northern    -.044133 |
+      |---------------------------------------------------------------------------------|
+ 231. | 182306                                          Great Basin College   -.0417519 |
+ 237. | 409315                                          South Texas College    -.041548 |
+ 248. | 139764                        Georgia Southwestern State University   -.0368027 |
+ 252. | 204006                                    Miami University-Hamilton   -.0363844 |
+ 265. | 204866                            Ohio University-Zanesville Campus   -.0354215 |
+      |---------------------------------------------------------------------------------|
+ 273. | 136473                                      Pensacola State College    -.033914 |
+ 278. | 205443                                     Shawnee State University   -.0322863 |
+ 291. | 237215                                   Bluefield State University    -.030382 |
+ 296. | 201973                                          Clark State College   -.0298218 |
+ 310. | 178341                           Missouri Southern State University   -.0297368 |
+      |---------------------------------------------------------------------------------|
+ 314. | 214768            Pennsylvania State University-Penn State Hazleton   -.0296441 |
+ 319. | 201928             Cincinnati State Technical and Community College   -.0294527 |
+ 333. | 204680                       Ohio State University-Mansfield Campus   -.0280163 |
+ 343. | 207564            Oklahoma State University Institute of Technology   -.0275614 |
+ 351. | 214786   Pennsylvania State University-Penn State Greater Allegheny   -.0274153 |
+      |---------------------------------------------------------------------------------|
+ 354. | 139719                                 Fort Valley State University   -.0272351 |
+ 362. | 260372                        Lac Courte Oreilles Ojibwe University   -.0268403 |
+ 376. | 151333                                    Indiana University-Kokomo   -.0243068 |
+ 384. | 199111                       University of North Carolina Asheville   -.0234169 |
+ 394. | 229337                 Texas Tech University Health Sciences Center    -.022862 |
+      |---------------------------------------------------------------------------------|
+ 399. | 152637                                         Vincennes University   -.0214923 |
+ 409. | 106245                        University of Arkansas at Little Rock   -.0213366 |
+ 420. | 238263                               Madison Area Technical College    -.020969 |
+ 426. | 110398    University of California College of the Law-San Francisco   -.0209321 |
+ 435. | 218654                        University of South Carolina Beaufort   -.0204867 |
+      |---------------------------------------------------------------------------------|
+ 443. | 196024                          SUNY College of Technology at Delhi     -.02043 |
+ 456. | 163912                               St. Mary's College of Maryland   -.0203571 |
+ 467. | 175342                                      Alcorn State University   -.0198491 |
+ 470. | 136233                              Northwest Florida State College   -.0197125 |
+ 480. | 138901                           Atlanta Metropolitan State College   -.0187489 |
+      |---------------------------------------------------------------------------------|
+ 487. | 237385                                   Glenville State University   -.0187476 |
+ 498. | 137281                              Saint Johns River State College   -.0179783 |
+ 509. | 151379                                 Indiana University-Southeast   -.0179571 |
+ 514. | 237039                                    Whatcom Community College   -.0173663 |
+ 527. | 135160                                      Florida Gateway College   -.0171466 |
+      |---------------------------------------------------------------------------------|
+ 532. | 204699                          Ohio State University-Marion Campus    -.017037 |
+ 549. | 231165                                     Vermont State University    -.016946 |
+ 550. | 218645                           University of South Carolina Aiken   -.0156569 |
+ 560. | 111188                 California State University Maritime Academy   -.0154101 |
+ 572. | 219082                                      Dakota State University   -.0151833 |
+      |---------------------------------------------------------------------------------|
+ 577. | 232566                                          Longwood University   -.0147036 |
+ 593. | 181783                                          Wayne State College    -.014688 |
+ 595. | 214829                Pennsylvania State University-Penn State York   -.0143917 |
+ 602. | 207865                       Southwestern Oklahoma State University   -.0142578 |
+ 612. | 227146                                              Navarro College   -.0138947 |
+      |---------------------------------------------------------------------------------|
+ 626. | 176965                               University of Central Missouri   -.0138608 |
+ 633. | 210146                                   Southern Oregon University   -.0137183 |
+ 638. | 177472                           Ozarks Technical Community College   -.0134984 |
+ 646. | 135717                                           Miami Dade College   -.0134757 |
+ 656. | 172200                       Schoolcraft Community College District   -.0134203 |
+      |---------------------------------------------------------------------------------|
+ 670. | 200466                                         Sitting Bull College   -.0132611 |
+ 674. | 235750                                       Lower Columbia College   -.0127179 |
+ 689. | 236708                              Spokane Falls Community College   -.0126555 |
+ 692. | 231712                               Christopher Newport University   -.0126463 |
+ 707. | 204477                            Northeast Ohio Medical University   -.0125358 |
+      |---------------------------------------------------------------------------------|
+ 711. | 100724                                     Alabama State University   -.0122526 |
+ 723. | 366252                           Pennsylvania College of Technology   -.0120799 |
+ 732. | 214795           Pennsylvania State University-Penn State Mont Alto   -.0117985 |
+ 741. | 203465                               Kent State University at Stark   -.0114036 |
+ 749. | 187444                    William Paterson University of New Jersey   -.0110109 |
+      |---------------------------------------------------------------------------------|
+ 752. | 237899                               West Virginia State University   -.0104787 |
+ 764. | 151342                                Indiana University-South Bend   -.0103622 |
+ 773. | 218733                              South Carolina State University   -.0098135 |
+ 779. | 484905                          University of North Texas at Dallas   -.0096934 |
+ 794. | 364016                            Paradise Valley Community College   -.0095052 |
+      |---------------------------------------------------------------------------------|
+ 796. | 151102                                 Purdue University Fort Wayne   -.0090109 |
+ 813. | 203474                            Kent State University at Trumbull   -.0081018 |
+ 815. | 203456                      Kent State University at East Liverpool     -.00802 |
+ 829. | 139968                                         Gordon State College    -.008019 |
+ 838. | 171146                                 University of Michigan-Flint    -.007795 |
+      |---------------------------------------------------------------------------------|
+ 842. | 176044                          Mississippi Valley State University   -.0075467 |
+ 856. | 179308                                Saint Louis Community College   -.0074823 |
+ 865. | 200572                                 Valley City State University   -.0073462 |
+ 868. | 240189                           University of Wisconsin-Whitewater   -.0070317 |
+ 880. | 160630                           Southern University at New Orleans   -.0067166 |
+      |---------------------------------------------------------------------------------|
+ 888. | 237792                                          Shepherd University   -.0064038 |
+ 903. | 219374                                      Sinte Gleska University   -.0061565 |
+ 906. | 214740              Pennsylvania State University-Penn State DuBois   -.0060353 |
+ 913. | 170444                                              Jackson College   -.0059314 |
+ 920. | 181428                        University of Nebraska Medical Center   -.0055952 |
+      |---------------------------------------------------------------------------------|
+ 928. | 156082                                          Washburn University   -.0051543 |
+ 938. | 229355                                         Tyler Junior College   -.0051177 |
+ 949. | 174075                            University of Minnesota-Crookston   -.0050969 |
+ 958. | 237330                                           Concord University    -.004729 |
+ 969. | 227368                    The University of Texas Rio Grande Valley   -.0047251 |
+      |---------------------------------------------------------------------------------|
+ 977. | 171456                                 Northern Michigan University   -.0047216 |
+ 982. | 233897                     University of Virginia's College at Wise   -.0046428 |
+ 994. | 107071                                   Henderson State University   -.0044912 |
+1005. | 214731          Pennsylvania State University-Penn State Brandywine   -.0041381 |
+1011. | 133021                                              Chipola College   -.0039386 |
+      |---------------------------------------------------------------------------------|
+1018. | 180647                                      Salish Kootenai College   -.0038776 |
+1028. | 144005                                     Chicago State University   -.0029438 |
+1033. | 203483                          Kent State University at Tuscarawas   -.0026898 |
+1047. | 207342                University of Oklahoma-Health Sciences Center   -.0020474 |
+1059. | 163453                                      Morgan State University   -.0019801 |
+      |---------------------------------------------------------------------------------|
+1068. | 207263                                Northeastern State University   -.0018972 |
+1073. | 229063                                    Texas Southern University   -.0018513 |
+1081. | 144892                                  Eastern Illinois University    -.001784 |
+1089. | 168607                                     Alpena Community College   -.0017158 |
+1096. | 226152                         Texas A & M International University   -.0011532 |
+      |---------------------------------------------------------------------------------|
+1109. | 235103                                              Edmonds College   -.0010768 |
+1122. | 175856                                     Jackson State University   -.0005366 |
+1128. | 196158                                             SUNY at Fredonia   -.0004134 |
+1137. | 199218                      University of North Carolina Wilmington   -.0003254 |
+1146. | 206695                                  Youngstown State University   -.0000984 |
+      +---------------------------------------------------------------------------------+
+
+. ** West Virigina University - Parkersburg -.152 -- 237686
+. ** Bay Mills Community College -.125 -- 380359
+. ** Ohio University - Southern Campus -.118 -- 204839
+. ** Kent State University - Salem -.114 -- 203492
+. 
+. ** WVU - Parkersburg
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==237686 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+   7. |       1         0         0         0        0        0        23        25         0        11        60 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==237686 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+   5. |       1         0         0         0        0        0        19        35         1         0        56 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. ** overall lost only 4 total; lost all 11 OW, 4 WM, gained 10 WW
+. 
+. ** Bay Mills CC
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==380359 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+  17. |       0         0         0         0        0        1         4         4         2         2        13 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==380359 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+  15. |       0         0         0         0        0        0         5         8         2         1        16 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. ** gained 3 overall; lost 1 OW, gained 1 WM, 4 WW
+. 
+. ** Ohio Univ - Southern Campus
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==204839 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+  24. |       0         1         0         0        1        0        11        15         0         0        28 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==204839 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+  22. |       0         1         0         1        0        0         5        18         0         0        25 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. ** lost 3 overall; lost 6 WM, gained 3 WW, lost 1 HM gained 1 BW
+. 
+. ** Kent State - Salem
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==203492 & year==2015
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+  30. |       0         0         1         1        0        0        13        21         0         0        36 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. list m_asian w_asian m_black w_black m_hisp w_hisp m_white w_white m_other w_other t_total if unitid==203492 & year==2023
+
+      +-----------------------------------------------------------------------------------------------------------+
+      | m_asian   w_asian   m_black   w_black   m_hisp   w_hisp   m_white   w_white   m_other   w_other   t_total |
+      |-----------------------------------------------------------------------------------------------------------|
+  29. |       0         1         0         1        0        0         5        20         0         0        27 |
+      +-----------------------------------------------------------------------------------------------------------+
+
+. ** lost 9 overall; lost 1 WW, 8 WM, lost 1 BM gained 1 AW
+. 
+. ** Ohio and Kent State - lost white men but maintained white women, no net gain in NW representation, so overall DI decreased due to majority faculty belonging to one race and gender group (WW
+> )
+. 
+. *****************************
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Results\6b Addtl Analyses.log
+  log type:  text
+ closed on:   4 Dec 2025, 18:18:20
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

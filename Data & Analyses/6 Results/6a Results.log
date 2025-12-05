@@ -1,0 +1,1870 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Results\6a Results.log
+  log type:  text
+ opened on:   4 Dec 2025, 18:17:33
+
+. 
+. *************************************************
+. *************************************************
+. 
+. **********  Chapter 6 Results  **********
+. 
+. *************************************************
+. *************************************************
+. 
+. use "\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Prelim Findings\5 Preliminary Findings Final.dta"
+
+. 
+. *************************************************
+. *** setting time variable
+. *************************************************
+. xtset unitid year
+
+Panel variable: unitid (unbalanced)
+ Time variable: year, 2015 to 2023, but with gaps
+         Delta: 1 unit
+
+. xtdescribe
+
+  unitid:  100654, 100663, ..., 492689                       n =        784
+    year:  2015, 2016, ..., 2023                             T =          9
+           Delta(year) = 1 unit
+           Span(year)  = 9 periods
+           (unitid*year uniquely identifies each observation)
+
+Distribution of T_i:   min      5%     25%       50%       75%     95%     max
+                         6       9       9         9         9       9       9
+
+     Freq.  Percent    Cum. |  Pattern
+ ---------------------------+-----------
+      757     96.56   96.56 |  111111111
+       20      2.55   99.11 |  1111...11
+        3      0.38   99.49 |  ...111111
+        2      0.26   99.74 |  11111111.
+        1      0.13   99.87 |  ..1111111
+        1      0.13  100.00 |  11111..11
+ ---------------------------+-----------
+      784    100.00         |  XXXXXXXXX
+
+. 
+. *************************************************
+. ** converting educapp to 1000 instead of 1
+. *************************************************
+. gen educappFTEK = educappFTE/1000
+
+. 
+. gen dem_legisprop_c = 1 if dem_legisprop < 0.25
+(6,222 missing values generated)
+
+. replace dem_legisprop_c = 2 if dem_legisprop >= 0.25 & dem_legisprop < 0.5
+(3,719 real changes made)
+
+. replace dem_legisprop_c = 3 if dem_legisprop >= 0.5 & dem_legisprop < 0.75
+(2,106 real changes made)
+
+. replace dem_legisprop_c = 4 if dem_legisprop >= 0.75
+(397 real changes made)
+
+. 
+. 
+. *************************************************
+. * descriptive stats
+. *************************************************
+. 
+. ** insert summ
+. 
+. ** insert pwcorr
+. 
+. *************************************************
+. *** looking deeper at descriptives ***
+. *************************************************
+. 
+. ** insts with 75% or higher white men
+. list unitid instname year p_white_m if p_white_m >= .750
+
+      +------------------------------------------------------------------+
+      | unitid                                instname   year   p_whit~m |
+      |------------------------------------------------------------------|
+2188. | 161299                  Maine Maritime Academy   2015   .7567568 |
+2189. | 161299                  Maine Maritime Academy   2016   .7702703 |
+2190. | 161299                  Maine Maritime Academy   2017   .8026316 |
+2191. | 161299                  Maine Maritime Academy   2018   .7948718 |
+2192. | 161299                  Maine Maritime Academy   2019   .7820513 |
+      |------------------------------------------------------------------|
+2193. | 161299                  Maine Maritime Academy   2020   .7619048 |
+2195. | 161299                  Maine Maritime Academy   2022   .7567568 |
+3000. | 180522       Montana State University-Northern   2017   .7884616 |
+3001. | 180522       Montana State University-Northern   2018   .7608696 |
+3781. | 197027   United States Merchant Marine Academy   2015    .761062 |
+      |------------------------------------------------------------------|
+3782. | 197027   United States Merchant Marine Academy   2016   .7543859 |
+3784. | 197027   United States Merchant Marine Academy   2018   .7619048 |
+3785. | 197027   United States Merchant Marine Academy   2019   .7757009 |
+3786. | 197027   United States Merchant Marine Academy   2020   .7567568 |
+3787. | 197027   United States Merchant Marine Academy   2021   .7592593 |
+      |------------------------------------------------------------------|
+3788. | 197027   United States Merchant Marine Academy   2022   .7592593 |
+      +------------------------------------------------------------------+
+
+. 
+. ** insts with no white men
+. list unitid instname year p_white_m if p_white_m == 0
+
+      +-----------------------------------------------------------------------------------------------+
+      | unitid                                                             instname   year   p_whit~m |
+      |-----------------------------------------------------------------------------------------------|
+1893. | 155140                                    Haskell Indian Nations University   2017          0 |
+1894. | 155140                                    Haskell Indian Nations University   2018          0 |
+1896. | 155140                                    Haskell Indian Nations University   2020          0 |
+1897. | 155140                                    Haskell Indian Nations University   2021          0 |
+3196. | 183257   University of New Hampshire College of Professional Studies Online   2015          0 |
+      |-----------------------------------------------------------------------------------------------|
+3197. | 183257   University of New Hampshire College of Professional Studies Online   2016          0 |
+3199. | 183257   University of New Hampshire College of Professional Studies Online   2018          0 |
+3200. | 183257   University of New Hampshire College of Professional Studies Online   2019          0 |
+5123. | 219374                                              Sinte Gleska University   2015          0 |
+5133. | 219408                                            Sisseton Wahpeton College   2016          0 |
+      |-----------------------------------------------------------------------------------------------|
+6733. | 433174                                 Carolinas College of Health Sciences   2015          0 |
+6734. | 433174                                 Carolinas College of Health Sciences   2016          0 |
+6957. | 488800                                      Teachers College of San Joaquin   2018          0 |
+6958. | 488800                                      Teachers College of San Joaquin   2019          0 |
+6959. | 488800                                      Teachers College of San Joaquin   2020          0 |
+      |-----------------------------------------------------------------------------------------------|
+6960. | 488800                                      Teachers College of San Joaquin   2021          0 |
+      +-----------------------------------------------------------------------------------------------+
+
+. 
+. ** insts with 75% or higher white women
+. list unitid instname year p_white_w if p_white_w >= .750
+
+      +-----------------------------------------------------------------------------------------------+
+      | unitid                                                             instname   year   p_whit~w |
+      |-----------------------------------------------------------------------------------------------|
+3196. | 183257   University of New Hampshire College of Professional Studies Online   2015          1 |
+3197. | 183257   University of New Hampshire College of Professional Studies Online   2016          1 |
+3198. | 183257   University of New Hampshire College of Professional Studies Online   2017   .7777778 |
+3199. | 183257   University of New Hampshire College of Professional Studies Online   2018   .9230769 |
+3200. | 183257   University of New Hampshire College of Professional Studies Online   2019   .8461539 |
+      |-----------------------------------------------------------------------------------------------|
+3201. | 183257   University of New Hampshire College of Professional Studies Online   2020        .75 |
+3203. | 183257   University of New Hampshire College of Professional Studies Online   2022   .7777778 |
+3204. | 183257   University of New Hampshire College of Professional Studies Online   2023        .75 |
+4344. | 204839                                      Ohio University-Southern Campus   2020        .75 |
+4345. | 204839                                      Ohio University-Southern Campus   2021   .7777778 |
+      |-----------------------------------------------------------------------------------------------|
+4346. | 204839                                      Ohio University-Southern Campus   2022        .76 |
+6733. | 433174                                 Carolinas College of Health Sciences   2015   .9230769 |
+6734. | 433174                                 Carolinas College of Health Sciences   2016         .8 |
+6735. | 433174                                 Carolinas College of Health Sciences   2017   .7777778 |
+6736. | 433174                                 Carolinas College of Health Sciences   2018   .8571429 |
+      |-----------------------------------------------------------------------------------------------|
+6737. | 433174                                 Carolinas College of Health Sciences   2019   .7857143 |
+6739. | 433174                                 Carolinas College of Health Sciences   2021   .7586207 |
+6740. | 433174                                 Carolinas College of Health Sciences   2022   .7741935 |
+6741. | 433174                                 Carolinas College of Health Sciences   2023   .7586207 |
+6957. | 488800                                      Teachers College of San Joaquin   2018        .75 |
+      |-----------------------------------------------------------------------------------------------|
+6958. | 488800                                      Teachers College of San Joaquin   2019        .75 |
+6959. | 488800                                      Teachers College of San Joaquin   2020   .8181818 |
+      +-----------------------------------------------------------------------------------------------+
+
+. 
+. ** insts with no white women
+. list unitid instname year p_white_w if p_white_w == 0
+
+      +--------------------------------------------------------------+
+      | unitid                            instname   year   p_whit~w |
+      |--------------------------------------------------------------|
+1893. | 155140   Haskell Indian Nations University   2017          0 |
+1894. | 155140   Haskell Indian Nations University   2018          0 |
+1896. | 155140   Haskell Indian Nations University   2020          0 |
+1897. | 155140   Haskell Indian Nations University   2021          0 |
+2848. | 177551       Harris-Stowe State University   2018          0 |
+      +--------------------------------------------------------------+
+
+. 
+. ** insts with 45% or higher black women
+. list unitid instname year p_black_w if p_black_w >= .45
+
+      +-------------------------------------------------------------------+
+      | unitid                                 instname   year   p_blac~w |
+      |-------------------------------------------------------------------|
+1027. | 131399   University of the District of Columbia   2015    .523077 |
+2236. | 162283                  Coppin State University   2018   .4818182 |
+2237. | 162283                  Coppin State University   2019   .4956522 |
+2238. | 162283                  Coppin State University   2020   .4782609 |
+2239. | 162283                  Coppin State University   2021   .4537815 |
+      |-------------------------------------------------------------------|
+2240. | 162283                  Coppin State University   2022         .5 |
+2241. | 162283                  Coppin State University   2023   .4827586 |
+      +-------------------------------------------------------------------+
+
+. 
+. ** looking deeper at inst with highest % BW but only in 2015
+. list year p_black_w if unitid==131399
+
+      +-----------------+
+      | year   p_blac~w |
+      |-----------------|
+1027. | 2015    .523077 |
+1028. | 2016   .3663366 |
+1029. | 2017   .3622449 |
+1030. | 2018   .3517588 |
+1031. | 2019       .365 |
+      |-----------------|
+1032. | 2020   .3560975 |
+1033. | 2021   .2736842 |
+1034. | 2022   .3116279 |
+1035. | 2023   .2959641 |
+      +-----------------+
+
+. * in 2016 % BW at this inst dropped from 52 to 36 and slowly decreased for the rest of the period to .296 by 2023
+. 
+. ** insts with high % other race men and women
+. list unitid instname year p_other_w if p_other_w >= .45
+
+      +--------------------------------------------------------------+
+      | unitid                            instname   year   p_othe~w |
+      |--------------------------------------------------------------|
+1893. | 155140   Haskell Indian Nations University   2017   .5294118 |
+1894. | 155140   Haskell Indian Nations University   2018   .4642857 |
+1896. | 155140   Haskell Indian Nations University   2020   .5384616 |
+1897. | 155140   Haskell Indian Nations University   2021         .5 |
+      +--------------------------------------------------------------+
+
+. 
+. list unitid instname year p_other_m if p_other_m >= .45
+
+      +--------------------------------------------------------------------------------------------------------+
+      | unitid                                                                      instname   year   p_othe~m |
+      |--------------------------------------------------------------------------------------------------------|
+1893. | 155140                                             Haskell Indian Nations University   2017   .4705882 |
+1894. | 155140                                             Haskell Indian Nations University   2018   .5357143 |
+1896. | 155140                                             Haskell Indian Nations University   2020   .4615385 |
+1897. | 155140                                             Haskell Indian Nations University   2021         .5 |
+3331. | 187745   Institute of American Indian and Alaska Native Culture and Arts Development   2015   .4782609 |
+      +--------------------------------------------------------------------------------------------------------+
+
+. 
+. ** insts with highest and lowest diversity index values
+. list unitid instname year i_diversity if i_diversity >= .845
+
+      +------------------------------------------------------------------------+
+      | unitid                                      instname   year   i_dive~y |
+      |------------------------------------------------------------------------|
+ 413. | 110547   California State University-Dominguez Hills   2022   .8478523 |
+ 414. | 110547   California State University-Dominguez Hills   2023   .8481005 |
+ 458. | 110592       California State University-Los Angeles   2022   .8478625 |
+ 459. | 110592       California State University-Los Angeles   2023   .8457573 |
+ 706. | 123509                               Skyline College   2018   .8465837 |
+      |------------------------------------------------------------------------|
+ 707. | 123509                               Skyline College   2019   .8457613 |
+ 710. | 123509                               Skyline College   2022   .8466696 |
+ 738. | 125471                      West Los Angeles College   2023   .8521713 |
+1580. | 141981                University of Hawaii-West Oahu   2019   .8468221 |
+1581. | 141981                University of Hawaii-West Oahu   2020   .8523183 |
+      |------------------------------------------------------------------------|
+1582. | 141981                University of Hawaii-West Oahu   2021   .8562925 |
+1583. | 141981                University of Hawaii-West Oahu   2022   .8528911 |
+1584. | 141981                University of Hawaii-West Oahu   2023   .8534813 |
+      +------------------------------------------------------------------------+
+
+. 
+. list year i_diversity if unitid ==141981
+
+      +-----------------+
+      | year   i_dive~y |
+      |-----------------|
+1576. | 2015   .8024691 |
+1577. | 2016   .8210491 |
+1578. | 2017   .8253738 |
+1579. | 2018   .8290817 |
+1580. | 2019   .8468221 |
+      |-----------------|
+1581. | 2020   .8523183 |
+1582. | 2021   .8562925 |
+1583. | 2022   .8528911 |
+1584. | 2023   .8534813 |
+      +-----------------+
+
+. list p_asian_m p_asian_w p_black_m p_black_w p_hisp_m p_hisp_w p_white_m p_white_w p_other_m p_other_w if unitid==141981 & year==2023
+
+      +-------------------------------------------------------------------------------------------------------------+
+      | p_asia~m   p_asia~w   p_blac~m   p_blac~w   p_hisp_m   p_hisp_w   p_whit~m   p_whit~w   p_othe~m   p_othe~w |
+      |-------------------------------------------------------------------------------------------------------------|
+1584. | .1724138   .1034483   .0229885   .0574713   .0229885   .0229885   .2298851   .1609195   .0804598   .1264368 |
+      +-------------------------------------------------------------------------------------------------------------+
+
+. 
+. list year i_diversity if unitid == 125471
+
+      +-----------------+
+      | year   i_dive~y |
+      |-----------------|
+ 730. | 2015   .8408996 |
+ 731. | 2016   .8433345 |
+ 732. | 2017   .8392646 |
+ 733. | 2018   .8308175 |
+ 734. | 2019   .8220915 |
+      |-----------------|
+ 735. | 2020   .8352196 |
+ 736. | 2021   .8310034 |
+ 737. | 2022   .8439541 |
+ 738. | 2023   .8521713 |
+      +-----------------+
+
+. list p_asian_m p_asian_w p_black_m p_black_w p_hisp_m p_hisp_w p_white_m p_white_w p_other_m p_other_w if unitid==125471 & year==2023
+
+      +-------------------------------------------------------------------------------------------------------------+
+      | p_asia~m   p_asia~w   p_blac~m   p_blac~w   p_hisp_m   p_hisp_w   p_whit~m   p_whit~w   p_othe~m   p_othe~w |
+      |-------------------------------------------------------------------------------------------------------------|
+ 738. | .0731707   .0853659   .1097561   .0731707   .0731707   .1829268   .1585366   .2317073          0   .0121951 |
+      +-------------------------------------------------------------------------------------------------------------+
+
+. 
+. list year i_diversity if unitid == 123509
+
+      +-----------------+
+      | year   i_dive~y |
+      |-----------------|
+ 703. | 2015   .8213157 |
+ 704. | 2016    .829056 |
+ 705. | 2017   .8417349 |
+ 706. | 2018   .8465837 |
+ 707. | 2019   .8457613 |
+      |-----------------|
+ 708. | 2020   .8342387 |
+ 709. | 2021   .8354239 |
+ 710. | 2022   .8466696 |
+ 711. | 2023   .8377134 |
+      +-----------------+
+
+. 
+. list unitid instname year i_diversity if i_diversity <=0.300
+
+      +-----------------------------------------------------------------------------------------------+
+      | unitid                                                             instname   year   i_dive~y |
+      |-----------------------------------------------------------------------------------------------|
+3196. | 183257   University of New Hampshire College of Professional Studies Online   2015          0 |
+3197. | 183257   University of New Hampshire College of Professional Studies Online   2016          0 |
+3199. | 183257   University of New Hampshire College of Professional Studies Online   2018   .1420118 |
+3200. | 183257   University of New Hampshire College of Professional Studies Online   2019   .2721893 |
+6733. | 433174                                 Carolinas College of Health Sciences   2015   .1420118 |
+      |-----------------------------------------------------------------------------------------------|
+6736. | 433174                                 Carolinas College of Health Sciences   2018   .2576531 |
+      +-----------------------------------------------------------------------------------------------+
+
+. 
+. *****
+. 
+. *************************************************
+. * YEARLY models
+. *************************************************
+. bysort year: mixed i_diversity dem_gov dem_legisprop educappFTEK hbcu c_r1 c_r2 size_midsize  size_large || state: || unitid:, ml
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2015
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =   998.6882  
+Iteration 1:  Log likelihood =   998.6882  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    780
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.3         62
+                 unitid |        780          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 228.80
+Log likelihood =   998.6882                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |  -.0204452   .0126981    -1.61   0.107    -.0453331    .0044427
+dem_legisprop |   .1454997   .0350021     4.16   0.000      .076897    .2141025
+  educappFTEK |   .0024822    .001968     1.26   0.207    -.0013749    .0063393
+         hbcu |   .1395639   .0113027    12.35   0.000     .1174111    .1617167
+         c_r1 |  -.0086134   .0103623    -0.83   0.406    -.0289231    .0116964
+         c_r2 |   .0070804   .0087908     0.81   0.421    -.0101494    .0243101
+ size_midsize |   .0285758   .0057308     4.99   0.000     .0173436    .0398079
+   size_large |   .0660313   .0093388     7.07   0.000     .0477275     .084335
+        _cons |   .5342545    .018963    28.17   0.000     .4970878    .5714213
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0009906   .0002951      .0005525     .001776
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0035885   .0604534      1.64e-17    7.85e+11
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0005509   .0604531      2.19e-97    1.38e+90
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 84.17                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2016
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1023.8181  
+Iteration 1:  Log likelihood =  1023.8181  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    780
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.3         62
+                 unitid |        780          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 264.45
+Log likelihood =  1023.8181                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |  -.0189746   .0122025    -1.55   0.120    -.0428912    .0049419
+dem_legisprop |   .1348072   .0336513     4.01   0.000     .0688519    .2007625
+  educappFTEK |   .0044904   .0018707     2.40   0.016     .0008238     .008157
+         hbcu |   .1434014   .0109468    13.10   0.000     .1219461    .1648566
+         c_r1 |  -.0066294   .0101184    -0.66   0.512    -.0264611    .0132023
+         c_r2 |   .0064266   .0085008     0.76   0.450    -.0102347    .0230878
+ size_midsize |   .0318078    .005573     5.71   0.000      .020885    .0427306
+   size_large |   .0698985   .0091683     7.62   0.000     .0519289    .0878681
+        _cons |   .5249105   .0183588    28.59   0.000      .488928     .560893
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0009171   .0002691       .000516      .00163
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0033669   .0547322      4.90e-17    2.31e+11
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0005166    .054732      3.37e-94    7.91e+86
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 86.98                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2017
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1051.8043  
+Iteration 1:  Log likelihood =  1051.8043  (backed up)
+Iteration 2:  Log likelihood =  1051.8043  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    781
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.3         63
+                 unitid |        781          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 268.30
+Log likelihood =  1051.8043                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |  -.0040464   .0115421    -0.35   0.726    -.0266684    .0185756
+dem_legisprop |   .1109914   .0301489     3.68   0.000     .0519006    .1700822
+  educappFTEK |   .0042969   .0016261     2.64   0.008     .0011098     .007484
+         hbcu |   .1395347   .0105787    13.19   0.000     .1188009    .1602685
+         c_r1 |   -.003179   .0099033    -0.32   0.748    -.0225891    .0162311
+         c_r2 |   .0060024   .0082296     0.73   0.466    -.0101273    .0221322
+ size_midsize |   .0293591    .005364     5.47   0.000     .0188458    .0398724
+   size_large |   .0672088   .0089184     7.54   0.000     .0497291    .0846885
+        _cons |   .5359464   .0165737    32.34   0.000     .5034625    .5684303
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0008672   .0002522      .0004904    .0015335
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0031428   .0513595      3.86e-17    2.56e+11
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0004825   .0513593      1.17e-94    1.98e+87
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 90.39                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2018
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1014.7401  
+Iteration 1:  Log likelihood =  1014.7401  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    784
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.4         63
+                 unitid |        784          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 250.42
+Log likelihood =  1014.7401                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |   .0044555   .0122303     0.36   0.716    -.0195154    .0284264
+dem_legisprop |   .1046765   .0328265     3.19   0.001     .0403378    .1690152
+  educappFTEK |   .0052295   .0016606     3.15   0.002     .0019749    .0084842
+         hbcu |   .1340785   .0111498    12.03   0.000     .1122252    .1559318
+         c_r1 |  -.0050582   .0105523    -0.48   0.632    -.0257404    .0156239
+         c_r2 |   .0050413   .0087075     0.58   0.563     -.012025    .0221076
+ size_midsize |   .0339287   .0056447     6.01   0.000     .0228653    .0449921
+   size_large |   .0734731   .0095112     7.72   0.000     .0548314    .0921148
+        _cons |   .5291802   .0169803    31.16   0.000     .4958994     .562461
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0008746   .0002616      .0004866     .001572
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0035102   .0588387      1.89e-17    6.51e+11
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0005349   .0588385      1.25e-97    2.28e+90
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 82.24                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2019
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1009.0744  
+Iteration 1:  Log likelihood =  1009.0744  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    764
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.0         63
+                 unitid |        764          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 258.63
+Log likelihood =  1009.0744                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |    .005921   .0123517     0.48   0.632    -.0182878    .0301298
+dem_legisprop |   .0759131   .0320293     2.37   0.018     .0131367    .1386895
+  educappFTEK |   .0047158   .0015031     3.14   0.002     .0017697    .0076619
+         hbcu |   .1371092   .0107784    12.72   0.000     .1159839    .1582346
+         c_r1 |   .0011837   .0102479     0.12   0.908    -.0189019    .0212693
+         c_r2 |   .0104842   .0084082     1.25   0.212    -.0059956    .0269641
+ size_midsize |   .0323294   .0055428     5.83   0.000     .0214657     .043193
+   size_large |    .068573   .0092919     7.38   0.000     .0503612    .0867849
+        _cons |   .5429735   .0171101    31.73   0.000     .5094383    .5765087
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0009438   .0002793      .0005284    .0016857
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |      .0033   .0544602      2.96e-17    3.68e+11
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0005074     .05446      2.25e-95    1.14e+88
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 81.62                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2020
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1014.3838  
+Iteration 1:  Log likelihood =  1014.3838  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    763
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.0         63
+                 unitid |        763          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 262.71
+Log likelihood =  1014.3838                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |   .0002235   .0118082     0.02   0.985    -.0229201    .0233671
+dem_legisprop |    .089964   .0307101     2.93   0.003     .0297733    .1501547
+  educappFTEK |   .0046792   .0013718     3.41   0.001     .0019905    .0073678
+         hbcu |   .1321934   .0106822    12.38   0.000     .1112567      .15313
+         c_r1 |    .003687   .0102574     0.36   0.719    -.0164171    .0237911
+         c_r2 |   .0108819   .0083229     1.31   0.191    -.0054306    .0271944
+ size_midsize |   .0334918   .0054783     6.11   0.000     .0227546     .044229
+   size_large |   .0684898   .0092383     7.41   0.000     .0503832    .0865965
+        _cons |   .5414825   .0166078    32.60   0.000     .5089318    .5740331
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0008711   .0002601      .0004852    .0015639
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0032546    .054152      2.24e-17    4.74e+11
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0004986   .0541518      1.75e-96    1.42e+89
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 77.67                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2021
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1017.1423  
+Iteration 1:  Log likelihood =  1017.1423  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    763
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.0         63
+                 unitid |        763          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 263.79
+Log likelihood =  1017.1423                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |   .0008908   .0120496     0.07   0.941     -.022726    .0245076
+dem_legisprop |   .0907062   .0298758     3.04   0.002     .0321508    .1492616
+  educappFTEK |   .0044551   .0012333     3.61   0.000     .0020379    .0068722
+         hbcu |   .1253802   .0106207    11.81   0.000      .104564    .1461964
+         c_r1 |   .0085636   .0102581     0.83   0.404     -.011542    .0286692
+         c_r2 |   .0123681   .0083109     1.49   0.137     -.003921    .0286571
+ size_midsize |   .0331801   .0054628     6.07   0.000     .0224731     .043887
+   size_large |   .0660575   .0092283     7.16   0.000     .0479704    .0841446
+        _cons |   .5467744   .0152532    35.85   0.000     .5168787    .5766702
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0008795     .00026      .0004927      .00157
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0032281   .0591055      8.39e-19    1.24e+13
+-----------------------------+------------------------------------------------
+               var(Residual) |    .000495   .0591053      1.1e-105    2.20e+98
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 81.86                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2022
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1033.0146  
+Iteration 1:  Log likelihood =  1033.0146  (backed up)
+Iteration 2:  Log likelihood =  1033.0146  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    784
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.4         63
+                 unitid |        784          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 247.03
+Log likelihood =  1033.0146                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |   .0028514   .0121206     0.24   0.814    -.0209046    .0266073
+dem_legisprop |   .0853924    .030442     2.81   0.005     .0257271    .1450577
+  educappFTEK |   .0046719   .0012523     3.73   0.000     .0022175    .0071263
+         hbcu |   .1191962   .0107619    11.08   0.000     .0981033     .140289
+         c_r1 |   .0096148    .010372     0.93   0.354    -.0107139    .0299436
+         c_r2 |   .0147395   .0084338     1.75   0.081    -.0017905    .0312695
+ size_midsize |   .0296812   .0054909     5.41   0.000     .0189194    .0404431
+   size_large |   .0634491   .0093771     6.77   0.000     .0450704    .0818278
+        _cons |   .5506289   .0158695    34.70   0.000     .5195253    .5817324
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0009351   .0002717      .0005291    .0016527
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0033288   .0566329      1.10e-17    1.01e+12
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0005115   .0566327      2.86e-98    9.14e+90
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 89.08                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-> year = 2023
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  1047.4443  
+Iteration 1:  Log likelihood =  1047.4443  (backed up)
+
+Computing standard errors ...
+
+Mixed-effects ML regression                             Number of obs =    782
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          1       15.3         63
+                 unitid |        782          1        1.0          1
+        -------------------------------------------------------------
+
+                                                        Wald chi2(8)  = 264.69
+Log likelihood =  1047.4443                             Prob > chi2   = 0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+      dem_gov |   .0013765   .0131862     0.10   0.917     -.024468    .0272211
+dem_legisprop |   .0783199   .0306608     2.55   0.011     .0182259    .1384139
+  educappFTEK |   .0044235   .0011323     3.91   0.000     .0022042    .0066428
+         hbcu |    .118525   .0105413    11.24   0.000     .0978645    .1391856
+         c_r1 |   .0135111   .0100593     1.34   0.179    -.0062049     .033227
+         c_r2 |   .0148686   .0082685     1.80   0.072    -.0013374    .0310746
+ size_midsize |   .0311273   .0053932     5.77   0.000     .0205569    .0416977
+   size_large |   .0640278   .0090781     7.05   0.000     .0462351    .0818205
+        _cons |   .5553332   .0148998    37.27   0.000     .5261301    .5845363
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0008462    .000248      .0004764    .0015027
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0031967   .0495713      2.02e-16    5.06e+10
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0004897    .049571      3.28e-90    7.30e+82
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 85.73                 Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. 
+. *************************************************
+. ***** Models 1-4
+. *************************************************
+. 
+. * base model year on diversity w controls
+. mixed i_diversity year hbcu c_r1 c_r2 size_midsize size_large || state: || unitid:, ml
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  15675.266  
+Iteration 1:  Log likelihood =  15675.266  
+
+Computing standard errors ...
+
+Mixed-effects ML regression                            Number of obs =   6,981
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          9      136.9        565
+                 unitid |        784          6        8.9          9
+        -------------------------------------------------------------
+
+                                                       Wald chi2(6)  = 2110.46
+Log likelihood =  15675.266                            Prob > chi2   =  0.0000
+
+------------------------------------------------------------------------------
+ i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+        year |   .0040983   .0000923    44.39   0.000     .0039174    .0042793
+        hbcu |   .0787762   .0083997     9.38   0.000     .0623131    .0952394
+        c_r1 |   .0325603   .0078697     4.14   0.000     .0171359    .0479847
+        c_r2 |    .029458   .0079109     3.72   0.000     .0139529    .0449631
+size_midsize |   .0054134   .0016683     3.24   0.001     .0021436    .0086833
+  size_large |   .0129855   .0033963     3.82   0.000     .0063289    .0196421
+       _cons |  -7.637564   .1866154   -40.93   0.000    -8.003323   -7.271804
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0017987   .0004554      .0010951    .0029545
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0037553    .000203      .0033778    .0041751
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0003926   7.07e-06       .000379    .0004067
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 14509.33              Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. 
+. * m1 + demgov
+. mixed i_diversity year dem_gov hbcu c_r1 c_r2 size_midsize size_large || state: || unitid:, ml
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  15682.001  
+Iteration 1:  Log likelihood =  15682.001  
+
+Computing standard errors ...
+
+Mixed-effects ML regression                            Number of obs =   6,981
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          9      136.9        565
+                 unitid |        784          6        8.9          9
+        -------------------------------------------------------------
+
+                                                       Wald chi2(7)  = 2128.36
+Log likelihood =  15682.001                            Prob > chi2   =  0.0000
+
+------------------------------------------------------------------------------
+ i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+        year |   .0041644    .000094    44.32   0.000     .0039802    .0043485
+     dem_gov |  -.0036523   .0009943    -3.67   0.000     -.005601   -.0017036
+        hbcu |   .0792582   .0083985     9.44   0.000     .0627975    .0957189
+        c_r1 |   .0330144   .0078704     4.19   0.000     .0175887    .0484401
+        c_r2 |   .0295599   .0079117     3.74   0.000     .0140534    .0450665
+size_midsize |   .0055596   .0016672     3.33   0.001      .002292    .0088271
+  size_large |   .0125548   .0033948     3.70   0.000     .0059011    .0192085
+       _cons |  -7.769541   .1898393   -40.93   0.000    -8.141619   -7.397463
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0018374   .0004639      .0011202    .0030138
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0037553    .000203      .0033779     .004175
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0003917   7.06e-06      .0003781    .0004058
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 14471.42              Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. 
+. * m1 + demgov and legisprop
+. mixed i_diversity year dem_gov dem_legisprop hbcu c_r1 c_r2 size_midsize size_large || state: || unitid:, ml
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  15709.608  
+Iteration 1:  Log likelihood =  15709.608  
+
+Computing standard errors ...
+
+Mixed-effects ML regression                            Number of obs =   6,981
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          9      136.9        565
+                 unitid |        784          6        8.9          9
+        -------------------------------------------------------------
+
+                                                       Wald chi2(8)  = 2199.92
+Log likelihood =  15709.608                            Prob > chi2   =  0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+         year |   .0039464    .000098    40.26   0.000     .0037543    .0041386
+      dem_gov |  -.0045599    .000998    -4.57   0.000     -.006516   -.0026038
+dem_legisprop |    .047222   .0063073     7.49   0.000       .03486     .059584
+         hbcu |   .0812806   .0083725     9.71   0.000     .0648709    .0976904
+         c_r1 |   .0329391    .007855     4.19   0.000     .0175436    .0483347
+         c_r2 |   .0289726   .0078936     3.67   0.000     .0135015    .0444437
+ size_midsize |   .0060404   .0016621     3.63   0.000     .0027828     .009298
+   size_large |   .0131232   .0033831     3.88   0.000     .0064924     .019754
+        _cons |  -7.349376   .1972576   -37.26   0.000    -7.735993   -6.962758
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0014978   .0003961       .000892     .002515
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0037479   .0002024      .0033715    .0041663
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0003889   7.00e-06      .0003754    .0004028
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 14019.15              Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. 
+. 
+. * m1 + demgov legisprop and educapp
+. mixed i_diversity year dem_gov dem_legisprop educappFTEK hbcu c_r1 c_r2 size_midsize size_large || state: || unitid:, ml
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  15730.935  
+Iteration 1:  Log likelihood =  15730.935  
+
+Computing standard errors ...
+
+Mixed-effects ML regression                            Number of obs =   6,981
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          9      136.9        565
+                 unitid |        784          6        8.9          9
+        -------------------------------------------------------------
+
+                                                       Wald chi2(9)  = 2256.43
+Log likelihood =  15730.935                            Prob > chi2   =  0.0000
+
+-------------------------------------------------------------------------------
+  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+         year |    .003146   .0001563    20.13   0.000     .0028397    .0034524
+      dem_gov |  -.0050275   .0009975    -5.04   0.000    -.0069826   -.0030724
+dem_legisprop |    .041272     .00635     6.50   0.000     .0288263    .0537177
+  educappFTEK |   .0019293   .0002944     6.55   0.000     .0013523    .0025062
+         hbcu |     .08174   .0083503     9.79   0.000     .0653737    .0981063
+         c_r1 |   .0332413   .0078425     4.24   0.000     .0178702    .0486123
+         c_r2 |   .0286611   .0078796     3.64   0.000     .0132174    .0441048
+ size_midsize |   .0066905     .00166     4.03   0.000      .003437     .009944
+   size_large |   .0134175   .0033735     3.98   0.000     .0068056    .0200295
+        _cons |  -5.747096   .3134996   -18.33   0.000    -6.361543   -5.132648
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0013403   .0003617      .0007898    .0022746
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0037404   .0002018       .003365    .0041576
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0003866   6.96e-06      .0003732    .0004005
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 13828.49              Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. 
+. 
+. *************************************************
+. *** Margins for several interactions
+. *************************************************
+. 
+. mixed i_diversity c.year##c.educappFTEK dem_gov dem_legisprop i.hbcu c_r1 c_r2 size_midsize size_large || state: || unitid:, ml
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  15738.827  
+Iteration 1:  Log likelihood =  15738.827  
+
+Computing standard errors ...
+
+Mixed-effects ML regression                            Number of obs =   6,981
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          9      136.9        565
+                 unitid |        784          6        8.9          9
+        -------------------------------------------------------------
+
+                                                       Wald chi2(10) = 2277.54
+Log likelihood =  15738.827                            Prob > chi2   =  0.0000
+
+--------------------------------------------------------------------------------------
+         i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+---------------------+----------------------------------------------------------------
+                year |   .0022361   .0002771     8.07   0.000      .001693    .0027793
+         educappFTEK |  -.3444431   .0869325    -3.96   0.000    -.5148276   -.1740586
+                     |
+c.year#c.educappFTEK |    .000171   .0000429     3.98   0.000     .0000869    .0002551
+                     |
+             dem_gov |  -.0055428   .0010045    -5.52   0.000    -.0075115   -.0035741
+       dem_legisprop |   .0427047    .006359     6.72   0.000     .0302413    .0551682
+                     |
+                hbcu |
+                Yes  |   .0822005   .0083517     9.84   0.000     .0658314    .0985696
+                c_r1 |   .0333351   .0078441     4.25   0.000     .0179609    .0487092
+                c_r2 |   .0288328   .0078837     3.66   0.000     .0133811    .0442845
+        size_midsize |   .0066515   .0016579     4.01   0.000     .0034021    .0099009
+          size_large |   .0131661   .0033699     3.91   0.000     .0065612    .0197711
+               _cons |  -3.900754   .5602657    -6.96   0.000    -4.998855   -2.802654
+--------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |    .001434   .0003834      .0008491    .0024218
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |   .0037412   .0002018      .0033658    .0041585
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0003854   6.94e-06       .000372    .0003993
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 13844.17              Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. margins, at (educappFTE=(5(5)35) year=(2015(1)2023)) saving("\\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Results\6 Year Educapp Interaction Marginsplot.dta", replace)
+
+Predictive margins                                       Number of obs = 6,981
+
+Expression: Linear prediction, fixed portion, predict()
+1._at:  year        = 2015
+        educappFTEK =    5
+2._at:  year        = 2015
+        educappFTEK =   10
+3._at:  year        = 2015
+        educappFTEK =   15
+4._at:  year        = 2015
+        educappFTEK =   20
+5._at:  year        = 2015
+        educappFTEK =   25
+6._at:  year        = 2015
+        educappFTEK =   30
+7._at:  year        = 2015
+        educappFTEK =   35
+8._at:  year        = 2016
+        educappFTEK =    5
+9._at:  year        = 2016
+        educappFTEK =   10
+10._at: year        = 2016
+        educappFTEK =   15
+11._at: year        = 2016
+        educappFTEK =   20
+12._at: year        = 2016
+        educappFTEK =   25
+13._at: year        = 2016
+        educappFTEK =   30
+14._at: year        = 2016
+        educappFTEK =   35
+15._at: year        = 2017
+        educappFTEK =    5
+16._at: year        = 2017
+        educappFTEK =   10
+17._at: year        = 2017
+        educappFTEK =   15
+18._at: year        = 2017
+        educappFTEK =   20
+19._at: year        = 2017
+        educappFTEK =   25
+20._at: year        = 2017
+        educappFTEK =   30
+21._at: year        = 2017
+        educappFTEK =   35
+22._at: year        = 2018
+        educappFTEK =    5
+23._at: year        = 2018
+        educappFTEK =   10
+24._at: year        = 2018
+        educappFTEK =   15
+25._at: year        = 2018
+        educappFTEK =   20
+26._at: year        = 2018
+        educappFTEK =   25
+27._at: year        = 2018
+        educappFTEK =   30
+28._at: year        = 2018
+        educappFTEK =   35
+29._at: year        = 2019
+        educappFTEK =    5
+30._at: year        = 2019
+        educappFTEK =   10
+31._at: year        = 2019
+        educappFTEK =   15
+32._at: year        = 2019
+        educappFTEK =   20
+33._at: year        = 2019
+        educappFTEK =   25
+34._at: year        = 2019
+        educappFTEK =   30
+35._at: year        = 2019
+        educappFTEK =   35
+36._at: year        = 2020
+        educappFTEK =    5
+37._at: year        = 2020
+        educappFTEK =   10
+38._at: year        = 2020
+        educappFTEK =   15
+39._at: year        = 2020
+        educappFTEK =   20
+40._at: year        = 2020
+        educappFTEK =   25
+41._at: year        = 2020
+        educappFTEK =   30
+42._at: year        = 2020
+        educappFTEK =   35
+43._at: year        = 2021
+        educappFTEK =    5
+44._at: year        = 2021
+        educappFTEK =   10
+45._at: year        = 2021
+        educappFTEK =   15
+46._at: year        = 2021
+        educappFTEK =   20
+47._at: year        = 2021
+        educappFTEK =   25
+48._at: year        = 2021
+        educappFTEK =   30
+49._at: year        = 2021
+        educappFTEK =   35
+50._at: year        = 2022
+        educappFTEK =    5
+51._at: year        = 2022
+        educappFTEK =   10
+52._at: year        = 2022
+        educappFTEK =   15
+53._at: year        = 2022
+        educappFTEK =   20
+54._at: year        = 2022
+        educappFTEK =   25
+55._at: year        = 2022
+        educappFTEK =   30
+56._at: year        = 2022
+        educappFTEK =   35
+57._at: year        = 2023
+        educappFTEK =    5
+58._at: year        = 2023
+        educappFTEK =   10
+59._at: year        = 2023
+        educappFTEK =   15
+60._at: year        = 2023
+        educappFTEK =   20
+61._at: year        = 2023
+        educappFTEK =   25
+62._at: year        = 2023
+        educappFTEK =   30
+63._at: year        = 2023
+        educappFTEK =   35
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |     Margin   std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+         _at |
+          1  |    .637608   .0061329   103.97   0.000     .6255877    .6496283
+          2  |    .637766   .0062647   101.80   0.000     .6254874    .6500447
+          3  |   .6379241   .0075168    84.87   0.000     .6231915    .6526567
+          4  |   .6380822    .009454    67.49   0.000     .6195527    .6566116
+          5  |   .6382402    .011742    54.36   0.000     .6152264    .6612541
+          6  |   .6383983   .0142124    44.92   0.000     .6105426     .666254
+          7  |   .6385564   .0167848    38.04   0.000     .6056588    .6714539
+          8  |   .6406989   .0061366   104.41   0.000     .6286713    .6527264
+          9  |   .6417117   .0061998   103.51   0.000     .6295603    .6538631
+         10  |   .6427245   .0072726    88.38   0.000     .6284705    .6569786
+         11  |   .6437374    .009001    71.52   0.000     .6260958     .661379
+         12  |   .6447502   .0110823    58.18   0.000     .6230292    .6664712
+         13  |    .645763   .0133526    48.36   0.000     .6195924    .6719337
+         14  |   .6467759   .0157302    41.12   0.000     .6159453    .6776065
+         15  |   .6437897   .0061443   104.78   0.000     .6317471    .6558323
+         16  |   .6456573   .0061447   105.08   0.000      .633614    .6577007
+         17  |    .647525   .0070479    91.88   0.000     .6337114    .6613385
+         18  |   .6493926   .0085731    75.75   0.000     .6325896    .6661956
+         19  |   .6512602   .0104515    62.31   0.000     .6307756    .6717448
+         20  |   .6531278   .0125252    52.15   0.000     .6285789    .6776767
+         21  |   .6549954   .0147118    44.52   0.000     .6261608      .68383
+         22  |   .6468806    .006156   105.08   0.000     .6348151    .6589461
+         23  |    .649603   .0060996   106.50   0.000     .6376479    .6615581
+         24  |   .6523254   .0068445    95.31   0.000     .6389105    .6657403
+         25  |   .6550478   .0081743    80.14   0.000     .6390265    .6710691
+         26  |   .6577702   .0098551    66.74   0.000     .6384545    .6770858
+         27  |   .6604926    .011737    56.27   0.000     .6374884    .6834967
+         28  |   .6632149   .0137377    48.28   0.000     .6362895    .6901404
+         29  |   .6499715   .0061716   105.32   0.000     .6378754    .6620676
+         30  |   .6535486   .0060649   107.76   0.000     .6416617    .6654356
+         31  |   .6571258   .0066643    98.60   0.000     .6440639    .6701877
+         32  |    .660703    .007809    84.61   0.000     .6453976    .6760083
+         33  |   .6642801   .0092997    71.43   0.000     .6460531    .6825072
+         34  |   .6678573   .0109965    60.73   0.000     .6463045    .6894101
+         35  |   .6714345    .012818    52.38   0.000     .6463117    .6965572
+         36  |   .6530624   .0061912   105.48   0.000     .6409279    .6651969
+         37  |   .6574943   .0060406   108.85   0.000     .6456549    .6693337
+         38  |   .6619262   .0065094   101.69   0.000      .649168    .6746845
+         39  |   .6663582   .0074821    89.06   0.000     .6516935    .6810229
+         40  |   .6707901    .008793    76.29   0.000     .6535561    .6880242
+         41  |   .6752221    .010314    65.47   0.000      .655007    .6954371
+         42  |    .679654   .0119652    56.80   0.000     .6562027    .7031053
+         43  |   .6561532   .0062146   105.58   0.000     .6439727    .6683337
+         44  |     .66144   .0060269   109.75   0.000     .6496274    .6732525
+         45  |   .6667267   .0063816   104.48   0.000      .654219    .6792344
+         46  |   .6720134   .0071989    93.35   0.000     .6579037    .6861231
+         47  |   .6773001   .0083441    81.17   0.000      .660946    .6936542
+         48  |   .6825868   .0097016    70.36   0.000      .663572    .7016016
+         49  |   .6878735   .0111946    61.45   0.000     .6659326    .7098145
+         50  |   .6592441    .006242   105.61   0.000     .6470101    .6714781
+         51  |   .6653856   .0060239   110.46   0.000     .6535789    .6771923
+         52  |   .6715271   .0062825   106.89   0.000     .6592137    .6838405
+         53  |   .6776686   .0069647    97.30   0.000     .6640179    .6913192
+         54  |   .6838101   .0079625    85.88   0.000     .6682038    .6994164
+         55  |   .6899516   .0091735    75.21   0.000     .6719719    .7079313
+         56  |   .6960931   .0105242    66.14   0.000     .6754659    .7167202
+         57  |    .662335   .0062731   105.58   0.000       .65004      .67463
+         58  |   .6693313   .0060316   110.97   0.000     .6575095     .681153
+         59  |   .6763275   .0062134   108.85   0.000     .6641494    .6885056
+         60  |   .6833238   .0067846   100.72   0.000     .6700262    .6966214
+         61  |   .6903201   .0076585    90.14   0.000     .6753096    .7053305
+         62  |   .6973163   .0087449    79.74   0.000     .6801767     .714456
+         63  |   .7043126   .0099745    70.61   0.000      .684763    .7238622
+------------------------------------------------------------------------------
+(file \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Results\6 Year Educapp Interaction Marginsplot.dta not found)
+
+. marginsplot, noci
+
+Variables that uniquely identify margins: educappFTEK year
+
+. 
+. mixed i_diversity year c.dem_legisprop##c.educappFTEK dem_gov i.hbcu c_r1 c_r2 size_midsize size_large || state: || unitid:, ml
+
+Performing EM optimization ...
+
+Performing gradient-based optimization: 
+Iteration 0:  Log likelihood =  15731.233  
+Iteration 1:  Log likelihood =  15731.233  
+
+Computing standard errors ...
+
+Mixed-effects ML regression                            Number of obs =   6,981
+
+        Grouping information
+        -------------------------------------------------------------
+                        |     No. of       Observations per group
+         Group variable |     groups    Minimum    Average    Maximum
+        ----------------+--------------------------------------------
+                  state |         51          9      136.9        565
+                 unitid |        784          6        8.9          9
+        -------------------------------------------------------------
+
+                                                       Wald chi2(10) = 2257.22
+Log likelihood =  15731.233                            Prob > chi2   =  0.0000
+
+-----------------------------------------------------------------------------------------------
+                  i_diversity | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+------------------------------+----------------------------------------------------------------
+                         year |   .0031745   .0001606    19.76   0.000     .0028597    .0034894
+                dem_legisprop |   .0358999   .0094308     3.81   0.000      .017416    .0543839
+                  educappFTEK |   .0015732   .0005474     2.87   0.004     .0005003    .0026461
+                              |
+c.dem_legisprop#c.educappFTEK |   .0005918   .0007666     0.77   0.440    -.0009106    .0020943
+                              |
+                      dem_gov |  -.0050977   .0010016    -5.09   0.000    -.0070608   -.0031345
+                              |
+                         hbcu |
+                         Yes  |   .0817881   .0083498     9.80   0.000     .0654229    .0981534
+                         c_r1 |   .0332005   .0078422     4.23   0.000     .0178301     .048571
+                         c_r2 |   .0286375   .0078789     3.63   0.000     .0131952    .0440798
+                 size_midsize |    .006723   .0016604     4.05   0.000     .0034687    .0099773
+                   size_large |   .0134677   .0033739     3.99   0.000     .0068549    .0200805
+                        _cons |  -5.801515    .321413   -18.05   0.000    -6.431473   -5.171557
+-----------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
+-----------------------------+------------------------------------------------
+state: Identity              |
+                  var(_cons) |   .0013328   .0003599      .0007851    .0022626
+-----------------------------+------------------------------------------------
+unitid: Identity             |
+                  var(_cons) |     .00374   .0002018      .0033647    .0041571
+-----------------------------+------------------------------------------------
+               var(Residual) |   .0003866   6.96e-06      .0003731    .0004004
+------------------------------------------------------------------------------
+LR test vs. linear model: chi2(2) = 13739.40              Prob > chi2 = 0.0000
+
+Note: LR test is conservative and provided only for reference.
+
+. margins, at (educappFTE=(5(5)35) dem_legisprop=(0(.25)1))
+
+Predictive margins                                       Number of obs = 6,981
+
+Expression: Linear prediction, fixed portion, predict()
+1._at:  dem_legisprop =   0
+        educappFTEK   =   5
+2._at:  dem_legisprop =   0
+        educappFTEK   =  10
+3._at:  dem_legisprop =   0
+        educappFTEK   =  15
+4._at:  dem_legisprop =   0
+        educappFTEK   =  20
+5._at:  dem_legisprop =   0
+        educappFTEK   =  25
+6._at:  dem_legisprop =   0
+        educappFTEK   =  30
+7._at:  dem_legisprop =   0
+        educappFTEK   =  35
+8._at:  dem_legisprop = .25
+        educappFTEK   =   5
+9._at:  dem_legisprop = .25
+        educappFTEK   =  10
+10._at: dem_legisprop = .25
+        educappFTEK   =  15
+11._at: dem_legisprop = .25
+        educappFTEK   =  20
+12._at: dem_legisprop = .25
+        educappFTEK   =  25
+13._at: dem_legisprop = .25
+        educappFTEK   =  30
+14._at: dem_legisprop = .25
+        educappFTEK   =  35
+15._at: dem_legisprop =  .5
+        educappFTEK   =   5
+16._at: dem_legisprop =  .5
+        educappFTEK   =  10
+17._at: dem_legisprop =  .5
+        educappFTEK   =  15
+18._at: dem_legisprop =  .5
+        educappFTEK   =  20
+19._at: dem_legisprop =  .5
+        educappFTEK   =  25
+20._at: dem_legisprop =  .5
+        educappFTEK   =  30
+21._at: dem_legisprop =  .5
+        educappFTEK   =  35
+22._at: dem_legisprop = .75
+        educappFTEK   =   5
+23._at: dem_legisprop = .75
+        educappFTEK   =  10
+24._at: dem_legisprop = .75
+        educappFTEK   =  15
+25._at: dem_legisprop = .75
+        educappFTEK   =  20
+26._at: dem_legisprop = .75
+        educappFTEK   =  25
+27._at: dem_legisprop = .75
+        educappFTEK   =  30
+28._at: dem_legisprop = .75
+        educappFTEK   =  35
+29._at: dem_legisprop =   1
+        educappFTEK   =   5
+30._at: dem_legisprop =   1
+        educappFTEK   =  10
+31._at: dem_legisprop =   1
+        educappFTEK   =  15
+32._at: dem_legisprop =   1
+        educappFTEK   =  20
+33._at: dem_legisprop =   1
+        educappFTEK   =  25
+34._at: dem_legisprop =   1
+        educappFTEK   =  30
+35._at: dem_legisprop =   1
+        educappFTEK   =  35
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |     Margin   std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+         _at |
+          1  |   .6293749   .0066804    94.21   0.000     .6162816    .6424682
+          2  |   .6372412   .0065136    97.83   0.000     .6244747    .6500076
+          3  |   .6451074   .0074303    86.82   0.000     .6305442    .6596706
+          4  |   .6529736   .0091091    71.68   0.000     .6351202    .6708271
+          5  |   .6608399   .0112127    58.94   0.000     .6388635    .6828163
+          6  |   .6687061   .0135445    49.37   0.000     .6421593    .6952529
+          7  |   .6765723   .0160053    42.27   0.000     .6452026    .7079421
+          8  |   .6390897   .0060781   105.15   0.000     .6271769    .6510025
+          9  |   .6476957   .0059961   108.02   0.000     .6359436    .6594478
+         10  |   .6563017   .0065527   100.16   0.000     .6434587    .6691447
+         11  |   .6649077    .007609    87.38   0.000     .6499944     .679821
+         12  |   .6735137   .0089905    74.91   0.000     .6558926    .6911349
+         13  |   .6821197   .0105706    64.53   0.000     .6614018    .7028377
+         14  |   .6907258   .0122727    56.28   0.000     .6666717    .7147798
+         15  |   .6488045   .0059607   108.85   0.000     .6371217    .6604872
+         16  |   .6581502   .0058803   111.93   0.000     .6466251    .6696754
+         17  |    .667496   .0061858   107.91   0.000     .6553721    .6796199
+         18  |   .6768418   .0068256    99.16   0.000     .6634639    .6902198
+         19  |   .6861876    .007717    88.92   0.000     .6710625    .7013127
+         20  |   .6955334   .0087838    79.18   0.000     .6783175    .7127493
+         21  |   .7048792   .0099698    70.70   0.000     .6853388    .7244196
+         22  |   .6585192   .0063553   103.62   0.000     .6460632    .6709753
+         23  |   .6686048   .0061888   108.03   0.000     .6564749    .6807347
+         24  |   .6786904   .0064179   105.75   0.000     .6661115    .6912692
+         25  |   .6887759   .0070038    98.34   0.000     .6750487    .7025031
+         26  |   .6988615   .0078672    88.83   0.000     .6834421    .7142809
+         27  |    .708947   .0089279    79.41   0.000     .6914486    .7264455
+         28  |   .7190326   .0101242    71.02   0.000     .6991896    .7388756
+         29  |    .668234   .0071778    93.10   0.000     .6541658    .6823021
+         30  |   .6790593   .0068647    98.92   0.000     .6656047     .692514
+         31  |   .6898847   .0071913    95.93   0.000     .6757901    .7039793
+         32  |     .70071   .0080802    86.72   0.000     .6848732    .7165469
+         33  |   .7115354   .0093728    75.91   0.000      .693165    .7299057
+         34  |   .7223607   .0109268    66.11   0.000     .7009445    .7437769
+         35  |    .733186   .0126462    57.98   0.000     .7083999    .7579722
+------------------------------------------------------------------------------
+
+. 
+. 
+. 
+. *************************************************
+. *** sem modeling
+. *************************************************
+. 
+. sem (year -> dem_gov, ) (year -> dem_legisprop, ) (year -> educappFTEK, ) (year -> i_diversity, ) (dem_gov -> dem_legisprop, ) (dem_gov -> educappFTEK, ) (dem_legisprop -> educappFTEK, ) (educ
+> appFTEK -> i_diversity,) (dem_gov -> i_diversity,) (dem_legisprop -> i_diversity,) (size_midsize -> i_diversity, ) (size_large -> i_diversity, ) (c_r1 -> i_diversity, ) (c_r2 -> i_diversity, )
+>  (hbcu -> i_diversity, ), nocapslatent
+
+Endogenous variables
+  Observed: dem_gov dem_legisprop educappFTEK i_diversity
+
+Exogenous variables
+  Observed: year size_midsize size_large c_r1 c_r2 hbcu
+
+Fitting target model:
+Iteration 0:  Log likelihood = -33285.952  
+Iteration 1:  Log likelihood = -33285.952  
+
+Structural equation model                                Number of obs = 6,981
+Estimation method: ml
+
+Log likelihood = -33285.952
+
+-------------------------------------------------------------------------------------
+                    |                 OIM
+                    | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+Structural          |
+  dem_gov           |
+               year |   .0174882   .0022853     7.65   0.000     .0130091    .0219673
+              _cons |   -34.8684    4.61405    -7.56   0.000    -43.91177   -25.82503
+  ------------------+----------------------------------------------------------------
+  dem_legisprop     |
+            dem_gov |   .1981203   .0034491    57.44   0.000     .1913601    .2048804
+               year |   .0015858   .0006613     2.40   0.016     .0002896     .002882
+              _cons |  -2.843702   1.335115    -2.13   0.033    -5.460479   -.2269249
+  ------------------+----------------------------------------------------------------
+  educappFTEK       |
+            dem_gov |  -.3318414   .0775199    -4.28   0.000    -.4837777   -.1799051
+      dem_legisprop |   7.064242    .221666    31.87   0.000     6.629784    7.498699
+               year |   .4107373   .0122536    33.52   0.000     .3867206     .434754
+              _cons |  -824.0782   24.73532   -33.32   0.000    -872.5585   -775.5978
+  ------------------+----------------------------------------------------------------
+  i_diversity       |
+            dem_gov |  -.0122659   .0020216    -6.07   0.000    -.0162281   -.0083037
+      dem_legisprop |   .1012973   .0061973    16.35   0.000     .0891508    .1134437
+        educappFTEK |   .0047819   .0003104    15.40   0.000     .0041734    .0053903
+               year |   .0019429   .0003426     5.67   0.000     .0012714    .0026145
+       size_midsize |   .0399612   .0018953    21.08   0.000     .0362464     .043676
+         size_large |   .0856694   .0031246    27.42   0.000     .0795452    .0917935
+               c_r1 |  -.0076499   .0036746    -2.08   0.037    -.0148519   -.0004478
+               c_r2 |  -.0059774   .0029773    -2.01   0.045    -.0118128    -.000142
+               hbcu |   .1300953   .0037652    34.55   0.000     .1227157    .1374749
+              _cons |  -3.377106   .6910992    -4.89   0.000    -4.731635   -2.022576
+--------------------+----------------------------------------------------------------
+      var(e.dem_gov)|   .2443734   .0041363                      .2363995    .2526164
+var(e.dem_legisprop)|    .020295   .0003435                      .0196327    .0209795
+  var(e.educappFTEK)|   6.961522   .1178312                      6.734365     7.19634
+  var(e.i_diversity)|   .0046831   .0000793                      .0045303    .0048411
+-------------------------------------------------------------------------------------
+Warning: The LR test of model vs. saturated is not reported because the
+         fitted model is not full rank. There appears to be 2 more fitted
+         parameters than the data can support.
+
+. 
+. 
+. ** standardized coefficients **
+. 
+. sem (year -> dem_gov, ) (year -> dem_legisprop, ) (year -> educappFTEK, ) (year -> i_diversity, ) (dem_gov -> dem_legisprop, ) (dem_gov -> educappFTEK, ) (dem_legisprop -> educappFTEK, ) (educ
+> appFTEK -> i_diversity,) (dem_gov -> i_diversity,) (dem_legisprop -> i_diversity,) (size_midsize -> i_diversity, ) (size_large -> i_diversity, ) (c_r1 -> i_diversity, ) (c_r2 -> i_diversity, )
+>  (hbcu -> i_diversity, ), nocapslatent standardized
+
+Endogenous variables
+  Observed: dem_gov dem_legisprop educappFTEK i_diversity
+
+Exogenous variables
+  Observed: year size_midsize size_large c_r1 c_r2 hbcu
+
+Fitting target model:
+Iteration 0:  Log likelihood = -33285.952  
+Iteration 1:  Log likelihood = -33285.952  
+
+Structural equation model                                Number of obs = 6,981
+Estimation method: ml
+
+Log likelihood = -33285.952
+
+-------------------------------------------------------------------------------------
+                    |                 OIM
+       Standardized | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+Structural          |
+  dem_gov           |
+               year |   .0912065   .0118443     7.70   0.000     .0679922    .1144208
+              _cons |  -70.24107   9.237302    -7.60   0.000    -88.34585   -52.13629
+  ------------------+----------------------------------------------------------------
+  dem_legisprop     |
+            dem_gov |     .56727   .0081506    69.60   0.000     .5512952    .5832449
+               year |   .0236801   .0098723     2.40   0.016     .0043308    .0430294
+              _cons |  -16.40227   7.698192    -2.13   0.033    -31.49045   -1.314095
+  ------------------+----------------------------------------------------------------
+  educappFTEK       |
+            dem_gov |  -.0532937   .0126848    -4.20   0.000    -.0781555   -.0284318
+      dem_legisprop |   .3962321   .0118599    33.41   0.000     .3729872     .419477
+               year |   .3440248   .0094313    36.48   0.000     .3255397    .3625099
+              _cons |  -266.6076   7.351866   -36.26   0.000     -281.017   -252.1982
+  ------------------+----------------------------------------------------------------
+  i_diversity       |
+            dem_gov |  -.0736864   .0122112    -6.03   0.000    -.0976199   -.0497529
+      dem_legisprop |   .2125323   .0129695    16.39   0.000     .1871125     .237952
+        educappFTEK |   .1788711    .011513    15.54   0.000      .156306    .2014362
+               year |   .0608734   .0107135     5.68   0.000     .0398752    .0818715
+       size_midsize |   .2398662   .0111027    21.60   0.000     .2181054     .261627
+         size_large |   .4086537   .0142182    28.74   0.000     .3807865    .4365209
+               c_r1 |  -.0282767   .0135797    -2.08   0.037    -.0548924    -.001661
+               c_r2 |  -.0213782    .010648    -2.01   0.045    -.0422478   -.0005086
+               hbcu |    .346345   .0091471    37.86   0.000     .3284171    .3642729
+              _cons |  -40.86878    8.34725    -4.90   0.000    -57.22909   -24.50847
+--------------------+----------------------------------------------------------------
+      var(e.dem_gov)|   .9916814   .0021605                      .9874558     .995925
+var(e.dem_legisprop)|   .6751936   .0092109                      .6573799    .6934901
+  var(e.educappFTEK)|    .728639   .0089291                      .7113468    .7463515
+  var(e.i_diversity)|   .6858528   .0084905                      .6694119    .7026975
+-------------------------------------------------------------------------------------
+Warning: The LR test of model vs. saturated is not reported because the
+         fitted model is not full rank. There appears to be 2 more fitted
+         parameters than the data can support.
+
+. 
+. ** looking at specific pathways **
+. 
+. estat stdize: nlcom _b[dem_gov:year]*_b[educappFTEK:dem_gov]*_b[i_diversity:educappFTEK]
+
+       _nl_1: _b[dem_gov:year]*_b[educappFTEK:dem_gov]*_b[i_diversity:educappFTEK]
+
+------------------------------------------------------------------------------
+             | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       _nl_1 |  -.0008694   .0002437    -3.57   0.000     -.001347   -.0003919
+------------------------------------------------------------------------------
+
+. estat stdize: nlcom _b[dem_legisprop:year]*_b[educappFTEK:dem_legisprop]*_b[i_diversity:educappFTEK]
+
+       _nl_1: _b[dem_legisprop:year]*_b[educappFTEK:dem_legisprop]*_b[i_diversity:educappFTEK]
+
+------------------------------------------------------------------------------
+             | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       _nl_1 |   .0016783   .0007094     2.37   0.018     .0002878    .0030688
+------------------------------------------------------------------------------
+
+. estat stdize: nlcom _b[educappFTEK:year]*_b[i_diversity:educappFTEK]
+
+       _nl_1: _b[educappFTEK:year]*_b[i_diversity:educappFTEK]
+
+------------------------------------------------------------------------------
+             | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       _nl_1 |   .0615361   .0043338    14.20   0.000      .053042    .0700302
+------------------------------------------------------------------------------
+
+. estat stdize: nlcom _b[dem_gov:year]*_b[dem_legisprop:dem_gov]*_b[i_diversity:dem_legisprop]
+
+       _nl_1: _b[dem_gov:year]*_b[dem_legisprop:dem_gov]*_b[i_diversity:dem_legisprop]
+
+------------------------------------------------------------------------------
+             | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       _nl_1 |   .0109961   .0015955     6.89   0.000      .007869    .0141233
+------------------------------------------------------------------------------
+
+. estat stdize: nlcom _b[dem_gov:year]*_b[dem_legisprop:dem_gov]*_b[educappFTEK:dem_legisprop]*_b[i_diversity:educappFTEK]
+
+       _nl_1: _b[dem_gov:year]*_b[dem_legisprop:dem_gov]*_b[educappFTEK:dem_legisprop]*_b[i_diversity:educappFTEK]
+
+------------------------------------------------------------------------------
+             | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       _nl_1 |    .003667   .0005486     6.68   0.000     .0025917    .0047422
+------------------------------------------------------------------------------
+
+. 
+. ** post-estimation **
+. 
+. estat gof, stats(all)
+
+----------------------------------------------------------------------------
+Fit statistic        |      Value   Description
+---------------------+------------------------------------------------------
+Likelihood ratio     |
+          chi2_ms(.) |          .   model vs. saturated
+            p > chi2 |          .
+         chi2_bs(30) |   7882.906   baseline vs. saturated
+            p > chi2 |      0.000
+---------------------+------------------------------------------------------
+Population error     |
+               RMSEA |          .   Root mean squared error of approximation
+ 90% CI, lower bound |      0.000
+         upper bound |          .
+              pclose |          .   Probability RMSEA <= 0.05
+---------------------+------------------------------------------------------
+Information criteria |
+                 AIC |  66613.904   Akaike's information criterion
+                 BIC |  66757.774   Bayesian information criterion
+---------------------+------------------------------------------------------
+Baseline comparison  |
+                 CFI |      1.000   Comparative fit index
+                 TLI |          .   Tucker–Lewis index
+---------------------+------------------------------------------------------
+Size of residuals    |
+                SRMR |      0.024   Standardized root mean squared residual
+                  CD |      0.351   Coefficient of determination
+----------------------------------------------------------------------------
+
+. estat eqgof
+
+Equation-level goodness of fit
+
+------------------------------------------------------------------------------
+   Dependent |             Variance            |
+   variables |    Fitted  Predicted   Residual | R-squared        mc       mc2
+-------------+---------------------------------+------------------------------
+Observed     |                                 |
+     dem_gov |  .2464233   .0020499   .2443734 |  .0083186  .0912065  .0083186
+dem_legisp~p |   .030058    .009763    .020295 |  .3248064  .5699179  .3248064
+ educappFTEK |  9.554144   2.592622   6.961522 |   .271361  .5209233   .271361
+ i_diversity |  .0068282   .0021451   .0046831 |  .3141472  .5604883  .3141472
+-------------+---------------------------------+------------------------------
+     Overall |                                 |   .351288
+------------------------------------------------------------------------------
+mc  = Correlation between dependent variable and its prediction.
+mc2 = mc^2 is the Bentler–Raykov squared multiple correlation coefficient.
+
+. 
+. ** direct and indirect effects **
+. 
+. estat teffects
+
+
+Direct effects
+---------------------------------------------------------------------------------
+                |                 OIM
+                | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+----------------+----------------------------------------------------------------
+Structural      |
+  dem_gov       |
+           year |   .0174882   .0022853     7.65   0.000     .0130091    .0219673
+  --------------+----------------------------------------------------------------
+  dem_legisprop |
+        dem_gov |   .1981203   .0034491    57.44   0.000     .1913601    .2048804
+           year |   .0015858   .0006613     2.40   0.016     .0002896     .002882
+  --------------+----------------------------------------------------------------
+  educappFTEK   |
+        dem_gov |  -.3318414   .0775199    -4.28   0.000    -.4837777   -.1799051
+  dem_legisprop |   7.064242    .221666    31.87   0.000     6.629784    7.498699
+           year |   .4107373   .0122536    33.52   0.000     .3867206     .434754
+  --------------+----------------------------------------------------------------
+  i_diversity   |
+        dem_gov |  -.0122659   .0020216    -6.07   0.000    -.0162281   -.0083037
+  dem_legisprop |   .1012973   .0061973    16.35   0.000     .0891508    .1134437
+    educappFTEK |   .0047819   .0003104    15.40   0.000     .0041734    .0053903
+           year |   .0019429   .0003426     5.67   0.000     .0012714    .0026145
+   size_midsize |   .0399612   .0018953    21.08   0.000     .0362464     .043676
+     size_large |   .0856694   .0031246    27.42   0.000     .0795452    .0917935
+           c_r1 |  -.0076499   .0036746    -2.08   0.037    -.0148519   -.0004478
+           c_r2 |  -.0059774   .0029773    -2.01   0.045    -.0118128    -.000142
+           hbcu |   .1300953   .0037652    34.55   0.000     .1227157    .1374749
+---------------------------------------------------------------------------------
+
+
+Indirect effects
+---------------------------------------------------------------------------------
+                |                 OIM
+                | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+----------------+----------------------------------------------------------------
+Structural      |
+  dem_gov       |
+           year |          0  (no path)
+  --------------+----------------------------------------------------------------
+  dem_legisprop |
+        dem_gov |          0  (no path)
+           year |   .0034648   .0004568     7.59   0.000     .0025695      .00436
+  --------------+----------------------------------------------------------------
+  educappFTEK   |
+        dem_gov |    1.39957   .0502229    27.87   0.000     1.301135    1.498005
+  dem_legisprop |          0  (no path)
+           year |   .0298749   .0053824     5.55   0.000     .0193255    .0404243
+  --------------+----------------------------------------------------------------
+  i_diversity   |
+        dem_gov |   .0251748   .0012802    19.66   0.000     .0226656    .0276839
+  dem_legisprop |   .0337802   .0024358    13.87   0.000     .0290062    .0385543
+    educappFTEK |          0  (no path)
+           year |    .002404   .0001714    14.02   0.000     .0020681      .00274
+   size_midsize |          0  (no path)
+     size_large |          0  (no path)
+           c_r1 |          0  (no path)
+           c_r2 |          0  (no path)
+           hbcu |          0  (no path)
+---------------------------------------------------------------------------------
+
+
+Total effects
+---------------------------------------------------------------------------------
+                |                 OIM
+                | Coefficient  std. err.      z    P>|z|     [95% conf. interval]
+----------------+----------------------------------------------------------------
+Structural      |
+  dem_gov       |
+           year |   .0174882   .0022853     7.65   0.000     .0130091    .0219673
+  --------------+----------------------------------------------------------------
+  dem_legisprop |
+        dem_gov |   .1981203   .0034491    57.44   0.000     .1913601    .2048804
+           year |   .0050505   .0007992     6.32   0.000     .0034841     .006617
+  --------------+----------------------------------------------------------------
+  educappFTEK   |
+        dem_gov |   1.067728   .0683692    15.62   0.000     .9337269    1.201729
+  dem_legisprop |   7.064242    .221666    31.87   0.000     6.629784    7.498699
+           year |   .4406123   .0132808    33.18   0.000     .4145824    .4666421
+  --------------+----------------------------------------------------------------
+  i_diversity   |
+        dem_gov |   .0129089   .0017593     7.34   0.000     .0094608     .016357
+  dem_legisprop |   .1350775   .0058901    22.93   0.000     .1235331     .146622
+    educappFTEK |   .0047819   .0003104    15.40   0.000     .0041734    .0053903
+           year |    .004347   .0003352    12.97   0.000       .00369     .005004
+   size_midsize |   .0399612   .0018953    21.08   0.000     .0362464     .043676
+     size_large |   .0856694   .0031246    27.42   0.000     .0795452    .0917935
+           c_r1 |  -.0076499   .0036746    -2.08   0.037    -.0148519   -.0004478
+           c_r2 |  -.0059774   .0029773    -2.01   0.045    -.0118128    -.000142
+           hbcu |   .1300953   .0037652    34.55   0.000     .1227157    .1374749
+---------------------------------------------------------------------------------
+
+. 
+. 
+. *************************************************
+. log close
+      name:  <unnamed>
+       log:  \\smb-isl01.fsu.edu\citrix\tal15b\Documents\diss\Results\6a Results.log
+  log type:  text
+ closed on:   4 Dec 2025, 18:18:03
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
